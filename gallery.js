@@ -6,6 +6,11 @@ const photoFiles = [
 
 const gallery = document.getElementById('gallery');
 const emptyState = document.getElementById('empty-state');
+const readableName = (fileName) =>
+  fileName
+    .replace(/\.[^/.]+$/, '')
+    .replace(/[_-]+/g, ' ')
+    .trim();
 
 if (photoFiles.length === 0) {
   emptyState.hidden = false;
@@ -16,7 +21,7 @@ if (photoFiles.length === 0) {
 
     const image = document.createElement('img');
     image.src = `photos/${fileName}`;
-    image.alt = fileName;
+    image.alt = readableName(fileName) || 'Zdjęcie z galerii';
     image.loading = 'lazy';
 
     image.addEventListener('error', () => {
