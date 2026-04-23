@@ -34,7 +34,7 @@ const photoFiles = [
 4. Zapisz ustawienia.
 5. Po chwili strona będzie dostępna pod adresem:
    - `https://twoznia.github.io/marta/` (dla tego repozytorium)
-   - `https://twoj-login.github.io/nazwa-repozytorium/` (wzór ogólny)
+   - `https://twój-login.github.io/nazwa-repozytorium/` (wzór ogólny)
 
 ## Kolejne kroki (praktycznie)
 
