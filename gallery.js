@@ -2,6 +2,7 @@ const photoFiles = [
   // Wpisuj tutaj nazwy plików z katalogu /photos, np. "img_001.jpg"
   // "img_001.jpg",
   // "img_002.jpg",
+  "t1.png","t2.png"
 ];
 
 const gallery = document.getElementById('gallery');
