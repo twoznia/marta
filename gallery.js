@@ -1,11 +1,11 @@
 const photos = [
   {
     fileName: 't1.png',
-    caption: 'Pierwsze zdjęcie pokazuje spokojny krajobraz w świetle dnia.'
+    caption: 'Tomek w Innsbrucku.'
   },
   {
     fileName: 't2.png',
-    caption: 'Drugie zdjęcie przedstawia miejski kadr z wyraźną perspektywą.'
+    caption: 'tomek z koniem w tle. Learning Days.'
   }
 ];
 
