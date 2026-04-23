@@ -1,8 +1,12 @@
-const photoFiles = [
-  // Wpisuj tutaj nazwy plików z katalogu /photos, np. "img_001.jpg"
-  // "img_001.jpg",
-  // "img_002.jpg",
-  "t1.png","t2.png"
+const photos = [
+  {
+    fileName: 't1.png',
+    caption: 'Pierwsze zdjęcie pokazuje spokojny krajobraz w świetle dnia.'
+  },
+  {
+    fileName: 't2.png',
+    caption: 'Drugie zdjęcie przedstawia miejski kadr z wyraźną perspektywą.'
+  }
 ];
 
 const gallery = document.getElementById('gallery');
@@ -13,10 +17,10 @@ const readableName = (fileName) =>
     .replace(/[_-]+/g, ' ')
     .trim();
 
-if (photoFiles.length === 0) {
+if (photos.length === 0) {
   emptyState.hidden = false;
 } else {
-  for (const fileName of photoFiles) {
+  for (const { fileName, caption: photoCaption } of photos) {
     const card = document.createElement('figure');
     card.className = 'photo-card';
 
@@ -33,7 +37,7 @@ if (photoFiles.length === 0) {
     });
 
     const caption = document.createElement('figcaption');
-    caption.textContent = fileName;
+    caption.textContent = photoCaption;
 
     card.append(image, caption);
     gallery.append(card);
