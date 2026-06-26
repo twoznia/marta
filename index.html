@@ -3,24 +3,72 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Galeria zdjęć</title>
+    <title>Dla Marty ❤️</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main class="container">
-      <h1>Galeria zdjęć</h1>
-      <p class="description">
-        Dodaj pliki do katalogu <code>/photos</code>, a następnie wpisz ich nazwy w
-        <code>gallery.js</code>.
-      </p>
+    <div class="hearts-bg" aria-hidden="true" id="hearts-bg"></div>
 
-      <section id="gallery" class="gallery" aria-label="Galeria zdjęć"></section>
-      <p id="empty-state" class="empty-state" hidden>
-        Brak zdjęć do wyświetlenia. Dodaj pliki do katalogu <code>/photos</code> i
-        uzupełnij listę w <code>gallery.js</code>.
-      </p>
+    <main>
+      <section class="hero">
+        <div class="hero-inner">
+          <p class="from">od Tomka</p>
+          <h1 class="headline">Kocham&nbsp;Cię,<br>Marto</h1>
+          <p class="subline">… i chciałem Ci o tym przypomnieć&nbsp;♥</p>
+          <a href="#list" class="scroll-btn">Czytaj dalej</a>
+        </div>
+      </section>
+
+      <section id="list" class="letter-section">
+        <div class="letter-card">
+          <p class="letter-label">List dla Ciebie</p>
+          <div class="letter-body">
+            <p>Marto,</p>
+            <p>
+              Codziennie budzę się z myślą, że mam szczęście — bo jesteś.
+              Twój śmiech, Twoja cierpliwość, Twój sposób patrzenia na świat
+              sprawiają, że każdy dzień jest lepszy.
+            </p>
+            <p>
+              Nie zawsze znajduję słowa, żeby powiedzieć Ci, co czuję.
+              Dlatego zrobiłem tę stronę — żebyś wiedziała, że myślę o Tobie
+              nawet wtedy, gdy siedzę przed komputerem. 😊
+            </p>
+            <p>
+              Dziękuję Ci za wszystko, co razem przeżyliśmy.
+              I cieszę się, że czeka nas jeszcze tak wiele.
+            </p>
+            <p class="letter-sign">— Tomek ❤️</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="reasons-section">
+        <h2>Kilka powodów, dla których Cię kocham</h2>
+        <ul class="reasons-list" id="reasons-list">
+          <li>Twój śmiech, który rozświetla każdy pokój</li>
+          <li>To, że zawsze jesteś po mojej stronie</li>
+          <li>Twoja dobroć wobec innych</li>
+          <li>Każda wspólna kawa i każda wspólna cisza</li>
+          <li>To, że jesteś po prostu <em>Tobą</em></li>
+        </ul>
+      </section>
+
+      <section class="gallery-section">
+        <h2>Nasze wspomnienia</h2>
+        <section id="gallery" class="gallery" aria-label="Galeria zdjęć"></section>
+        <p id="empty-state" class="empty-state" hidden>
+          Zdjęcia pojawią się tutaj — dodaj je do katalogu <code>photos/</code>
+          i uzupełnij listę w <code>gallery.js</code>.
+        </p>
+      </section>
     </main>
 
+    <footer class="site-footer">
+      <p>Zrobione z miłości ❤️ przez Tomka</p>
+    </footer>
+
     <script src="gallery.js"></script>
+    <script src="hearts.js"></script>
   </body>
 </html>

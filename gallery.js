@@ -5,7 +5,7 @@ const photos = [
   },
   {
     fileName: 't2.png',
-    caption: 'tomek z koniem w tle. Learning Days.'
+    caption: 'Tomek z koniem w tle. Learning Days.'
   }
 ];
 
