@@ -25,6 +25,12 @@ jak łatwo zjeść tu na diecie low FODMAP:
 | [Gorący Pies](wilanow/burgery/goracy-pies.md) | burgery / grill | Al. Rzeczypospolitej 10 | ~12–22 | 🟡 |
 | [Salad Story](wilanow/salatki-cafe/salad-story.md) | sałatki / lunch | Klimczaka 1 (Royal Wilanów) | pon–pt 9–20, weekendy 10–19 | 🟢 |
 | [PAUL](wilanow/salatki-cafe/paul.md) | piekarnia / kawiarnia | Klimczaka 1 (Royal Wilanów) | pon–pt 7–20, weekendy 9–21 | 🔴 |
+| [UlaLa Bistro](wilanow/kuchnia-polska/ulala-bistro.md) | polska / europejska | Adama Branickiego 18 | ~12–22 | 🟢 |
+| [Restauracja Wiele Dobrego](wilanow/kuchnia-polska/wiele-dobrego.md) | polska / europejska | Zygmunta Vogla 62 | ~12–22 | 🟢 |
+| [Restauracja Poezja](wilanow/kuchnia-polska/poezja.md) | polska / włoska / francuska | Sikorskiego 61a | ~12–22 | 🟢 |
+| [Vilano Ristorante Bar & Vino](wilanow/kuchnia-wloska/vilano.md) | włoska | Kazachska 1 | ~12–23 | 🟡 |
+| [Bistro Gruzińskie Granat](wilanow/kuchnia-gruzinska/granat.md) | gruzińska | Adama Branickiego 10 | ~12–22 | 🟡 |
+| [Cukiernia Kawiarnia DESEO](wilanow/salatki-cafe/deseo.md) | cukiernia / kawiarnia | Przyczółkowa 223 | ~9–20 | 🟡 |
 
 ## Ursynów
 
@@ -46,10 +52,15 @@ jak łatwo zjeść tu na diecie low FODMAP:
 | [Thai Hung Bistro](ursynow/kuchnia-tajska/thai-hung-bistro.md) | tajska / wietnamska | ul. Pelikanów | ~11–21 | 🟡 |
 | [Adana Kebab](ursynow/kebab-turecka/adana-kebab.md) | turecka / kebab | KEN 36/Lok-7 (też Belgradzka 21A) | codz. 10–23 | 🟡 |
 | [W. Kebab](ursynow/kebab-turecka/w-kebab.md) | turecka / kebab | Nugat 7/U1 | codz. 11–22 | 🟡 |
+| [Polskie Smaki](ursynow/kuchnia-polska/polskie-smaki.md) | polska / pierogarnia | Ursynów | ~11–20 | 🟡 |
+| [Vina Express (Bar Kokos)](ursynow/kuchnia-wietnamska/vina-express.md) | wietnamska | Ursynów | ~11–21 | 🟡 |
+| [Rong Vang](ursynow/kuchnia-wietnamska/rong-vang.md) | wietnamska | Ursynów | ~11–21 | 🟡 |
+| [Viet Street Food](ursynow/kuchnia-wietnamska/viet-street-food.md) | wietnamska / street food | Ursynów | ~11–21 | 🟡 |
+| [Coffeeway](ursynow/salatki-cafe/coffeeway.md) | kawiarnia | Ursynów | ~8–20 | 🟡 |
 
 ## Najlepsze miejsca na low FODMAP (🟢)
 
-- **Wilanów:** Kimi Sushi, Sushi Akiyama, Nama Sushi, Salad Story, Taste & Tap, Kuchnia Otwarta
+- **Wilanów:** Kimi Sushi, Sushi Akiyama, Nama Sushi, Salad Story, Taste & Tap, Kuchnia Otwarta, UlaLa Bistro, Wiele Dobrego, Poezja
 - **Ursynów:** Siwy Dym (BBQ/grill), Soto Sushi, Kabaty Sushi
 
 Ogólna zasada: **kuchnie oparte na grillu i sushi** są najłatwiejsze na diecie low

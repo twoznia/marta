@@ -16,6 +16,7 @@ restauracje/
 │   ├── sushi-japonska/
 │   ├── kuchnia-azjatycka/
 │   ├── kuchnia-chinska/
+│   ├── kuchnia-gruzinska/
 │   ├── kuchnia-srodkowoazjatycka/
 │   ├── kuchnia-meksykanska/
 │   ├── burgery/
@@ -25,6 +26,7 @@ restauracje/
     ├── kuchnia-wloska/
     ├── sushi-japonska/
     ├── kuchnia-azjatycka/
+    ├── kuchnia-wietnamska/
     ├── kuchnia-gruzinska/
     ├── kuchnia-indyjska/
     ├── kuchnia-tajska/
@@ -43,6 +45,15 @@ Przy każdym daniu znajdziesz oznaczenie:
   cebuli, bez czosnku, bez pszennego pieczywa, sos obok). Warto dopytać obsługę.
 - ❌ **Wysokie FODMAP** — danie zawiera składniki bogate w FODMAP (cebula, czosnek,
   pszenica, rośliny strączkowe, laktoza, miód itp.) i trudno je zmodyfikować.
+
+## Zasięg bazy
+
+Baza obejmuje **44 restauracje** (24 Wilanów + 20 Ursynów) — najbardziej znane i
+reprezentatywne lokale każdej dzielnicy, w podziale na wszystkie główne typy kuchni.
+Agregatory (np. gdziejemy.pl) listują w tych dzielnicach ponad setkę pozycji, ale
+większość „ogona" to sieciówki fast food, bary mleczne, food trucki, punkty z kawą
+na wynos i lokale bez własnego menu — te pomijamy. Jeśli brakuje konkretnego lokalu,
+który chcesz mieć w bazie, daj znać — dodam go.
 
 ## Ważne zastrzeżenia
 
