@@ -25,6 +25,9 @@ Obecne kafelki:
 - 🍽️ **Restauracje** → [`restauracje/index.html`](restauracje/index.html) —
   interaktywna przeglądarka restauracji w Wilanowie i Ursynowie: menu, adresy, godziny
   otwarcia, typ kuchni oraz dania, które można zjeść na diecie low FODMAP.
+- 🌱 **Dieta Low FODMAP** → [`low-fodmap/index.html`](low-fodmap/index.html) —
+  przewodnik po diecie: wyszukiwarka produktów (co można ✅ / warunkowo ⚠️ / unikać ❌),
+  fazy diety, ukryte źródła FODMAP i zamienniki.
 
 ## Jak opublikować na GitHub Pages (`github.io`)
 

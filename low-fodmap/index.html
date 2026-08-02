@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dieta Low FODMAP — przewodnik</title>
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      .r-nav { position: sticky; top: 0; z-index: 40; background: rgba(255,249,249,0.92);
+               backdrop-filter: blur(8px); border-bottom: 1px solid var(--rose-lt); }
+      .r-nav-inner { max-width: 1000px; margin: 0 auto; padding: 0.7rem 1rem; display: flex; align-items: center;
+                     gap: 1rem; flex-wrap: wrap; }
+      .r-brand { font-weight: 800; color: var(--rose); text-decoration: none; font-size: 1.15rem; }
+      .r-brand span { font-weight: 400; color: var(--muted); font-size: 0.9rem; }
+      .r-navlink { color: var(--text); text-decoration: none; font-weight: 600; font-size: 0.95rem;
+                   padding: 0.35rem 0.7rem; border-radius: 100px; }
+      .r-navlink:hover { background: var(--rose-lt); color: var(--rose); }
+      .r-status-wrap { display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; margin-left: auto; }
+      .r-status-label { font-size: 0.82rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+      .chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+      .chip { border: 1px solid var(--rose-lt); background: var(--card); color: var(--muted); border-radius: 100px;
+              padding: 0.28rem 0.7rem; font-size: 0.82rem; cursor: pointer; transition: all 0.15s; }
+      .chip:hover { border-color: var(--rose); }
+      .chip.active { background: var(--rose); color: #fff; border-color: var(--rose); }
+
+      .wrap { max-width: 1000px; margin: 0 auto; padding: 2rem 1rem 4rem; position: relative; z-index: 1; }
+      .lead { text-align: center; margin-bottom: 2.2rem; }
+      .lead h1 { color: var(--rose); font-size: clamp(1.8rem, 5vw, 2.6rem); }
+      .lead p { color: var(--muted); max-width: 640px; margin: 0.7rem auto 0; line-height: 1.6; }
+
+      .sec { margin: 2.4rem 0; }
+      .sec h2 { color: var(--rose); font-size: 1.35rem; margin-bottom: 1rem; text-align: center; }
+
+      .cards3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+      .pcard { background: var(--card); border: 1px solid var(--rose-lt); border-radius: 1rem; padding: 1.2rem 1.3rem; box-shadow: var(--shadow); }
+      .pcard .step { display: inline-block; background: var(--rose); color: #fff; font-weight: 800; font-size: 0.8rem;
+                     border-radius: 100px; padding: 0.15rem 0.7rem; margin-bottom: 0.6rem; }
+      .pcard h3 { font-size: 1.1rem; margin-bottom: 0.4rem; }
+      .pcard p { color: var(--muted); font-size: 0.93rem; line-height: 1.55; }
+
+      /* Wyszukiwarka jedzenia */
+      .finder-controls { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; margin-bottom: 1rem; }
+      .r-search { flex: 1 1 240px; max-width: 320px; padding: 0.6rem 0.9rem; border: 1px solid var(--rose-lt);
+                  border-radius: 100px; font-size: 1rem; outline: none; }
+      .r-search:focus { border-color: var(--rose); }
+      .r-select { padding: 0.55rem 0.9rem; border: 1px solid var(--rose-lt); border-radius: 100px; font-size: 0.95rem;
+                  background: var(--card); color: var(--text); cursor: pointer; outline: none; }
+      .food-count { text-align: center; color: var(--muted); font-size: 0.9rem; margin-bottom: 1rem; }
+      .food-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0.7rem; }
+      .food { background: var(--card); border: 1px solid var(--rose-lt); border-left-width: 5px; border-radius: 0.7rem;
+              padding: 0.7rem 0.9rem; }
+      .food.ok { border-left-color: #1e7d38; }
+      .food.maybe { border-left-color: #d69412; }
+      .food.no { border-left-color: #b23030; }
+      .food .fname { font-weight: 700; display: flex; align-items: center; gap: 0.4rem; }
+      .food .fgroup { font-size: 0.78rem; color: var(--rose); font-weight: 600; }
+      .food .fnote { font-size: 0.83rem; color: var(--muted); margin-top: 0.25rem; line-height: 1.4; }
+
+      table.swaps { width: 100%; border-collapse: collapse; background: var(--card); border-radius: 0.8rem; overflow: hidden; box-shadow: var(--shadow); }
+      table.swaps th, table.swaps td { padding: 0.6rem 0.9rem; text-align: left; border-bottom: 1px solid var(--rose-lt); font-size: 0.92rem; }
+      table.swaps th { background: var(--rose-lt); color: var(--rose); }
+      table.swaps tr:last-child td { border-bottom: none; }
+      .table-scroll { overflow-x: auto; }
+
+      ul.plain { list-style: none; padding: 0; max-width: 760px; margin: 0 auto; }
+      ul.plain li { background: var(--card); border: 1px solid var(--rose-lt); border-radius: 0.6rem;
+                    padding: 0.7rem 1rem; margin-bottom: 0.6rem; line-height: 1.5; font-size: 0.95rem; }
+      ul.plain li strong { color: var(--rose); }
+
+      .myth { display: grid; gap: 0.7rem; max-width: 760px; margin: 0 auto; }
+      .myth .m { background: var(--card); border: 1px solid var(--rose-lt); border-radius: 0.7rem; padding: 0.9rem 1.1rem; }
+      .myth .m .q { font-weight: 700; }
+      .myth .m .a { color: var(--muted); font-size: 0.93rem; margin-top: 0.3rem; line-height: 1.5; }
+
+      .cta { text-align: center; }
+      .cta a { display: inline-block; background: var(--rose); color: #fff; text-decoration: none; font-weight: 700;
+               padding: 0.8rem 1.8rem; border-radius: 100px; }
+      .cta a:hover { background: #c0325a; }
+
+      .disclaimer { background: #fff4dd; border: 1px solid #f0d089; border-radius: 0.8rem; padding: 1rem 1.2rem;
+                    color: #7a5a10; font-size: 0.9rem; line-height: 1.55; max-width: 820px; margin: 2.5rem auto 0; }
+      .legend-inline { text-align: center; color: var(--muted); font-size: 0.88rem; margin-bottom: 1rem; }
+    </style>
+  </head>
+  <body>
+    <div class="hearts-bg" aria-hidden="true" id="hearts-bg"></div>
+
+    <nav class="r-nav">
+      <div class="r-nav-inner">
+        <a class="r-brand" href="../index.html">🌱 Low FODMAP <span>przewodnik</span></a>
+        <a class="r-navlink" href="../index.html">← Strona główna</a>
+        <a class="r-navlink" href="../restauracje/index.html">Restauracje</a>
+      </div>
+    </nav>
+
+    <div class="wrap">
+      <div class="lead">
+        <h1>Dieta Low FODMAP 🌱</h1>
+        <p>FODMAP to grupa słabo wchłanianych, fermentujących węglowodanów (fruktany, galaktany,
+           laktoza, nadmiar fruktozy, poliole). U osób z <strong>zespołem jelita drażliwego (IBS)</strong>
+           potrafią wywoływać wzdęcia, ból i biegunki. Dieta low FODMAP ogranicza je czasowo,
+           by uspokoić jelita i poznać własne progi tolerancji.</p>
+      </div>
+
+      <!-- FAZY -->
+      <section class="sec">
+        <h2>Jak to działa — 3 fazy</h2>
+        <div class="cards3">
+          <div class="pcard">
+            <span class="step">Faza 1</span>
+            <h3>Eliminacja (2–6 tyg.)</h3>
+            <p>Usuwasz produkty wysokie w FODMAP i obserwujesz, czy objawy ustępują. To etap
+               diagnostyczny, <strong>nie dłużej niż 6 tygodni</strong> — nie jest to dieta docelowa.</p>
+          </div>
+          <div class="pcard">
+            <span class="step">Faza 2</span>
+            <h3>Reintrodukcja (6–8 tyg.)</h3>
+            <p>Pojedynczo, w rosnących porcjach testujesz każdą grupę FODMAP, żeby dowiedzieć się,
+               <strong>co i w jakiej ilości</strong> tolerujesz. Najważniejszy, a najczęściej pomijany etap.</p>
+          </div>
+          <div class="pcard">
+            <span class="step">Faza 3</span>
+            <h3>Personalizacja</h3>
+            <p>Budujesz własną, <strong>jak najmniej restrykcyjną</strong> dietę na stałe — wykluczasz tylko to,
+               co naprawdę Ci szkodzi, i utrzymujesz różnorodność.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- WYSZUKIWARKA JEDZENIA -->
+      <section class="sec" id="finder">
+        <h2>Co można jeść? — wyszukiwarka</h2>
+        <p class="legend-inline">✅ można &nbsp;·&nbsp; ⚠️ warunkowo (zależy od porcji) &nbsp;·&nbsp; ❌ unikaj (w fazie eliminacji)</p>
+        <div class="finder-controls">
+          <input type="search" class="r-search" id="food-search" placeholder="Szukaj produktu…" />
+          <select class="r-select" id="group-select" aria-label="Grupa produktów"></select>
+        </div>
+        <div class="chips" id="status-chips" style="justify-content:center; margin-bottom:1rem;"></div>
+        <div class="food-count" id="food-count"></div>
+        <div class="food-grid" id="food-grid"></div>
+      </section>
+
+      <!-- UKRYTE ŹRÓDŁA -->
+      <section class="sec">
+        <h2>Ukryte źródła FODMAP (na to uważaj)</h2>
+        <ul class="plain">
+          <li><strong>Cebula i czosnek</strong> — najczęstszy „ukryty" FODMAP: w bulionach, sosach, marynatach,
+              zasmażkach, „przyprawie do…". Sam <strong>olej czosnkowy jest OK</strong> — fruktany nie są rozpuszczalne w tłuszczu.</li>
+          <li><strong>Inulina / FOS / cykoria</strong> — dodawane do batonów „fit", jogurtów „proteinowych" i pieczywa
+              „z błonnikiem". To skoncentrowany fruktan.</li>
+          <li><strong>Poliole w produktach „bez cukru"</strong> — sorbitol, mannitol, ksylitol, maltitol (E420, E421,
+              E965…) w gumach, cukierkach i „light".</li>
+          <li><strong>Syrop glukozowo-fruktozowy (HFCS)</strong> — w napojach, słodyczach, sosach (ketchup, słodkie sosy).</li>
+          <li><strong>Gotowe buliony, kostki, sos sojowy i dressingi</strong> — zwykle na cebuli i czosnku
+              (sos sojowy w małej ilości bywa OK mimo pszenicy).</li>
+        </ul>
+      </section>
+
+      <!-- ZAMIENNIKI -->
+      <section class="sec">
+        <h2>Sprytne zamienniki</h2>
+        <div class="table-scroll">
+          <table class="swaps">
+            <tr><th>Zamiast (wysokie FODMAP)</th><th>Wybierz (low FODMAP)</th></tr>
+            <tr><td>Cebula i czosnek</td><td>Zielona część szczypioru/pora, olej czosnkowy, świeże zioła, odrobina asafetydy</td></tr>
+            <tr><td>Mleko krowie</td><td>Mleko bez laktozy lub migdałowe</td></tr>
+            <tr><td>Makaron pszenny</td><td>Makaron ryżowy lub bezglutenowy</td></tr>
+            <tr><td>Chleb pszenny</td><td>Chleb bezglutenowy lub orkiszowy na zakwasie (2 kromki)</td></tr>
+            <tr><td>Miód, syrop z agawy</td><td>Syrop klonowy, cukier stołowy (z umiarem)</td></tr>
+            <tr><td>Jabłko, gruszka, mango</td><td>Pomarańcza, truskawki, kiwi, winogrona</td></tr>
+            <tr><td>Hummus, falafel (ciecierzyca)</td><td>Tofu twarde, masło orzechowe, pasta z bakłażana bez czosnku</td></tr>
+            <tr><td>Fasola, soczewica (duże porcje)</td><td>Mięso, ryby, jajka, tofu; strączki z puszki, płukane, w małej porcji</td></tr>
+          </table>
+        </div>
+      </section>
+
+      <!-- JEDZENIE NA MIEŚCIE -->
+      <section class="sec cta">
+        <h2>Na mieście?</h2>
+        <p class="legend-inline">Sprawdź, gdzie w Wilanowie i Ursynowie zjesz na low FODMAP — z oznaczeniami przy każdym daniu.</p>
+        <a href="../restauracje/index.html">🍽️ Przeglądaj restauracje</a>
+      </section>
+
+      <!-- MITY -->
+      <section class="sec">
+        <h2>Mity, które warto obalić</h2>
+        <div class="myth">
+          <div class="m"><div class="q">„Low FODMAP = dieta bezglutenowa"</div>
+            <div class="a">Nie. Problemem jest fruktan (rodzaj węglowodanu), a nie gluten. Małe porcje pszenicy i
+              orkisz na zakwasie bywają dobrze tolerowane, a wiele produktów bezglutenowych i tak jest wysokie w FODMAP.</div></div>
+          <div class="m"><div class="q">„To dieta na całe życie"</div>
+            <div class="a">Nie. To 3-fazowy proces uczenia się tolerancji. Faza eliminacji jest krótka; celem jest
+              dieta jak najmniej restrykcyjna.</div></div>
+          <div class="m"><div class="q">„Produkt z listy zakazanej trzeba wykluczyć całkowicie"</div>
+            <div class="a">Nie zawsze — liczy się porcja. FODMAP-y się kumulują, więc małe ilości „warunkowych"
+              produktów często są OK, a duże — nie.</div></div>
+          <div class="m"><div class="q">„Zdrowe = low FODMAP"</div>
+            <div class="a">Niekoniecznie. Czosnek, jabłko czy soczewica są zdrowe, ale wysokie w FODMAP. To dieta
+              terapeutyczna dla jelit, nie ranking „zdrowości".</div></div>
+        </div>
+      </section>
+
+      <div class="disclaimer">
+        <strong>Zastrzeżenie:</strong> to materiał informacyjny, nie porada medyczna ani dietetyczna. Dietę low FODMAP
+        najlepiej prowadzić pod opieką dietetyka, a przy uporczywych objawach skonsultować się z lekarzem (by wykluczyć
+        inne przyczyny). Podane porcje są orientacyjne i bywają aktualizowane — wzorcowym źródłem danych jest
+        <strong>Monash University</strong> (aplikacja FODMAP). Tolerancja jest indywidualna.
+      </div>
+    </div>
+
+    <script>
+      // status: ok = ✅ można, maybe = ⚠️ warunkowo, no = ❌ unikaj
+      const FOODS = [
+        // Warzywa
+        {n:"Marchew", g:"Warzywa", s:"ok"},
+        {n:"Ogórek", g:"Warzywa", s:"ok"},
+        {n:"Sałata, rukola", g:"Warzywa", s:"ok"},
+        {n:"Szpinak (baby)", g:"Warzywa", s:"ok"},
+        {n:"Pomidor", g:"Warzywa", s:"ok", note:"koktajlowe do ~2 szt."},
+        {n:"Ziemniak", g:"Warzywa", s:"ok"},
+        {n:"Jarmuż", g:"Warzywa", s:"ok"},
+        {n:"Rzodkiewka", g:"Warzywa", s:"ok"},
+        {n:"Kapusta pekińska", g:"Warzywa", s:"ok"},
+        {n:"Papryka czerwona", g:"Warzywa", s:"maybe", note:"do ~75 g; zielona bardziej ograniczona"},
+        {n:"Cukinia", g:"Warzywa", s:"maybe", note:"do ~65 g"},
+        {n:"Bakłażan", g:"Warzywa", s:"maybe", note:"do ~75 g"},
+        {n:"Dynia (hokkaido/kabocha)", g:"Warzywa", s:"maybe", note:"do ~75 g"},
+        {n:"Batat", g:"Warzywa", s:"maybe", note:"do ~75 g (powyżej mannitol)"},
+        {n:"Brokuł", g:"Warzywa", s:"maybe", note:"same różyczki do ~75 g; łodygi wyżej"},
+        {n:"Fasolka szparagowa", g:"Warzywa", s:"maybe", note:"do ~75 g"},
+        {n:"Kukurydza", g:"Warzywa", s:"maybe", note:"ok. 1/2 kolby"},
+        {n:"Seler naciowy", g:"Warzywa", s:"maybe", note:"do ~1/2 łodygi (mannitol)"},
+        {n:"Burak", g:"Warzywa", s:"maybe", note:"marynowany, do ~2 plasterków"},
+        {n:"Cebula", g:"Warzywa", s:"no", note:"kluczowy fruktan — unikaj"},
+        {n:"Czosnek", g:"Warzywa", s:"no", note:"kluczowy fruktan; olej czosnkowy jest OK"},
+        {n:"Por", g:"Warzywa", s:"no", note:"biała część wysoka; zielona część OK"},
+        {n:"Szalotka", g:"Warzywa", s:"no"},
+        {n:"Kalafior", g:"Warzywa", s:"no", note:"mannitol"},
+        {n:"Pieczarki", g:"Warzywa", s:"no", note:"boczniaki są OK"},
+        {n:"Szparagi", g:"Warzywa", s:"no"},
+        {n:"Karczoch", g:"Warzywa", s:"no"},
+        {n:"Groszek zielony", g:"Warzywa", s:"no"},
+
+        // Owoce
+        {n:"Banan (niedojrzały)", g:"Owoce", s:"ok", note:"dojrzały = więcej fruktanów"},
+        {n:"Truskawki", g:"Owoce", s:"ok"},
+        {n:"Borówki", g:"Owoce", s:"ok"},
+        {n:"Winogrona", g:"Owoce", s:"ok"},
+        {n:"Kiwi", g:"Owoce", s:"ok"},
+        {n:"Pomarańcza", g:"Owoce", s:"ok"},
+        {n:"Mandarynka", g:"Owoce", s:"ok"},
+        {n:"Ananas", g:"Owoce", s:"ok"},
+        {n:"Melon kantalupa", g:"Owoce", s:"ok", note:"arbuz jest wysoki!"},
+        {n:"Cytryna, limonka", g:"Owoce", s:"ok"},
+        {n:"Maliny", g:"Owoce", s:"maybe", note:"do ~30 g"},
+        {n:"Awokado", g:"Owoce", s:"maybe", note:"do ~1/8 (30 g); więcej = sorbitol"},
+        {n:"Granat", g:"Owoce", s:"maybe", note:"do ~1/4 owocu"},
+        {n:"Jabłko", g:"Owoce", s:"no", note:"sorbitol + nadmiar fruktozy"},
+        {n:"Gruszka", g:"Owoce", s:"no"},
+        {n:"Mango", g:"Owoce", s:"no", note:"nadmiar fruktozy"},
+        {n:"Arbuz", g:"Owoce", s:"no", note:"fruktany + poliole"},
+        {n:"Wiśnie, czereśnie", g:"Owoce", s:"no"},
+        {n:"Brzoskwinia, nektarynka", g:"Owoce", s:"no", note:"poliole"},
+        {n:"Śliwka", g:"Owoce", s:"no", note:"sorbitol"},
+        {n:"Jeżyny", g:"Owoce", s:"no", note:"sorbitol"},
+        {n:"Owoce suszone, figi, daktyle", g:"Owoce", s:"no"},
+
+        // Nabiał i zamienniki
+        {n:"Ser cheddar / dojrzewający", g:"Nabiał i zamienniki", s:"ok"},
+        {n:"Parmezan", g:"Nabiał i zamienniki", s:"ok"},
+        {n:"Masło", g:"Nabiał i zamienniki", s:"ok"},
+        {n:"Mleko bez laktozy", g:"Nabiał i zamienniki", s:"ok"},
+        {n:"Jogurt bez laktozy", g:"Nabiał i zamienniki", s:"ok"},
+        {n:"Tofu twarde (odsączone)", g:"Nabiał i zamienniki", s:"ok"},
+        {n:"Mleko migdałowe", g:"Nabiał i zamienniki", s:"ok", note:"do ~250 ml"},
+        {n:"Feta", g:"Nabiał i zamienniki", s:"maybe", note:"małe porcje (~40 g)"},
+        {n:"Mozzarella", g:"Nabiał i zamienniki", s:"maybe", note:"~1/2 kulki"},
+        {n:"Brie / camembert", g:"Nabiał i zamienniki", s:"maybe", note:"małe porcje"},
+        {n:"Mleko krowie / kozie", g:"Nabiał i zamienniki", s:"no", note:"laktoza"},
+        {n:"Jogurt naturalny (krowi)", g:"Nabiał i zamienniki", s:"no"},
+        {n:"Śmietana", g:"Nabiał i zamienniki", s:"no"},
+        {n:"Lody mleczne", g:"Nabiał i zamienniki", s:"no"},
+        {n:"Twaróg, ricotta", g:"Nabiał i zamienniki", s:"no", note:"duże porcje"},
+        {n:"Mleko sojowe (z całych ziaren)", g:"Nabiał i zamienniki", s:"no", note:"z izolatu białka sojowego jest OK"},
+
+        // Zboża i pieczywo
+        {n:"Ryż (biały, basmati)", g:"Zboża i pieczywo", s:"ok"},
+        {n:"Quinoa (komosa)", g:"Zboża i pieczywo", s:"ok"},
+        {n:"Kasza gryczana", g:"Zboża i pieczywo", s:"ok"},
+        {n:"Mąka / pieczywo kukurydziane", g:"Zboża i pieczywo", s:"ok"},
+        {n:"Makaron bezglutenowy", g:"Zboża i pieczywo", s:"ok"},
+        {n:"Pieczywo bezglutenowe", g:"Zboża i pieczywo", s:"ok"},
+        {n:"Owies", g:"Zboża i pieczywo", s:"maybe", note:"do ~1/2 szklanki suchego"},
+        {n:"Chleb orkiszowy na zakwasie", g:"Zboża i pieczywo", s:"maybe", note:"do 2 kromek"},
+        {n:"Pszenica (chleb, makaron, kuskus)", g:"Zboża i pieczywo", s:"no", note:"fruktany w większych porcjach"},
+        {n:"Żyto", g:"Zboża i pieczywo", s:"no"},
+        {n:"Jęczmień", g:"Zboża i pieczywo", s:"no"},
+
+        // Białko
+        {n:"Kurczak, indyk", g:"Białko", s:"ok", note:"bez marynat czosnkowo-cebulowych"},
+        {n:"Wołowina, wieprzowina", g:"Białko", s:"ok"},
+        {n:"Ryby (łosoś, dorsz, pstrąg)", g:"Białko", s:"ok"},
+        {n:"Owoce morza (krewetki)", g:"Białko", s:"ok"},
+        {n:"Jajka", g:"Białko", s:"ok"},
+        {n:"Tempeh", g:"Białko", s:"ok"},
+        {n:"Soczewica z puszki (płukana)", g:"Białko", s:"maybe", note:"do ~46 g"},
+        {n:"Ciecierzyca z puszki (płukana)", g:"Białko", s:"maybe", note:"do ~1/4 szklanki"},
+        {n:"Fasola (czerwona, biała)", g:"Białko", s:"no"},
+        {n:"Hummus", g:"Białko", s:"no", note:"ciecierzyca + czosnek"},
+
+        // Orzechy i nasiona
+        {n:"Orzechy włoskie", g:"Orzechy i nasiona", s:"ok"},
+        {n:"Orzechy makadamia", g:"Orzechy i nasiona", s:"ok"},
+        {n:"Orzeszki ziemne", g:"Orzechy i nasiona", s:"ok"},
+        {n:"Pestki dyni", g:"Orzechy i nasiona", s:"ok"},
+        {n:"Nasiona chia", g:"Orzechy i nasiona", s:"ok", note:"do ~2 łyżek"},
+        {n:"Migdały", g:"Orzechy i nasiona", s:"maybe", note:"do 10 szt."},
+        {n:"Orzechy laskowe", g:"Orzechy i nasiona", s:"maybe", note:"do 10 szt."},
+        {n:"Nerkowce", g:"Orzechy i nasiona", s:"no"},
+        {n:"Pistacje", g:"Orzechy i nasiona", s:"no"},
+
+        // Słodycze i słodziki
+        {n:"Cukier stołowy (sacharoza)", g:"Słodycze i słodziki", s:"ok", note:"z umiarem"},
+        {n:"Syrop klonowy", g:"Słodycze i słodziki", s:"ok"},
+        {n:"Stewia", g:"Słodycze i słodziki", s:"ok"},
+        {n:"Gorzka czekolada", g:"Słodycze i słodziki", s:"maybe", note:"do ~30 g"},
+        {n:"Czekolada mleczna", g:"Słodycze i słodziki", s:"maybe", note:"do ~20 g"},
+        {n:"Miód", g:"Słodycze i słodziki", s:"no", note:"nadmiar fruktozy"},
+        {n:"Syrop z agawy", g:"Słodycze i słodziki", s:"no"},
+        {n:"Syrop glukozowo-fruktozowy (HFCS)", g:"Słodycze i słodziki", s:"no"},
+        {n:"Słodziki-poliole (sorbitol, ksylitol, maltitol)", g:"Słodycze i słodziki", s:"no", note:"produkty „bez cukru”"},
+
+        // Napoje
+        {n:"Woda", g:"Napoje", s:"ok"},
+        {n:"Kawa (czarna / z mlekiem bez laktozy)", g:"Napoje", s:"ok", note:"z umiarem — kofeina drażni jelita"},
+        {n:"Herbata czarna / zielona", g:"Napoje", s:"ok", note:"słaby napar"},
+        {n:"Herbata miętowa", g:"Napoje", s:"ok"},
+        {n:"Wino wytrawne", g:"Napoje", s:"maybe", note:"1 lampka"},
+        {n:"Piwo", g:"Napoje", s:"maybe", note:"1 małe; unikaj z HFCS"},
+        {n:"Herbata z rumianku / kopru / mniszka", g:"Napoje", s:"no"},
+        {n:"Soki owocowe", g:"Napoje", s:"no", note:"skoncentrowana fruktoza"},
+        {n:"Napoje z HFCS (cola itp.)", g:"Napoje", s:"no"},
+        {n:"Rum, cydr", g:"Napoje", s:"no"}
+      ];
+
+      const SMAP = { ok:["ok","✅"], maybe:["maybe","⚠️"], no:["no","❌"] };
+      let fStatus = "all", fGroup = "all", fQuery = "";
+
+      const groupSelect = document.getElementById("group-select");
+      const groups = [...new Set(FOODS.map(f => f.g))];
+      groupSelect.innerHTML = `<option value="all">Wszystkie grupy</option>` +
+        groups.map(g => `<option value="${g}">${g}</option>`).join("");
+      groupSelect.onchange = () => { fGroup = groupSelect.value; renderFoods(); };
+
+      function renderStatusChips() {
+        const box = document.getElementById("status-chips");
+        box.innerHTML = "";
+        [["all","Wszystko"],["ok","✅ można"],["maybe","⚠️ warunkowo"],["no","❌ unikaj"]]
+          .forEach(([val, label]) => {
+            const b = document.createElement("button");
+            b.className = "chip" + (val === fStatus ? " active" : "");
+            b.textContent = label;
+            b.onclick = () => { fStatus = val; renderFoods(); renderStatusChips(); };
+            box.appendChild(b);
+          });
+      }
+
+      function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+
+      function renderFoods() {
+        const q = fQuery.trim().toLowerCase();
+        const list = FOODS.filter(f =>
+          (fStatus === "all" || f.s === fStatus) &&
+          (fGroup === "all" || f.g === fGroup) &&
+          (q === "" || f.n.toLowerCase().includes(q) || f.g.toLowerCase().includes(q))
+        );
+        const grid = document.getElementById("food-grid");
+        grid.innerHTML = "";
+        list.forEach(f => {
+          const [cls, icon] = SMAP[f.s];
+          const el = document.createElement("div");
+          el.className = "food " + cls;
+          el.innerHTML =
+            `<div class="fname">${icon} ${esc(f.n)}</div>` +
+            `<div class="fgroup">${esc(f.g)}</div>` +
+            (f.note ? `<div class="fnote">${esc(f.note)}</div>` : "");
+          grid.appendChild(el);
+        });
+        const c = document.getElementById("food-count");
+        const okN = FOODS.filter(f=>f.s==="ok").length, mN = FOODS.filter(f=>f.s==="maybe").length, nN = FOODS.filter(f=>f.s==="no").length;
+        c.innerHTML = `Pokazano <strong>${list.length}</strong> z ${FOODS.length} produktów ` +
+          `(✅ ${okN} · ⚠️ ${mN} · ❌ ${nN})`;
+      }
+
+      document.getElementById("food-search").addEventListener("input", (e) => { fQuery = e.target.value; renderFoods(); });
+
+      renderStatusChips();
+      renderFoods();
+    </script>
+    <script src="../hearts.js"></script>
+  </body>
+</html>
