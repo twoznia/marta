@@ -16,9 +16,14 @@ restauracje/
 │   ├── sushi-japonska/
 │   ├── kuchnia-azjatycka/
 │   ├── kuchnia-chinska/
+│   ├── kuchnia-wietnamska/
+│   ├── kuchnia-tajska/
+│   ├── kuchnia-indyjska/
 │   ├── kuchnia-gruzinska/
 │   ├── kuchnia-srodkowoazjatycka/
+│   ├── kuchnia-srodziemnomorska/
 │   ├── kuchnia-meksykanska/
+│   ├── steki-grill/
 │   ├── kebab-turecka/
 │   ├── burgery/
 │   └── salatki-cafe/
@@ -49,7 +54,7 @@ Przy każdym daniu znajdziesz oznaczenie:
 
 ## Zasięg bazy
 
-Baza obejmuje **45 restauracji** (24 Wilanów + 21 Ursynów) — najbardziej znane i
+Baza obejmuje **82 restauracje** (61 Wilanów + 21 Ursynów) — najbardziej znane i
 reprezentatywne lokale każdej dzielnicy, w podziale na wszystkie główne typy kuchni.
 Agregatory (np. gdziejemy.pl) listują w tych dzielnicach ponad setkę pozycji, ale
 większość „ogona" to sieciówki fast food, bary mleczne, food trucki, punkty z kawą

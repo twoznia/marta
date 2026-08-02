@@ -32,6 +32,43 @@ jak łatwo zjeść tu na diecie low FODMAP:
 | [Bistro Gruzińskie Granat](wilanow/kuchnia-gruzinska/granat.md) | gruzińska | Adama Branickiego 10 | ~12–22 | 🟡 |
 | [Cukiernia Kawiarnia DESEO](wilanow/salatki-cafe/deseo.md) | cukiernia / kawiarnia | Przyczółkowa 223 | ~9–20 | 🟡 |
 | [Hakan Chef Wilanów](wilanow/kebab-turecka/hakan-chef.md) | turecka / grill | Klimczaka 17/U208 | ~11–23 | 🟡 |
+| [Ristorante Semolino](wilanow/kuchnia-wloska/semolino.md) | włoska | Klimczaka 6A | ~12–22 | 🟡 |
+| [Milanovo](wilanow/kuchnia-wloska/milanovo.md) | włoska | Kostki Potockiego 24G | ~12–22 | 🟡 |
+| [Pizzeria 360°](wilanow/kuchnia-wloska/pizzeria-360.md) | pizzeria | Klimczaka 5 | ~12–22 | 🔴 |
+| [Pizzeria 105](wilanow/kuchnia-wloska/pizzeria-105.md) | pizzeria | Klimczaka 5 | ~12–22 | 🔴 |
+| [Italia Wilanów](wilanow/kuchnia-wloska/italia-wilanow.md) | pizzeria / lodziarnia | Prymasa A. Hlonda 2/3 | ~11–22 | 🟡 |
+| [Trattoria del Gusto](wilanow/kuchnia-wloska/trattoria-del-gusto.md) | włoska | Lanciego 12 | ~12–22 | 🟡 |
+| [Quattro Canti](wilanow/kuchnia-wloska/quattro-canti.md) | włoska / sycylijska | Syta 120 (Zawady) | ~12–22 | 🟡 |
+| [Katsuo Japanese Cuisine](wilanow/sushi-japonska/katsuo.md) | japońska / sushi | Kostki Potockiego 24/B | ~12–22 | 🟢 |
+| [Kama Sushi Wilanów](wilanow/sushi-japonska/kama-sushi.md) | japońska / sushi | Branickiego 18 | ~12–22 | 🟢 |
+| [Sushi Atelier](wilanow/sushi-japonska/sushi-atelier.md) | japońska / sushi | Klimczaka 17 | ~12–22 | 🟢 |
+| [Hanashi Sushi & Teppanyaki](wilanow/sushi-japonska/hanashi.md) | japońska / teppanyaki | Klimczaka 20/87 | ~12–22 | 🟢 |
+| [Sakana Sushi And Sticks](wilanow/sushi-japonska/sakana.md) | japońska / sushi | Przyczółkowa 221 | ~12–22 | 🟢 |
+| [Hoi An Asian Food](wilanow/kuchnia-wietnamska/hoi-an.md) | wietnamska | Branickiego 21 | ~11–21 | 🟡 |
+| [Green Lotus – Bar Wietnamski](wilanow/kuchnia-wietnamska/green-lotus.md) | wietnamska | Oś Królewska 18B/U3 | ~11–21 | 🟡 |
+| [PHO & WOK Asian Fusion](wilanow/kuchnia-wietnamska/pho-wok.md) | wietnamska / azjatycka | al. Rzeczypospolitej 31 | ~11–21 | 🟡 |
+| [Bar Thai&Viet](wilanow/kuchnia-tajska/bar-thai-viet.md) | tajska / wietnamska | Klimczaka 15/U5b | ~11–21 | 🟡 |
+| [Bin Bin 2 – Asian Fusion](wilanow/kuchnia-azjatycka/bin-bin-2.md) | azjatycka fusion | Klimczaka 15/U8 | ~12–22 | 🟡 |
+| [Zamigo](wilanow/kuchnia-azjatycka/zamigo.md) | azjatycka / ramen | Gieysztora 2 | ~12–22 | 🟡 |
+| [Namo – Indian Fusion](wilanow/kuchnia-indyjska/namo.md) | indyjska | Gieysztora 2/150 | ~12–22 | 🔴 |
+| [Chinkalnia](wilanow/kuchnia-gruzinska/chinkalnia.md) | gruzińska | al. Rzeczypospolitej 18/208B | ~12–22 | 🟡 |
+| [Yug Restauracja](wilanow/kuchnia-gruzinska/yug.md) | gruzińska / kaukaska | al. Rzeczypospolitej 4 | ~12–22 | 🟡 |
+| [Beef and Reef](wilanow/steki-grill/beef-and-reef.md) | steki / owoce morza | Kazachska 1/92 | ~13–23 | 🟢 |
+| [Smashny Burger](wilanow/burgery/smashny-burger.md) | burgery | Klimczaka 1 (Royal) | ~12–22 | 🟡 |
+| [TASTE Burger](wilanow/burgery/taste-burger.md) | burgery | Przyczółkowa 400 | ~12–22 | 🟡 |
+| [GrillLab – Burgery i Grill](wilanow/burgery/grilllab.md) | burgery / grill | al. Rzeczypospolitej 8 | ~12–22 | 🟡 |
+| [Mister Doner](wilanow/kebab-turecka/mister-doner.md) | turecka / kebab | al. Rzeczypospolitej 24d/U5 | ~11–22 | 🟡 |
+| [Baku Kebab & Grill](wilanow/kebab-turecka/baku-kebab.md) | turecka / kebab | al. Rzeczypospolitej 12/U8 | ~11–23 | 🟡 |
+| [Rotisserie Bistro Wilanów](wilanow/kuchnia-polska/rotisserie-bistro.md) | bistro / kurczak z rożna | al. Rzeczypospolitej 14 | ~12–22 | 🟢 |
+| [Bistro W Kropki Bordo](wilanow/kuchnia-polska/kropki-bordo.md) | bistro / polska | Zaściankowa 96 (Zawady) | ~12–21 | 🟡 |
+| [Stacja Zawady](wilanow/kuchnia-polska/stacja-zawady.md) | bistro / polska | Wał Zawadowski 87 (Zawady) | ~12–22 | 🟡 |
+| [Łąka Zawady](wilanow/kuchnia-polska/laka-zawady.md) | bistro / kawiarnia | Zaściankowa 1 (Zawady) | ~9–20 | 🟡 |
+| [El Patio Warsaw](wilanow/kuchnia-srodziemnomorska/el-patio.md) | śródziemnomorska / hiszpańska | Kremowa 63 | ~12–22 | 🟡 |
+| [Charlotte Wilanów](wilanow/salatki-cafe/charlotte.md) | francuska piekarnia / bistro | Kieślowskiego 7 | rano–wieczór | 🔴 |
+| [Bajgle i Bąble](wilanow/salatki-cafe/bajgle-i-bable.md) | bajgle / śniadania | Kostki Potockiego 24 | rano–popoł. | 🔴 |
+| [AleTarta](wilanow/salatki-cafe/aletarta.md) | tarty / kawiarnia | Sarmacka 10 | ~9–19 | 🔴 |
+| [ABOUT CAFE](wilanow/salatki-cafe/about-cafe.md) | kawiarnia / desery | al. Rzeczypospolitej 6 | ~9–20 | 🟡 |
+| [Sylvia Crystal Cafe](wilanow/salatki-cafe/sylvia-crystal-cafe.md) | kawiarnia | Kazachska 1 | ~9–20 | 🟡 |
 
 ## Ursynów
 
