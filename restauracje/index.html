@@ -17,6 +17,10 @@
         background: none; border: none; cursor: pointer; color: var(--text); text-decoration: none;
         font-size: 0.95rem; font-weight: 600; padding: 0.35rem 0.7rem; border-radius: 100px; transition: all 0.15s; }
       .r-nav a.r-navlink:hover, .r-nav button.r-navlink:hover { background: var(--rose-lt); color: var(--rose); }
+      .r-fodmap-wrap { display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; margin-left: auto; }
+      .r-fodmap-label { font-size: 0.82rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+      .r-fodmap-wrap .chips { margin: 0; }
+      .r-fodmap-wrap .chip { padding: 0.28rem 0.7rem; font-size: 0.82rem; }
 
       .r-wrap { max-width: 1100px; margin: 0 auto; padding: 2rem 1rem 4rem; position: relative; z-index: 1; }
       .r-top { text-align: center; margin-bottom: 1.5rem; }
@@ -95,9 +99,10 @@
       <div class="r-nav-inner">
         <a class="r-brand" href="../index.html">🍽️ Restauracje <span>Wilanów &amp; Ursynów</span></a>
         <a class="r-navlink" href="../index.html">← Strona główna</a>
-        <button class="r-navlink" data-district="Wilanów">Wilanów</button>
-        <button class="r-navlink" data-district="Ursynów">Ursynów</button>
-        <button class="r-navlink" data-district="Wszystkie">Wszystkie</button>
+        <div class="r-fodmap-wrap">
+          <span class="r-fodmap-label">Low FODMAP</span>
+          <div class="chips" id="fodmap-chips"></div>
+        </div>
       </div>
     </nav>
 
@@ -110,10 +115,9 @@
 
       <div class="r-controls">
         <input type="search" class="r-search" id="search" placeholder="Szukaj restauracji…" />
+        <select class="r-select" id="district-select" aria-label="Dzielnica"></select>
         <select class="r-select" id="type-select" aria-label="Typ kuchni"></select>
       </div>
-      <div class="chips" id="district-chips"></div>
-      <div class="chips" id="fodmap-chips"></div>
       <div class="r-count" id="count"></div>
 
       <div class="r-grid" id="grid"></div>
@@ -186,31 +190,33 @@
       const grid = document.getElementById("grid");
       const countEl = document.getElementById("count");
 
-      // Wypełnij listę typów kuchni
+      // Dropdown: dzielnica
+      const districtSelect = document.getElementById("district-select");
+      districtSelect.innerHTML =
+        `<option value="Wszystkie">Wszystkie dzielnice</option>` +
+        `<option value="Wilanów">Wilanów</option>` +
+        `<option value="Ursynów">Ursynów</option>`;
+      districtSelect.onchange = () => { filterDistrict = districtSelect.value; render(); };
+
+      // Dropdown: typ kuchni
       const typeSelect = document.getElementById("type-select");
       const types = [...new Set(DATA.map(r => r.c))].sort((a,b) => a.localeCompare(b,"pl"));
       typeSelect.innerHTML = `<option value="all">Wszystkie typy kuchni</option>` +
         types.map(t => `<option value="${t}">${t}</option>`).join("");
       typeSelect.onchange = () => { filterType = typeSelect.value; render(); };
 
-      function makeChips(id, items, current, onPick) {
-        const box = document.getElementById(id);
-        box.innerHTML = "";
-        items.forEach(([val, label]) => {
-          const b = document.createElement("button");
-          b.className = "chip" + (val === current() ? " active" : "");
-          b.textContent = label;
-          b.onclick = () => { onPick(val); render(); refreshChips(); };
-          box.appendChild(b);
-        });
-      }
+      // Filtr FODMAP (zawsze widoczny w nawigacji)
       function refreshChips() {
-        makeChips("district-chips",
-          [["Wszystkie","Wszystkie dzielnice"],["Wilanów","Wilanów"],["Ursynów","Ursynów"]],
-          () => filterDistrict, v => filterDistrict = v);
-        makeChips("fodmap-chips",
-          [["all","Każda low FODMAP"],["g","🟢 łatwo"],["y","🟡 z modyfikacjami"],["r","🔴 trudno"]],
-          () => filterFodmap, v => filterFodmap = v);
+        const box = document.getElementById("fodmap-chips");
+        box.innerHTML = "";
+        [["all","Wszystkie"],["g","🟢 łatwo"],["y","🟡 z modyfikacjami"],["r","🔴 trudno"]]
+          .forEach(([val, label]) => {
+            const b = document.createElement("button");
+            b.className = "chip" + (val === filterFodmap ? " active" : "");
+            b.textContent = label;
+            b.onclick = () => { filterFodmap = val; render(); refreshChips(); };
+            box.appendChild(b);
+          });
       }
 
       function render() {
@@ -241,7 +247,7 @@
 
       function resetFilters() {
         filterDistrict = "Wszystkie"; filterFodmap = "all"; filterType = "all"; query = "";
-        document.getElementById("search").value = ""; typeSelect.value = "all";
+        document.getElementById("search").value = ""; typeSelect.value = "all"; districtSelect.value = "Wszystkie";
         render(); refreshChips();
       }
 
@@ -322,15 +328,6 @@
       document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
 
       document.getElementById("search").addEventListener("input", (e) => { query = e.target.value; render(); });
-
-      // Nawigacja: skróty dzielnic
-      document.querySelectorAll(".r-nav [data-district]").forEach(btn => {
-        btn.onclick = () => {
-          filterDistrict = btn.dataset.district;
-          render(); refreshChips();
-          document.getElementById("grid").scrollIntoView({ behavior: "smooth", block: "start" });
-        };
-      });
 
       refreshChips();
       render();
