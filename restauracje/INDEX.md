@@ -69,6 +69,31 @@ jak łatwo zjeść tu na diecie low FODMAP:
 | [AleTarta](wilanow/salatki-cafe/aletarta.md) | tarty / kawiarnia | Sarmacka 10 | ~9–19 | 🔴 |
 | [ABOUT CAFE](wilanow/salatki-cafe/about-cafe.md) | kawiarnia / desery | al. Rzeczypospolitej 6 | ~9–20 | 🟡 |
 | [Sylvia Crystal Cafe](wilanow/salatki-cafe/sylvia-crystal-cafe.md) | kawiarnia | Kazachska 1 | ~9–20 | 🟡 |
+| [McDonald's Wilanów](wilanow/fast-food/mcdonalds.md) | fast food | Branickiego / Wiertnicza 35 | do późna | 🟡 |
+| [Da Grasso Wilanów](wilanow/kuchnia-wloska/da-grasso.md) | pizzeria (sieć) | Oś. Królewska 18b/U2 | ~11–22 | 🔴 |
+| [MAX Premium Burgers](wilanow/burgery/max-premium-burgers.md) | burgery (sieć) | Przyczółkowa 219 | ~11–22 | 🟡 |
+| [KURA Buffalo Wings](wilanow/fast-food/kura-buffalo-wings.md) | kurczak / wings | Branickiego 11 | ~12–22 | 🟡 |
+| [Kurcze! Wilanów](wilanow/fast-food/kurcze.md) | kurczak / fast food | Wilanów | ~12–22 | 🟡 |
+| [Bay Kebab](wilanow/kebab-turecka/bay-kebab.md) | turecka / kebab | al. Rzeczypospolitej | ~11–22 | 🟡 |
+| [Wilanowski Bar Mleczny](wilanow/bar-mleczny/wilanowski-bar-mleczny.md) | bar mleczny / polska | Klimczaka | ~9–19 | 🟡 |
+| [Garkuchnia Wilanów](wilanow/kuchnia-polska/garkuchnia.md) | polska / domowa | Wilanów | ~11–19 | 🟡 |
+| [Stołówka U Chłopaków](wilanow/kuchnia-polska/stolowka-u-chlopakow.md) | polska / stołówka | Branickiego 14 | ~11–19 | 🟡 |
+| [Nasza Jadalnia](wilanow/kuchnia-polska/nasza-jadalnia.md) | polska / bistro | Wilanów | ~12–21 | 🟡 |
+| [Restauracja Polska Różana](wilanow/kuchnia-polska/polska-rozana.md) | polska tradycyjna | Wilanów | ~12–22 | 🟡 |
+| [Grande Pierogi](wilanow/kuchnia-polska/grande-pierogi.md) | polska / pierogarnia | Wilanów | ~11–21 | 🔴 |
+| [Restauracja J:](wilanow/kuchnia-polska/restauracja-j.md) | polska / śniadania / bistro | Wilanów | ~9–20 | 🟢 |
+| [Villa 22](wilanow/kuchnia-autorska/villa-22.md) | autorska / owoce morza | Wilanów | ~12–22 | 🟢 |
+| [Kumin](wilanow/kuchnia-autorska/kumin.md) | autorska / bliskowschodnia | Wilanów | ~12–22 | 🟡 |
+| [Winalove](wilanow/bar-winny/winalove.md) | bar winny / bistro | Wilanów | popołudnie–wieczór | 🟢 |
+| [Papino Wilanów](wilanow/kuchnia-wloska/papino.md) | włoska (makaron i wino) | Klimczaka 15 | ~12–22 | 🟡 |
+| [Pasta Point Spaghetteria](wilanow/kuchnia-wloska/pasta-point.md) | włoska (makarony) | Wilanów | ~12–22 | 🟡 |
+| [Pizza po Zmroku](wilanow/kuchnia-wloska/pizza-po-zmroku.md) | pizzeria (dowóz) | Wilanów | wieczory | 🔴 |
+| [Parnik Wilanów – Chińskie Pierogi](wilanow/kuchnia-chinska/parnik.md) | chińska / pierożki | Klimczaka 15 | ~12–21 | 🔴 |
+| [Sushi World – Wilanów](wilanow/sushi-japonska/sushi-world.md) | japońska / sushi | Miasteczko Wilanów | ~12–22 | 🟢 |
+| [Sushiberry & Ramen](wilanow/sushi-japonska/sushiberry-ramen.md) | japońska / sushi / ramen | Wilanów | ~12–22 | 🟢 |
+| [Nana Sushi](wilanow/sushi-japonska/nana-sushi.md) | japońska / sushi | Wilanów | ~12–22 | 🟢 |
+| [Ochota na Sushi](wilanow/sushi-japonska/ochota-na-sushi.md) | japońska / sushi | Sarmacka 10 | ~12–22 | 🟢 |
+| [Cafe Plakatówka](wilanow/salatki-cafe/plakatowka.md) | kawiarnia | Prymasa A. Hlonda 2 | ~9–20 | 🟡 |
 
 ## Ursynów
 
