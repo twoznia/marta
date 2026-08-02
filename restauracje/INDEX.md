@@ -31,6 +31,7 @@ jak łatwo zjeść tu na diecie low FODMAP:
 | [Vilano Ristorante Bar & Vino](wilanow/kuchnia-wloska/vilano.md) | włoska | Kazachska 1 | ~12–23 | 🟡 |
 | [Bistro Gruzińskie Granat](wilanow/kuchnia-gruzinska/granat.md) | gruzińska | Adama Branickiego 10 | ~12–22 | 🟡 |
 | [Cukiernia Kawiarnia DESEO](wilanow/salatki-cafe/deseo.md) | cukiernia / kawiarnia | Przyczółkowa 223 | ~9–20 | 🟡 |
+| [Hakan Chef Wilanów](wilanow/kebab-turecka/hakan-chef.md) | turecka / grill | Klimczaka 17/U208 | ~11–23 | 🟡 |
 
 ## Ursynów
 
