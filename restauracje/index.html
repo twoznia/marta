@@ -317,23 +317,30 @@
       function esc(s) { return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
       function gsearch(q) { return "https://www.google.com/search?q=" + encodeURIComponent(q); }
 
-      // Pasek linków: strona www, Facebook, Instagram, mapa, pełne menu (plik .md)
+      // Zweryfikowane linki (strona www / menu) uzupełniane przez research; klucz = ścieżka pliku .md
+      const LINKS = {};
+
+      // Pasek linków: strona www, Facebook, Instagram, mapa, menu online, nasze menu (plik .md)
       function linksBar(r) {
+        const lk = LINKS[r.p] || {};
         const q = `${r.n} ${r.d} Warszawa`;
-        const www  = r.www || gsearch(`${r.n} ${r.d} Warszawa restauracja`);
-        const fb   = r.fb  || gsearch(`${r.n} ${r.d} Warszawa Facebook`);
-        const ig   = r.ig  || gsearch(`${r.n} Warszawa Instagram`);
+        const wwwReal = r.www || lk.www;
+        const www  = wwwReal || gsearch(`${r.n} ${r.d} Warszawa restauracja`);
+        const fb   = r.fb  || lk.fb || gsearch(`${r.n} ${r.d} Warszawa Facebook`);
+        const ig   = r.ig  || lk.ig || gsearch(`${r.n} Warszawa Instagram`);
         const maps = "https://www.google.com/maps/search/" + encodeURIComponent(q);
-        const anySearch = !r.www || !r.fb || !r.ig;
+        const menuUrl = r.menu || lk.menu;
+        const anySearch = !wwwReal || !(r.fb||lk.fb) || !(r.ig||lk.ig);
         return `
           <div class="r-links">
             <a class="r-link" href="${www}" target="_blank" rel="noopener">🌐 Strona www</a>
             <a class="r-link" href="${fb}" target="_blank" rel="noopener">📘 Facebook</a>
             <a class="r-link" href="${ig}" target="_blank" rel="noopener">📸 Instagram</a>
             <a class="r-link" href="${maps}" target="_blank" rel="noopener">🗺️ Mapa</a>
-            <a class="r-link primary" href="${r.p}" target="_blank" rel="noopener">📋 Pełne menu</a>
+            ${menuUrl ? `<a class="r-link" href="${menuUrl}" target="_blank" rel="noopener">📋 Menu online</a>` : ""}
+            <a class="r-link primary" href="${r.p}" target="_blank" rel="noopener">📋 Nasze menu</a>
           </div>
-          ${anySearch ? `<p class="r-links-note">Linki bez zweryfikowanego adresu (Facebook / Instagram i część stron) otwierają wyszukiwarkę Google z nazwą lokalu.</p>` : ""}`;
+          ${anySearch ? `<p class="r-links-note">Część linków (Facebook / Instagram i strony bez zweryfikowanego adresu) otwiera wyszukiwarkę Google z nazwą lokalu.</p>` : ""}`;
       }
 
       // Mini-renderer Markdown → HTML z grupowaniem działów menu (### → sekcja)
