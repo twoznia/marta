@@ -48,7 +48,7 @@ Przy każdym daniu znajdziesz oznaczenie:
 
 ## Zasięg bazy
 
-Baza obejmuje **44 restauracje** (24 Wilanów + 20 Ursynów) — najbardziej znane i
+Baza obejmuje **44 restauracje** (23 Wilanów + 21 Ursynów) — najbardziej znane i
 reprezentatywne lokale każdej dzielnicy, w podziale na wszystkie główne typy kuchni.
 Agregatory (np. gdziejemy.pl) listują w tych dzielnicach ponad setkę pozycji, ale
 większość „ogona" to sieciówki fast food, bary mleczne, food trucki, punkty z kawą
