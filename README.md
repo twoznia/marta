@@ -9,6 +9,11 @@ Strona dla Marty pod GitHub Pages (`github.io`). Strona główna to list oraz
 - `style.css` – styl strony
 - `hearts.js` – animowane serduszka w tle + animacja listy powodów
 - `restauracje/` – baza restauracji (Wilanów i Ursynów) z menu i oznaczeniami low FODMAP
+  - `restauracje/index.html` – interaktywna przeglądarka: filtry (dzielnica, low FODMAP),
+    wyszukiwarka i podgląd menu każdej restauracji
+  - `restauracje/INDEX.md` – ta sama lista jako tabela (czytelna wprost na GitHubie)
+- `.nojekyll` – wyłącza przetwarzanie Jekyllem, dzięki czemu GitHub Pages serwuje pliki
+  `.md` bez zmian (przeglądarka restauracji wczytuje je na żywo)
 
 ## Kafelki menu
 
@@ -17,9 +22,9 @@ skopiuj blok `<a class="tile" …>` i podmień emoji, tytuł, opis oraz `href`.
 
 Obecne kafelki:
 
-- 🍽️ **Restauracje** → [`restauracje/INDEX.md`](restauracje/INDEX.md) —
-  restauracje w Wilanowie i Ursynowie: menu, adresy, godziny otwarcia, typ kuchni
-  oraz dania, które można zjeść na diecie low FODMAP.
+- 🍽️ **Restauracje** → [`restauracje/index.html`](restauracje/index.html) —
+  interaktywna przeglądarka restauracji w Wilanowie i Ursynowie: menu, adresy, godziny
+  otwarcia, typ kuchni oraz dania, które można zjeść na diecie low FODMAP.
 
 ## Jak opublikować na GitHub Pages (`github.io`)
 

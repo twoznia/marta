@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restauracje — Wilanów i Ursynów</title>
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      .r-wrap { max-width: 1100px; margin: 0 auto; padding: 2rem 1rem 4rem; position: relative; z-index: 1; }
+      .r-top { text-align: center; margin-bottom: 1.5rem; }
+      .r-top h1 { color: var(--rose); font-size: clamp(1.8rem, 5vw, 2.6rem); }
+      .r-top p { color: var(--muted); margin-top: 0.5rem; }
+      .r-back { display: inline-block; margin-bottom: 1.2rem; color: var(--rose); text-decoration: none; font-weight: 600; }
+      .r-back:hover { text-decoration: underline; }
+
+      .r-controls { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; margin-bottom: 1.2rem; }
+      .r-search { flex: 1 1 240px; max-width: 340px; padding: 0.6rem 0.9rem; border: 1px solid var(--rose-lt);
+                  border-radius: 100px; font-size: 1rem; outline: none; }
+      .r-search:focus { border-color: var(--rose); }
+      .chips { display: flex; flex-wrap: wrap; gap: 0.4rem; justify-content: center; margin-bottom: 0.8rem; }
+      .chip { border: 1px solid var(--rose-lt); background: var(--card); color: var(--muted); border-radius: 100px;
+              padding: 0.35rem 0.9rem; font-size: 0.88rem; cursor: pointer; transition: all 0.15s; }
+      .chip:hover { border-color: var(--rose); }
+      .chip.active { background: var(--rose); color: #fff; border-color: var(--rose); }
+
+      .r-count { text-align: center; color: var(--muted); font-size: 0.9rem; margin-bottom: 1rem; }
+
+      .r-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
+      .r-card { background: var(--card); border: 1px solid var(--rose-lt); border-radius: 1rem; padding: 1.1rem 1.2rem;
+                box-shadow: var(--shadow); cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; text-align: left; }
+      .r-card:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(200, 60, 90, 0.18); }
+      .r-card h3 { color: var(--text); font-size: 1.12rem; margin-bottom: 0.3rem; display: flex; align-items: center; gap: 0.4rem; }
+      .r-card .r-type { color: var(--rose); font-size: 0.85rem; font-weight: 600; }
+      .r-card .r-meta { color: var(--muted); font-size: 0.85rem; margin-top: 0.5rem; line-height: 1.45; }
+      .r-badge { font-size: 0.78rem; padding: 0.1rem 0.5rem; border-radius: 100px; margin-left: auto; white-space: nowrap; }
+      .r-badge.g { background: #e4f6e8; color: #1e7d38; }
+      .r-badge.y { background: #fff4dd; color: #9a6a10; }
+      .r-badge.r { background: #fde4e4; color: #b23030; }
+
+      /* Modal */
+      .r-modal { position: fixed; inset: 0; background: rgba(45, 26, 32, 0.55); display: none; align-items: flex-start;
+                 justify-content: center; padding: 2rem 1rem; z-index: 50; overflow-y: auto; }
+      .r-modal.open { display: flex; }
+      .r-dialog { background: var(--cream); border-radius: 1.1rem; max-width: 720px; width: 100%; box-shadow: var(--shadow);
+                  overflow: hidden; }
+      .r-dialog-head { background: var(--rose); color: #fff; padding: 0.8rem 1.3rem; display: flex; align-items: center;
+                       justify-content: space-between; position: sticky; top: 0; }
+      .r-dialog-head span { font-weight: 700; letter-spacing: 0.05em; }
+      .r-close { background: rgba(255,255,255,0.2); border: none; color: #fff; font-size: 1.3rem; line-height: 1;
+                 width: 2rem; height: 2rem; border-radius: 50%; cursor: pointer; }
+      .r-close:hover { background: rgba(255,255,255,0.35); }
+      .r-body { padding: 1.4rem 1.6rem 2rem; line-height: 1.7; }
+      .r-body h1 { font-size: 1.6rem; color: var(--rose); margin-bottom: 0.8rem; }
+      .r-body h2 { font-size: 1.2rem; color: var(--text); margin: 1.3rem 0 0.5rem; border-bottom: 1px solid var(--rose-lt); padding-bottom: 0.3rem; }
+      .r-body h3 { font-size: 1.02rem; color: var(--rose); margin: 1rem 0 0.4rem; }
+      .r-body ul { list-style: none; padding: 0; }
+      .r-body li { padding: 0.28rem 0; border-bottom: 1px dashed var(--rose-lt); }
+      .r-body li:last-child { border-bottom: none; }
+      .r-body p { margin: 0.6rem 0; }
+      .r-body a { color: var(--rose); }
+      .r-loading, .r-error { text-align: center; color: var(--muted); padding: 2rem; }
+      .r-error a { color: var(--rose); }
+    </style>
+  </head>
+  <body>
+    <div class="hearts-bg" aria-hidden="true" id="hearts-bg"></div>
+
+    <div class="r-wrap">
+      <a class="r-back" href="../index.html">← Strona główna</a>
+      <div class="r-top">
+        <h1>Restauracje 🍽️</h1>
+        <p>Wilanów i Ursynów — menu, adres, godziny i dania <strong>low&nbsp;FODMAP</strong>.
+           Kliknij restaurację, aby zobaczyć menu.</p>
+      </div>
+
+      <div class="r-controls">
+        <input type="search" class="r-search" id="search" placeholder="Szukaj restauracji lub kuchni…" />
+      </div>
+      <div class="chips" id="district-chips"></div>
+      <div class="chips" id="fodmap-chips"></div>
+      <div class="r-count" id="count"></div>
+
+      <div class="r-grid" id="grid"></div>
+    </div>
+
+    <div class="r-modal" id="modal">
+      <div class="r-dialog">
+        <div class="r-dialog-head">
+          <span>Menu</span>
+          <button class="r-close" id="close" aria-label="Zamknij">×</button>
+        </div>
+        <div class="r-body" id="modal-body"></div>
+      </div>
+    </div>
+
+    <script>
+      const DATA = [
+        // Wilanów
+        {n:"Restauracja Wilanów", d:"Wilanów", t:"polska / dziczyzna", a:"Stanisława Kostki Potockiego 27", h:"pon–czw 12–20, pt–sob 12–22, niedz 12–20", f:"y", p:"wilanow/kuchnia-polska/restauracja-wilanow.md"},
+        {n:"Taste & Tap Neo Bistro", d:"Wilanów", t:"polska / neo bistro", a:"Ledóchowskiej 12/A", h:"pon 16–22, wt–pt 17–22, sob 13–22, niedz nieczynne", f:"g", p:"wilanow/kuchnia-polska/taste-and-tap.md"},
+        {n:"Kuchnia Otwarta", d:"Wilanów", t:"polska / europejska", a:"Klimczaka 1 (Royal Wilanów)", h:"pon–pt 11–21, weekendy 12–21", f:"g", p:"wilanow/kuchnia-polska/kuchnia-otwarta.md"},
+        {n:"Kuźnia Kulturalna", d:"Wilanów", t:"polska / międzynarodowa", a:"okolice Pałacu w Wilanowie", h:"~12–22", f:"y", p:"wilanow/kuchnia-polska/kuznia-kulturalna.md"},
+        {n:"UlaLa Bistro", d:"Wilanów", t:"polska / europejska", a:"Adama Branickiego 18", h:"~12–22", f:"g", p:"wilanow/kuchnia-polska/ulala-bistro.md"},
+        {n:"Restauracja Wiele Dobrego", d:"Wilanów", t:"polska / europejska", a:"Zygmunta Vogla 62", h:"~12–22", f:"g", p:"wilanow/kuchnia-polska/wiele-dobrego.md"},
+        {n:"Restauracja Poezja", d:"Wilanów", t:"polska / włoska / francuska", a:"Sikorskiego 61a", h:"~12–22", f:"g", p:"wilanow/kuchnia-polska/poezja.md"},
+        {n:"Trattoria Rucola", d:"Wilanów", t:"włoska", a:"Klimczaka 1", h:"pon–czw 12–21, pt–sob 12–22, niedz 12–21", f:"y", p:"wilanow/kuchnia-wloska/trattoria-rucola.md"},
+        {n:"Basico Wilanów", d:"Wilanów", t:"włoska / pizzeria", a:"Branickiego 11", h:"pon–czw 12–22, pt–sob 12–23, niedz 12–22", f:"y", p:"wilanow/kuchnia-wloska/basico-wilanow.md"},
+        {n:"ANDIAMO Pizzeria", d:"Wilanów", t:"pizza neapolitańska", a:"Miasteczko Wilanów", h:"~12–22", f:"r", p:"wilanow/kuchnia-wloska/andiamo-pizzeria.md"},
+        {n:"Vilano Ristorante Bar & Vino", d:"Wilanów", t:"włoska", a:"Kazachska 1", h:"~12–23", f:"y", p:"wilanow/kuchnia-wloska/vilano.md"},
+        {n:"Kimi Sushi", d:"Wilanów", t:"japońska / sushi", a:"Vogla 62", h:"pon–sob 12–22, niedz 12–21", f:"g", p:"wilanow/sushi-japonska/kimi-sushi.md"},
+        {n:"Sushi Akiyama", d:"Wilanów", t:"japońska / koreańska", a:"Miasteczko Wilanów", h:"~12–22", f:"g", p:"wilanow/sushi-japonska/sushi-akiyama.md"},
+        {n:"Nama Sushi", d:"Wilanów", t:"japońska / sushi", a:"Wilanów", h:"~12–22", f:"g", p:"wilanow/sushi-japonska/nama-sushi.md"},
+        {n:"AZIA Concept", d:"Wilanów", t:"azjatycka (tajska/chińska/japońska)", a:"Klimczaka 1 (Royal Wilanów)", h:"pon–czw 12–22, pt–sob 12–23, niedz 12–22", f:"y", p:"wilanow/kuchnia-azjatycka/azia-concept.md"},
+        {n:"Dynasty", d:"Wilanów", t:"chińska", a:"Gieysztora 2/150", h:"codz. 12–22", f:"r", p:"wilanow/kuchnia-chinska/dynasty.md"},
+        {n:"Samarkand", d:"Wilanów", t:"uzbecka / środkowoazjatycka", a:"Rutkiewicz 11", h:"pon–czw 11–22, pt–sob 11–23, niedz 11–22", f:"y", p:"wilanow/kuchnia-srodkowoazjatycka/samarkand.md"},
+        {n:"Ye Ye Mex Food", d:"Wilanów", t:"meksykańska", a:"Klimczaka 1 (Royal Wilanów)", h:"~12–22/24", f:"r", p:"wilanow/kuchnia-meksykanska/ye-ye-mex.md"},
+        {n:"Gorący Pies", d:"Wilanów", t:"burgery / grill", a:"Al. Rzeczypospolitej 10", h:"~12–22", f:"y", p:"wilanow/burgery/goracy-pies.md"},
+        {n:"Salad Story", d:"Wilanów", t:"sałatki / lunch", a:"Klimczaka 1 (Royal Wilanów)", h:"pon–pt 9–20, weekendy 10–19", f:"g", p:"wilanow/salatki-cafe/salad-story.md"},
+        {n:"PAUL", d:"Wilanów", t:"piekarnia / kawiarnia", a:"Klimczaka 1 (Royal Wilanów)", h:"pon–pt 7–20, weekendy 9–21", f:"r", p:"wilanow/salatki-cafe/paul.md"},
+        {n:"Cukiernia Kawiarnia DESEO", d:"Wilanów", t:"cukiernia / kawiarnia", a:"Przyczółkowa 223", h:"~9–20", f:"y", p:"wilanow/salatki-cafe/deseo.md"},
+        {n:"Bistro Gruzińskie Granat", d:"Wilanów", t:"gruzińska", a:"Adama Branickiego 10", h:"~12–22", f:"y", p:"wilanow/kuchnia-gruzinska/granat.md"},
+        // Ursynów
+        {n:"Karczma Bałkany od Kuchni", d:"Ursynów", t:"bałkańska / grill", a:"Strzeleckiego 10", h:"pon–czw 12–22, pt–sob 12–23, niedz 12–21", f:"y", p:"ursynow/kuchnia-balkanska/karczma-balkany.md"},
+        {n:"Siwy Dym", d:"Ursynów", t:"polska / BBQ / grill", a:"Puławska 378", h:"~12–23", f:"g", p:"ursynow/kuchnia-polska/siwy-dym.md"},
+        {n:"Polskie Smaki", d:"Ursynów", t:"polska / pierogarnia", a:"Ursynów", h:"~11–20", f:"y", p:"ursynow/kuchnia-polska/polskie-smaki.md"},
+        {n:"Marani", d:"Ursynów", t:"gruzińska", a:"Wąwozowa 23", h:"codz. 12–22", f:"y", p:"ursynow/kuchnia-gruzinska/marani.md"},
+        {n:"Bella Napoli", d:"Ursynów", t:"włoska / pizzeria", a:"KEN 57", h:"pon–czw 12–22, pt–sob 12–23, niedz 12–22", f:"y", p:"ursynow/kuchnia-wloska/bella-napoli.md"},
+        {n:"Da Gusto", d:"Ursynów", t:"włoska / pizzeria", a:"Wąwozowa 36", h:"~12–22", f:"y", p:"ursynow/kuchnia-wloska/da-gusto.md"},
+        {n:"Basilia", d:"Ursynów", t:"włoska / sycylijska", a:"Kabaty (przy metrze)", h:"~12–22", f:"y", p:"ursynow/kuchnia-wloska/basilia.md"},
+        {n:"Soto Sushi", d:"Ursynów", t:"japońska / sushi", a:"KEN 84", h:"~12–22", f:"g", p:"ursynow/sushi-japonska/soto-sushi.md"},
+        {n:"Kabaty Sushi", d:"Ursynów", t:"japońska / sushi", a:"KEN 105", h:"~12–22", f:"g", p:"ursynow/sushi-japonska/kabaty-sushi.md"},
+        {n:"QABBO Ramen Dim Sum & Sushi", d:"Ursynów", t:"azjatycka (ramen/dim sum/sushi)", a:"Ursynów", h:"~12–22", f:"y", p:"ursynow/kuchnia-azjatycka/qabbo.md"},
+        {n:"Moje Curry Kabaty", d:"Ursynów", t:"indyjska", a:"Wąwozowa 18", h:"codz. 12–22", f:"r", p:"ursynow/kuchnia-indyjska/moje-curry.md"},
+        {n:"Tulsi Ursynów", d:"Ursynów", t:"indyjska", a:"pasaż Stokłosy 11", h:"wt–pt 11–22, sob–niedz 12–22", f:"r", p:"ursynow/kuchnia-indyjska/tulsi.md"},
+        {n:"India King", d:"Ursynów", t:"indyjska", a:"Metro Natolin", h:"~12–22", f:"r", p:"ursynow/kuchnia-indyjska/india-king.md"},
+        {n:"Thai Masala", d:"Ursynów", t:"tajska / indyjska", a:"KEN 21 (Kabaty)", h:"~12–22", f:"y", p:"ursynow/kuchnia-tajska/thai-masala.md"},
+        {n:"Thai Hung Bistro", d:"Ursynów", t:"tajska / wietnamska", a:"ul. Pelikanów", h:"~11–21", f:"y", p:"ursynow/kuchnia-tajska/thai-hung-bistro.md"},
+        {n:"Vina Express (Bar Kokos)", d:"Ursynów", t:"wietnamska", a:"Ursynów", h:"~11–21", f:"y", p:"ursynow/kuchnia-wietnamska/vina-express.md"},
+        {n:"Rong Vang", d:"Ursynów", t:"wietnamska", a:"Ursynów", h:"~11–21", f:"y", p:"ursynow/kuchnia-wietnamska/rong-vang.md"},
+        {n:"Viet Street Food", d:"Ursynów", t:"wietnamska / street food", a:"Ursynów", h:"~11–21", f:"y", p:"ursynow/kuchnia-wietnamska/viet-street-food.md"},
+        {n:"Adana Kebab", d:"Ursynów", t:"turecka / kebab", a:"KEN 36/Lok-7 (też Belgradzka 21A)", h:"codz. 10–23", f:"y", p:"ursynow/kebab-turecka/adana-kebab.md"},
+        {n:"W. Kebab", d:"Ursynów", t:"turecka / kebab", a:"Nugat 7/U1", h:"codz. 11–22", f:"y", p:"ursynow/kebab-turecka/w-kebab.md"},
+        {n:"Coffeeway", d:"Ursynów", t:"kawiarnia", a:"Ursynów", h:"~8–20", f:"y", p:"ursynow/salatki-cafe/coffeeway.md"}
+      ];
+
+      const FBADGE = { g: ["g","🟢 łatwo low FODMAP"], y: ["y","🟡 low FODMAP z modyfikacjami"], r: ["r","🔴 trudno low FODMAP"] };
+
+      let filterDistrict = "Wszystkie";
+      let filterFodmap = "all";
+      let query = "";
+
+      const grid = document.getElementById("grid");
+      const countEl = document.getElementById("count");
+
+      function makeChips(id, items, current, onPick) {
+        const box = document.getElementById(id);
+        box.innerHTML = "";
+        items.forEach(([val, label]) => {
+          const b = document.createElement("button");
+          b.className = "chip" + (val === current() ? " active" : "");
+          b.textContent = label;
+          b.onclick = () => { onPick(val); render(); refreshChips(); };
+          box.appendChild(b);
+        });
+      }
+      function refreshChips() {
+        makeChips("district-chips",
+          [["Wszystkie","Wszystkie"],["Wilanów","Wilanów"],["Ursynów","Ursynów"]],
+          () => filterDistrict, v => filterDistrict = v);
+        makeChips("fodmap-chips",
+          [["all","Wszystkie"],["g","🟢 łatwo"],["y","🟡 z modyfikacjami"],["r","🔴 trudno"]],
+          () => filterFodmap, v => filterFodmap = v);
+      }
+
+      function render() {
+        const q = query.trim().toLowerCase();
+        const list = DATA.filter(r =>
+          (filterDistrict === "Wszystkie" || r.d === filterDistrict) &&
+          (filterFodmap === "all" || r.f === filterFodmap) &&
+          (q === "" || r.n.toLowerCase().includes(q) || r.t.toLowerCase().includes(q))
+        );
+        grid.innerHTML = "";
+        list.forEach(r => {
+          const card = document.createElement("div");
+          card.className = "r-card";
+          const [cls, title] = FBADGE[r.f];
+          card.innerHTML =
+            `<h3>${esc(r.n)} <span class="r-badge ${cls}" title="${title}">${title.split(" ")[0]}</span></h3>` +
+            `<div class="r-type">${esc(r.t)} · ${esc(r.d)}</div>` +
+            `<div class="r-meta">📍 ${esc(r.a)}<br>🕒 ${esc(r.h)}</div>`;
+          card.onclick = () => openModal(r);
+          grid.appendChild(card);
+        });
+        countEl.textContent = `Znaleziono: ${list.length} z ${DATA.length} restauracji`;
+      }
+
+      function esc(s) { return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+
+      // Minimalny renderer Markdown → HTML (nagłówki, listy, pogrubienia, linki, akapity)
+      function mdToHtml(md) {
+        const lines = md.replace(/\r/g,"").split("\n");
+        let html = "", inList = false;
+        const inline = (s) => esc(s)
+          .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+          .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2">$1</a>');
+        const closeList = () => { if (inList) { html += "</ul>"; inList = false; } };
+        for (let raw of lines) {
+          const line = raw.trimEnd();
+          if (/^###\s+/.test(line)) { closeList(); html += `<h3>${inline(line.replace(/^###\s+/,""))}</h3>`; }
+          else if (/^##\s+/.test(line)) { closeList(); html += `<h2>${inline(line.replace(/^##\s+/,""))}</h2>`; }
+          else if (/^#\s+/.test(line)) { closeList(); html += `<h1>${inline(line.replace(/^#\s+/,""))}</h1>`; }
+          else if (/^-\s+/.test(line)) { if (!inList) { html += "<ul>"; inList = true; } html += `<li>${inline(line.replace(/^-\s+/,""))}</li>`; }
+          else if (line.trim() === "") { closeList(); }
+          else { closeList(); html += `<p>${inline(line)}</p>`; }
+        }
+        closeList();
+        return html;
+      }
+
+      const modal = document.getElementById("modal");
+      const modalBody = document.getElementById("modal-body");
+      function openModal(r) {
+        modal.classList.add("open");
+        modalBody.innerHTML = `<div class="r-loading">Ładowanie menu…</div>`;
+        fetch(r.p)
+          .then(res => { if (!res.ok) throw new Error(res.status); return res.text(); })
+          .then(txt => { modalBody.innerHTML = mdToHtml(txt); })
+          .catch(() => {
+            modalBody.innerHTML =
+              `<div class="r-error">Nie udało się wczytać menu w podglądzie.<br>` +
+              `Otwórz plik bezpośrednio: <a href="${r.p}">${esc(r.n)}</a></div>`;
+          });
+      }
+      function closeModal() { modal.classList.remove("open"); }
+      document.getElementById("close").onclick = closeModal;
+      modal.onclick = (e) => { if (e.target === modal) closeModal(); };
+      document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
+
+      document.getElementById("search").addEventListener("input", (e) => { query = e.target.value; render(); });
+
+      refreshChips();
+      render();
+    </script>
+    <script src="../hearts.js"></script>
+  </body>
+</html>
