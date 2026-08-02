@@ -42,7 +42,7 @@ assert 'href="low-fodmap/index.html"'  "$OUT/home.dom.html" "Low FODMAP tile"
 
 echo "[2/3] restauracje browser (JS-rendered cards)"
 shot "$BASE/restauracje/index.html" restauracje
-assert 'z 107 restauracji' "$OUT/restauracje.dom.html" "restaurant count text"
+assert 'z 132 restauracji' "$OUT/restauracje.dom.html" "restaurant count text"
 N=$(grep -o 'class="r-card"' "$OUT/restauracje.dom.html" | wc -l)
 [ "$N" -ge 100 ] && echo "  ok: $N restaurant cards rendered" || { echo "  FAIL: only $N cards"; exit 1; }
 # menu fetch dependency: .md must be served raw (needs .nojekyll on Pages)

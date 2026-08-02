@@ -9,7 +9,7 @@ description: Run, serve, preview, screenshot or smoke-test the "marta" static si
 GitHub Pages. Three pages:
 
 - `index.html` — landing with two tiles (Restauracje, Low FODMAP).
-- `restauracje/index.html` — restaurant browser. JS embeds a `DATA` array of 107
+- `restauracje/index.html` — restaurant browser. JS embeds a `DATA` array of 132
   restaurants and renders cards; clicking a card **fetches the matching `.md`**
   menu file and renders it. Filters + search are pure client-side JS.
 - `low-fodmap/index.html` — Low FODMAP guide with a JS-rendered food finder (115 items).
@@ -38,7 +38,7 @@ bash .claude/skills/run-marta/smoke.sh
 
 What it does: starts `python3 -m http.server` at the repo root, screenshots all
 three pages with headless Chromium, and asserts the client-side JS rendered its
-data (107 restaurant cards, the "z 107 restauracji" count, food-finder items) and
+data (132 restaurant cards, the "z 132 restauracji" count, food-finder items) and
 that a menu `.md` is served (the modal fetch dependency). Exits non-zero on any
 failed assertion.
 
@@ -50,7 +50,7 @@ OUT=/tmp/marta-shots bash .claude/skills/run-marta/smoke.sh
 ```
 
 Then **look at** `.smoke-out/restauracje.png` — you should see the sticky nav with
-the LOW FODMAP filter chips, "Znaleziono: 107 z 107 restauracji", and a grid of
+the LOW FODMAP filter chips, "Znaleziono: 132 z 132 restauracji", and a grid of
 cards each with a 🟢/🟡/🔴 badge.
 
 Screenshot one page manually (same technique the driver uses):
@@ -94,9 +94,9 @@ the exit code / screenshots.
   `find /opt/pw-browsers -name chrome -type f`.
 - **`--no-sandbox` is required** (running as root in the container).
 - **Counts are asserted from the DOM.** If you add/remove restaurants, update the
-  `z 107 restauracji` count assertion (or rely on the `>=100 cards` check) —
+  `z 132 restauracji` count assertion (or rely on the `>=100 cards` check) —
   `DATA` in `restauracje/index.html`, the `INDEX.md` rows, and the `.md` files must
-  stay in sync (107 = 86 Wilanów + 21 Ursynów).
+  stay in sync (132 = 86 Wilanów + 46 Ursynów).
 
 ## Troubleshooting
 
