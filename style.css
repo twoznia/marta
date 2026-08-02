@@ -190,11 +190,22 @@ body {
   transform: translateX(0);
 }
 
+/* ── Strona główna: wyśrodkowanie kafelków ── */
+.home-main {
+  position: relative;
+  z-index: 1;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
 /* ── Menu / kafelki wyboru ── */
 .menu-section {
   position: relative;
   z-index: 1;
-  padding: 0 1rem 5rem;
+  padding: 0 1rem;
   text-align: center;
 }
 

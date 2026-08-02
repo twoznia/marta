@@ -1,13 +1,13 @@
 # marta
 
-Strona dla Marty pod GitHub Pages (`github.io`). Strona główna to list oraz
-**menu z kafelkami wyboru** — na razie z jednym kafelkiem: **Restauracje**.
+Strona pod GitHub Pages (`github.io`). Strona główna to **menu z kafelkami wyboru** —
+na razie z jednym kafelkiem: **Restauracje**.
 
 ## Struktura repozytorium
 
-- `index.html` – strona główna (hero, list, powody, menu z kafelkami)
+- `index.html` – strona główna (menu z kafelkami wyboru)
 - `style.css` – styl strony
-- `hearts.js` – animowane serduszka w tle + animacja listy powodów
+- `hearts.js` – animowane serduszka w tle
 - `restauracje/` – baza restauracji (Wilanów i Ursynów) z menu i oznaczeniami low FODMAP
   - `restauracje/index.html` – interaktywna przeglądarka: filtry (dzielnica, low FODMAP),
     wyszukiwarka i podgląd menu każdej restauracji
