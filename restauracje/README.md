@@ -41,7 +41,12 @@ restauracje/
     ├── kuchnia-indyjska/
     ├── kuchnia-tajska/
     ├── kuchnia-balkanska/
-    └── kebab-turecka/
+    ├── kuchnia-autorska/
+    ├── wegetarianska/
+    ├── kebab-turecka/
+    ├── burgery/
+    ├── fast-food/
+    └── salatki-cafe/
 ```
 
 Każda restauracja to osobny plik `.md` w folderze swojej dzielnicy i typu.
@@ -58,7 +63,7 @@ Przy każdym daniu znajdziesz oznaczenie:
 
 ## Zasięg bazy
 
-Baza obejmuje **107 restauracji** (86 Wilanów + 21 Ursynów) — od restauracji przez
+Baza obejmuje **132 restauracje** (86 Wilanów + 46 Ursynów) — od restauracji przez
 reprezentatywne lokale każdej dzielnicy, w podziale na wszystkie główne typy kuchni.
 Agregatory (np. gdziejemy.pl) listują w tych dzielnicach ponad setkę pozycji, ale
 większość „ogona" to sieciówki fast food, bary mleczne, food trucki, punkty z kawą

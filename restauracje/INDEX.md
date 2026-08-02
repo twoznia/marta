@@ -120,6 +120,31 @@ jak łatwo zjeść tu na diecie low FODMAP:
 | [Rong Vang](ursynow/kuchnia-wietnamska/rong-vang.md) | wietnamska | Ursynów | ~11–21 | 🟡 |
 | [Viet Street Food](ursynow/kuchnia-wietnamska/viet-street-food.md) | wietnamska / street food | Ursynów | ~11–21 | 🟡 |
 | [Coffeeway](ursynow/salatki-cafe/coffeeway.md) | kawiarnia | Ursynów | ~8–20 | 🟡 |
+| [Restauracja Nowoursynowska](ursynow/kuchnia-wloska/nowoursynowska.md) | włoska | Nowoursynowska | ~12–22 | 🟡 |
+| [Tito Appetito](ursynow/kuchnia-wloska/tito-appetito.md) | włoska | Jana Rosoła 48 | pon–sob 12–21, niedz 12–20 | 🟡 |
+| [Dziurka od Klucza](ursynow/kuchnia-wloska/dziurka-od-klucza.md) | włoska / pizza neapolitańska | Fort Służew 1B | pon–sob 12–22, niedz 12–21 | 🟡 |
+| [Da Grasso Ursynów](ursynow/kuchnia-wloska/da-grasso.md) | pizzeria (sieć) | Béli Bartóka 1 | pon–czw 11–22, pt–sob 11–23 | 🔴 |
+| [Sushi Nugat](ursynow/sushi-japonska/sushi-nugat.md) | japońska / sushi | Wąwozowa 6 | ~12–21:30 | 🟢 |
+| [Geisha Sushi](ursynow/sushi-japonska/geisha-sushi.md) | japońska / sushi | Płaskowickiej 46/U3 | ~12–22 | 🟢 |
+| [Sushi Icons](ursynow/sushi-japonska/sushi-icons.md) | japońska / sushi | Ursynów | ~12–22 | 🟢 |
+| [Rani – Indyjska Restauracja](ursynow/kuchnia-indyjska/rani.md) | indyjska | KEN 48/10 | codz. 11–22 | 🔴 |
+| [Mr India](ursynow/kuchnia-indyjska/mr-india.md) | indyjska | Ursynów | ~12–22 | 🔴 |
+| [Gaumarjos](ursynow/kuchnia-gruzinska/gaumarjos.md) | gruzińska | KEN 47 | ~12–22 | 🟡 |
+| [Restauracja Staroświecka](ursynow/kuchnia-polska/staroswiecka.md) | polska tradycyjna | KEN 53 | pon–pt 10–22 | 🟡 |
+| [Czyli Czyli Kabaty](ursynow/kuchnia-autorska/czyli-czyli.md) | autorska / nowoczesna polska | KEN 19/U2/4 | pon 14–22, wt–sob 12–22 | 🟢 |
+| [Wiethai Kabaty](ursynow/kuchnia-tajska/wiethai.md) | tajska / wietnamska | Kabaty | ~11–21 | 🟡 |
+| [Huong Asia](ursynow/kuchnia-azjatycka/huong-asia.md) | azjatycka (chińska/tajska/wietnamska) | Rotmistrza W. Pileckiego | ~11–22 | 🟡 |
+| [Baku Kebab Ursynów](ursynow/kebab-turecka/baku-kebab.md) | turecka / kebab | Ursynów | ~11–23 | 🟡 |
+| [Tasbih Kebab](ursynow/kebab-turecka/tasbih-kebab.md) | turecka / kebab | Ursynów | ~11–22 | 🟡 |
+| [Wół na Stół](ursynow/burgery/wol-na-stol.md) | burgery / street food | KEN 52 | codz. 12–22 | 🟡 |
+| [McDonald's Ursynów](ursynow/fast-food/mcdonalds.md) | fast food | Puławska 427 (CH Ursynów) | pon–sob 8–22, niedz 9–21 | 🟡 |
+| [KFC Ursynów](ursynow/fast-food/kfc.md) | fast food (kurczak) | Puławska 274C | pon–pt 8–24, weekend 9–24 | 🟡 |
+| [Chrupiący Kurczak](ursynow/fast-food/chrupiacy-kurczak.md) | fast food (kurczak) | Ursynów | ~11–22 | 🟡 |
+| [Domino's Pizza Ursynów](ursynow/fast-food/dominos.md) | pizzeria (sieć, dowóz) | Ursynów | do późna | 🔴 |
+| [Salad Story Ursynów](ursynow/salatki-cafe/salad-story.md) | sałatki / lunch | KEN 24 | ~9–20 | 🟢 |
+| [Vege Bistro Kurkuma](ursynow/wegetarianska/kurkuma.md) | wegetariańska / roślinna | Ursynów | ~11–20 | 🟡 |
+| [Mały Belgrad](ursynow/kuchnia-balkanska/maly-belgrad.md) | bałkańska / serbska | Belgradzka 4 | ~12–22 | 🟡 |
+| [Moo Cafe Filipiny](ursynow/salatki-cafe/moo-cafe.md) | kawiarnia | Płaskowickiej | ~8–20 | 🟡 |
 
 ## Najlepsze miejsca na low FODMAP (🟢)
 
