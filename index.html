@@ -15,7 +15,7 @@
           <p class="from">od Tomka</p>
           <h1 class="headline">Kocham&nbsp;Cię,<br>Marto</h1>
           <p class="subline">… i chciałem Ci o tym przypomnieć&nbsp;♥</p>
-          <a href="#list" class="scroll-btn">Czytaj dalej</a>
+          <a href="#menu" class="scroll-btn">Wybierz coś dla siebie</a>
         </div>
       </section>
 
@@ -54,13 +54,18 @@
         </ul>
       </section>
 
-      <section class="gallery-section">
-        <h2>Nasze wspomnienia</h2>
-        <section id="gallery" class="gallery" aria-label="Galeria zdjęć"></section>
-        <p id="empty-state" class="empty-state" hidden>
-          Zdjęcia pojawią się tutaj — dodaj je do katalogu <code>photos/</code>
-          i uzupełnij listę w <code>gallery.js</code>.
-        </p>
+      <section id="menu" class="menu-section">
+        <h2>Menu — co wybierasz?</h2>
+        <p class="menu-intro">Na razie jest tu jedna rzecz, ale będzie ich więcej ♥</p>
+        <div class="tiles">
+          <a class="tile" href="restauracje/INDEX.md">
+            <span class="tile-emoji" aria-hidden="true">🍽️</span>
+            <span class="tile-title">Restauracje</span>
+            <span class="tile-desc">
+              Wilanów i Ursynów — menu, adresy, godziny otwarcia i dania low&nbsp;FODMAP
+            </span>
+          </a>
+        </div>
       </section>
     </main>
 
@@ -68,7 +73,6 @@
       <p>Zrobione z miłości ❤️ przez Tomka</p>
     </footer>
 
-    <script src="gallery.js"></script>
     <script src="hearts.js"></script>
   </body>
 </html>

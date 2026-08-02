@@ -1,28 +1,25 @@
 # marta
 
-Prosta galeria zdjęć pod GitHub Pages (`github.io`).
+Strona dla Marty pod GitHub Pages (`github.io`). Strona główna to list oraz
+**menu z kafelkami wyboru** — na razie z jednym kafelkiem: **Restauracje**.
 
 ## Struktura repozytorium
 
-- `index.html` – strona galerii
+- `index.html` – strona główna (hero, list, powody, menu z kafelkami)
 - `style.css` – styl strony
-- `gallery.js` – lista zdjęć do wyświetlenia
-- `photos/` – tutaj wrzucasz swoje zdjęcia
+- `hearts.js` – animowane serduszka w tle + animacja listy powodów
+- `restauracje/` – baza restauracji (Wilanów i Ursynów) z menu i oznaczeniami low FODMAP
 
-## Jak dodać zdjęcia
+## Kafelki menu
 
-1. Skopiuj zdjęcia do katalogu `photos/` (np. `photos/001.jpg`, `photos/002.jpg`).
-2. Otwórz `gallery.js` i uzupełnij tablicę `photoFiles`, np.:
+Kafelki znajdują się w `index.html` w sekcji `#menu`. Aby dodać kolejny wybór,
+skopiuj blok `<a class="tile" …>` i podmień emoji, tytuł, opis oraz `href`.
 
-```js
-const photoFiles = [
-  "001.jpg",
-  "002.jpg",
-  "003.jpg"
-];
-```
+Obecne kafelki:
 
-3. Zacommituj zmiany do repozytorium.
+- 🍽️ **Restauracje** → [`restauracje/INDEX.md`](restauracje/INDEX.md) —
+  restauracje w Wilanowie i Ursynowie: menu, adresy, godziny otwarcia, typ kuchni
+  oraz dania, które można zjeść na diecie low FODMAP.
 
 ## Jak opublikować na GitHub Pages (`github.io`)
 
@@ -30,15 +27,7 @@ const photoFiles = [
 2. `Settings` → `Pages`.
 3. W sekcji **Build and deployment** ustaw:
    - **Source**: `Deploy from a branch`
-   - **Branch**: `main` (lub gałąź, z której publikujesz), folder `/ (root)`
+   - **Branch**: `main`, folder `/ (root)`
 4. Zapisz ustawienia.
 5. Po chwili strona będzie dostępna pod adresem:
    - `https://twoznia.github.io/marta/` (dla tego repozytorium)
-   - `https://twój-login.github.io/nazwa-repozytorium/` (wzór ogólny)
-
-## Kolejne kroki (praktycznie)
-
-1. Dodaj kilkadziesiąt zdjęć do `photos/`.
-2. Dopisz wszystkie nazwy plików w `gallery.js`.
-3. Wypchnij zmiany do GitHub.
-4. Otwórz opublikowany link i sprawdź galerię.
