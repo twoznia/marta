@@ -1,6 +1,6 @@
 # Linki do menu — restauracje Ursynów
 
-Bezpośrednie linki do kart menu lokali z Ursynowa. Menu online mają **48** z 184; dla pozostałych podano stronę www, a w przeglądarce zawsze działa wyszukiwarka + 🗺️ Mapa.
+Bezpośrednie linki do kart menu lokali z Ursynowa. Menu online mają **54** z 184; dla pozostałych podano stronę www, a w przeglądarce zawsze działa wyszukiwarka + 🗺️ Mapa.
 
 | Restauracja | Menu online | Strona www |
 |---|---|---|
@@ -44,7 +44,7 @@ Bezpośrednie linki do kart menu lokali z Ursynowa. Menu online mają **48** z 1
 | Wół na Stół | — | [www](https://wolnastol.pl/) |
 | McDonald's Ursynów | — | — |
 | KFC Ursynów | — | — |
-| Chrupiący Kurczak | — | — |
+| Chrupiący Kurczak | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/bangkok-fried-crunch-bfc) | — |
 | Domino's Pizza Ursynów | — | — |
 | Salad Story Ursynów | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/salad-story-al-ken) | [www](https://wolt.com/en/pol/warsaw/restaurant/salad-story-al-ken) |
 | Vege Bistro Kurkuma | [karta menu](https://vege-bistro.dowozimy.pl/) | [www](https://vege-bistro.dowozimy.pl/) |
@@ -70,11 +70,11 @@ Bezpośrednie linki do kart menu lokali z Ursynowa. Menu online mają **48** z 1
 | Bistro KEN | [karta menu](https://www.pyszne.pl/menu/bistro-ken) | — |
 | Bite me! Burger Ursynów | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/bite-me-burger-ursynw) | — |
 | Bread Morning | — | [www](https://www.facebook.com/breadmorning/) |
-| Burger Mama | — | — |
-| Caffè Gelateria Myszka | — | — |
-| Casa di Pizza Ursynów | — | — |
-| Chicago's Pizza Ursynów | — | — |
-| CHO Sushi Ursynów | — | — |
+| Burger Mama | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/burger-mama-ursynw) | — |
+| Caffè Gelateria Myszka | [karta menu](https://www.pyszne.pl/menu/caffe-gelateria-myszka) | — |
+| Casa di Pizza Ursynów | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/casa-di-pizza-ursynow) | — |
+| Chicago's Pizza Ursynów | [karta menu](https://chicago-s-pizza.orderwebsite.com/) | [www](https://chicagospizza.pl/) |
+| CHO Sushi Ursynów | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/cho-sushi-ursynow) | — |
 | Ciepło Zimno Bistro & Bar | [karta menu](https://cieplozimnobistro.pl/menu/) | [www](https://cieplozimnobistro.pl/) |
 | Costa Coffee KEN Metro Ursynów | — | — |
 | Costa Coffee Ursynów | — | — |
