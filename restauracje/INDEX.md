@@ -160,3 +160,89 @@ jak łatwo zjeść tu na diecie low FODMAP:
 Ogólna zasada: **kuchnie oparte na grillu i sushi** są najłatwiejsze na diecie low
 FODMAP, natomiast **indyjska, chińska, meksykańska i piekarnie** wymagają najwięcej
 modyfikacji (wszechobecne cebula, czosnek, rośliny strączkowe i pszenica).
+| [A. Blikle Centrum Ursynów](ursynow/salatki-cafe/a-blikle-centrum-ursynow.md) | cukiernia/kawiarnia | Puławska 427 | potwierdź | 🔴 |
+| [A. Blikle Kabaty](ursynow/salatki-cafe/a-blikle-kabaty.md) | cukiernia/kawiarnia | al. KEN 22 | potwierdź | 🔴 |
+| [American Dream Pizza Ursynów](ursynow/kuchnia-wloska/american-dream-pizza-ursynow.md) | pizza | Ursynów | potwierdź | 🔴 |
+| [AMICI ItalianFoodLovers](ursynow/kuchnia-wloska/amici-italianfoodlovers.md) | restauracja włoska/pizzeria | al. KEN, Kabaty | potwierdź | 🔴 |
+| [Arena Restaurant](ursynow/kuchnia-polska/arena-restaurant.md) | restauracja | Ursynów | potwierdź | 🟡 |
+| [Bar Janusz](ursynow/kuchnia-polska/bar-janusz.md) | bar | al. KEN 48 | potwierdź | 🟡 |
+| [Bar mleczny Zaścianek](ursynow/bar-mleczny/bar-mleczny-zascianek.md) | bar mleczny | Ursynów | potwierdź | 🟡 |
+| [Bar U Justyny](ursynow/bar-mleczny/bar-u-justyny.md) | bar mleczny | Ursynów | potwierdź | 🟡 |
+| [Beczka](ursynow/pub-bar/beczka.md) | pub | Kabaty | potwierdź | 🟡 |
+| [Bezowy Zakątek](ursynow/salatki-cafe/bezowy-zakatek.md) | cukiernia | Ursynów | potwierdź | 🔴 |
+| [Bistro Kafelek](ursynow/salatki-cafe/bistro-kafelek.md) | kawiarnia/bistro | al. KEN 83 | potwierdź | 🟡 |
+| [Bistro KEN](ursynow/kuchnia-polska/bistro-ken.md) | polska | ul. KEN, Ursynów | potwierdź | 🟡 |
+| [Bite me! Burger Ursynów](ursynow/burgery/bite-me-burger-ursynow.md) | burger | Ursynów | potwierdź | 🟡 |
+| [Bread Morning](ursynow/salatki-cafe/bread-morning.md) | piekarnia | Kabaty | potwierdź | 🔴 |
+| [Burger Mama](ursynow/burgery/burger-mama.md) | burgery | Stanisława Herbsta 11 | potwierdź | 🟡 |
+| [Caffè Gelateria Myszka](ursynow/salatki-cafe/caffe-gelateria-myszka.md) | desery | Ursynów | potwierdź | 🔴 |
+| [Casa di Pizza Ursynów](ursynow/kuchnia-wloska/casa-di-pizza-ursynow.md) | pizza | Ursynów | potwierdź | 🔴 |
+| [Chicago's Pizza Ursynów](ursynow/kuchnia-wloska/chicago-s-pizza-ursynow.md) | pizza | ul. Aleksandra Janowskiego 9, Ursynów | potwierdź | 🔴 |
+| [CHO Sushi Ursynów](ursynow/sushi-japonska/cho-sushi-ursynow.md) | sushi | Ursynów | potwierdź | 🟢 |
+| [Ciepło Zimno Bistro & Bar](ursynow/kuchnia-polska/ciepo-zimno-bistro-bar.md) | bistro | al. KEN 49 | potwierdź | 🟡 |
+| [Costa Coffee KEN Metro Ursynów](ursynow/salatki-cafe/costa-coffee-ken-metro-ursynow.md) | kawa / śniadania | al. KEN, Metro Ursynów | potwierdź | 🟡 |
+| [Costa Coffee Ursynów](ursynow/salatki-cafe/costa-coffee-ursynow.md) | kawa / śniadania | Kabaty | potwierdź | 🟡 |
+| [Cukiernia Cieślikowski](ursynow/salatki-cafe/cukiernia-cieslikowski.md) | desery | Ursynów | potwierdź | 🔴 |
+| [Cukiernia Cieślikowski (Galeria Ursynów)](ursynow/salatki-cafe/cukiernia-cieslikowski-galeria-ursynow.md) | cukiernia/kawiarnia | Ursynów, przy metrze Natolin | potwierdź | 🔴 |
+| [Cukiernia Deserownia](ursynow/salatki-cafe/cukiernia-deserownia.md) | cukiernia | ul. Strzeleckiego 10 | potwierdź | 🔴 |
+| [Cukiernia Olsza](ursynow/salatki-cafe/cukiernia-olsza.md) | cukiernia | Wańkowicza 1 | potwierdź | 🔴 |
+| [Cukiernia Sowa](ursynow/salatki-cafe/cukiernia-sowa.md) | desery | al. KEN 92 | potwierdź | 🔴 |
+| [Cukiernia Sweet Home](ursynow/salatki-cafe/cukiernia-sweet-home.md) | cukiernia | al. KEN 51 | potwierdź | 🔴 |
+| [Diyaa Indian Restaurant](ursynow/kuchnia-indyjska/diyaa-indian-restaurant.md) | indyjskie | Ursynów | potwierdź | 🔴 |
+| [Eatstory bistro i cukiernia](ursynow/salatki-cafe/eatstory-bistro-i-cukiernia.md) | śniadania | Ursynów | potwierdź | 🔴 |
+| [Eleven Kebab & Pizza](ursynow/kebab-turecka/eleven-kebab-pizza.md) | kebab | ul. Nugat 7/U1 | potwierdź | 🟡 |
+| [Express Indii](ursynow/kuchnia-indyjska/express-indii.md) | indyjskie | Ursynów | potwierdź | 🔴 |
+| [Farszawa - Pierogi z Pieca](ursynow/kuchnia-polska/farszawa-pierogi-z-pieca.md) | polskie | Ursynów | potwierdź | 🔴 |
+| [Fenicja Kebab - Dereniowa](ursynow/kebab-turecka/fenicja-kebab-dereniowa.md) | kebab | ul. Dereniowa, Ursynów | potwierdź | 🟡 |
+| [Fit Cake Ursynów](ursynow/salatki-cafe/fit-cake-ursynow.md) | desery / cukiernia | Ursynów | potwierdź | 🔴 |
+| [G-Yoza Ursynów](ursynow/kuchnia-azjatycka/g-yoza-ursynow.md) | azjatyckie / gyoza | Ursynów | potwierdź | 🟡 |
+| [Goodly Specialty Coffee](ursynow/salatki-cafe/goodly-specialty-coffee.md) | kawiarnia | Wąwozowa 31, Kabaty | potwierdź | 🟡 |
+| [Green Caffè Nero Kabaty](ursynow/salatki-cafe/green-caffe-nero-kabaty.md) | kawiarnia | al. KEN 18 | potwierdź | 🟡 |
+| [Hakan](ursynow/kebab-turecka/hakan.md) | kebab | Stokłosy | potwierdź | 🟡 |
+| [Hooligan Burgers](ursynow/burgery/hooligan-burgers.md) | burgery | Ursynów | potwierdź | 🟡 |
+| [Horapa](ursynow/kuchnia-tajska/horapa.md) | restauracja tajska | al. KEN 50 | potwierdź | 🟡 |
+| [Inori Sushi](ursynow/sushi-japonska/inori-sushi.md) | sushi | Ursynów | potwierdź | 🟢 |
+| [Japan Burger Ursynów](ursynow/sushi-japonska/japan-burger-ursynow.md) | burger / sushi | al. KEN 11 lok. G, Ursynów | potwierdź | 🟢 |
+| [Jesz Lody Tradycyjne](ursynow/salatki-cafe/jesz-lody-tradycyjne.md) | lodziarnia | Bronikowskiego 1 | potwierdź | 🔴 |
+| [Kaba Sushi Ursynów](ursynow/sushi-japonska/kaba-sushi-ursynow.md) | sushi | Ursynów | potwierdź | 🟢 |
+| [Kervan Kebab](ursynow/kebab-turecka/kervan-kebab.md) | kebab | ul. Puławska 485 | potwierdź | 🟡 |
+| [Klubokawiarnia KEN54](ursynow/salatki-cafe/klubokawiarnia-ken54.md) | klubokawiarnia | al. KEN 54 | potwierdź | 🟡 |
+| [KOKU Sushi](ursynow/sushi-japonska/koku-sushi.md) | sushi | Imielin, Ursynów | potwierdź | 🟢 |
+| [KRISPI korean KFC Ursynów](ursynow/burgery/krispi-korean-kfc-ursynow.md) | koreańska / burger | Ursynów | potwierdź | 🟡 |
+| [Krowarzywa Ursynów](ursynow/burgery/krowarzywa-ursynow.md) | wegański burger | Ursynów | potwierdź | 🟡 |
+| [Kucharek Sześć](ursynow/kuchnia-polska/kucharek-szesc.md) | bistro/kuchnia polska | Dereniowa 6 | potwierdź | 🟡 |
+| [Kuchnia za Ścianą](ursynow/bar-mleczny/kuchnia-za-sciana.md) | bar mleczny | al. KEN 61 | potwierdź | 🟡 |
+| [Kumpir & Kebab](ursynow/kebab-turecka/kumpir-kebab.md) | kebab | al. KEN | potwierdź | 🟡 |
+| [Kurczaki na Wypasie Ursynów](ursynow/fast-food/kurczaki-na-wypasie-ursynow.md) | kurczak z rożna | ul. Wiolinowa 2a, Ursynów | potwierdź | 🟡 |
+| [Le Petit Café](ursynow/salatki-cafe/le-petit-cafe.md) | kawiarnia | Natolin | potwierdź | 🟡 |
+| [Lody Ice Cream NOW - Ursynów](ursynow/salatki-cafe/lody-ice-cream-now-ursynow.md) | desery | Ursynów | potwierdź | 🔴 |
+| [Lodziarnia Al Passo](ursynow/salatki-cafe/lodziarnia-al-passo.md) | lodziarnia | Wąwozowa 6 | potwierdź | 🔴 |
+| [Lodziarnia Rożek na Rożku](ursynow/salatki-cafe/lodziarnia-rozek-na-rozku.md) | lodziarnia/kawiarnia | Kabacki Dukt 8 | potwierdź | 🔴 |
+| [Los Mexicos Ursynów](ursynow/kuchnia-meksykanska/los-mexicos-ursynow.md) | meksykańska | Ursynów | potwierdź | 🟡 |
+| [Make&Take Pizza Ursynów](ursynow/kuchnia-wloska/make-take-pizza-ursynow.md) | pizza | Ursynów | potwierdź | 🔴 |
+| [Mama Kebab](ursynow/kebab-turecka/mama-kebab.md) | kebab | Ursynów | potwierdź | 🟡 |
+| [Mama Kebab - Galeria Ursynów](ursynow/kebab-turecka/mama-kebab-galeria-ursynow.md) | kebab | Galeria Ursynów, Ursynów | potwierdź | 🟡 |
+| [Mezze Gyros](ursynow/kebab-turecka/mezze-gyros.md) | kebab | Ursynów | potwierdź | 🟡 |
+| [Monkey Craft Beer](ursynow/pub-bar/monkey-craft-beer.md) | bar | al. KEN 54 | potwierdź | 🟡 |
+| [My Sushi](ursynow/sushi-japonska/my-sushi.md) | sushi | al. Anody 22 | potwierdź | 🟢 |
+| [Naleśnikarnia Nasz Naleśnik](ursynow/kuchnia-polska/nalesnikarnia-nasz-nalesnik.md) | naleśniki | Ursynów | potwierdź | 🟡 |
+| [New York Pizza Departament Ursynów](ursynow/kuchnia-wloska/new-york-pizza-departament-ursynow.md) | pizza | Ursynów | potwierdź | 🔴 |
+| [Night Burger Noc](ursynow/burgery/night-burger-noc.md) | burgery | Ursynów | potwierdź | 🟡 |
+| [Nocna Wyżerka](ursynow/kuchnia-wloska/nocna-wyzerka.md) | pizza | Ursynów | potwierdź | 🔴 |
+| [Noto Pizza Ursynów](ursynow/kuchnia-wloska/noto-pizza-ursynow.md) | pizza | Ursynów | potwierdź | 🔴 |
+| [Obiady U Gienia](ursynow/kuchnia-polska/obiady-u-gienia.md) | polskie | Ursynów | potwierdź | 🟡 |
+| [One & More Sushi](ursynow/sushi-japonska/one-more-sushi.md) | sushi | Ursynów | potwierdź | 🟢 |
+| [ONO-POKE Ursynów](ursynow/kuchnia-azjatycka/ono-poke-ursynow.md) | poke | Ursynów | potwierdź | 🟢 |
+| [Orient Express](ursynow/kuchnia-azjatycka/orient-express.md) | restauracja azjatycka | Płaskowickiej 44 | potwierdź | 🟡 |
+| [Pan Sushi Ursynów KEN](ursynow/sushi-japonska/pan-sushi-ursynow-ken.md) | sushi | al. KEN, Ursynów | potwierdź | 🟢 |
+| [Papa Johns Ursynów](ursynow/kuchnia-wloska/papa-johns-ursynow.md) | pizza | Ursynów | potwierdź | 🔴 |
+| [Papito Mexican Bar](ursynow/kuchnia-meksykanska/papito-mexican-bar.md) | meksykańska | Ursynów | potwierdź | 🟡 |
+| [Paradizzo](ursynow/kuchnia-wloska/paradizzo.md) | włoskie | Ursynów | potwierdź | 🔴 |
+| [Pasta Point Ursynów](ursynow/kuchnia-wloska/pasta-point-ursynow.md) | makarony | Ursynów | potwierdź | 🟡 |
+| [Pazzo Italia](ursynow/kuchnia-wloska/pazzo-italia.md) | pizza | Ursynów | potwierdź | 🔴 |
+| [Piccolo Pizzaiolo](ursynow/kuchnia-wloska/piccolo-pizzaiolo.md) | pizzeria | ul. Dereniowa 60 | potwierdź | 🔴 |
+| [Piekarnia Cukiernia Grzybki](ursynow/salatki-cafe/piekarnia-cukiernia-grzybki.md) | piekarnia/cukiernia | Belgradzka 46 | potwierdź | 🔴 |
+| [Piekarnia Wanda](ursynow/salatki-cafe/piekarnia-wanda.md) | piekarnia | Wąwozowa 4 | potwierdź | 🔴 |
+| [Piri-Piri Kebab](ursynow/kebab-turecka/piri-piri-kebab.md) | kebab | al. KEN 88 | potwierdź | 🟡 |
+| [Pita Bros Ursynów](ursynow/kebab-turecka/pita-bros-ursynow.md) | grecka | Ursynów | potwierdź | 🟡 |
+| [Pizza Na Wypasie Ursynów](ursynow/kuchnia-wloska/pizza-na-wypasie-ursynow.md) | pizza | Ursynów | potwierdź | 🔴 |
