@@ -1,6 +1,6 @@
 # Linki do menu — restauracje Ursynów
 
-Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono w researchu). Menu online mają **68** z 184 lokali; dla pozostałych podano stronę www, a w przeglądarce zawsze działa wyszukiwarka + 🗺️ Mapa.
+Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono w researchu). Menu online mają **71** z 184 lokali; dla pozostałych podano stronę www, a w przeglądarce zawsze działa wyszukiwarka + 🗺️ Mapa.
 
 | Restauracja | Menu online | Strona www |
 |---|---|---|
@@ -9,15 +9,15 @@ Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono w rese
 | AMICI ItalianFoodLovers | [karta menu](https://amiciwarszawa.pl/menu/) | [www](https://amiciwarszawa.pl/) |
 | Adana Kebab | [karta menu](https://www.adanakebab.pl/menu) | [www](https://www.adanakebab.pl) |
 | American Dream Pizza Ursynów | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/american-dream-pizza-ursynw) | — |
-| Arena Restaurant | — | — |
+| Arena Restaurant | [karta menu](https://arenarestaurant.pl/menu/) | [www](https://arenarestaurant.pl/) |
 | Baku Kebab Ursynów | [karta menu](https://www.bakukebab.com/restauracja/baku-kebab-ursynow) | [www](https://www.bakukebab.com) |
 | Bar Janusz | — | — |
-| Bar U Justyny | — | — |
+| Bar U Justyny | [karta menu](https://www.pyszne.pl/menu/bar-u-justyny-warszawa) | [www](https://www.barujustyny.pl/) |
 | Bar mleczny Zaścianek | — | — |
 | Basilia | [karta menu](https://basilia.pl/menu/) | [www](https://basilia.pl/) |
-| Beczka | — | — |
+| Beczka | — | [www](https://www.facebook.com/beczka.kabaty/) |
 | Bella Napoli | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/bella-napoli-ursynow) | [www](https://bellanapoli.com.pl/ursynow.html) |
-| Berlin Döner Kebap Ursynów | — | — |
+| Berlin Döner Kebap Ursynów | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/berlin-doner-kebap-1) | [www](https://www.berlindonerkebap.com/) |
 | Bezowy Zakątek | — | [www](https://bezowyzakatek.pl/) |
 | Bistro KEN | [karta menu](https://www.pyszne.pl/menu/bistro-ken) | — |
 | Bistro Kafelek | — | [www](https://www.bistrokafelek.pl/) |
