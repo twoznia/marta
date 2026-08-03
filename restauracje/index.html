@@ -270,7 +270,13 @@
         {n:"Salad Story Ursynów", d:"Ursynów", c:"Sałatki / lunch", t:"sałatki / lunch", a:"KEN 24", h:"~9–20", f:"g", p:"ursynow/salatki-cafe/salad-story.md"},
         {n:"Vege Bistro Kurkuma", d:"Ursynów", c:"Wegetariańska", t:"wegetariańska / roślinna", a:"Ursynów", h:"~11–20", f:"y", p:"ursynow/wegetarianska/kurkuma.md"},
         {n:"Mały Belgrad", d:"Ursynów", c:"Bałkańska", t:"bałkańska / serbska", a:"Belgradzka 4", h:"~12–22", f:"y", p:"ursynow/kuchnia-balkanska/maly-belgrad.md"},
-        {n:"Moo Cafe Filipiny", d:"Ursynów", c:"Kawiarnia / cukiernia", t:"kawiarnia", a:"Płaskowickiej", h:"~8–20", f:"y", p:"ursynow/salatki-cafe/moo-cafe.md"}
+        {n:"Moo Cafe Filipiny", d:"Ursynów", c:"Kawiarnia / cukiernia", t:"kawiarnia", a:"Płaskowickiej", h:"~8–20", f:"y", p:"ursynow/salatki-cafe/moo-cafe.md"},
+        {n:"Telepizza Ursynów", d:"Ursynów", c:"Fast food", t:"pizzeria (sieć, dowóz)", a:"Puławska (Ursynów)", h:"do późna", f:"r", p:"ursynow/fast-food/telepizza.md", www:"https://telepizza.pl"},
+        {n:"North Fish Ursynów", d:"Ursynów", c:"Fast food", t:"ryby / fish & chips (sieć)", a:"CH Ursynów, Puławska 427", h:"~9–21", f:"y", p:"ursynow/fast-food/north-fish.md", www:"https://northfish.pl"},
+        {n:"Subway Ursynów", d:"Ursynów", c:"Fast food", t:"kanapki (sieć)", a:"Ursynów", h:"~9–22", f:"y", p:"ursynow/fast-food/subway.md", www:"https://www.subway.com/pl-PL"},
+        {n:"Pasibus Ursynów", d:"Ursynów", c:"Burgery", t:"burgery (sieć)", a:"Ursynów", h:"~12–22", f:"y", p:"ursynow/burgery/pasibus.md", www:"https://pasibus.pl"},
+        {n:"Bobby Burger Ursynów", d:"Ursynów", c:"Burgery", t:"burgery (sieć)", a:"Ursynów", h:"~12–22", f:"y", p:"ursynow/burgery/bobby-burger.md", www:"https://bobbyburger.pl"},
+        {n:"Berlin Döner Kebap Ursynów", d:"Ursynów", c:"Kebab / turecka", t:"turecka / kebab (sieć)", a:"Ursynów", h:"~10–23", f:"y", p:"ursynow/kebab-turecka/berlin-doner.md"}
       ];
 
       const FBADGE = { g: ["g","🟢 łatwo"], y: ["y","🟡 z modyfikacjami"], r: ["r","🔴 trudno"] };
@@ -466,7 +472,7 @@
         const fbReal  = r.fb  || lk.fb;
         const igReal  = r.ig  || lk.ig;
         const menuUrl = r.menu || lk.menu;
-        const maps = "https://www.google.com/maps/search/" + encodeURIComponent(q);
+        const maps = "https://www.google.com/maps/search/" + encodeURIComponent(`${r.n}, ${r.a}, ${r.d}, Warszawa`);
         // Zweryfikowany link => aktywna ikona; brak => wyszarzona (klik = wyszukiwarka Google)
         const chip = (icon, label, realUrl, searchQ) => realUrl
           ? `<a class="r-link" href="${realUrl}" target="_blank" rel="noopener">${icon} ${label}</a>`
