@@ -1,6 +1,6 @@
 # Linki do menu — restauracje Ursynów
 
-Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono w researchu). Menu online mają **76** z 184 lokali; dla pozostałych podano stronę www, a w przeglądarce zawsze działa wyszukiwarka + 🗺️ Mapa.
+Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono w researchu). Menu online mają **79** z 184 lokali; dla pozostałych podano stronę www, a w przeglądarce zawsze działa wyszukiwarka + 🗺️ Mapa.
 
 | Restauracja | Menu online | Strona www |
 |---|---|---|
@@ -78,12 +78,12 @@ Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono w rese
 | Kuchnia za Ścianą | [karta menu](https://kuchniazasciana.pl/en/todays-menu/) | [www](https://kuchniazasciana.pl/) |
 | Kumpir & Kebab | — | — |
 | Kurczaki na Wypasie Ursynów | — | — |
-| Le Petit Café | — | — |
-| Lody Ice Cream NOW - Ursynów | — | — |
+| Le Petit Café | — | [www](https://lepetitcafe.eu/) |
+| Lody Ice Cream NOW - Ursynów | [karta menu](https://www.pyszne.pl/menu/lody-ice-cream-now-ursynow) | — |
 | Lodziarnia Al Passo | — | — |
 | Lodziarnia Rożek na Rożku | — | — |
-| Los Mexicos Ursynów | — | — |
-| Make&Take Pizza Ursynów | — | — |
+| Los Mexicos Ursynów | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/los-mexicos-ursynw) | — |
+| Make&Take Pizza Ursynów | [karta menu](https://www.ubereats.com/pl/store/make&take-pizza-ursynow/agMr-TBlSR21bLfUxl8RRg) | [www](https://maketake.pl/ursynow/) |
 | Mama Kebab | — | — |
 | Mama Kebab - Galeria Ursynów | — | — |
 | Marani | — | — |
