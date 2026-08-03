@@ -1,6 +1,6 @@
 # Linki do menu — restauracje Ursynów
 
-Bezpośrednie linki do kart menu lokali z Ursynowa. Menu online mają **58** z 184; dla pozostałych podano stronę www, a w przeglądarce zawsze działa wyszukiwarka + 🗺️ Mapa.
+Bezpośrednie linki do kart menu lokali z Ursynowa. Menu online mają **63** z 184; dla pozostałych podano stronę www, a w przeglądarce zawsze działa wyszukiwarka + 🗺️ Mapa.
 
 | Restauracja | Menu online | Strona www |
 |---|---|---|
@@ -9,7 +9,7 @@ Bezpośrednie linki do kart menu lokali z Ursynowa. Menu online mają **58** z 1
 | Polskie Smaki | — | — |
 | Marani | — | — |
 | Bella Napoli | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/bella-napoli-ursynow) | [www](https://bellanapoli.com.pl/ursynow.html) |
-| Da Gusto | — | — |
+| Da Gusto | [karta menu](https://www.ubereats.com/pl-en/store/da-gusto/dVcjeZ6sSmSQOzCX_IHbJw) | — |
 | Basilia | [karta menu](https://basilia.pl/menu/) | [www](https://basilia.pl/) |
 | Soto Sushi | [karta menu](https://www.sotosushi.pl/menu) | [www](https://www.sotosushi.pl/) |
 | Kabaty Sushi | — | — |
@@ -45,7 +45,7 @@ Bezpośrednie linki do kart menu lokali z Ursynowa. Menu online mają **58** z 1
 | McDonald's Ursynów | — | — |
 | KFC Ursynów | — | — |
 | Chrupiący Kurczak | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/bangkok-fried-crunch-bfc) | — |
-| Domino's Pizza Ursynów | — | — |
+| Domino's Pizza Ursynów | [karta menu](https://www.pyszne.pl/menu/dominos-pizza-dereniowa) | — |
 | Salad Story Ursynów | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/salad-story-al-ken) | [www](https://wolt.com/en/pol/warsaw/restaurant/salad-story-al-ken) |
 | Vege Bistro Kurkuma | [karta menu](https://vege-bistro.dowozimy.pl/) | [www](https://vege-bistro.dowozimy.pl/) |
 | Mały Belgrad | — | [www](https://www.malybelgrad.pl/) |
@@ -82,13 +82,13 @@ Bezpośrednie linki do kart menu lokali z Ursynowa. Menu online mają **58** z 1
 | Cukiernia Cieślikowski (Galeria Ursynów) | [karta menu](https://wolt.com/en/pol/warsaw/venue/cukiernia-a-cielikowski-galeria-ursynw) | [www](https://www.cukierniacieslikowski.pl/) |
 | Cukiernia Deserownia | — | [www](http://www.deserownia.com/) |
 | Cukiernia Olsza | — | [www](https://cukierniaolsza.pl/) |
-| Cukiernia Sowa | — | — |
+| Cukiernia Sowa | — | [www](https://www.cukierniasowa.pl/) |
 | Cukiernia Sweet Home | — | [www](https://www.sweet-home.pl/) |
 | Diyaa Indian Restaurant | — | — |
 | Eatstory bistro i cukiernia | — | — |
-| Eleven Kebab & Pizza | — | — |
-| Express Indii | — | — |
-| Farszawa - Pierogi z Pieca | — | — |
+| Eleven Kebab & Pizza | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/eleven-kebab-pizza) | — |
+| Express Indii | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/express-indii) | [www](https://expressindii.pl/) |
+| Farszawa - Pierogi z Pieca | [karta menu](https://farszawa.pl/pl/menu) | [www](https://farszawa.pl/) |
 | Fenicja Kebab - Dereniowa | — | — |
 | Fit Cake Ursynów | — | — |
 | G-Yoza Ursynów | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/g-yoza-ursynow) | [www](https://wolt.com/en/pol/warsaw/restaurant/g-yoza-ursynow) |
