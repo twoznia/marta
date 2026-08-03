@@ -1,6 +1,6 @@
 # Linki do menu — restauracje Ursynów
 
-Bezpośrednie linki do kart menu lokali z Ursynowa. Menu online mają **54** z 184; dla pozostałych podano stronę www, a w przeglądarce zawsze działa wyszukiwarka + 🗺️ Mapa.
+Bezpośrednie linki do kart menu lokali z Ursynowa. Menu online mają **58** z 184; dla pozostałych podano stronę www, a w przeglądarce zawsze działa wyszukiwarka + 🗺️ Mapa.
 
 | Restauracja | Menu online | Strona www |
 |---|---|---|
@@ -76,12 +76,12 @@ Bezpośrednie linki do kart menu lokali z Ursynowa. Menu online mają **54** z 1
 | Chicago's Pizza Ursynów | [karta menu](https://chicago-s-pizza.orderwebsite.com/) | [www](https://chicagospizza.pl/) |
 | CHO Sushi Ursynów | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/cho-sushi-ursynow) | — |
 | Ciepło Zimno Bistro & Bar | [karta menu](https://cieplozimnobistro.pl/menu/) | [www](https://cieplozimnobistro.pl/) |
-| Costa Coffee KEN Metro Ursynów | — | — |
-| Costa Coffee Ursynów | — | — |
-| Cukiernia Cieślikowski | — | — |
-| Cukiernia Cieślikowski (Galeria Ursynów) | — | — |
-| Cukiernia Deserownia | — | — |
-| Cukiernia Olsza | — | — |
+| Costa Coffee KEN Metro Ursynów | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/costa-cofee-ken) | — |
+| Costa Coffee Ursynów | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/costa-coffee-ursynow) | — |
+| Cukiernia Cieślikowski | [karta menu](https://wolt.com/en/pol/warsaw/venue/cukiernia-a-cielikowski-galeria-ursynw) | [www](https://www.cukierniacieslikowski.pl/) |
+| Cukiernia Cieślikowski (Galeria Ursynów) | [karta menu](https://wolt.com/en/pol/warsaw/venue/cukiernia-a-cielikowski-galeria-ursynw) | [www](https://www.cukierniacieslikowski.pl/) |
+| Cukiernia Deserownia | — | [www](http://www.deserownia.com/) |
+| Cukiernia Olsza | — | [www](https://cukierniaolsza.pl/) |
 | Cukiernia Sowa | — | — |
 | Cukiernia Sweet Home | — | [www](https://www.sweet-home.pl/) |
 | Diyaa Indian Restaurant | — | — |
