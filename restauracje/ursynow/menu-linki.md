@@ -1,6 +1,6 @@
 # Linki do menu — restauracje Ursynów
 
-Bezpośrednie linki do kart menu lokali z Ursynowa. Menu online mają **45** z 184; dla pozostałych podano stronę www, a w przeglądarce zawsze działa wyszukiwarka + 🗺️ Mapa.
+Bezpośrednie linki do kart menu lokali z Ursynowa. Menu online mają **48** z 184; dla pozostałych podano stronę www, a w przeglądarce zawsze działa wyszukiwarka + 🗺️ Mapa.
 
 | Restauracja | Menu online | Strona www |
 |---|---|---|
@@ -54,7 +54,7 @@ Bezpośrednie linki do kart menu lokali z Ursynowa. Menu online mają **45** z 1
 | North Fish Ursynów | — | — |
 | Subway Ursynów | — | — |
 | Pasibus Ursynów | — | — |
-| Bobby Burger Ursynów | — | — |
+| Bobby Burger Ursynów | [karta menu](https://bobbyburger.pl/menu/) | [www](https://bobbyburger.pl/) |
 | Berlin Döner Kebap Ursynów | — | — |
 | A. Blikle Centrum Ursynów | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/a-blikle-ch-ursynow) | [www](https://www.blikle.pl/) |
 | A. Blikle Kabaty | [karta menu](https://wolt.com/en/pol/warsaw/venue/blikle-kabaty) | [www](https://www.blikle.pl/) |
@@ -65,11 +65,11 @@ Bezpośrednie linki do kart menu lokali z Ursynowa. Menu online mają **45** z 1
 | Bar mleczny Zaścianek | — | — |
 | Bar U Justyny | — | — |
 | Beczka | — | — |
-| Bezowy Zakątek | — | — |
-| Bistro Kafelek | — | — |
-| Bistro KEN | — | — |
-| Bite me! Burger Ursynów | — | — |
-| Bread Morning | — | — |
+| Bezowy Zakątek | — | [www](https://bezowyzakatek.pl/) |
+| Bistro Kafelek | — | [www](https://www.bistrokafelek.pl/) |
+| Bistro KEN | [karta menu](https://www.pyszne.pl/menu/bistro-ken) | — |
+| Bite me! Burger Ursynów | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/bite-me-burger-ursynw) | — |
+| Bread Morning | — | [www](https://www.facebook.com/breadmorning/) |
 | Burger Mama | — | — |
 | Caffè Gelateria Myszka | — | — |
 | Casa di Pizza Ursynów | — | — |
