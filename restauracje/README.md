@@ -43,9 +43,12 @@ restauracje/
     ├── kuchnia-balkanska/
     ├── kuchnia-autorska/
     ├── wegetarianska/
+    ├── kuchnia-meksykanska/
     ├── kebab-turecka/
     ├── burgery/
     ├── fast-food/
+    ├── bar-mleczny/
+    ├── pub-bar/
     └── salatki-cafe/
 ```
 
