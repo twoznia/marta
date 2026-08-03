@@ -1,6 +1,6 @@
 # Linki do menu — restauracje Ursynów
 
-Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono w researchu). Menu online mają **71** z 184 lokali; dla pozostałych podano stronę www, a w przeglądarce zawsze działa wyszukiwarka + 🗺️ Mapa.
+Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono w researchu). Menu online mają **76** z 184 lokali; dla pozostałych podano stronę www, a w przeglądarce zawsze działa wyszukiwarka + 🗺️ Mapa.
 
 | Restauracja | Menu online | Strona www |
 |---|---|---|
@@ -56,18 +56,18 @@ Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono w rese
 | Gaumarjos – Kuchnia Gruzińska | [karta menu](http://www.gaumarjos.pl/menu/) | [www](http://www.gaumarjos.pl/) |
 | Geisha Sushi | [karta menu](https://www.geishasushiursynow.pl/menu) | [www](https://www.geishasushiursynow.pl/) |
 | Goodly Specialty Coffee | — | — |
-| Green Caffè Nero Kabaty | — | — |
+| Green Caffè Nero Kabaty | [karta menu](https://www.greencaffenero.pl/pl/menu) | [www](https://www.greencaffenero.pl/pl) |
 | Hakan | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/hakan-chef) | — |
 | Hooligan Burgers | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/hooligan-burgers) | [www](https://hooliganburgers.com.pl/) |
 | Horapa | [karta menu](http://horapa.pl/menu/main-menu/) | [www](https://horapa.pl/) |
 | Huong Asia | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/huong-asia-pan-asia-cuisine-bar) | [www](https://wolt.com/en/pol/warsaw/restaurant/huong-asia-pan-asia-cuisine-bar) |
 | India King | [karta menu](https://www.indiaking.pl/menu.html) | [www](https://www.indiaking.pl/) |
 | Inori Sushi | [karta menu](https://www.inorisushi.pl/menu/) | [www](https://www.inorisushi.pl/) |
-| Japan Burger Ursynów | — | — |
-| Jesz Lody Tradycyjne | — | — |
-| KFC Ursynów | — | — |
-| KOKU Sushi | — | — |
-| KRISPI korean KFC Ursynów | — | — |
+| Japan Burger Ursynów | [karta menu](https://ursynow.japanburger.pl/menu) | [www](https://ursynow.japanburger.pl/) |
+| Jesz Lody Tradycyjne | — | [www](https://jeszlody.pl/) |
+| KFC Ursynów | [karta menu](https://kfc.pl/restauracje/kfc-warszawa-ursynow-3-19) | [www](https://kfc.pl/) |
+| KOKU Sushi | [karta menu](https://www.pyszne.pl/menu/koku-sushi-warszawa-skoroszewska) | [www](https://kokusushi.pl/) |
+| KRISPI korean KFC Ursynów | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/krispi-korean-kfc-burger-ursynw) | — |
 | Kaba Sushi Ursynów | — | — |
 | Kabaty Sushi | — | — |
 | Karczma Bałkany od Kuchni | [karta menu](https://balkanyodkuchni.pl/pl/menu) | [www](https://balkanyodkuchni.pl/) |
