@@ -1,188 +1,187 @@
 # Linki do menu — restauracje Ursynów
 
-Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono w researchu). Menu online mają **111** z 185 lokali; dla pozostałych podano stronę www, a w przeglądarce zawsze działa wyszukiwarka + 🗺️ Mapa.
+Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono). Menu online mają **37** z 184 lokali; dla pozostałych podano stronę www, a w przeglądarce zawsze działa wyszukiwarka + 🗺️ Mapa.
 
 | Restauracja | Menu online | Strona www |
 |---|---|---|
-| A. Blikle Centrum Ursynów | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/a-blikle-ch-ursynow) | [www](https://www.blikle.pl/) |
-| A. Blikle Kabaty | [karta menu](https://wolt.com/en/pol/warsaw/venue/blikle-kabaty) | [www](https://www.blikle.pl/) |
-| AMICI ItalianFoodLovers | [karta menu](https://amiciwarszawa.pl/menu/) | [www](https://amiciwarszawa.pl/) |
 | Adana Kebab | [karta menu](https://www.adanakebab.pl/menu) | [www](https://www.adanakebab.pl) |
-| American Dream Pizza Ursynów | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/american-dream-pizza-ursynw) | — |
-| Arena Restaurant | [karta menu](https://arenarestaurant.pl/menu/) | [www](https://arenarestaurant.pl/) |
+| AMICI ItalianFoodLovers | [karta menu](https://amiciwarszawa.pl/menu/) | [www](https://amiciwarszawa.pl/) |
 | Baku Kebab Ursynów | [karta menu](https://www.bakukebab.com/restauracja/baku-kebab-ursynow) | [www](https://www.bakukebab.com) |
-| Bar Janusz | — | — |
-| Bar U Justyny | [karta menu](https://www.pyszne.pl/menu/bar-u-justyny-warszawa) | [www](https://www.barujustyny.pl/) |
-| Bar mleczny Zaścianek | — | — |
 | Basilia | [karta menu](https://basilia.pl/menu/) | [www](https://basilia.pl/) |
-| Beczka | — | [www](https://www.facebook.com/beczka.kabaty/) |
 | Bella Napoli | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/bella-napoli-ursynow) | [www](https://bellanapoli.com.pl/ursynow.html) |
-| Berlin Döner Kebap Ursynów | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/berlin-doner-kebap-1) | [www](https://www.berlindonerkebap.com/) |
-| Bezowy Zakątek | — | [www](https://bezowyzakatek.pl/) |
-| Bistro KEN | [karta menu](https://www.pyszne.pl/menu/bistro-ken) | — |
-| Bistro Kafelek | — | [www](https://www.bistrokafelek.pl/) |
-| Bite me! Burger Ursynów | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/bite-me-burger-ursynw) | — |
-| Bobby Burger Ursynów | [karta menu](https://bobbyburger.pl/menu/) | [www](https://bobbyburger.pl/) |
-| Bread Morning | — | [www](https://www.facebook.com/breadmorning/) |
-| Burger Mama | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/burger-mama-ursynw) | — |
-| CHO Sushi Ursynów | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/cho-sushi-ursynow) | — |
-| Caffè Gelateria Myszka | [karta menu](https://www.pyszne.pl/menu/caffe-gelateria-myszka) | — |
-| Casa di Pizza Ursynów | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/casa-di-pizza-ursynow) | — |
-| Chicago's Pizza Ursynów | [karta menu](https://chicago-s-pizza.orderwebsite.com/) | [www](https://chicagospizza.pl/) |
-| Chrupiący Kurczak | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/bangkok-fried-crunch-bfc) | — |
 | Ciepło Zimno Bistro & Bar | [karta menu](https://cieplozimnobistro.pl/menu/) | [www](https://cieplozimnobistro.pl/) |
-| Coffeeway | — | — |
-| Costa Coffee KEN Metro Ursynów | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/costa-cofee-ken) | — |
-| Costa Coffee Ursynów | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/costa-coffee-ursynow) | — |
-| Cukiernia Cieślikowski | [karta menu](https://wolt.com/en/pol/warsaw/venue/cukiernia-a-cielikowski-galeria-ursynw) | [www](https://www.cukierniacieslikowski.pl/) |
-| Cukiernia Cieślikowski (Galeria Ursynów) | [karta menu](https://wolt.com/en/pol/warsaw/venue/cukiernia-a-cielikowski-galeria-ursynw) | [www](https://www.cukierniacieslikowski.pl/) |
-| Cukiernia Deserownia | — | [www](http://www.deserownia.com/) |
-| Cukiernia Olsza | — | [www](https://cukierniaolsza.pl/) |
-| Cukiernia Sowa | — | [www](https://www.cukierniasowa.pl/) |
-| Cukiernia Sweet Home | — | [www](https://www.sweet-home.pl/) |
 | Czyli Czyli Kabaty | [karta menu](http://czyliczyli.pl/menu/) | [www](http://czyliczyli.pl/) |
 | Da Grasso Ursynów | [karta menu](https://www.dagrasso.pl/warszawa-ursynow) | [www](https://www.dagrasso.pl/warszawa-ursynow) |
-| Da Gusto | [karta menu](https://www.ubereats.com/pl-en/store/da-gusto/dVcjeZ6sSmSQOzCX_IHbJw) | — |
-| Diyaa Indian Restaurant | — | — |
-| Domino's Pizza Ursynów | [karta menu](https://www.pyszne.pl/menu/dominos-pizza-dereniowa) | — |
 | Dziurka od Klucza | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/dziurka-od-klucza-wwa) | [www](https://dziurkaodklucza.eu) |
-| Eatstory bistro i cukiernia | — | — |
-| Eleven Kebab & Pizza | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/eleven-kebab-pizza) | — |
-| Express Indii | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/express-indii) | [www](https://expressindii.pl/) |
-| Farszawa - Pierogi z Pieca | [karta menu](https://farszawa.pl/pl/menu) | [www](https://farszawa.pl/) |
-| Fenicja Kebab - Dereniowa | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/fenicja-kebab-dereniowa) | — |
-| Fit Cake Ursynów | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/fit-cake-ursynow) | [www](https://fitcakeursynow.com/) |
 | G-Yoza Ursynów | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/g-yoza-ursynow) | [www](https://wolt.com/en/pol/warsaw/restaurant/g-yoza-ursynow) |
 | Gaumarjos – Kuchnia Gruzińska | [karta menu](http://www.gaumarjos.pl/menu/) | [www](http://www.gaumarjos.pl/) |
 | Geisha Sushi | [karta menu](https://www.geishasushiursynow.pl/menu) | [www](https://www.geishasushiursynow.pl/) |
-| Goodly Specialty Coffee | — | — |
-| Green Caffè Nero Kabaty | [karta menu](https://www.greencaffenero.pl/pl/menu) | [www](https://www.greencaffenero.pl/pl) |
-| Hakan | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/hakan-chef) | — |
-| Hooligan Burgers | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/hooligan-burgers) | [www](https://hooliganburgers.com.pl/) |
 | Horapa | [karta menu](http://horapa.pl/menu/main-menu/) | [www](https://horapa.pl/) |
 | Huong Asia | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/huong-asia-pan-asia-cuisine-bar) | [www](https://wolt.com/en/pol/warsaw/restaurant/huong-asia-pan-asia-cuisine-bar) |
-| India King | [karta menu](https://www.indiaking.pl/menu.html) | [www](https://www.indiaking.pl/) |
-| Inori Sushi | [karta menu](https://www.inorisushi.pl/menu/) | [www](https://www.inorisushi.pl/) |
-| Japan Burger Ursynów | [karta menu](https://ursynow.japanburger.pl/menu) | [www](https://ursynow.japanburger.pl/) |
-| Jesz Lody Tradycyjne | — | [www](https://jeszlody.pl/) |
-| KFC Ursynów | [karta menu](https://kfc.pl/restauracje/kfc-warszawa-ursynow-3-19) | [www](https://kfc.pl/) |
-| KOKU Sushi | [karta menu](https://www.pyszne.pl/menu/koku-sushi-warszawa-skoroszewska) | [www](https://kokusushi.pl/) |
-| KRISPI korean KFC Ursynów | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/krispi-korean-kfc-burger-ursynw) | — |
+| India King | [karta menu](https://www.indiaking.pl/menu.html) | [www](https://www.indiaking.pl) |
+| Karczma Bałkany od Kuchni | [karta menu](https://balkanyodkuchni.pl/pl/menu) | [www](https://balkanyodkuchni.pl/) |
+| Kucharek Sześć | [karta menu](https://www.pyszne.pl/menu/kucharek-szesc) | [www](https://kucharekszesc.pl/pl/) |
+| Moje Curry Kabaty | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/moje-curry) | [www](https://wolt.com/en/pol/warsaw/restaurant/moje-curry) |
+| Mr India | [karta menu](https://www.pyszne.pl/menu/mr-india) | [www](https://www.mrindia.pl/) |
+| QABBO Ramen Dim Sum & Sushi | [karta menu](https://qabbo.pl/menu/) | [www](https://qabbo.pl/) |
+| Rani – Indyjska Restauracja | [karta menu](https://rani-restauracja-indyjska.orderwebsite.com/en/rani-warszawa) | [www](https://rani.com.pl/) |
+| Restauracja Ngon | [karta menu](https://www.pyszne.pl/menu/bar-orientalny-ngon-ngon) | [www](https://www.pyszne.pl/menu/bar-orientalny-ngon-ngon) |
+| Restauracja Nowoursynowska | [karta menu](https://www.nowoursynowska.pl/restauracja/nowoursynowska) | [www](https://www.nowoursynowska.pl/) |
+| Restauracja Staroświecka | [karta menu](https://staroswiecka.pl/menu-restauracji/) | [www](https://staroswiecka.pl) |
+| Salad Story Ursynów | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/salad-story-al-ken) | [www](https://wolt.com/en/pol/warsaw/restaurant/salad-story-al-ken) |
+| Siwy Dym | [karta menu](https://warszawa.siwydym.pl/menu/) | [www](https://warszawa.siwydym.pl/) |
+| Soto Sushi | [karta menu](https://www.sotosushi.pl/menu) | [www](https://www.sotosushi.pl/) |
+| Sushi Icons | [karta menu](https://sushiicons.pl/category/sushi) | [www](https://sushiicons.pl) |
+| Sushi Nugat | [karta menu](https://www.sushinugat.pl/en/menu) | [www](https://www.sushinugat.pl/) |
+| Tasbih Kebab | [karta menu](https://www.ubereats.com/pl/store/tasbih-kebab/GRLQRxvzR56WJBmZ3tD3iw) | [www](https://www.ubereats.com/pl/store/tasbih-kebab/GRLQRxvzR56WJBmZ3tD3iw) |
+| Thai Hung Bistro | [karta menu](https://www.pyszne.pl/menu/thai-hung-warszawa) | [www](https://www.pyszne.pl/menu/thai-hung-warszawa) |
+| Tito Appetito | [karta menu](https://titoappetito.order.dish.co/menus) | [www](https://www.facebook.com/titoappetito/) |
+| Tulsi Ursynów | [karta menu](https://tulsirestauracja.pl/tulsi-menu/) | [www](https://tulsirestauracja.pl/) |
+| Vege Bistro Kurkuma | [karta menu](https://vege-bistro.dowozimy.pl/) | [www](https://vege-bistro.dowozimy.pl/) |
+| Viet Street Food | [karta menu](https://vietstreetfood.pl/photo-menu/) | [www](https://vietstreetfood.pl/) |
+| Vina Express (Bar Kokos) | [karta menu](https://www.ubereats.com/pl/store/vina-express/Ld-1Bc4oU9mjFmBfsYRFJw) | [www](https://www.ubereats.com/pl/store/vina-express/Ld-1Bc4oU9mjFmBfsYRFJw) |
+| Wiethai Kabaty | [karta menu](https://www.ubereats.com/pl/store/wiethai-kabaty/SW9b0nktUX26yBPjGwRfVQ) | [www](https://www.ubereats.com/pl/store/wiethai-kabaty/SW9b0nktUX26yBPjGwRfVQ) |
+| A. Blikle Centrum Ursynów | — | — |
+| A. Blikle Kabaty | — | — |
+| American Dream Pizza Ursynów | — | — |
+| Arena Restaurant | — | — |
+| Bar Janusz | — | — |
+| Bar mleczny Zaścianek | — | — |
+| Bar U Justyny | — | — |
+| Beczka | — | — |
+| Berlin Döner Kebap Ursynów | — | — |
+| Bezowy Zakątek | — | — |
+| Bistro Kafelek | — | — |
+| Bistro KEN | — | — |
+| Bite me! Burger Ursynów | — | — |
+| Bobby Burger Ursynów | — | [www](https://bobbyburger.pl) |
+| Bread Morning | — | — |
+| Burger Mama | — | — |
+| Caffè Gelateria Myszka | — | — |
+| Casa di Pizza Ursynów | — | — |
+| Chicago's Pizza Ursynów | — | — |
+| CHO Sushi Ursynów | — | — |
+| Chrupiący Kurczak | — | — |
+| Coffeeway | — | — |
+| Costa Coffee KEN Metro Ursynów | — | — |
+| Costa Coffee Ursynów | — | — |
+| Cukiernia Cieślikowski | — | — |
+| Cukiernia Cieślikowski (Galeria Ursynów) | — | — |
+| Cukiernia Deserownia | — | — |
+| Cukiernia Olsza | — | — |
+| Cukiernia Sowa | — | — |
+| Cukiernia Sweet Home | — | [www](https://www.sweet-home.pl/) |
+| Da Gusto | — | — |
+| Diyaa Indian Restaurant | — | — |
+| Domino's Pizza Ursynów | — | [www](https://dominospizza.pl) |
+| Eatstory bistro i cukiernia | — | — |
+| Eleven Kebab & Pizza | — | — |
+| Express Indii | — | — |
+| Farszawa - Pierogi z Pieca | — | — |
+| Fenicja Kebab - Dereniowa | — | — |
+| Fit Cake Ursynów | — | — |
+| Goodly Specialty Coffee | — | — |
+| Green Caffè Nero Kabaty | — | — |
+| Hakan | — | — |
+| Hooligan Burgers | — | — |
+| Inori Sushi | — | — |
+| Japan Burger Ursynów | — | — |
+| Jesz Lody Tradycyjne | — | — |
 | Kaba Sushi Ursynów | — | — |
 | Kabaty Sushi | — | — |
-| Karczma Bałkany od Kuchni | [karta menu](https://balkanyodkuchni.pl/pl/menu) | [www](https://balkanyodkuchni.pl/) |
 | Kervan Kebab | — | — |
+| KFC Ursynów | — | [www](https://kfc.pl) |
 | Klubokawiarnia KEN54 | — | — |
-| Krowarzywa Ursynów | [karta menu](https://wolt.com/pl/pol/warsaw/restaurant/krowarzywa-ursynow) | [www](https://krowarzywa.pl/) |
-| Kucharek Sześć | [karta menu](https://www.pyszne.pl/menu/kucharek-szesc) | [www](https://kucharekszesc.pl/pl/) |
-| Kuchnia za Ścianą | [karta menu](https://kuchniazasciana.pl/en/todays-menu/) | [www](https://kuchniazasciana.pl/) |
+| KOKU Sushi | — | — |
+| KRISPI korean KFC Ursynów | — | — |
+| Krowarzywa Ursynów | — | — |
+| Kuchnia za Ścianą | — | — |
 | Kumpir & Kebab | — | — |
 | Kurczaki na Wypasie Ursynów | — | — |
-| Le Petit Café | — | [www](https://lepetitcafe.eu/) |
-| Lody Ice Cream NOW - Ursynów | [karta menu](https://www.pyszne.pl/menu/lody-ice-cream-now-ursynow) | — |
+| Le Petit Café | — | — |
+| Lody Ice Cream NOW - Ursynów | — | — |
 | Lodziarnia Al Passo | — | — |
 | Lodziarnia Rożek na Rożku | — | — |
-| Los Mexicos Ursynów | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/los-mexicos-ursynw) | — |
-| Make&Take Pizza Ursynów | [karta menu](https://www.ubereats.com/pl/store/make&take-pizza-ursynow/agMr-TBlSR21bLfUxl8RRg) | [www](https://maketake.pl/ursynow/) |
+| Los Mexicos Ursynów | — | — |
+| Make&Take Pizza Ursynów | — | — |
 | Mama Kebab | — | — |
 | Mama Kebab - Galeria Ursynów | — | — |
-| Marani | — | — |
+| Marani | — | [www](https://www.marani.pl) |
 | Mały Belgrad | — | [www](https://www.malybelgrad.pl/) |
-| McDonald's Ursynów | — | — |
-| Mezze Gyros | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/mezze-gyros-beirut-ursynw) | — |
-| Moje Curry Kabaty | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/moje-curry) | [www](https://wolt.com/en/pol/warsaw/restaurant/moje-curry) |
-| Monkey Craft Beer | — | [www](https://monkeycraftbeerursynow.pl/) |
+| McDonald's Ursynów | — | [www](https://mcdonalds.pl) |
+| Mezze Gyros | — | — |
+| Monkey Craft Beer | — | — |
 | Moo Cafe Filipiny | — | [www](https://www.facebook.com/moocafe/) |
-| Mr India | [karta menu](https://www.pyszne.pl/menu/mr-india) | [www](https://www.mrindia.pl/) |
-| My Sushi | — | [www](https://mysushi.com.pl/) |
-| Naleśnikarnia Nasz Naleśnik | [karta menu](https://www.ubereats.com/pl/store/nalesnikarnia-nasz-nalesnik-kabaty/8odSXD54Q8qV_MgFElJ5RQ) | [www](https://www.nasznalesnik.pl/) |
-| New York Pizza Departament Ursynów | [karta menu](https://www.pyszne.pl/jedzenie-na-dowoz/marki/new-york-pizza-department) | [www](https://nowojorska.pizza/) |
-| Night Burger Noc | [karta menu](https://www.pyszne.pl/menu/night-burger-noc) | [www](https://www.nightburger.pl/) |
+| My Sushi | — | — |
+| Naleśnikarnia Nasz Naleśnik | — | — |
+| New York Pizza Departament Ursynów | — | — |
+| Night Burger Noc | — | — |
 | Nocna Wyżerka | — | — |
-| North Fish Ursynów | — | — |
+| North Fish Ursynów | — | [www](https://northfish.pl) |
 | Noto Pizza Ursynów | — | — |
-| ONO-POKE Ursynów | — | — |
 | Obiady U Gienia | — | — |
 | One & More Sushi | — | — |
-| Orient Express | — | [www](https://www.barorientexpress.pl/) |
-| PIZZA O PÓŁNOCY | [karta menu](https://www.pyszne.pl/menu/pizza-o-pnocy) | — |
-| Pan Sushi Ursynów KEN | [karta menu](https://www.ubereats.com/pl/store/pan-sushi-ursynow-ken/zj63XN1dSOGDVk85wJ5I3A) | [www](https://ursynow.pansushi.pl/) |
-| Papa Johns Ursynów | [karta menu](https://www.pyszne.pl/menu/papa-johns-ursynow) | — |
-| Papito Mexican Bar | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/papito-mexican-bar) | [www](https://papitowarszawa.pl/) |
-| Paradizzo | — | [www](https://paradizzo.eatbu.com/) |
-| Pasibus Ursynów | — | — |
+| ONO-POKE Ursynów | — | — |
+| Orient Express | — | — |
+| Pan Sushi Ursynów KEN | — | — |
+| Papa Johns Ursynów | — | — |
+| Papito Mexican Bar | — | — |
+| Paradizzo | — | — |
+| Pasibus Ursynów | — | [www](https://pasibus.pl) |
 | Pasta Point Ursynów | — | — |
 | Pazzo Italia | — | — |
 | Piccolo Pizzaiolo | — | — |
 | Piekarnia Cukiernia Grzybki | — | — |
 | Piekarnia Wanda | — | — |
-| Piri-Piri Kebab | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/piri-piri-kebab-ursynow) | — |
-| Pita Bros Ursynów | [karta menu](https://www.ubereats.com/pl/store/pita-bros-ursynow/mw1ZLbGwS9KfEBZD0GLRTQ) | [www](https://pitabros.pl/) |
-| Pizza Na Wypasie Ursynów | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/pizza-na-wypasie-ursynow) | — |
-| Pizzeria Biesiadowo | [karta menu](https://pizzaportal.pl/warszawa/pizzeria-biesiadowo-ursynow/) | [www](https://www.facebook.com/biesiadowoursynowken/) |
-| Pizzeria Czerwony Stefan | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/pizzeria-czerwony-stefan) | — |
-| Pizzeria Picka | [karta menu](https://www.pyszne.pl/menu/pizzeria-picka-warszawa) | — |
+| Piri-Piri Kebab | — | — |
+| Pita Bros Ursynów | — | — |
+| Pizza Na Wypasie Ursynów | — | — |
+| PIZZA O PÓŁNOCY | — | — |
+| Pizzeria Biesiadowo | — | — |
+| Pizzeria Czerwony Stefan | — | — |
+| Pizzeria Picka | — | — |
 | Pizzeria Stokłosy | — | — |
 | Polskie Smaki | — | — |
 | Port Jeziorki | — | — |
 | Praski Kebab | — | — |
 | Pub Szyszka Chmielu | — | — |
 | Punto Pizza | — | — |
-| QABBO Ramen Dim Sum & Sushi | [karta menu](https://qabbo.pl/menu/) | [www](https://qabbo.pl/) |
-| QKI Cukiernia Kawiarnia | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/qki-cukiernia-kawiarnia) | [www](https://qkicukiernia.pl/) |
-| Rani – Indyjska Restauracja | [karta menu](https://rani-restauracja-indyjska.orderwebsite.com/en/rani-warszawa) | [www](https://rani.com.pl/) |
-| Restauracja Lipari | [karta menu](https://www.restauracjalipari.pl/restauracja/restauracja-lipari-warszawa) | [www](https://restauracjalipari.pl/) |
-| Restauracja Ngon | [karta menu](https://www.pyszne.pl/menu/bar-orientalny-ngon-ngon) | [www](https://www.pyszne.pl/menu/bar-orientalny-ngon-ngon) |
-| Restauracja Nowoursynowska | [karta menu](https://www.nowoursynowska.pl/restauracja/nowoursynowska) | [www](https://www.nowoursynowska.pl/) |
-| Restauracja Rimini | [karta menu](https://www.pyszne.pl/menu/rimini-warszawa) | [www](https://riminiwarszawa.pl/) |
-| Restauracja Shogun | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/restauracja-shogun-ursynow) | — |
-| Restauracja Staroświecka | [karta menu](https://staroswiecka.pl/menu-restauracji/) | [www](https://staroswiecka.pl) |
-| Rolldog Ursynów | [karta menu](https://www.ubereats.com/pl/store/rolldog-ursynow/lNhPKMCGSdOZKMENGJXjQA) | [www](https://rolldog.pl/) |
+| QKI Cukiernia Kawiarnia | — | — |
+| Restauracja Lipari | — | — |
+| Restauracja Rimini | — | — |
+| Restauracja Shogun | — | — |
+| Rolldog Ursynów | — | — |
 | Rong Vang | — | [www](https://rongvang.pl/) |
-| Rosso | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/rosso-ursynow) | — |
-| SABA SUSHI | [karta menu](https://www.pyszne.pl/menu/saba-sushi-ursynow) | [www](https://saba-sushi.pl/) |
-| SHAHI KEBAB & GRILL Ursynów | — | — |
-| Sake Izakaya | — | [www](https://sake-izakaya.eatbu.com/) |
-| Salad Story Ursynów | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/salad-story-al-ken) | [www](https://wolt.com/en/pol/warsaw/restaurant/salad-story-al-ken) |
+| Rosso | — | — |
+| SABA SUSHI | — | — |
+| Sake Izakaya | — | — |
 | Salsiccia - Pizzeria Napoletana | — | — |
 | San Giovanni | — | — |
-| Siwy Dym | [karta menu](https://warszawa.siwydym.pl/menu/) | [www](https://warszawa.siwydym.pl/) |
-| Soto Sushi | [karta menu](https://www.sotosushi.pl/menu) | [www](https://www.sotosushi.pl/) |
+| SHAHI KEBAB & GRILL Ursynów | — | — |
 | Sphinx Ursynów (Multikino) | — | — |
-| Subway Ursynów | — | — |
+| Subway Ursynów | — | [www](https://www.subway.com/pl-PL) |
 | Sucré Ursynów - Cukiernia, Lody Naturalne | — | — |
-| Sushi Bistro | [karta menu](https://www.ubereats.com/pl/store/sushi-bistro-ursynow/5vZ0hMSxWASTIcgatiHVhw) | [www](https://sushibistro.pl/pl/) |
-| Sushi Fudzi Ursynów | [karta menu](https://www.pyszne.pl/menu/sushi-fudzi-warszawa) | [www](https://sushifudzi.pl/) |
-| Sushi Icons | [karta menu](https://sushiicons.pl/category/sushi) | [www](https://sushiicons.pl) |
-| Sushi Nugat | [karta menu](https://www.sushinugat.pl/en/menu) | [www](https://www.sushinugat.pl/) |
-| Sushi Scena Fryderyk | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/sushi-scena-fryderyk) | — |
-| Sushi Zushi Silver Ursynów | [karta menu](https://www.pyszne.pl/menu/zushi-silver-warszawa) | [www](https://zushisilver.pl/) |
-| SushiZen | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/sushizen-ursynow) | [www](https://sushizen.pl/) |
-| Sypka Mąka | [karta menu](https://www.pyszne.pl/menu/sypka-maka) | [www](https://www.sypkamaka.pl/) |
-| Taco Loco Ursynów | [karta menu](https://www.pyszne.pl/menu/taco-loco-eugeniusza-romera) | [www](https://www.pyszne.pl/menu/taco-loco-eugeniusza-romera) |
+| Sushi Bistro | — | — |
+| Sushi Fudzi Ursynów | — | — |
+| Sushi Scena Fryderyk | — | — |
+| Sushi Zushi Silver Ursynów | — | — |
+| SushiZen | — | — |
+| Sypka Mąka | — | — |
+| Taco Loco Ursynów | — | — |
 | Tajto Sushi Ursynów | — | — |
 | Tamli Kebap Restauracja | — | — |
-| Tanami Sushi | [karta menu](https://www.pyszne.pl/menu/tanami-sushi-dzwonnicza) | [www](https://tanami-sushi.pl/) |
-| Tasbih Kebab | [karta menu](https://www.ubereats.com/pl/store/tasbih-kebab/GRLQRxvzR56WJBmZ3tD3iw) | [www](https://www.ubereats.com/pl/store/tasbih-kebab/GRLQRxvzR56WJBmZ3tD3iw) |
-| Telepizza Ursynów | — | — |
-| Thai Hung Bistro | [karta menu](https://www.pyszne.pl/menu/thai-hung-warszawa) | [www](https://www.pyszne.pl/menu/thai-hung-warszawa) |
+| Tanami Sushi | — | — |
+| Telepizza Ursynów | — | [www](https://telepizza.pl) |
 | Thai Masala | — | [www](https://www.facebook.com/restauracjathaimasala/) |
 | The Goood Burger - Warszawa Ursynów | — | — |
-| Tito Appetito | [karta menu](https://titoappetito.order.dish.co/menus) | [www](https://www.facebook.com/titoappetito/) |
 | Trattoria In Italia | — | — |
-| Tulsi Ursynów | [karta menu](https://tulsirestauracja.pl/tulsi-menu/) | [www](https://tulsirestauracja.pl/) |
 | Tylko dobre makarony Ursynów | — | — |
-| Tylko dobre sałatki! Ursynów | [karta menu](https://www.pyszne.pl/menu/tylko-dobre-salatki-warszawa) | [www](https://tylkodobresalatki.pl/) |
-| Tylko dobre sałatki! Ursynów | [karta menu](https://www.pyszne.pl/menu/tylko-dobre-salatki-warszawa) | [www](https://tylkodobresalatki.pl/) |
-| Va Bene | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/va-bene-pizzeria-ursynow) | [www](https://vabene.pl/) |
-| Veda | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/veda-ursynow) | — |
-| Vegan House | [karta menu](https://www.ubereats.com/pl/store/vegan-house-ursynow/q_EcGuaISPW8LLVyHZfohg) | [www](https://www.veganhouse.pl/) |
-| Vege Bistro Kurkuma | [karta menu](https://vege-bistro.dowozimy.pl/) | [www](https://vege-bistro.dowozimy.pl/) |
-| Viet Street Food | [karta menu](https://vietstreetfood.pl/photo-menu/) | [www](https://vietstreetfood.pl/) |
-| Vina Express (Bar Kokos) | [karta menu](https://www.ubereats.com/pl/store/vina-express/Ld-1Bc4oU9mjFmBfsYRFJw) | [www](https://www.ubereats.com/pl/store/vina-express/Ld-1Bc4oU9mjFmBfsYRFJw) |
+| Tylko dobre sałatki! Ursynów | — | — |
+| Va Bene | — | — |
+| Veda | — | — |
+| Vegan House | — | — |
 | Violinova Milky Bar | — | — |
-| W. Kebab | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/w-kebab-ursynow) | — |
-| Wiethai Kabaty | [karta menu](https://www.ubereats.com/pl/store/wiethai-kabaty/SW9b0nktUX26yBPjGwRfVQ) | [www](https://www.ubereats.com/pl/store/wiethai-kabaty/SW9b0nktUX26yBPjGwRfVQ) |
+| W. Kebab | — | — |
 | Winowajcy Roku | — | — |
 | Wół na Stół | — | [www](https://wolnastol.pl/) |
 | YUKI Ursynów | — | — |
