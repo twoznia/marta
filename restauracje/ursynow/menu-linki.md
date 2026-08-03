@@ -1,6 +1,6 @@
 # Linki do menu — restauracje Ursynów
 
-Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono w researchu). Menu online mają **83** z 184 lokali; dla pozostałych podano stronę www, a w przeglądarce zawsze działa wyszukiwarka + 🗺️ Mapa.
+Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono w researchu). Menu online mają **87** z 184 lokali; dla pozostałych podano stronę www, a w przeglądarce zawsze działa wyszukiwarka + 🗺️ Mapa.
 
 | Restauracja | Menu online | Strona www |
 |---|---|---|
@@ -104,12 +104,12 @@ Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono w rese
 | ONO-POKE Ursynów | — | — |
 | Obiady U Gienia | — | — |
 | One & More Sushi | — | — |
-| Orient Express | — | — |
-| PIZZA O PÓŁNOCY | — | — |
-| Pan Sushi Ursynów KEN | — | — |
-| Papa Johns Ursynów | — | — |
-| Papito Mexican Bar | — | — |
-| Paradizzo | — | — |
+| Orient Express | — | [www](https://www.barorientexpress.pl/) |
+| PIZZA O PÓŁNOCY | [karta menu](https://www.pyszne.pl/menu/pizza-o-pnocy) | — |
+| Pan Sushi Ursynów KEN | [karta menu](https://www.ubereats.com/pl/store/pan-sushi-ursynow-ken/zj63XN1dSOGDVk85wJ5I3A) | [www](https://ursynow.pansushi.pl/) |
+| Papa Johns Ursynów | [karta menu](https://www.pyszne.pl/menu/papa-johns-ursynow) | — |
+| Papito Mexican Bar | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/papito-mexican-bar) | [www](https://papitowarszawa.pl/) |
+| Paradizzo | — | [www](https://paradizzo.eatbu.com/) |
 | Pasibus Ursynów | — | — |
 | Pasta Point Ursynów | — | — |
 | Pazzo Italia | — | — |
