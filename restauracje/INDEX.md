@@ -145,6 +145,12 @@ jak łatwo zjeść tu na diecie low FODMAP:
 | [Vege Bistro Kurkuma](ursynow/wegetarianska/kurkuma.md) | wegetariańska / roślinna | Ursynów | ~11–20 | 🟡 |
 | [Mały Belgrad](ursynow/kuchnia-balkanska/maly-belgrad.md) | bałkańska / serbska | Belgradzka 4 | ~12–22 | 🟡 |
 | [Moo Cafe Filipiny](ursynow/salatki-cafe/moo-cafe.md) | kawiarnia | Płaskowickiej | ~8–20 | 🟡 |
+| [Telepizza Ursynów](ursynow/fast-food/telepizza.md) | fast food / pizzeria (sieć) | Puławska (Ursynów) | do późna | 🔴 |
+| [North Fish Ursynów](ursynow/fast-food/north-fish.md) | fast food (ryby) | CH Ursynów, Puławska 427 | ~9–21 | 🟡 |
+| [Subway Ursynów](ursynow/fast-food/subway.md) | fast food (kanapki) | Ursynów | ~9–22 | 🟡 |
+| [Pasibus Ursynów](ursynow/burgery/pasibus.md) | burgery (sieć) | Ursynów | ~12–22 | 🟡 |
+| [Bobby Burger Ursynów](ursynow/burgery/bobby-burger.md) | burgery (sieć) | Ursynów | ~12–22 | 🟡 |
+| [Berlin Döner Kebap Ursynów](ursynow/kebab-turecka/berlin-doner.md) | turecka / kebab (sieć) | Ursynów | ~10–23 | 🟡 |
 
 ## Najlepsze miejsca na low FODMAP (🟢)
 
