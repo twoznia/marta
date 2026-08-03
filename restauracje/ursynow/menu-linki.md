@@ -1,25 +1,31 @@
 # Linki do menu — restauracje Ursynów
 
-Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono w researchu). Menu online mają **31** z 184 lokali; dla pozostałych podano stronę www, a w przeglądarce zawsze działa wyszukiwarka + 🗺️ Mapa.
+Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono). Menu online mają **37** z 184 lokali; dla pozostałych podano stronę www, a w przeglądarce zawsze działa wyszukiwarka + 🗺️ Mapa.
 
 | Restauracja | Menu online | Strona www |
 |---|---|---|
 | Adana Kebab | [karta menu](https://www.adanakebab.pl/menu) | [www](https://www.adanakebab.pl) |
+| AMICI ItalianFoodLovers | [karta menu](https://amiciwarszawa.pl/menu/) | [www](https://amiciwarszawa.pl/) |
 | Baku Kebab Ursynów | [karta menu](https://www.bakukebab.com/restauracja/baku-kebab-ursynow) | [www](https://www.bakukebab.com) |
 | Basilia | [karta menu](https://basilia.pl/menu/) | [www](https://basilia.pl/) |
 | Bella Napoli | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/bella-napoli-ursynow) | [www](https://bellanapoli.com.pl/ursynow.html) |
+| Ciepło Zimno Bistro & Bar | [karta menu](https://cieplozimnobistro.pl/menu/) | [www](https://cieplozimnobistro.pl/) |
 | Czyli Czyli Kabaty | [karta menu](http://czyliczyli.pl/menu/) | [www](http://czyliczyli.pl/) |
 | Da Grasso Ursynów | [karta menu](https://www.dagrasso.pl/warszawa-ursynow) | [www](https://www.dagrasso.pl/warszawa-ursynow) |
 | Dziurka od Klucza | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/dziurka-od-klucza-wwa) | [www](https://dziurkaodklucza.eu) |
+| G-Yoza Ursynów | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/g-yoza-ursynow) | [www](https://wolt.com/en/pol/warsaw/restaurant/g-yoza-ursynow) |
 | Gaumarjos – Kuchnia Gruzińska | [karta menu](http://www.gaumarjos.pl/menu/) | [www](http://www.gaumarjos.pl/) |
 | Geisha Sushi | [karta menu](https://www.geishasushiursynow.pl/menu) | [www](https://www.geishasushiursynow.pl/) |
+| Horapa | [karta menu](http://horapa.pl/menu/main-menu/) | [www](https://horapa.pl/) |
 | Huong Asia | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/huong-asia-pan-asia-cuisine-bar) | [www](https://wolt.com/en/pol/warsaw/restaurant/huong-asia-pan-asia-cuisine-bar) |
 | India King | [karta menu](https://www.indiaking.pl/menu.html) | [www](https://www.indiaking.pl) |
 | Karczma Bałkany od Kuchni | [karta menu](https://balkanyodkuchni.pl/pl/menu) | [www](https://balkanyodkuchni.pl/) |
+| Kucharek Sześć | [karta menu](https://www.pyszne.pl/menu/kucharek-szesc) | [www](https://kucharekszesc.pl/pl/) |
 | Moje Curry Kabaty | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/moje-curry) | [www](https://wolt.com/en/pol/warsaw/restaurant/moje-curry) |
 | Mr India | [karta menu](https://www.pyszne.pl/menu/mr-india) | [www](https://www.mrindia.pl/) |
 | QABBO Ramen Dim Sum & Sushi | [karta menu](https://qabbo.pl/menu/) | [www](https://qabbo.pl/) |
 | Rani – Indyjska Restauracja | [karta menu](https://rani-restauracja-indyjska.orderwebsite.com/en/rani-warszawa) | [www](https://rani.com.pl/) |
+| Restauracja Ngon | [karta menu](https://www.pyszne.pl/menu/bar-orientalny-ngon-ngon) | [www](https://www.pyszne.pl/menu/bar-orientalny-ngon-ngon) |
 | Restauracja Nowoursynowska | [karta menu](https://www.nowoursynowska.pl/restauracja/nowoursynowska) | [www](https://www.nowoursynowska.pl/) |
 | Restauracja Staroświecka | [karta menu](https://staroswiecka.pl/menu-restauracji/) | [www](https://staroswiecka.pl) |
 | Salad Story Ursynów | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/salad-story-al-ken) | [www](https://wolt.com/en/pol/warsaw/restaurant/salad-story-al-ken) |
@@ -38,7 +44,6 @@ Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono w rese
 | A. Blikle Centrum Ursynów | — | — |
 | A. Blikle Kabaty | — | — |
 | American Dream Pizza Ursynów | — | — |
-| AMICI ItalianFoodLovers | — | — |
 | Arena Restaurant | — | — |
 | Bar Janusz | — | — |
 | Bar mleczny Zaścianek | — | — |
@@ -57,7 +62,6 @@ Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono w rese
 | Chicago's Pizza Ursynów | — | — |
 | CHO Sushi Ursynów | — | — |
 | Chrupiący Kurczak | — | — |
-| Ciepło Zimno Bistro & Bar | — | — |
 | Coffeeway | — | — |
 | Costa Coffee KEN Metro Ursynów | — | — |
 | Costa Coffee Ursynów | — | — |
@@ -66,7 +70,7 @@ Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono w rese
 | Cukiernia Deserownia | — | — |
 | Cukiernia Olsza | — | — |
 | Cukiernia Sowa | — | — |
-| Cukiernia Sweet Home | — | — |
+| Cukiernia Sweet Home | — | [www](https://www.sweet-home.pl/) |
 | Da Gusto | — | — |
 | Diyaa Indian Restaurant | — | — |
 | Domino's Pizza Ursynów | — | [www](https://dominospizza.pl) |
@@ -76,12 +80,10 @@ Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono w rese
 | Farszawa - Pierogi z Pieca | — | — |
 | Fenicja Kebab - Dereniowa | — | — |
 | Fit Cake Ursynów | — | — |
-| G-Yoza Ursynów | — | — |
 | Goodly Specialty Coffee | — | — |
 | Green Caffè Nero Kabaty | — | — |
 | Hakan | — | — |
 | Hooligan Burgers | — | — |
-| Horapa | — | — |
 | Inori Sushi | — | — |
 | Japan Burger Ursynów | — | — |
 | Jesz Lody Tradycyjne | — | — |
@@ -93,7 +95,6 @@ Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono w rese
 | KOKU Sushi | — | — |
 | KRISPI korean KFC Ursynów | — | — |
 | Krowarzywa Ursynów | — | — |
-| Kucharek Sześć | — | — |
 | Kuchnia za Ścianą | — | — |
 | Kumpir & Kebab | — | — |
 | Kurczaki na Wypasie Ursynów | — | — |
@@ -147,7 +148,6 @@ Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono w rese
 | Punto Pizza | — | — |
 | QKI Cukiernia Kawiarnia | — | — |
 | Restauracja Lipari | — | — |
-| Restauracja Ngon | — | — |
 | Restauracja Rimini | — | — |
 | Restauracja Shogun | — | — |
 | Rolldog Ursynów | — | — |
