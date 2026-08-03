@@ -75,6 +75,8 @@
                 background: var(--card); color: var(--text); transition: all 0.15s; }
       .r-link:hover { border-color: var(--rose); color: var(--rose); transform: translateY(-1px); }
       .r-link.primary { background: var(--rose); color: #fff; border-color: var(--rose); }
+      .r-link.muted { opacity: 0.4; filter: grayscale(1); font-weight: 500; }
+      .r-link.muted:hover { opacity: 0.7; transform: none; }
       .r-links-note { font-size: 0.78rem; color: var(--muted); margin: -0.6rem 0 1.2rem; }
 
       /* Menu podzielone na działy */
@@ -461,22 +463,25 @@
         const lk = LINKS[r.p] || {};
         const q = `${r.n} ${r.d} Warszawa`;
         const wwwReal = r.www || lk.www;
-        const www  = wwwReal || gsearch(`${r.n} ${r.d} Warszawa restauracja`);
-        const fb   = r.fb  || lk.fb || gsearch(`${r.n} ${r.d} Warszawa Facebook`);
-        const ig   = r.ig  || lk.ig || gsearch(`${r.n} Warszawa Instagram`);
-        const maps = "https://www.google.com/maps/search/" + encodeURIComponent(q);
+        const fbReal  = r.fb  || lk.fb;
+        const igReal  = r.ig  || lk.ig;
         const menuUrl = r.menu || lk.menu;
-        const anySearch = !wwwReal || !(r.fb||lk.fb) || !(r.ig||lk.ig);
+        const maps = "https://www.google.com/maps/search/" + encodeURIComponent(q);
+        // Zweryfikowany link => aktywna ikona; brak => wyszarzona (klik = wyszukiwarka Google)
+        const chip = (icon, label, realUrl, searchQ) => realUrl
+          ? `<a class="r-link" href="${realUrl}" target="_blank" rel="noopener">${icon} ${label}</a>`
+          : `<a class="r-link muted" href="${gsearch(searchQ)}" target="_blank" rel="noopener" title="Brak zweryfikowanego linku — kliknij, aby wyszukać w Google">${icon} ${label}</a>`;
+        const anyMuted = !wwwReal || !fbReal || !igReal;
         return `
           <div class="r-links">
-            <a class="r-link" href="${www}" target="_blank" rel="noopener">🌐 Strona www</a>
-            <a class="r-link" href="${fb}" target="_blank" rel="noopener">📘 Facebook</a>
-            <a class="r-link" href="${ig}" target="_blank" rel="noopener">📸 Instagram</a>
+            ${chip("🌐", "Strona www", wwwReal, `${r.n} ${r.d} Warszawa restauracja`)}
+            ${chip("📘", "Facebook", fbReal, `${r.n} ${r.d} Warszawa Facebook`)}
+            ${chip("📸", "Instagram", igReal, `${r.n} Warszawa Instagram`)}
             <a class="r-link" href="${maps}" target="_blank" rel="noopener">🗺️ Mapa</a>
             ${menuUrl ? `<a class="r-link" href="${menuUrl}" target="_blank" rel="noopener">📋 Menu online</a>` : ""}
             <a class="r-link primary" href="${r.p}" target="_blank" rel="noopener">📋 Nasze menu</a>
           </div>
-          ${anySearch ? `<p class="r-links-note">Część linków (Facebook / Instagram i strony bez zweryfikowanego adresu) otwiera wyszukiwarkę Google z nazwą lokalu.</p>` : ""}`;
+          ${anyMuted ? `<p class="r-links-note">Wyszarzone ikony = brak zweryfikowanego linku (kliknięcie otwiera wyszukiwarkę Google). 🗺️ Mapa i „Nasze menu” działają zawsze.</p>` : ""}`;
       }
 
       // Mini-renderer Markdown → HTML z grupowaniem działów menu (### → sekcja)
