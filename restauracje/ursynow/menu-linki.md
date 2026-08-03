@@ -1,6 +1,6 @@
 # Linki do menu — restauracje Ursynów
 
-Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono). Menu online mają **37** z 184 lokali; dla pozostałych podano stronę www, a w przeglądarce zawsze działa wyszukiwarka + 🗺️ Mapa.
+Bezpośrednie linki do kart menu lokali z Ursynowa. Menu online mają **42** z 184; dla pozostałych podano stronę www, a w przeglądarce zawsze działa wyszukiwarka + 🗺️ Mapa.
 
 | Restauracja | Menu online | Strona www |
 |---|---|---|
@@ -20,11 +20,14 @@ Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono). Menu
 | Huong Asia | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/huong-asia-pan-asia-cuisine-bar) | [www](https://wolt.com/en/pol/warsaw/restaurant/huong-asia-pan-asia-cuisine-bar) |
 | India King | [karta menu](https://www.indiaking.pl/menu.html) | [www](https://www.indiaking.pl) |
 | Karczma Bałkany od Kuchni | [karta menu](https://balkanyodkuchni.pl/pl/menu) | [www](https://balkanyodkuchni.pl/) |
+| Krowarzywa Ursynów | [karta menu](https://wolt.com/pl/pol/warsaw/restaurant/krowarzywa-ursynow) | [www](https://krowarzywa.pl/) |
 | Kucharek Sześć | [karta menu](https://www.pyszne.pl/menu/kucharek-szesc) | [www](https://kucharekszesc.pl/pl/) |
+| Kuchnia za Ścianą | [karta menu](https://kuchniazasciana.pl/en/todays-menu/) | [www](https://kuchniazasciana.pl/) |
 | Moje Curry Kabaty | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/moje-curry) | [www](https://wolt.com/en/pol/warsaw/restaurant/moje-curry) |
 | Mr India | [karta menu](https://www.pyszne.pl/menu/mr-india) | [www](https://www.mrindia.pl/) |
 | QABBO Ramen Dim Sum & Sushi | [karta menu](https://qabbo.pl/menu/) | [www](https://qabbo.pl/) |
 | Rani – Indyjska Restauracja | [karta menu](https://rani-restauracja-indyjska.orderwebsite.com/en/rani-warszawa) | [www](https://rani.com.pl/) |
+| Restauracja Lipari | [karta menu](https://www.restauracjalipari.pl/restauracja/restauracja-lipari-warszawa) | [www](https://restauracjalipari.pl/) |
 | Restauracja Ngon | [karta menu](https://www.pyszne.pl/menu/bar-orientalny-ngon-ngon) | [www](https://www.pyszne.pl/menu/bar-orientalny-ngon-ngon) |
 | Restauracja Nowoursynowska | [karta menu](https://www.nowoursynowska.pl/restauracja/nowoursynowska) | [www](https://www.nowoursynowska.pl/) |
 | Restauracja Staroświecka | [karta menu](https://staroswiecka.pl/menu-restauracji/) | [www](https://staroswiecka.pl) |
@@ -33,6 +36,8 @@ Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono). Menu
 | Soto Sushi | [karta menu](https://www.sotosushi.pl/menu) | [www](https://www.sotosushi.pl/) |
 | Sushi Icons | [karta menu](https://sushiicons.pl/category/sushi) | [www](https://sushiicons.pl) |
 | Sushi Nugat | [karta menu](https://www.sushinugat.pl/en/menu) | [www](https://www.sushinugat.pl/) |
+| Taco Loco Ursynów | [karta menu](https://www.pyszne.pl/menu/taco-loco-eugeniusza-romera) | [www](https://www.pyszne.pl/menu/taco-loco-eugeniusza-romera) |
+| Tanami Sushi | [karta menu](https://www.pyszne.pl/menu/tanami-sushi-dzwonnicza) | [www](https://tanami-sushi.pl/) |
 | Tasbih Kebab | [karta menu](https://www.ubereats.com/pl/store/tasbih-kebab/GRLQRxvzR56WJBmZ3tD3iw) | [www](https://www.ubereats.com/pl/store/tasbih-kebab/GRLQRxvzR56WJBmZ3tD3iw) |
 | Thai Hung Bistro | [karta menu](https://www.pyszne.pl/menu/thai-hung-warszawa) | [www](https://www.pyszne.pl/menu/thai-hung-warszawa) |
 | Tito Appetito | [karta menu](https://titoappetito.order.dish.co/menus) | [www](https://www.facebook.com/titoappetito/) |
@@ -94,8 +99,6 @@ Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono). Menu
 | Klubokawiarnia KEN54 | — | — |
 | KOKU Sushi | — | — |
 | KRISPI korean KFC Ursynów | — | — |
-| Krowarzywa Ursynów | — | — |
-| Kuchnia za Ścianą | — | — |
 | Kumpir & Kebab | — | — |
 | Kurczaki na Wypasie Ursynów | — | — |
 | Le Petit Café | — | — |
@@ -147,14 +150,13 @@ Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono). Menu
 | Pub Szyszka Chmielu | — | — |
 | Punto Pizza | — | — |
 | QKI Cukiernia Kawiarnia | — | — |
-| Restauracja Lipari | — | — |
 | Restauracja Rimini | — | — |
 | Restauracja Shogun | — | — |
 | Rolldog Ursynów | — | — |
 | Rong Vang | — | [www](https://rongvang.pl/) |
 | Rosso | — | — |
 | SABA SUSHI | — | — |
-| Sake Izakaya | — | — |
+| Sake Izakaya | — | [www](https://sake-izakaya.eatbu.com/) |
 | Salsiccia - Pizzeria Napoletana | — | — |
 | San Giovanni | — | — |
 | SHAHI KEBAB & GRILL Ursynów | — | — |
@@ -167,10 +169,8 @@ Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono). Menu
 | Sushi Zushi Silver Ursynów | — | — |
 | SushiZen | — | — |
 | Sypka Mąka | — | — |
-| Taco Loco Ursynów | — | — |
 | Tajto Sushi Ursynów | — | — |
 | Tamli Kebap Restauracja | — | — |
-| Tanami Sushi | — | — |
 | Telepizza Ursynów | — | [www](https://telepizza.pl) |
 | Thai Masala | — | [www](https://www.facebook.com/restauracjathaimasala/) |
 | The Goood Burger - Warszawa Ursynów | — | — |
