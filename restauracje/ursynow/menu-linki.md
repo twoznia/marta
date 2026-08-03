@@ -1,6 +1,6 @@
 # Linki do menu — restauracje Ursynów
 
-Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono w researchu). Menu online mają **79** z 184 lokali; dla pozostałych podano stronę www, a w przeglądarce zawsze działa wyszukiwarka + 🗺️ Mapa.
+Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono w researchu). Menu online mają **83** z 184 lokali; dla pozostałych podano stronę www, a w przeglądarce zawsze działa wyszukiwarka + 🗺️ Mapa.
 
 | Restauracja | Menu online | Strona www |
 |---|---|---|
@@ -89,15 +89,15 @@ Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono w rese
 | Marani | — | — |
 | Mały Belgrad | — | [www](https://www.malybelgrad.pl/) |
 | McDonald's Ursynów | — | — |
-| Mezze Gyros | — | — |
+| Mezze Gyros | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/mezze-gyros-beirut-ursynw) | — |
 | Moje Curry Kabaty | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/moje-curry) | [www](https://wolt.com/en/pol/warsaw/restaurant/moje-curry) |
-| Monkey Craft Beer | — | — |
+| Monkey Craft Beer | — | [www](https://monkeycraftbeerursynow.pl/) |
 | Moo Cafe Filipiny | — | [www](https://www.facebook.com/moocafe/) |
 | Mr India | [karta menu](https://www.pyszne.pl/menu/mr-india) | [www](https://www.mrindia.pl/) |
-| My Sushi | — | — |
-| Naleśnikarnia Nasz Naleśnik | — | — |
-| New York Pizza Departament Ursynów | — | — |
-| Night Burger Noc | — | — |
+| My Sushi | — | [www](https://mysushi.com.pl/) |
+| Naleśnikarnia Nasz Naleśnik | [karta menu](https://www.ubereats.com/pl/store/nalesnikarnia-nasz-nalesnik-kabaty/8odSXD54Q8qV_MgFElJ5RQ) | [www](https://www.nasznalesnik.pl/) |
+| New York Pizza Departament Ursynów | [karta menu](https://www.pyszne.pl/jedzenie-na-dowoz/marki/new-york-pizza-department) | [www](https://nowojorska.pizza/) |
+| Night Burger Noc | [karta menu](https://www.pyszne.pl/menu/night-burger-noc) | [www](https://www.nightburger.pl/) |
 | Nocna Wyżerka | — | — |
 | North Fish Ursynów | — | — |
 | Noto Pizza Ursynów | — | — |
