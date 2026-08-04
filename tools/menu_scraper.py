@@ -14,7 +14,7 @@ import urllib.error
 
 # Konfiguracja
 GITHUB_RAW = "https://raw.githubusercontent.com/twoznia/marta/main/restauracje/index.html"
-LOCAL_HTML = "index.html"  # Szukaj w bieżącym katalogu
+LOCAL_HTML = "restauracje/index.html"  # Szukaj w folderze restauracje
 
 # Delivery platforms do sprawdzenia
 PLATFORMS = {
