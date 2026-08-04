@@ -1,6 +1,6 @@
 # Linki do menu — restauracje Ursynów
 
-Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono w researchu). Menu online mają **93** z 184 lokali; dla pozostałych podano stronę www, a w przeglądarce zawsze działa wyszukiwarka + 🗺️ Mapa.
+Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono w researchu). Menu online mają **99** z 184 lokali; dla pozostałych podano stronę www, a w przeglądarce zawsze działa wyszukiwarka + 🗺️ Mapa.
 
 | Restauracja | Menu online | Strona www |
 |---|---|---|
@@ -129,18 +129,18 @@ Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono w rese
 | Pub Szyszka Chmielu | — | — |
 | Punto Pizza | — | — |
 | QABBO Ramen Dim Sum & Sushi | [karta menu](https://qabbo.pl/menu/) | [www](https://qabbo.pl/) |
-| QKI Cukiernia Kawiarnia | — | — |
+| QKI Cukiernia Kawiarnia | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/qki-cukiernia-kawiarnia) | [www](https://qkicukiernia.pl/) |
 | Rani – Indyjska Restauracja | [karta menu](https://rani-restauracja-indyjska.orderwebsite.com/en/rani-warszawa) | [www](https://rani.com.pl/) |
 | Restauracja Lipari | [karta menu](https://www.restauracjalipari.pl/restauracja/restauracja-lipari-warszawa) | [www](https://restauracjalipari.pl/) |
 | Restauracja Ngon | [karta menu](https://www.pyszne.pl/menu/bar-orientalny-ngon-ngon) | [www](https://www.pyszne.pl/menu/bar-orientalny-ngon-ngon) |
 | Restauracja Nowoursynowska | [karta menu](https://www.nowoursynowska.pl/restauracja/nowoursynowska) | [www](https://www.nowoursynowska.pl/) |
-| Restauracja Rimini | — | — |
-| Restauracja Shogun | — | — |
+| Restauracja Rimini | [karta menu](https://www.pyszne.pl/menu/rimini-warszawa) | [www](https://riminiwarszawa.pl/) |
+| Restauracja Shogun | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/restauracja-shogun-ursynow) | — |
 | Restauracja Staroświecka | [karta menu](https://staroswiecka.pl/menu-restauracji/) | [www](https://staroswiecka.pl) |
-| Rolldog Ursynów | — | — |
+| Rolldog Ursynów | [karta menu](https://www.ubereats.com/pl/store/rolldog-ursynow/lNhPKMCGSdOZKMENGJXjQA) | [www](https://rolldog.pl/) |
 | Rong Vang | — | [www](https://rongvang.pl/) |
-| Rosso | — | — |
-| SABA SUSHI | — | — |
+| Rosso | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/rosso-ursynow) | — |
+| SABA SUSHI | [karta menu](https://www.pyszne.pl/menu/saba-sushi-ursynow) | [www](https://saba-sushi.pl/) |
 | SHAHI KEBAB & GRILL Ursynów | — | — |
 | Sake Izakaya | — | [www](https://sake-izakaya.eatbu.com/) |
 | Salad Story Ursynów | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/salad-story-al-ken) | [www](https://wolt.com/en/pol/warsaw/restaurant/salad-story-al-ken) |
