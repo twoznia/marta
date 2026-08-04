@@ -14,7 +14,7 @@ import urllib.error
 
 # Konfiguracja
 GITHUB_RAW = "https://raw.githubusercontent.com/twoznia/marta/main/restauracje/index.html"
-LOCAL_HTML = "index.html"  # Szukaj w bieżącym katalogu
+LOCAL_HTML = "restauracje/index.html"  # Szukaj w folderze restauracje
 
 # Delivery platforms do sprawdzenia
 PLATFORMS = {
@@ -115,7 +115,10 @@ def print_report(restaurants, links, missing):
     print(f"📊 RAPORT MENU LINKÓW URSYNÓW")
     print(f"{'='*60}")
     print(f"Razem restauracji: {total}")
-    print(f"Z menu linkami: {with_menu}/{total} ({100*with_menu//total}%)")
+    if total > 0:
+        print(f"Z menu linkami: {with_menu}/{total} ({100*with_menu//total}%)")
+    else:
+        print(f"Z menu linkami: 0/0 (0%)")
     print(f"Brakujące: {len(missing)}")
     print(f"{'='*60}\n")
 
