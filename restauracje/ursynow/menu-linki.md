@@ -1,6 +1,6 @@
 # Linki do menu — restauracje Ursynów
 
-Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono w researchu). Menu online mają **99** z 184 lokali; dla pozostałych podano stronę www, a w przeglądarce zawsze działa wyszukiwarka + 🗺️ Mapa.
+Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono w researchu). Menu online mają **105** z 184 lokali; dla pozostałych podano stronę www, a w przeglądarce zawsze działa wyszukiwarka + 🗺️ Mapa.
 
 | Restauracja | Menu online | Strona www |
 |---|---|---|
@@ -151,14 +151,14 @@ Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono w rese
 | Sphinx Ursynów (Multikino) | — | — |
 | Subway Ursynów | — | — |
 | Sucré Ursynów - Cukiernia, Lody Naturalne | — | — |
-| Sushi Bistro | — | — |
-| Sushi Fudzi Ursynów | — | — |
+| Sushi Bistro | [karta menu](https://www.ubereats.com/pl/store/sushi-bistro-ursynow/5vZ0hMSxWASTIcgatiHVhw) | [www](https://sushibistro.pl/pl/) |
+| Sushi Fudzi Ursynów | [karta menu](https://www.pyszne.pl/menu/sushi-fudzi-warszawa) | [www](https://sushifudzi.pl/) |
 | Sushi Icons | [karta menu](https://sushiicons.pl/category/sushi) | [www](https://sushiicons.pl) |
 | Sushi Nugat | [karta menu](https://www.sushinugat.pl/en/menu) | [www](https://www.sushinugat.pl/) |
-| Sushi Scena Fryderyk | — | — |
-| Sushi Zushi Silver Ursynów | — | — |
-| SushiZen | — | — |
-| Sypka Mąka | — | — |
+| Sushi Scena Fryderyk | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/sushi-scena-fryderyk) | — |
+| Sushi Zushi Silver Ursynów | [karta menu](https://www.pyszne.pl/menu/zushi-silver-warszawa) | [www](https://zushisilver.pl/) |
+| SushiZen | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/sushizen-ursynow) | [www](https://sushizen.pl/) |
+| Sypka Mąka | [karta menu](https://www.pyszne.pl/menu/sypka-maka) | [www](https://www.sypkamaka.pl/) |
 | Taco Loco Ursynów | [karta menu](https://www.pyszne.pl/menu/taco-loco-eugeniusza-romera) | [www](https://www.pyszne.pl/menu/taco-loco-eugeniusza-romera) |
 | Tajto Sushi Ursynów | — | — |
 | Tamli Kebap Restauracja | — | — |
