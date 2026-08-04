@@ -1,6 +1,6 @@
 # Linki do menu — restauracje Ursynów
 
-Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono w researchu). Menu online mają **105** z 184 lokali; dla pozostałych podano stronę www, a w przeglądarce zawsze działa wyszukiwarka + 🗺️ Mapa.
+Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono w researchu). Menu online mają **111** z 185 lokali; dla pozostałych podano stronę www, a w przeglądarce zawsze działa wyszukiwarka + 🗺️ Mapa.
 
 | Restauracja | Menu online | Strona www |
 |---|---|---|
@@ -172,15 +172,16 @@ Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono w rese
 | Trattoria In Italia | — | — |
 | Tulsi Ursynów | [karta menu](https://tulsirestauracja.pl/tulsi-menu/) | [www](https://tulsirestauracja.pl/) |
 | Tylko dobre makarony Ursynów | — | — |
-| Tylko dobre sałatki! Ursynów | — | — |
-| Va Bene | — | — |
-| Veda | — | — |
-| Vegan House | — | — |
+| Tylko dobre sałatki! Ursynów | [karta menu](https://www.pyszne.pl/menu/tylko-dobre-salatki-warszawa) | [www](https://tylkodobresalatki.pl/) |
+| Tylko dobre sałatki! Ursynów | [karta menu](https://www.pyszne.pl/menu/tylko-dobre-salatki-warszawa) | [www](https://tylkodobresalatki.pl/) |
+| Va Bene | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/va-bene-pizzeria-ursynow) | [www](https://vabene.pl/) |
+| Veda | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/veda-ursynow) | — |
+| Vegan House | [karta menu](https://www.ubereats.com/pl/store/vegan-house-ursynow/q_EcGuaISPW8LLVyHZfohg) | [www](https://www.veganhouse.pl/) |
 | Vege Bistro Kurkuma | [karta menu](https://vege-bistro.dowozimy.pl/) | [www](https://vege-bistro.dowozimy.pl/) |
 | Viet Street Food | [karta menu](https://vietstreetfood.pl/photo-menu/) | [www](https://vietstreetfood.pl/) |
 | Vina Express (Bar Kokos) | [karta menu](https://www.ubereats.com/pl/store/vina-express/Ld-1Bc4oU9mjFmBfsYRFJw) | [www](https://www.ubereats.com/pl/store/vina-express/Ld-1Bc4oU9mjFmBfsYRFJw) |
 | Violinova Milky Bar | — | — |
-| W. Kebab | — | — |
+| W. Kebab | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/w-kebab-ursynow) | — |
 | Wiethai Kabaty | [karta menu](https://www.ubereats.com/pl/store/wiethai-kabaty/SW9b0nktUX26yBPjGwRfVQ) | [www](https://www.ubereats.com/pl/store/wiethai-kabaty/SW9b0nktUX26yBPjGwRfVQ) |
 | Winowajcy Roku | — | — |
 | Wół na Stół | — | [www](https://wolnastol.pl/) |
