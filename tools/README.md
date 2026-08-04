@@ -24,8 +24,13 @@ pip install playwright
 playwright install
 
 # Uruchomienie
-python3 menu_finder.py
+python3 menu_finder.py [--district DISTRICT]
 ```
+
+**Parametry:**
+- `--district ursynow` - szukaj tylko Ursynów (domyślnie)
+- `--district wilanow` - szukaj tylko Wilanów
+- `--district all` - szukaj Ursynów + Wilanów
 
 **Działanie:**
 1. Wchodzi na www restauracji
@@ -33,40 +38,73 @@ python3 menu_finder.py
 3. Dla restauracji bez www - szuka przez Google
 4. Zapisuje wyniki do `found_menus.json`
 
-**Czas:** ~30-60 minut dla 194 restauracji
+**Czas:** 
+- ~30-60 min dla Ursynów (194 restauracji)
+- ~60-90 min dla Wilanowa (280+ restauracji)
+- ~120+ min dla obu (all)
 
 ### 3. update_index.py
 **Cel:** Aktualizowanie index.html znalezionymi linkami
 
 ```bash
-python3 update_index.py
+python3 update_index.py [--test|--apply]
 ```
+
+**Parametry:**
+- `--test` (domyślnie) - Tryb testowy
+  - Zapisuje do `index_updated.html` (nie zmienia oryginalnego)
+  - Pozwala sprawdzić zmiany przed aplikacją
+  
+- `--apply` - Tryb aplikacji
+  - Modyfikuje `index.html`
+  - Tworzy backup: `index.html.backup`
 
 **Działanie:**
 1. Czyta `found_menus.json`
-2. Aktualizuje sekcję LINKS w index.html
-3. Tworzy backup: `index.html.backup`
-4. Zapisuje zaktualizowany index.html
+2. Aktualizuje sekcję LINKS
+3. W trybie test: zapisuje do `index_updated.html`
+4. W trybie apply: backup i update `index.html`
 
 ## Workflow
 
+### Opcja 1: Pojedyncza dzielnica (Ursynów)
+
 ```bash
-# 1. Znajdź brakujące menu (opcjonalnie - przed update)
-python3 menu_scraper.py
+# 1. Szukaj menu (domyślnie Ursynów)
+python3 tools/menu_finder.py
+# czeka ~30-60 min
 
-# 2. Szukaj menu automatycznie
-python3 menu_finder.py
-# ⏱️  czeka ~30-60 min
+# 2. TEST - sprawdź zmiany bez modyfikacji
+python3 tools/update_index.py --test
+# sprawdź: restauracje/index_updated.html
 
-# 3. Aktualizuj index.html
-python3 update_index.py
+# 3. APPLY - zastosuj zmiany
+python3 tools/update_index.py --apply
+# backup: restauracje/index.html.backup
+# zaktualizowany: restauracje/index.html
 
-# 4. Sprawdź zmiany
-git diff restauracje/index.html
-
-# 5. Commit i push
+# 4. Commit i push
 git add restauracje/index.html
-git commit -m "Add found menu links"
+git commit -m "Add Ursynów menu links"
+git push
+```
+
+### Opcja 2: Obie dzielnice (Ursynów + Wilanów)
+
+```bash
+# 1. Szukaj menu w obu dzielnicach
+python3 tools/menu_finder.py --district all
+# czeka ~120+ min
+
+# 2. TEST
+python3 tools/update_index.py --test
+
+# 3. APPLY
+python3 tools/update_index.py --apply
+
+# 4. Commit
+git add restauracje/index.html
+git commit -m "Add menu links for Ursynów and Wilanów"
 git push
 ```
 

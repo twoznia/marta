@@ -7,6 +7,7 @@ Wchodzi na strony restauracji i wyciąga linki do menu
 import json
 import re
 import sys
+import argparse
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
 import time
@@ -37,8 +38,8 @@ MENU_DOMAINS = [
     'google.com/maps',
 ]
 
-def extract_restaurants(html):
-    """Wyciągnij restauracje z DATA array"""
+def extract_restaurants(html, district="Ursynów"):
+    """Wyciągnij restauracje z DATA array dla wybranej dzielnicy"""
     data_match = re.search(r'const DATA = \[(.*?)\];', html, re.DOTALL)
     if not data_match:
         return {}
@@ -46,8 +47,9 @@ def extract_restaurants(html):
     restaurants = {}
     data_str = data_match.group(1)
 
-    # Szukaj Ursynów restauracji
-    for match in re.finditer(r'{n:"([^"]+)"[^}]*d:"Ursynów"[^}]*p:"([^"]+)"(?:[^}]*www:"([^"]*)")?', data_str):
+    # Szukaj restauracji dla wybranej dzielnicy
+    pattern = rf'{{n:"([^"]+)"[^}}]*d:"{re.escape(district)}"[^}}]*p:"([^"]+)"(?:[^}}]*www:"([^"]*)")?'
+    for match in re.finditer(pattern, data_str):
         name = match.group(1)
         path = match.group(2)
         www = match.group(3) or ""
@@ -55,20 +57,21 @@ def extract_restaurants(html):
 
     return restaurants
 
-def extract_existing_links(html):
-    """Wyciągnij istniejące LINKS"""
+def extract_existing_links(html, district="ursynow"):
+    """Wyciągnij istniejące LINKS dla wybranej dzielnicy"""
     links_match = re.search(r'const LINKS = \{(.*?)\};', html, re.DOTALL)
     if not links_match:
         return {}
 
     links = {}
     links_str = links_match.group(1)
+    prefix = f"{district}/"
 
     for match in re.finditer(r'"([^"]+)":\s*{www:"([^"]*)",menu:"([^"]*)"}', links_str):
         path = match.group(1)
         www = match.group(2)
         menu = match.group(3)
-        if path.startswith("ursynow/"):
+        if path.startswith(prefix):
             links[path] = {"www": www, "menu": menu}
 
     return links
@@ -155,17 +158,12 @@ def search_www_on_google(browser, restaurant_name):
             pass
         return None
 
-def main():
-    print("🚀 Menu Finder - Automatyczne wyszukiwanie menu\n")
+def process_district(html, district_name, district_lower):
+    """Przetwórz jedną dzielnicę"""
+    restaurants = extract_restaurants(html, district=district_name)
+    existing_links = extract_existing_links(html, district=district_lower)
 
-    # Wczytaj HTML
-    with open(LOCAL_HTML, 'r', encoding='utf-8') as f:
-        html = f.read()
-
-    restaurants = extract_restaurants(html)
-    existing_links = extract_existing_links(html)
-
-    print(f"📊 Znaleziono {len(restaurants)} restauracji w Ursynowie")
+    print(f"📊 Znaleziono {len(restaurants)} restauracji w {district_name}")
 
     # Restauracje do przetworzenia
     to_process = []
@@ -218,13 +216,55 @@ def main():
 
         browser.close()
 
+    return found
+
+def main():
+    # Argumenty command line
+    parser = argparse.ArgumentParser(
+        description='Automatyczne wyszukiwanie linków do menu restauracji'
+    )
+    parser.add_argument(
+        '--district',
+        choices=['ursynow', 'wilanow', 'all'],
+        default='ursynow',
+        help='Dzielnica: ursynow, wilanow, lub all (default: ursynow)'
+    )
+    args = parser.parse_args()
+
+    # Wybór dzielnic do przetworzenia
+    if args.district == 'all':
+        districts = [('ursynow', 'Ursynów'), ('wilanow', 'Wilanów')]
+    else:
+        districts = [(args.district, args.district.title())]
+
+    print(f"🚀 Menu Finder - Automatyczne wyszukiwanie menu")
+    print(f"📍 Dzielnice: {', '.join([d[1] for d in districts])}\n")
+
+    # Wczytaj HTML
+    with open(LOCAL_HTML, 'r', encoding='utf-8') as f:
+        html = f.read()
+
+    # Przetwórz każdą dzielnicę
+    all_found = {"www": {}, "menu": {}}
+
+    for district_lower, district_title in districts:
+        print(f"\n{'='*60}")
+        print(f"Przetwarzanie: {district_title}")
+        print(f"{'='*60}")
+
+        found = process_district(html, district_title, district_lower)
+        all_found['www'].update(found['www'])
+        all_found['menu'].update(found['menu'])
+
     # Zapisz wyniki
     with open(OUTPUT_LINKS, 'w', encoding='utf-8') as f:
-        json.dump(found, f, indent=2, ensure_ascii=False)
+        json.dump(all_found, f, indent=2, ensure_ascii=False)
 
-    print(f"\n✅ Znaleziono www: {len(found['www'])}")
-    print(f"✅ Znaleziono menu: {len(found['menu'])}")
+    print(f"\n{'='*60}")
+    print(f"✅ Znaleziono www: {len(all_found['www'])}")
+    print(f"✅ Znaleziono menu: {len(all_found['menu'])}")
     print(f"📁 Zapisano do: {OUTPUT_LINKS}")
+    print(f"{'='*60}")
     print("\n💡 Następnie: Uruchom update_index.py żeby dodać linki do index.html")
 
 if __name__ == "__main__":

@@ -5,6 +5,8 @@ Update Index - Aktualizuje index.html z nowymi linkami do menu
 
 import json
 import re
+import argparse
+import sys
 from pathlib import Path
 
 LOCAL_HTML = "restauracje/index.html"
@@ -66,7 +68,31 @@ def build_links_section(links):
     return '\n      '.join(lines)
 
 def main():
-    print("🔄 Update Index - Aktualizowanie index.html\n")
+    # Argumenty command line
+    parser = argparse.ArgumentParser(
+        description='Aktualizuje index.html z nowymi linkami do menu'
+    )
+    parser.add_argument(
+        '--test',
+        action='store_true',
+        help='Tryb testowy - zapisz do index_updated.html bez modyfikacji oryginalnego'
+    )
+    parser.add_argument(
+        '--apply',
+        action='store_true',
+        help='Zastosuj zmiany do oryginalnego index.html'
+    )
+    args = parser.parse_args()
+
+    # Domyślnie test mode
+    test_mode = not args.apply or args.test
+
+    print("🔄 Update Index - Aktualizowanie index.html")
+    if test_mode:
+        print("📋 TRYB TEST - brak zmian w oryginalnym pliku")
+    else:
+        print("⚠️  TRYB APPLY - będę modyfikować index.html")
+    print()
 
     # Wczytaj pliki
     with open(LOCAL_HTML, 'r', encoding='utf-8') as f:
@@ -104,17 +130,26 @@ def main():
     old_links_pattern = r'const LINKS = \{[^}]*\};'
     updated_html = re.sub(old_links_pattern, new_links_section, html, flags=re.DOTALL)
 
-    # Backup
-    with open(BACKUP_HTML, 'w', encoding='utf-8') as f:
-        f.write(html)
-    print(f"💾 Backup: {BACKUP_HTML}")
+    if test_mode:
+        # Test mode - zapisz do index_updated.html
+        test_file = "restauracje/index_updated.html"
+        with open(test_file, 'w', encoding='utf-8') as f:
+            f.write(updated_html)
+        print(f"📋 Test file: {test_file}")
+        print(f"✅ Razem linków: {len(existing_links)}")
+        print(f"\n💡 Aby zastosować zmiany:")
+        print(f"   python3 tools/update_index.py --apply")
+    else:
+        # Apply mode - zapisz do oryginalnego i utwórz backup
+        with open(BACKUP_HTML, 'w', encoding='utf-8') as f:
+            f.write(html)
+        print(f"💾 Backup: {BACKUP_HTML}")
 
-    # Zapisz zaktualizowany HTML
-    with open(LOCAL_HTML, 'w', encoding='utf-8') as f:
-        f.write(updated_html)
+        with open(LOCAL_HTML, 'w', encoding='utf-8') as f:
+            f.write(updated_html)
 
-    print(f"✅ Zaktualizowano: {LOCAL_HTML}")
-    print(f"✅ Razem linków: {len(existing_links)}")
+        print(f"✅ Zaktualizowano: {LOCAL_HTML}")
+        print(f"✅ Razem linków: {len(existing_links)}")
 
 if __name__ == "__main__":
     main()
