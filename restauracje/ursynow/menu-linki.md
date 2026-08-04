@@ -1,6 +1,6 @@
 # Linki do menu — restauracje Ursynów
 
-Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono w researchu). Menu online mają **87** z 184 lokali; dla pozostałych podano stronę www, a w przeglądarce zawsze działa wyszukiwarka + 🗺️ Mapa.
+Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono w researchu). Menu online mają **93** z 184 lokali; dla pozostałych podano stronę www, a w przeglądarce zawsze działa wyszukiwarka + 🗺️ Mapa.
 
 | Restauracja | Menu online | Strona www |
 |---|---|---|
@@ -116,12 +116,12 @@ Bezpośrednie linki do kart menu lokali z Ursynowa (tam, gdzie znaleziono w rese
 | Piccolo Pizzaiolo | — | — |
 | Piekarnia Cukiernia Grzybki | — | — |
 | Piekarnia Wanda | — | — |
-| Piri-Piri Kebab | — | — |
-| Pita Bros Ursynów | — | — |
-| Pizza Na Wypasie Ursynów | — | — |
-| Pizzeria Biesiadowo | — | — |
-| Pizzeria Czerwony Stefan | — | — |
-| Pizzeria Picka | — | — |
+| Piri-Piri Kebab | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/piri-piri-kebab-ursynow) | — |
+| Pita Bros Ursynów | [karta menu](https://www.ubereats.com/pl/store/pita-bros-ursynow/mw1ZLbGwS9KfEBZD0GLRTQ) | [www](https://pitabros.pl/) |
+| Pizza Na Wypasie Ursynów | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/pizza-na-wypasie-ursynow) | — |
+| Pizzeria Biesiadowo | [karta menu](https://pizzaportal.pl/warszawa/pizzeria-biesiadowo-ursynow/) | [www](https://www.facebook.com/biesiadowoursynowken/) |
+| Pizzeria Czerwony Stefan | [karta menu](https://wolt.com/en/pol/warsaw/restaurant/pizzeria-czerwony-stefan) | — |
+| Pizzeria Picka | [karta menu](https://www.pyszne.pl/menu/pizzeria-picka-warszawa) | — |
 | Pizzeria Stokłosy | — | — |
 | Polskie Smaki | — | — |
 | Port Jeziorki | — | — |
