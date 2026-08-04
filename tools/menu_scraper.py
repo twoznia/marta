@@ -115,7 +115,10 @@ def print_report(restaurants, links, missing):
     print(f"📊 RAPORT MENU LINKÓW URSYNÓW")
     print(f"{'='*60}")
     print(f"Razem restauracji: {total}")
-    print(f"Z menu linkami: {with_menu}/{total} ({100*with_menu//total}%)")
+    if total > 0:
+        print(f"Z menu linkami: {with_menu}/{total} ({100*with_menu//total}%)")
+    else:
+        print(f"Z menu linkami: 0/0 (0%)")
     print(f"Brakujące: {len(missing)}")
     print(f"{'='*60}\n")
 
