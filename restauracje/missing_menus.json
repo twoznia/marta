@@ -1,0 +1,957 @@
+{
+  "ursynow/kuchnia-balkanska/karczma-balkany.md": {
+    "name": "Karczma Bałkany od Kuchni",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-polska/siwy-dym.md": {
+    "name": "Siwy Dym",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-polska/polskie-smaki.md": {
+    "name": "Polskie Smaki",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-gruzinska/marani.md": {
+    "name": "Marani",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wloska/bella-napoli.md": {
+    "name": "Bella Napoli",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wloska/da-gusto.md": {
+    "name": "Da Gusto",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wloska/basilia.md": {
+    "name": "Basilia",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/sushi-japonska/soto-sushi.md": {
+    "name": "Soto Sushi",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/sushi-japonska/kabaty-sushi.md": {
+    "name": "Kabaty Sushi",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-azjatycka/qabbo.md": {
+    "name": "QABBO Ramen Dim Sum & Sushi",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-indyjska/moje-curry.md": {
+    "name": "Moje Curry Kabaty",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-indyjska/tulsi.md": {
+    "name": "Tulsi Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-indyjska/india-king.md": {
+    "name": "India King",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-tajska/thai-masala.md": {
+    "name": "Thai Masala",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-tajska/thai-hung-bistro.md": {
+    "name": "Thai Hung Bistro",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wietnamska/vina-express.md": {
+    "name": "Vina Express (Bar Kokos)",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wietnamska/rong-vang.md": {
+    "name": "Rong Vang",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wietnamska/viet-street-food.md": {
+    "name": "Viet Street Food",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kebab-turecka/adana-kebab.md": {
+    "name": "Adana Kebab",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kebab-turecka/w-kebab.md": {
+    "name": "W. Kebab",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/salatki-cafe/coffeeway.md": {
+    "name": "Coffeeway",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wloska/nowoursynowska.md": {
+    "name": "Restauracja Nowoursynowska",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wloska/tito-appetito.md": {
+    "name": "Tito Appetito",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wloska/dziurka-od-klucza.md": {
+    "name": "Dziurka od Klucza",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wloska/da-grasso.md": {
+    "name": "Da Grasso Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/sushi-japonska/sushi-nugat.md": {
+    "name": "Sushi Nugat",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/sushi-japonska/geisha-sushi.md": {
+    "name": "Geisha Sushi",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/sushi-japonska/sushi-icons.md": {
+    "name": "Sushi Icons",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-indyjska/rani.md": {
+    "name": "Rani – Indyjska Restauracja",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-indyjska/mr-india.md": {
+    "name": "Mr India",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-gruzinska/gaumarjos.md": {
+    "name": "Gaumarjos – Kuchnia Gruzińska",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-polska/staroswiecka.md": {
+    "name": "Restauracja Staroświecka",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-autorska/czyli-czyli.md": {
+    "name": "Czyli Czyli Kabaty",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-tajska/wiethai.md": {
+    "name": "Wiethai Kabaty",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-azjatycka/huong-asia.md": {
+    "name": "Huong Asia",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kebab-turecka/baku-kebab.md": {
+    "name": "Baku Kebab Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kebab-turecka/tasbih-kebab.md": {
+    "name": "Tasbih Kebab",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/burgery/wol-na-stol.md": {
+    "name": "Wół na Stół",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/fast-food/mcdonalds.md": {
+    "name": "McDonald's Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/fast-food/kfc.md": {
+    "name": "KFC Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/fast-food/chrupiacy-kurczak.md": {
+    "name": "Chrupiący Kurczak",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/fast-food/dominos.md": {
+    "name": "Domino's Pizza Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/salatki-cafe/salad-story.md": {
+    "name": "Salad Story Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/wegetarianska/kurkuma.md": {
+    "name": "Vege Bistro Kurkuma",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-balkanska/maly-belgrad.md": {
+    "name": "Mały Belgrad",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/salatki-cafe/moo-cafe.md": {
+    "name": "Moo Cafe Filipiny",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/fast-food/telepizza.md": {
+    "name": "Telepizza Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/fast-food/north-fish.md": {
+    "name": "North Fish Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/fast-food/subway.md": {
+    "name": "Subway Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/burgery/pasibus.md": {
+    "name": "Pasibus Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/burgery/bobby-burger.md": {
+    "name": "Bobby Burger Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kebab-turecka/berlin-doner.md": {
+    "name": "Berlin Döner Kebap Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/salatki-cafe/a-blikle-centrum-ursynow.md": {
+    "name": "A. Blikle Centrum Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/salatki-cafe/a-blikle-kabaty.md": {
+    "name": "A. Blikle Kabaty",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wloska/american-dream-pizza-ursynow.md": {
+    "name": "American Dream Pizza Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wloska/amici-italianfoodlovers.md": {
+    "name": "AMICI ItalianFoodLovers",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-polska/arena-restaurant.md": {
+    "name": "Arena Restaurant",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-polska/bar-janusz.md": {
+    "name": "Bar Janusz",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/bar-mleczny/bar-mleczny-zascianek.md": {
+    "name": "Bar mleczny Zaścianek",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/bar-mleczny/bar-u-justyny.md": {
+    "name": "Bar U Justyny",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/pub-bar/beczka.md": {
+    "name": "Beczka",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/salatki-cafe/bezowy-zakatek.md": {
+    "name": "Bezowy Zakątek",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/salatki-cafe/bistro-kafelek.md": {
+    "name": "Bistro Kafelek",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-polska/bistro-ken.md": {
+    "name": "Bistro KEN",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/burgery/bite-me-burger-ursynow.md": {
+    "name": "Bite me! Burger Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/salatki-cafe/bread-morning.md": {
+    "name": "Bread Morning",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/burgery/burger-mama.md": {
+    "name": "Burger Mama",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/salatki-cafe/caffe-gelateria-myszka.md": {
+    "name": "Caffè Gelateria Myszka",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wloska/casa-di-pizza-ursynow.md": {
+    "name": "Casa di Pizza Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wloska/chicago-s-pizza-ursynow.md": {
+    "name": "Chicago's Pizza Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/sushi-japonska/cho-sushi-ursynow.md": {
+    "name": "CHO Sushi Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-polska/ciepo-zimno-bistro-bar.md": {
+    "name": "Ciepło Zimno Bistro & Bar",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/salatki-cafe/costa-coffee-ken-metro-ursynow.md": {
+    "name": "Costa Coffee KEN Metro Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/salatki-cafe/costa-coffee-ursynow.md": {
+    "name": "Costa Coffee Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/salatki-cafe/cukiernia-cieslikowski.md": {
+    "name": "Cukiernia Cieślikowski",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/salatki-cafe/cukiernia-cieslikowski-galeria-ursynow.md": {
+    "name": "Cukiernia Cieślikowski (Galeria Ursynów)",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/salatki-cafe/cukiernia-deserownia.md": {
+    "name": "Cukiernia Deserownia",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/salatki-cafe/cukiernia-olsza.md": {
+    "name": "Cukiernia Olsza",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/salatki-cafe/cukiernia-sowa.md": {
+    "name": "Cukiernia Sowa",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/salatki-cafe/cukiernia-sweet-home.md": {
+    "name": "Cukiernia Sweet Home",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-indyjska/diyaa-indian-restaurant.md": {
+    "name": "Diyaa Indian Restaurant",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/salatki-cafe/eatstory-bistro-i-cukiernia.md": {
+    "name": "Eatstory bistro i cukiernia",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kebab-turecka/eleven-kebab-pizza.md": {
+    "name": "Eleven Kebab & Pizza",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-indyjska/express-indii.md": {
+    "name": "Express Indii",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-polska/farszawa-pierogi-z-pieca.md": {
+    "name": "Farszawa - Pierogi z Pieca",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kebab-turecka/fenicja-kebab-dereniowa.md": {
+    "name": "Fenicja Kebab - Dereniowa",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/salatki-cafe/fit-cake-ursynow.md": {
+    "name": "Fit Cake Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-azjatycka/g-yoza-ursynow.md": {
+    "name": "G-Yoza Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/salatki-cafe/goodly-specialty-coffee.md": {
+    "name": "Goodly Specialty Coffee",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/salatki-cafe/green-caffe-nero-kabaty.md": {
+    "name": "Green Caffè Nero Kabaty",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kebab-turecka/hakan.md": {
+    "name": "Hakan",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/burgery/hooligan-burgers.md": {
+    "name": "Hooligan Burgers",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-tajska/horapa.md": {
+    "name": "Horapa",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/sushi-japonska/inori-sushi.md": {
+    "name": "Inori Sushi",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/sushi-japonska/japan-burger-ursynow.md": {
+    "name": "Japan Burger Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/salatki-cafe/jesz-lody-tradycyjne.md": {
+    "name": "Jesz Lody Tradycyjne",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/sushi-japonska/kaba-sushi-ursynow.md": {
+    "name": "Kaba Sushi Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kebab-turecka/kervan-kebab.md": {
+    "name": "Kervan Kebab",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/salatki-cafe/klubokawiarnia-ken54.md": {
+    "name": "Klubokawiarnia KEN54",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/sushi-japonska/koku-sushi.md": {
+    "name": "KOKU Sushi",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/burgery/krispi-korean-kfc-ursynow.md": {
+    "name": "KRISPI korean KFC Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/burgery/krowarzywa-ursynow.md": {
+    "name": "Krowarzywa Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-polska/kucharek-szesc.md": {
+    "name": "Kucharek Sześć",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/bar-mleczny/kuchnia-za-sciana.md": {
+    "name": "Kuchnia za Ścianą",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kebab-turecka/kumpir-kebab.md": {
+    "name": "KUMPIR & KEBAB",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/fast-food/kurczaki-na-wypasie-ursynow.md": {
+    "name": "Kurczaki na Wypasie Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/salatki-cafe/le-petit-cafe.md": {
+    "name": "Le Petit Café",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/salatki-cafe/lody-ice-cream-now-ursynow.md": {
+    "name": "Lody Ice Cream NOW - Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/salatki-cafe/lodziarnia-al-passo.md": {
+    "name": "Lodziarnia Al Passo",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/salatki-cafe/lodziarnia-rozek-na-rozku.md": {
+    "name": "Lodziarnia Rożek na Rożku",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-meksykanska/los-mexicos-ursynow.md": {
+    "name": "Los Mexicos Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wloska/make-take-pizza-ursynow.md": {
+    "name": "Make&Take Pizza Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kebab-turecka/mama-kebab.md": {
+    "name": "Mama Kebab",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kebab-turecka/mama-kebab-galeria-ursynow.md": {
+    "name": "Mama Kebab - Galeria Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kebab-turecka/mezze-gyros.md": {
+    "name": "Mezze Gyros",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/pub-bar/monkey-craft-beer.md": {
+    "name": "Monkey Craft Beer",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/sushi-japonska/my-sushi.md": {
+    "name": "My Sushi",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-polska/nalesnikarnia-nasz-nalesnik.md": {
+    "name": "Naleśnikarnia Nasz Naleśnik",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wloska/new-york-pizza-departament-ursynow.md": {
+    "name": "New York Pizza Departament Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/burgery/night-burger-noc.md": {
+    "name": "Night Burger Noc",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wloska/nocna-wyzerka.md": {
+    "name": "Nocna Wyżerka",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wloska/noto-pizza-ursynow.md": {
+    "name": "Noto Pizza Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-polska/obiady-u-gienia.md": {
+    "name": "Obiady U Gienia",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/sushi-japonska/one-more-sushi.md": {
+    "name": "One & More Sushi",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-azjatycka/ono-poke-ursynow.md": {
+    "name": "ONO-POKE Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-azjatycka/orient-express.md": {
+    "name": "Orient Express",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/sushi-japonska/pan-sushi-ursynow-ken.md": {
+    "name": "Pan Sushi Ursynów KEN",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wloska/papa-johns-ursynow.md": {
+    "name": "Papa Johns Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-meksykanska/papito-mexican-bar.md": {
+    "name": "Papito Mexican Bar",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wloska/paradizzo.md": {
+    "name": "Paradizzo",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wloska/pasta-point-ursynow.md": {
+    "name": "Pasta Point Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wloska/pazzo-italia.md": {
+    "name": "Pazzo Italia",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wloska/piccolo-pizzaiolo.md": {
+    "name": "Piccolo Pizzaiolo",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/salatki-cafe/piekarnia-cukiernia-grzybki.md": {
+    "name": "Piekarnia Cukiernia Grzybki",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/salatki-cafe/piekarnia-wanda.md": {
+    "name": "Piekarnia Wanda",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kebab-turecka/piri-piri-kebab.md": {
+    "name": "Piri-Piri Kebab",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kebab-turecka/pita-bros-ursynow.md": {
+    "name": "Pita Bros Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wloska/pizza-na-wypasie-ursynow.md": {
+    "name": "Pizza Na Wypasie Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wloska/pizza-o-ponocy.md": {
+    "name": "PIZZA O PÓŁNOCY",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wloska/pizzeria-biesiadowo.md": {
+    "name": "Pizzeria Biesiadowo",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wloska/pizzeria-czerwony-stefan.md": {
+    "name": "Pizzeria Czerwony Stefan",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wloska/pizzeria-picka.md": {
+    "name": "Pizzeria Picka",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wloska/pizzeria-stokosy.md": {
+    "name": "Pizzeria Stokłosy",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-polska/port-jeziorki.md": {
+    "name": "Port Jeziorki",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kebab-turecka/praski-kebab.md": {
+    "name": "Praski Kebab",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/pub-bar/pub-szyszka-chmielu.md": {
+    "name": "Pub Szyszka Chmielu",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wloska/punto-pizza.md": {
+    "name": "Punto Pizza",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/salatki-cafe/qki-cukiernia-kawiarnia.md": {
+    "name": "QKI Cukiernia Kawiarnia",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wloska/restauracja-lipari.md": {
+    "name": "Restauracja Lipari",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wietnamska/restauracja-ngon.md": {
+    "name": "Restauracja Ngon",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wloska/restauracja-rimini.md": {
+    "name": "Restauracja Rimini",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/sushi-japonska/restauracja-shogun.md": {
+    "name": "Restauracja Shogun",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-azjatycka/rolldog-ursynow.md": {
+    "name": "Rolldog Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wloska/rosso.md": {
+    "name": "Rosso",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/sushi-japonska/saba-sushi.md": {
+    "name": "SABA SUSHI",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/sushi-japonska/sake-izakaya.md": {
+    "name": "Sake Izakaya",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wloska/salsiccia-pizzeria-napoletana.md": {
+    "name": "Salsiccia - Pizzeria Napoletana",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wloska/san-giovanni.md": {
+    "name": "San Giovanni",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kebab-turecka/shahi-kebab-grill-ursynow.md": {
+    "name": "SHAHI KEBAB & GRILL Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-polska/sphinx-ursynow-multikino.md": {
+    "name": "Sphinx Ursynów (Multikino)",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/salatki-cafe/sucre-ursynow-cukiernia-lody-naturalne.md": {
+    "name": "Sucré Ursynów - Cukiernia, Lody Naturalne",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/sushi-japonska/sushi-bistro.md": {
+    "name": "Sushi Bistro",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/sushi-japonska/sushi-fudzi-ursynow.md": {
+    "name": "Sushi Fudzi Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/sushi-japonska/sushi-scena-fryderyk.md": {
+    "name": "Sushi Scena Fryderyk",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/sushi-japonska/sushi-zushi-silver-ursynow.md": {
+    "name": "Sushi Zushi Silver Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/sushi-japonska/sushizen.md": {
+    "name": "SushiZen",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wloska/sypka-maka.md": {
+    "name": "Sypka Mąka",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-meksykanska/taco-loco-ursynow.md": {
+    "name": "Taco Loco Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/sushi-japonska/tajto-sushi-ursynow.md": {
+    "name": "Tajto Sushi Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kebab-turecka/tamli-kebap-restauracja.md": {
+    "name": "Tamli Kebap Restauracja",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/sushi-japonska/tanami-sushi.md": {
+    "name": "Tanami Sushi",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/burgery/the-goood-burger-warszawa-ursynow.md": {
+    "name": "The Goood Burger - Warszawa Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wloska/trattoria-in-italia.md": {
+    "name": "Trattoria In Italia",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wloska/tylko-dobre-makarony-ursynow.md": {
+    "name": "Tylko dobre makarony Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/salatki-cafe/tylko-dobre-saatki-ursynow.md": {
+    "name": "Tylko dobre sałatki! Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-wloska/va-bene.md": {
+    "name": "Va Bene",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-indyjska/veda.md": {
+    "name": "Veda",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/wegetarianska/vegan-house.md": {
+    "name": "Vegan House",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/bar-mleczny/violinova-milky-bar.md": {
+    "name": "Violinova Milky Bar",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-polska/winowajcy-roku.md": {
+    "name": "Winowajcy Roku",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/sushi-japonska/yuki-ursynow.md": {
+    "name": "YUKI Ursynów",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-polska/z-koperkiem-czy-bez.md": {
+    "name": "Z koperkiem czy bez",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-polska/zapiecek-pierogarnia.md": {
+    "name": "Zapiecek Pierogarnia",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/salatki-cafe/zona-krawca.md": {
+    "name": "Żona Krawca",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-europejska/american-house.md": {
+    "name": "American House",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-chinska/china-town.md": {
+    "name": "China Town",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/burgery/ale-burger.md": {
+    "name": "Ale Burger",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-indyjska/ganesh.md": {
+    "name": "Ganesh",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-grecka/grek-zorba.md": {
+    "name": "Grek Zorba",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/kuchnia-balkanska/balkanski-kociol.md": {
+    "name": "Bałkański Kocioł",
+    "www": "",
+    "menu": ""
+  },
+  "ursynow/bar-mleczny/twoj-barek-aga.md": {
+    "name": "Twój Barek Aga",
+    "www": "",
+    "menu": ""
+  }
+}
