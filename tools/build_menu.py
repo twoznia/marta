@@ -51,6 +51,33 @@ _ING_RE = re.compile(
     r'nazwa:\s*"(?P<nazwa>[^"]+)"\s*,\s*gramy:\s*(?P<gramy>\d+(?:\.\d+)?)\s*,\s*kcal:\s*(?P<kcal>\d+(?:\.\d+)?)'
 )
 
+# Składniki warunkowe (⚠️ „żółte") wg low-fodmap/README.md — bezpieczne tylko
+# w limicie porcji, a FODMAP-y się kumulują. Danie z takim składnikiem oznaczamy
+# jako „żółte"; danie wyłącznie z produktów zielonych → „zielone".
+_WARUNKOWE_KEYWORDS = (
+    "awokado", "brokuł", "brokul", "batat", "cukini", "malin",
+    "papryk", "feta", "mozzarell", "owsian", "owies", "orkisz",
+    "laskow", "gorzka czekolad", "czekolada gorzk", "kukurydza",
+)
+
+
+def _skladnik_warunkowy(nazwa: str) -> bool:
+    """Czy dany składnik jest warunkowy (⚠️)?"""
+    n = nazwa.lower()
+    # „mleko migdałowe" jest zielone, ale migdały (orzechy) już warunkowe.
+    if "migdał" in n and "mleko" not in n:
+        return True
+    # „kukurydza" (ziarna/kolba) jest warunkowa, ale „produkty kukurydziane"
+    # (tortilla, wafle, mąka kukurydziana) są zielone — te nie zawierają
+    # podłańcucha „kukurydza" (mają „kukurydzian…"), więc obsługuje to keyword.
+    return any(k in n for k in _WARUNKOWE_KEYWORDS)
+
+
+def klasyfikuj(skladniki: list[dict]) -> tuple[str, list[str]]:
+    """Zwraca ('zielony'|'zolty', [nazwy składników warunkowych])."""
+    warunkowe = [s["nazwa"] for s in skladniki if _skladnik_warunkowy(s["nazwa"])]
+    return ("zolty" if warunkowe else "zielony"), warunkowe
+
 
 def parse_dish(path: Path) -> dict:
     text = path.read_text(encoding="utf-8")
@@ -90,6 +117,7 @@ def parse_dish(path: Path) -> dict:
 
     bazowe_kcal = round(sum(s["kcal"] for s in skladniki))
     bazowa_gramatura = round(sum(s["gramy"] for s in skladniki))
+    fodmap, warunkowe = klasyfikuj(skladniki)
 
     rel = path.relative_to(ROOT).as_posix()
     return {
@@ -100,6 +128,8 @@ def parse_dish(path: Path) -> dict:
         "skladniki": skladniki,
         "bazowe_kcal": bazowe_kcal,
         "bazowa_gramatura": bazowa_gramatura,
+        "fodmap": fodmap,          # 'zielony' | 'zolty'
+        "warunkowe": warunkowe,    # nazwy składników warunkowych (⚠️)
         "plik": rel,  # ścieżka do pełnego przepisu (fetch z przeglądarki)
     }
 
@@ -141,7 +171,9 @@ def main() -> int:
     data = build()
     n = len(data["dania"])
     summary = ", ".join(f"{p['etykieta']}: {p['liczba']}" for p in data["posilki"])
+    zolte = sum(1 for d in data["dania"] if d["fodmap"] == "zolty")
     print(f"Wczytano {n} dań ({summary}).", file=sys.stderr)
+    print(f"FODMAP: zielone {n - zolte}, żółte {zolte}.", file=sys.stderr)
 
     if args.check:
         print("OK — walidacja przeszła (nic nie zapisano).", file=sys.stderr)
