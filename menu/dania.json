@@ -51,6 +51,8 @@
       ],
       "bazowe_kcal": 249,
       "bazowa_gramatura": 240,
+      "fodmap": "zielony",
+      "warunkowe": [],
       "plik": "menu/dania/drugie-sniadanie/jajka-pomidor-pieczywo.md"
     },
     {
@@ -77,6 +79,8 @@
       ],
       "bazowe_kcal": 299,
       "bazowa_gramatura": 240,
+      "fodmap": "zielony",
+      "warunkowe": [],
       "plik": "menu/dania/drugie-sniadanie/jogurt-granola-owoce.md"
     },
     {
@@ -103,6 +107,10 @@
       ],
       "bazowe_kcal": 251,
       "bazowa_gramatura": 135,
+      "fodmap": "zolty",
+      "warunkowe": [
+        "Awokado"
+      ],
       "plik": "menu/dania/drugie-sniadanie/kanapka-awokado-jajko.md"
     },
     {
@@ -139,6 +147,8 @@
       ],
       "bazowe_kcal": 237,
       "bazowa_gramatura": 160,
+      "fodmap": "zielony",
+      "warunkowe": [],
       "plik": "menu/dania/drugie-sniadanie/kanapka-indyk-ogorek.md"
     },
     {
@@ -170,6 +180,8 @@
       ],
       "bazowe_kcal": 268,
       "bazowa_gramatura": 160,
+      "fodmap": "zielony",
+      "warunkowe": [],
       "plik": "menu/dania/drugie-sniadanie/kanapka-pasta-tunczyk.md"
     },
     {
@@ -201,6 +213,8 @@
       ],
       "bazowe_kcal": 222,
       "bazowa_gramatura": 360,
+      "fodmap": "zielony",
+      "warunkowe": [],
       "plik": "menu/dania/drugie-sniadanie/koktajl-banan-truskawka.md"
     },
     {
@@ -232,6 +246,8 @@
       ],
       "bazowe_kcal": 261,
       "bazowa_gramatura": 295,
+      "fodmap": "zielony",
+      "warunkowe": [],
       "plik": "menu/dania/drugie-sniadanie/koktajl-zielony.md"
     },
     {
@@ -258,6 +274,10 @@
       ],
       "bazowe_kcal": 248,
       "bazowa_gramatura": 170,
+      "fodmap": "zolty",
+      "warunkowe": [
+        "Papryka czerwona"
+      ],
       "plik": "menu/dania/drugie-sniadanie/muffiny-jajeczne.md"
     },
     {
@@ -284,6 +304,8 @@
       ],
       "bazowe_kcal": 214,
       "bazowa_gramatura": 215,
+      "fodmap": "zielony",
+      "warunkowe": [],
       "plik": "menu/dania/drugie-sniadanie/owoce-orzechy.md"
     },
     {
@@ -315,6 +337,8 @@
       ],
       "bazowe_kcal": 258,
       "bazowa_gramatura": 295,
+      "fodmap": "zielony",
+      "warunkowe": [],
       "plik": "menu/dania/drugie-sniadanie/salatka-owocowa-kiwi.md"
     },
     {
@@ -351,6 +375,8 @@
       ],
       "bazowe_kcal": 455,
       "bazowa_gramatura": 328,
+      "fodmap": "zielony",
+      "warunkowe": [],
       "plik": "menu/dania/kolacja/jajka-na-twardo-salata.md"
     },
     {
@@ -382,6 +408,10 @@
       ],
       "bazowe_kcal": 467,
       "bazowa_gramatura": 255,
+      "fodmap": "zolty",
+      "warunkowe": [
+        "Papryka czerwona"
+      ],
       "plik": "menu/dania/kolacja/kanapki-szynka-ser.md"
     },
     {
@@ -418,6 +448,8 @@
       ],
       "bazowe_kcal": 375,
       "bazowa_gramatura": 600,
+      "fodmap": "zielony",
+      "warunkowe": [],
       "plik": "menu/dania/kolacja/krem-marchewkowy-grzanki.md"
     },
     {
@@ -454,6 +486,12 @@
       ],
       "bazowe_kcal": 440,
       "bazowa_gramatura": 338,
+      "fodmap": "zolty",
+      "warunkowe": [
+        "Papryka czerwona",
+        "Cukinia",
+        "Ser feta"
+      ],
       "plik": "menu/dania/kolacja/omlet-warzywny-kolacja.md"
     },
     {
@@ -490,6 +528,10 @@
       ],
       "bazowe_kcal": 363,
       "bazowa_gramatura": 483,
+      "fodmap": "zolty",
+      "warunkowe": [
+        "Cukinia"
+      ],
       "plik": "menu/dania/kolacja/ryba-warzywa-para.md"
     },
     {
@@ -526,6 +568,10 @@
       ],
       "bazowe_kcal": 478,
       "bazowa_gramatura": 303,
+      "fodmap": "zolty",
+      "warunkowe": [
+        "Cukinia"
+      ],
       "plik": "menu/dania/kolacja/ryz-warzywa-jajko.md"
     },
     {
@@ -567,6 +613,10 @@
       ],
       "bazowe_kcal": 339,
       "bazowa_gramatura": 298,
+      "fodmap": "zolty",
+      "warunkowe": [
+        "Ser feta"
+      ],
       "plik": "menu/dania/kolacja/salatka-grecka.md"
     },
     {
@@ -603,6 +653,10 @@
       ],
       "bazowe_kcal": 351,
       "bazowa_gramatura": 390,
+      "fodmap": "zolty",
+      "warunkowe": [
+        "Ser feta"
+      ],
       "plik": "menu/dania/kolacja/salatka-kurczak-grill.md"
     },
     {
@@ -639,6 +693,8 @@
       ],
       "bazowe_kcal": 498,
       "bazowa_gramatura": 410,
+      "fodmap": "zielony",
+      "warunkowe": [],
       "plik": "menu/dania/kolacja/salatka-tunczyk-jajko.md"
     },
     {
@@ -670,6 +726,8 @@
       ],
       "bazowe_kcal": 338,
       "bazowa_gramatura": 260,
+      "fodmap": "zielony",
+      "warunkowe": [],
       "plik": "menu/dania/kolacja/tortilla-kukurydziana-kurczak.md"
     },
     {
@@ -701,6 +759,8 @@
       ],
       "bazowe_kcal": 511,
       "bazowa_gramatura": 380,
+      "fodmap": "zielony",
+      "warunkowe": [],
       "plik": "menu/dania/obiad/dorsz-ryz-salatka.md"
     },
     {
@@ -737,6 +797,8 @@
       ],
       "bazowe_kcal": 680,
       "bazowa_gramatura": 540,
+      "fodmap": "zielony",
+      "warunkowe": [],
       "plik": "menu/dania/obiad/gulasz-wolowy-ziemniaki.md"
     },
     {
@@ -773,6 +835,10 @@
       ],
       "bazowe_kcal": 529,
       "bazowa_gramatura": 375,
+      "fodmap": "zolty",
+      "warunkowe": [
+        "Cukinia"
+      ],
       "plik": "menu/dania/obiad/indyk-kasza-gryczana.md"
     },
     {
@@ -809,6 +875,8 @@
       ],
       "bazowe_kcal": 599,
       "bazowa_gramatura": 500,
+      "fodmap": "zielony",
+      "warunkowe": [],
       "plik": "menu/dania/obiad/klopsiki-indycze-ryz.md"
     },
     {
@@ -845,6 +913,10 @@
       ],
       "bazowe_kcal": 564,
       "bazowa_gramatura": 385,
+      "fodmap": "zolty",
+      "warunkowe": [
+        "Brokuł (różyczki)"
+      ],
       "plik": "menu/dania/obiad/kurczak-ryz-warzywa.md"
     },
     {
@@ -876,6 +948,10 @@
       ],
       "bazowe_kcal": 585,
       "bazowa_gramatura": 543,
+      "fodmap": "zolty",
+      "warunkowe": [
+        "Cukinia"
+      ],
       "plik": "menu/dania/obiad/kurczak-ziemniaki-cukinia.md"
     },
     {
@@ -907,6 +983,8 @@
       ],
       "bazowe_kcal": 561,
       "bazowa_gramatura": 435,
+      "fodmap": "zielony",
+      "warunkowe": [],
       "plik": "menu/dania/obiad/losos-ziemniaki.md"
     },
     {
@@ -938,6 +1016,8 @@
       ],
       "bazowe_kcal": 748,
       "bazowa_gramatura": 370,
+      "fodmap": "zielony",
+      "warunkowe": [],
       "plik": "menu/dania/obiad/makaron-bolognese.md"
     },
     {
@@ -979,6 +1059,10 @@
       ],
       "bazowe_kcal": 604,
       "bazowa_gramatura": 385,
+      "fodmap": "zolty",
+      "warunkowe": [
+        "Papryka czerwona"
+      ],
       "plik": "menu/dania/obiad/ryz-smazony-kurczak.md"
     },
     {
@@ -1015,6 +1099,8 @@
       ],
       "bazowe_kcal": 705,
       "bazowa_gramatura": 445,
+      "fodmap": "zielony",
+      "warunkowe": [],
       "plik": "menu/dania/obiad/schabowy-ziemniaki-surowka.md"
     },
     {
@@ -1046,6 +1132,10 @@
       ],
       "bazowe_kcal": 244,
       "bazowa_gramatura": 191,
+      "fodmap": "zolty",
+      "warunkowe": [
+        "Mozzarella"
+      ],
       "plik": "menu/dania/podwieczorek/caprese-mozzarella-pomidor.md"
     },
     {
@@ -1067,6 +1157,8 @@
       ],
       "bazowe_kcal": 216,
       "bazowa_gramatura": 165,
+      "fodmap": "zielony",
+      "warunkowe": [],
       "plik": "menu/dania/podwieczorek/jogurt-grecki-syrop.md"
     },
     {
@@ -1088,6 +1180,8 @@
       ],
       "bazowe_kcal": 220,
       "bazowa_gramatura": 70,
+      "fodmap": "zielony",
+      "warunkowe": [],
       "plik": "menu/dania/podwieczorek/kanapka-ser.md"
     },
     {
@@ -1114,6 +1208,8 @@
       ],
       "bazowe_kcal": 164,
       "bazowa_gramatura": 310,
+      "fodmap": "zielony",
+      "warunkowe": [],
       "plik": "menu/dania/podwieczorek/koktajl-truskawkowy.md"
     },
     {
@@ -1135,6 +1231,10 @@
       ],
       "bazowe_kcal": 141,
       "bazowa_gramatura": 162,
+      "fodmap": "zolty",
+      "warunkowe": [
+        "Migdały"
+      ],
       "plik": "menu/dania/podwieczorek/migdaly-pomarancza.md"
     },
     {
@@ -1156,6 +1256,8 @@
       ],
       "bazowe_kcal": 200,
       "bazowa_gramatura": 120,
+      "fodmap": "zielony",
+      "warunkowe": [],
       "plik": "menu/dania/podwieczorek/orzechy-winogrona.md"
     },
     {
@@ -1182,6 +1284,8 @@
       ],
       "bazowe_kcal": 127,
       "bazowa_gramatura": 235,
+      "fodmap": "zielony",
+      "warunkowe": [],
       "plik": "menu/dania/podwieczorek/salatka-owocowa.md"
     },
     {
@@ -1208,6 +1312,8 @@
       ],
       "bazowe_kcal": 210,
       "bazowa_gramatura": 62,
+      "fodmap": "zielony",
+      "warunkowe": [],
       "plik": "menu/dania/podwieczorek/wafle-dzem-truskawkowy.md"
     },
     {
@@ -1234,6 +1340,8 @@
       ],
       "bazowe_kcal": 249,
       "bazowa_gramatura": 100,
+      "fodmap": "zielony",
+      "warunkowe": [],
       "plik": "menu/dania/podwieczorek/wafle-maslo-orzechowe.md"
     },
     {
@@ -1260,6 +1368,8 @@
       ],
       "bazowe_kcal": 185,
       "bazowa_gramatura": 95,
+      "fodmap": "zielony",
+      "warunkowe": [],
       "plik": "menu/dania/podwieczorek/wafle-ser-pomidor.md"
     },
     {
@@ -1291,6 +1401,8 @@
       ],
       "bazowe_kcal": 475,
       "bazowa_gramatura": 335,
+      "fodmap": "zielony",
+      "warunkowe": [],
       "plik": "menu/dania/sniadanie/jajecznica-pieczywo.md"
     },
     {
@@ -1327,6 +1439,8 @@
       ],
       "bazowe_kcal": 366,
       "bazowa_gramatura": 295,
+      "fodmap": "zielony",
+      "warunkowe": [],
       "plik": "menu/dania/sniadanie/jajka-sadzone-szynka.md"
     },
     {
@@ -1363,6 +1477,8 @@
       ],
       "bazowe_kcal": 417,
       "bazowa_gramatura": 245,
+      "fodmap": "zielony",
+      "warunkowe": [],
       "plik": "menu/dania/sniadanie/kanapki-pasta-jajeczna.md"
     },
     {
@@ -1394,6 +1510,8 @@
       ],
       "bazowe_kcal": 406,
       "bazowa_gramatura": 198,
+      "fodmap": "zielony",
+      "warunkowe": [],
       "plik": "menu/dania/sniadanie/kanapki-ser-pomidor.md"
     },
     {
@@ -1425,6 +1543,8 @@
       ],
       "bazowe_kcal": 455,
       "bazowa_gramatura": 335,
+      "fodmap": "zielony",
+      "warunkowe": [],
       "plik": "menu/dania/sniadanie/kasza-jaglana-owoce.md"
     },
     {
@@ -1461,6 +1581,8 @@
       ],
       "bazowe_kcal": 406,
       "bazowa_gramatura": 320,
+      "fodmap": "zielony",
+      "warunkowe": [],
       "plik": "menu/dania/sniadanie/nalesniki-truskawki.md"
     },
     {
@@ -1492,6 +1614,8 @@
       ],
       "bazowe_kcal": 424,
       "bazowa_gramatura": 253,
+      "fodmap": "zielony",
+      "warunkowe": [],
       "plik": "menu/dania/sniadanie/omlet-ser-szpinak.md"
     },
     {
@@ -1523,6 +1647,10 @@
       ],
       "bazowe_kcal": 477,
       "bazowa_gramatura": 365,
+      "fodmap": "zolty",
+      "warunkowe": [
+        "Płatki owsiane"
+      ],
       "plik": "menu/dania/sniadanie/owsianka-banan-orzechy.md"
     },
     {
@@ -1554,6 +1682,8 @@
       ],
       "bazowe_kcal": 420,
       "bazowa_gramatura": 475,
+      "fodmap": "zielony",
+      "warunkowe": [],
       "plik": "menu/dania/sniadanie/ryz-na-mleku-borowki.md"
     },
     {
@@ -1585,6 +1715,8 @@
       ],
       "bazowe_kcal": 405,
       "bazowa_gramatura": 285,
+      "fodmap": "zielony",
+      "warunkowe": [],
       "plik": "menu/dania/sniadanie/tosty-jajko-pomidor.md"
     }
   ]

@@ -65,6 +65,18 @@
       .meal-emoji { font-size: 1.5rem; }
       .meal-cat { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--rose); }
       .meal-name { font-weight: 800; font-size: 1.12rem; }
+      .badge { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.72rem; font-weight: 700;
+               text-transform: uppercase; letter-spacing: 0.03em; padding: 0.15rem 0.55rem; border-radius: 100px;
+               border: 1px solid transparent; white-space: nowrap; }
+      .badge-green { background: #e7f6e7; color: #2e7d32; border-color: #b6e0b6; }
+      .badge-yellow { background: #fff4dd; color: #8a6100; border-color: #f0d089; }
+      .meal-tags { display: flex; align-items: center; gap: 0.4rem; margin-top: 0.2rem; flex-wrap: wrap; }
+      .warn-ings { font-size: 0.78rem; color: #8a6100; }
+      table.ing tr.warn td { background: #fff8ea; }
+      table.ing td .chip-warn { color: #8a6100; font-weight: 700; margin-left: 0.3rem; font-size: 0.8rem; }
+      .legend { display: flex; gap: 0.9rem; justify-content: center; flex-wrap: wrap; margin-top: 0.9rem;
+                font-size: 0.82rem; color: var(--muted); }
+      .legend span { display: inline-flex; align-items: center; gap: 0.35rem; }
       .meal-kcal { margin-left: auto; text-align: right; }
       .meal-kcal .n { font-weight: 800; color: var(--rose); font-size: 1.15rem; }
       .meal-kcal .g { font-size: 0.8rem; color: var(--muted); }
@@ -128,6 +140,11 @@
           <button class="kbtn" data-k="2500">2500</button>
         </div>
         <div class="meals-toggle" id="mealsToggle"></div>
+        <div class="legend">
+          <span><span class="badge badge-green">🟢 Zielone</span> w pełni low FODMAP</span>
+          <span><span class="badge badge-yellow">🟡 Żółte</span> zawiera składnik warunkowy (⚠️)</span>
+          <span>W planie dnia dbam, żeby żółte się nie kumulowały (najwyżej jedno).</span>
+        </div>
         <div class="gen-row">
           <button class="btn-primary" id="generate">Generuj plan na dzień</button>
           <button class="btn-ghost" id="regen" hidden>🎲 Losuj od nowa</button>
@@ -212,18 +229,48 @@
       }
 
       const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
+      const isYellow = (d) => d && d.fodmap === "zolty";
+      const shuffled = (arr) => {
+        const a = arr.slice();
+        for (let i = a.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [a[i], a[j]] = [a[j], a[i]];
+        }
+        return a;
+      };
+
+      // Liczba żółtych dań w planie poza wskazanym posiłkiem.
+      function yellowCount(exceptSlug) {
+        return Object.keys(plan).filter((s) => s !== exceptSlug && isYellow(plan[s].dish)).length;
+      }
 
       // reroll=true losuje nowe dania; reroll=false zachowuje wybrane i tylko przelicza porcje.
+      // Blokada kumulacji: w całym planie dnia dopuszczamy najwyżej JEDNO żółte danie.
       function generate(reroll = true) {
         const target = clampKcal(parseInt($("kcal").value, 10) || 2000);
         const w = activeWeights();
         const prev = plan;
         plan = {};
-        for (const p of MENU.posilki) {
-          if (!active[p.slug]) continue;
+        let yellowUsed = false;
+        // Losowa kolejność wyboru, żeby żółte danie mogło trafić w różne posiłki
+        // (a nie zawsze w pierwszy). Renderujemy i tak w kolejności kanonicznej.
+        const order = shuffled(MENU.posilki.filter((p) => active[p.slug]));
+        for (const p of order) {
           const dishes = byMeal[p.slug] || [];
           if (!dishes.length) continue;
-          const dish = (!reroll && prev[p.slug]?.dish) ? prev[p.slug].dish : pick(dishes);
+
+          let dish;
+          if (!reroll && prev[p.slug]?.dish) {
+            dish = prev[p.slug].dish;              // zachowaj wybrane danie
+          } else if (yellowUsed) {
+            // Żółte już wykorzystane — losuj tylko z zielonych (fallback: cokolwiek).
+            const greens = dishes.filter((d) => !isYellow(d));
+            dish = greens.length ? pick(greens) : pick(dishes);
+          } else {
+            dish = pick(dishes);
+          }
+          if (isYellow(dish)) yellowUsed = true;
+
           const mealTarget = target * w[p.slug];
           plan[p.slug] = { dish, factor: mealTarget / dish.bazowe_kcal };
         }
@@ -231,8 +278,14 @@
       }
 
       function swapMeal(slug) {
-        const dishes = byMeal[slug] || [];
+        let dishes = byMeal[slug] || [];
         if (dishes.length <= 1) return;
+        // Jeśli w planie jest już żółte danie w innym posiłku, zamieniaj tylko
+        // na zielone, żeby żółte się nie kumulowały.
+        if (yellowCount(slug) >= 1) {
+          const greens = dishes.filter((d) => !isYellow(d));
+          if (greens.length) dishes = greens;
+        }
         let d;
         do { d = pick(dishes); } while (d.slug === plan[slug].dish.slug && dishes.length > 1);
         const target = clampKcal(parseInt($("kcal").value, 10) || 2000);
@@ -283,15 +336,26 @@
       function mealCard(posilek, dish, scaled, pct) {
         const el = document.createElement("div");
         el.className = "meal";
+        const warunkowe = dish.warunkowe || [];
+        const isWarn = (nazwa) => warunkowe.includes(nazwa);
         const rows = scaled.ing.map((s) =>
-          `<tr><td>${s.nazwa}</td><td class="num">${s.gramy} g</td><td class="num">${s.kcal} kcal</td></tr>`
+          `<tr class="${isWarn(s.nazwa) ? "warn" : ""}"><td>${escapeHtml(s.nazwa)}` +
+          `${isWarn(s.nazwa) ? '<span class="chip-warn" title="Składnik warunkowy — bezpieczny tylko w limicie porcji">⚠️</span>' : ""}` +
+          `</td><td class="num">${s.gramy} g</td><td class="num">${s.kcal} kcal</td></tr>`
         ).join("");
+        const badge = isYellow(dish)
+          ? `<span class="badge badge-yellow">🟡 Żółte</span>`
+          : `<span class="badge badge-green">🟢 Zielone</span>`;
+        const warnLine = (isYellow(dish) && warunkowe.length)
+          ? `<span class="warn-ings">⚠️ warunkowo: ${warunkowe.map(escapeHtml).join(", ")}</span>`
+          : "";
         el.innerHTML = `
           <div class="meal-head">
             <span class="meal-emoji">${EMOJI[posilek.slug] || "🍽️"}</span>
             <div>
               <div class="meal-cat">${posilek.etykieta}</div>
-              <div class="meal-name">${dish.nazwa}</div>
+              <div class="meal-name">${escapeHtml(dish.nazwa)}</div>
+              <div class="meal-tags">${badge}${warnLine}</div>
             </div>
             <div class="meal-kcal">
               <div class="n">${scaled.kcal} kcal</div>
@@ -317,6 +381,10 @@
         return el;
       }
 
+      // dish.plik jest zapisany względem korzenia repo ("menu/dania/…"), a ta
+      // strona leży w "menu/", więc do fetch/linku trzeba ścieżki względem strony.
+      const recipeHref = (plik) => plik.replace(/^menu\//, "");
+
       async function toggleRecipe(btn, dish, box) {
         if (box.classList.contains("show")) {
           box.classList.remove("show");
@@ -327,12 +395,14 @@
         box.classList.add("show");
         if (box.dataset.loaded) return;
         box.innerHTML = "Wczytuję przepis…";
+        const href = recipeHref(dish.plik);
         try {
-          const res = await fetch(dish.plik, { cache: "no-store" });
+          const res = await fetch(href, { cache: "no-store" });
+          if (!res.ok) throw new Error("HTTP " + res.status);
           const md = await res.text();
-          box.innerHTML = extractRecipe(md, dish.plik);
+          box.innerHTML = extractRecipe(md, href);
         } catch (e) {
-          box.innerHTML = `<a href="${dish.plik}" target="_blank" rel="noopener">Otwórz pełny przepis →</a>`;
+          box.innerHTML = `<a href="${href}" target="_blank" rel="noopener">Otwórz pełny przepis →</a>`;
         }
         box.dataset.loaded = "1";
       }
