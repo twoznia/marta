@@ -36,17 +36,36 @@
         {
           "nazwa": "Jajka (2 szt.)",
           "gramy": 110.0,
-          "kcal": 156.0
+          "kcal": 156.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 55,
+            "etykieta": "szt.",
+            "grupa": "jajka",
+            "nazwa_grupy": "Jajka"
+          }
         },
         {
           "nazwa": "Pomidor",
           "gramy": 100.0,
-          "kcal": 18.0
+          "kcal": 18.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 120,
+            "etykieta": "szt."
+          }
         },
         {
           "nazwa": "Chleb bezglutenowy",
           "gramy": 30.0,
-          "kcal": 75.0
+          "kcal": 75.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 30,
+            "etykieta": "kromka",
+            "grupa": "pieczywo-bg",
+            "nazwa_grupy": "Pieczywo bezglutenowe"
+          }
         }
       ],
       "bazowe_kcal": 249,
@@ -64,7 +83,12 @@
         {
           "nazwa": "Jogurt bez laktozy",
           "gramy": 150.0,
-          "kcal": 90.0
+          "kcal": 90.0,
+          "jednostka": {
+            "typ": "ml",
+            "gestosc": 1.0,
+            "etykieta": "ml"
+          }
         },
         {
           "nazwa": "Granola bezglutenowa",
@@ -92,7 +116,14 @@
         {
           "nazwa": "Chleb bezglutenowy",
           "gramy": 50.0,
-          "kcal": 125.0
+          "kcal": 125.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 30,
+            "etykieta": "kromka",
+            "grupa": "pieczywo-bg",
+            "nazwa_grupy": "Pieczywo bezglutenowe"
+          }
         },
         {
           "nazwa": "Awokado",
@@ -102,7 +133,14 @@
         {
           "nazwa": "Jajko (1 szt.)",
           "gramy": 55.0,
-          "kcal": 78.0
+          "kcal": 78.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 55,
+            "etykieta": "szt.",
+            "grupa": "jajka",
+            "nazwa_grupy": "Jajka"
+          }
         }
       ],
       "bazowe_kcal": 251,
@@ -122,7 +160,14 @@
         {
           "nazwa": "Pieczywo bezglutenowe",
           "gramy": 60.0,
-          "kcal": 150.0
+          "kcal": 150.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 30,
+            "etykieta": "kromka",
+            "grupa": "pieczywo-bg",
+            "nazwa_grupy": "Pieczywo bezglutenowe"
+          }
         },
         {
           "nazwa": "Wędlina z indyka",
@@ -160,7 +205,14 @@
         {
           "nazwa": "Chleb bezglutenowy",
           "gramy": 50.0,
-          "kcal": 125.0
+          "kcal": 125.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 30,
+            "etykieta": "kromka",
+            "grupa": "pieczywo-bg",
+            "nazwa_grupy": "Pieczywo bezglutenowe"
+          }
         },
         {
           "nazwa": "Tuńczyk w sosie własnym",
@@ -170,7 +222,12 @@
         {
           "nazwa": "Majonez",
           "gramy": 10.0,
-          "kcal": 68.0
+          "kcal": 68.0,
+          "jednostka": {
+            "typ": "ml",
+            "gestosc": 0.91,
+            "etykieta": "ml"
+          }
         },
         {
           "nazwa": "Ogórek",
@@ -193,7 +250,12 @@
         {
           "nazwa": "Banan (niedojrzały)",
           "gramy": 100.0,
-          "kcal": 89.0
+          "kcal": 89.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 120,
+            "etykieta": "szt."
+          }
         },
         {
           "nazwa": "Truskawki",
@@ -203,12 +265,22 @@
         {
           "nazwa": "Mleko bez laktozy 2%",
           "gramy": 150.0,
-          "kcal": 75.0
+          "kcal": 75.0,
+          "jednostka": {
+            "typ": "ml",
+            "gestosc": 1.0,
+            "etykieta": "ml"
+          }
         },
         {
           "nazwa": "Syrop klonowy",
           "gramy": 10.0,
-          "kcal": 26.0
+          "kcal": 26.0,
+          "jednostka": {
+            "typ": "ml",
+            "gestosc": 1.32,
+            "etykieta": "ml"
+          }
         }
       ],
       "bazowe_kcal": 222,
@@ -231,12 +303,22 @@
         {
           "nazwa": "Banan (niedojrzały)",
           "gramy": 100.0,
-          "kcal": 89.0
+          "kcal": 89.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 120,
+            "etykieta": "szt."
+          }
         },
         {
           "nazwa": "Mleko bez laktozy 2%",
           "gramy": 150.0,
-          "kcal": 75.0
+          "kcal": 75.0,
+          "jednostka": {
+            "typ": "ml",
+            "gestosc": 1.0,
+            "etykieta": "ml"
+          }
         },
         {
           "nazwa": "Masło orzechowe",
@@ -259,7 +341,14 @@
         {
           "nazwa": "Jajka (2 szt.)",
           "gramy": 110.0,
-          "kcal": 156.0
+          "kcal": 156.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 55,
+            "etykieta": "szt.",
+            "grupa": "jajka",
+            "nazwa_grupy": "Jajka"
+          }
         },
         {
           "nazwa": "Papryka czerwona",
@@ -294,7 +383,12 @@
         {
           "nazwa": "Pomarańcza",
           "gramy": 100.0,
-          "kcal": 47.0
+          "kcal": 47.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 130,
+            "etykieta": "szt."
+          }
         },
         {
           "nazwa": "Orzechy włoskie",
@@ -317,12 +411,22 @@
         {
           "nazwa": "Kiwi",
           "gramy": 80.0,
-          "kcal": 49.0
+          "kcal": 49.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 75,
+            "etykieta": "szt."
+          }
         },
         {
           "nazwa": "Pomarańcza",
           "gramy": 120.0,
-          "kcal": 56.0
+          "kcal": 56.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 130,
+            "etykieta": "szt."
+          }
         },
         {
           "nazwa": "Winogrona",
@@ -350,12 +454,26 @@
         {
           "nazwa": "Jajka",
           "gramy": 150.0,
-          "kcal": 215.0
+          "kcal": 215.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 55,
+            "etykieta": "szt.",
+            "grupa": "jajka",
+            "nazwa_grupy": "Jajka"
+          }
         },
         {
           "nazwa": "Pieczywo bezglutenowe",
           "gramy": 60.0,
-          "kcal": 150.0
+          "kcal": 150.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 30,
+            "etykieta": "kromka",
+            "grupa": "pieczywo-bg",
+            "nazwa_grupy": "Pieczywo bezglutenowe"
+          }
         },
         {
           "nazwa": "Sałata",
@@ -365,12 +483,22 @@
         {
           "nazwa": "Pomidor",
           "gramy": 80.0,
-          "kcal": 14.0
+          "kcal": 14.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 120,
+            "etykieta": "szt."
+          }
         },
         {
           "nazwa": "Oliwa z oliwek",
           "gramy": 8.0,
-          "kcal": 71.0
+          "kcal": 71.0,
+          "jednostka": {
+            "typ": "ml",
+            "gestosc": 0.92,
+            "etykieta": "ml"
+          }
         }
       ],
       "bazowe_kcal": 455,
@@ -388,7 +516,14 @@
         {
           "nazwa": "Chleb bezglutenowy",
           "gramy": 80.0,
-          "kcal": 200.0
+          "kcal": 200.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 30,
+            "etykieta": "kromka",
+            "grupa": "pieczywo-bg",
+            "nazwa_grupy": "Pieczywo bezglutenowe"
+          }
         },
         {
           "nazwa": "Szynka drobiowa",
@@ -433,17 +568,34 @@
         {
           "nazwa": "Bulion warzywny (bez cebuli/czosnku)",
           "gramy": 200.0,
-          "kcal": 10.0
+          "kcal": 10.0,
+          "jednostka": {
+            "typ": "ml",
+            "gestosc": 1.0,
+            "etykieta": "ml"
+          }
         },
         {
           "nazwa": "Oliwa z oliwek",
           "gramy": 10.0,
-          "kcal": 88.0
+          "kcal": 88.0,
+          "jednostka": {
+            "typ": "ml",
+            "gestosc": 0.92,
+            "etykieta": "ml"
+          }
         },
         {
           "nazwa": "Pieczywo bezglutenowe (grzanki)",
           "gramy": 40.0,
-          "kcal": 100.0
+          "kcal": 100.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 30,
+            "etykieta": "kromka",
+            "grupa": "pieczywo-bg",
+            "nazwa_grupy": "Pieczywo bezglutenowe"
+          }
         }
       ],
       "bazowe_kcal": 375,
@@ -461,7 +613,14 @@
         {
           "nazwa": "Jajka (3 szt.)",
           "gramy": 165.0,
-          "kcal": 235.0
+          "kcal": 235.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 55,
+            "etykieta": "szt.",
+            "grupa": "jajka",
+            "nazwa_grupy": "Jajka"
+          }
         },
         {
           "nazwa": "Papryka czerwona",
@@ -481,7 +640,12 @@
         {
           "nazwa": "Oliwa",
           "gramy": 8.0,
-          "kcal": 70.0
+          "kcal": 70.0,
+          "jednostka": {
+            "typ": "ml",
+            "gestosc": 0.92,
+            "etykieta": "ml"
+          }
         }
       ],
       "bazowe_kcal": 440,
@@ -548,7 +712,14 @@
         {
           "nazwa": "Jajka (2 szt.)",
           "gramy": 110.0,
-          "kcal": 156.0
+          "kcal": 156.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 55,
+            "etykieta": "szt.",
+            "grupa": "jajka",
+            "nazwa_grupy": "Jajka"
+          }
         },
         {
           "nazwa": "Marchew",
@@ -563,7 +734,12 @@
         {
           "nazwa": "Oliwa",
           "gramy": 8.0,
-          "kcal": 70.0
+          "kcal": 70.0,
+          "jednostka": {
+            "typ": "ml",
+            "gestosc": 0.92,
+            "etykieta": "ml"
+          }
         }
       ],
       "bazowe_kcal": 478,
@@ -588,7 +764,12 @@
         {
           "nazwa": "Pomidor",
           "gramy": 100.0,
-          "kcal": 18.0
+          "kcal": 18.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 120,
+            "etykieta": "szt."
+          }
         },
         {
           "nazwa": "Ogórek",
@@ -603,12 +784,24 @@
         {
           "nazwa": "Oliwa",
           "gramy": 8.0,
-          "kcal": 70.0
+          "kcal": 70.0,
+          "jednostka": {
+            "typ": "ml",
+            "gestosc": 0.92,
+            "etykieta": "ml"
+          }
         },
         {
           "nazwa": "Chleb bezglutenowy",
           "gramy": 40.0,
-          "kcal": 100.0
+          "kcal": 100.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 30,
+            "etykieta": "kromka",
+            "grupa": "pieczywo-bg",
+            "nazwa_grupy": "Pieczywo bezglutenowe"
+          }
         }
       ],
       "bazowe_kcal": 339,
@@ -638,12 +831,22 @@
         {
           "nazwa": "Pomidor",
           "gramy": 80.0,
-          "kcal": 14.0
+          "kcal": 14.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 120,
+            "etykieta": "szt."
+          }
         },
         {
           "nazwa": "Oliwa",
           "gramy": 10.0,
-          "kcal": 88.0
+          "kcal": 88.0,
+          "jednostka": {
+            "typ": "ml",
+            "gestosc": 0.92,
+            "etykieta": "ml"
+          }
         },
         {
           "nazwa": "Ser feta",
@@ -673,7 +876,14 @@
         {
           "nazwa": "Jajka (2 szt.)",
           "gramy": 110.0,
-          "kcal": 156.0
+          "kcal": 156.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 55,
+            "etykieta": "szt.",
+            "grupa": "jajka",
+            "nazwa_grupy": "Jajka"
+          }
         },
         {
           "nazwa": "Sałata i warzywa",
@@ -683,12 +893,24 @@
         {
           "nazwa": "Oliwa",
           "gramy": 10.0,
-          "kcal": 88.0
+          "kcal": 88.0,
+          "jednostka": {
+            "typ": "ml",
+            "gestosc": 0.92,
+            "etykieta": "ml"
+          }
         },
         {
           "nazwa": "Chleb bezglutenowy",
           "gramy": 40.0,
-          "kcal": 100.0
+          "kcal": 100.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 30,
+            "etykieta": "kromka",
+            "grupa": "pieczywo-bg",
+            "nazwa_grupy": "Pieczywo bezglutenowe"
+          }
         }
       ],
       "bazowe_kcal": 498,
@@ -706,7 +928,12 @@
         {
           "nazwa": "Tortilla kukurydziana",
           "gramy": 60.0,
-          "kcal": 130.0
+          "kcal": 130.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 30,
+            "etykieta": "szt."
+          }
         },
         {
           "nazwa": "Pierś z kurczaka",
@@ -754,7 +981,12 @@
         {
           "nazwa": "Oliwa",
           "gramy": 10.0,
-          "kcal": 88.0
+          "kcal": 88.0,
+          "jednostka": {
+            "typ": "ml",
+            "gestosc": 0.92,
+            "etykieta": "ml"
+          }
         }
       ],
       "bazowe_kcal": 511,
@@ -787,12 +1019,22 @@
         {
           "nazwa": "Passata pomidorowa (bez cebuli/czosnku)",
           "gramy": 100.0,
-          "kcal": 30.0
+          "kcal": 30.0,
+          "jednostka": {
+            "typ": "ml",
+            "gestosc": 1.0,
+            "etykieta": "ml"
+          }
         },
         {
           "nazwa": "Oliwa",
           "gramy": 10.0,
-          "kcal": 88.0
+          "kcal": 88.0,
+          "jednostka": {
+            "typ": "ml",
+            "gestosc": 0.92,
+            "etykieta": "ml"
+          }
         }
       ],
       "bazowe_kcal": 680,
@@ -830,7 +1072,12 @@
         {
           "nazwa": "Oliwa",
           "gramy": 10.0,
-          "kcal": 88.0
+          "kcal": 88.0,
+          "jednostka": {
+            "typ": "ml",
+            "gestosc": 0.92,
+            "etykieta": "ml"
+          }
         }
       ],
       "bazowe_kcal": 529,
@@ -855,7 +1102,12 @@
         {
           "nazwa": "Passata pomidorowa (bez cebuli/czosnku)",
           "gramy": 120.0,
-          "kcal": 36.0
+          "kcal": 36.0,
+          "jednostka": {
+            "typ": "ml",
+            "gestosc": 1.0,
+            "etykieta": "ml"
+          }
         },
         {
           "nazwa": "Ryż (ugotowany)",
@@ -865,7 +1117,12 @@
         {
           "nazwa": "Oliwa z oliwek",
           "gramy": 10.0,
-          "kcal": 88.0
+          "kcal": 88.0,
+          "jednostka": {
+            "typ": "ml",
+            "gestosc": 0.92,
+            "etykieta": "ml"
+          }
         },
         {
           "nazwa": "Marchew",
@@ -908,7 +1165,12 @@
         {
           "nazwa": "Oliwa",
           "gramy": 10.0,
-          "kcal": 88.0
+          "kcal": 88.0,
+          "jednostka": {
+            "typ": "ml",
+            "gestosc": 0.92,
+            "etykieta": "ml"
+          }
         }
       ],
       "bazowe_kcal": 564,
@@ -943,7 +1205,12 @@
         {
           "nazwa": "Oliwa z oliwek",
           "gramy": 18.0,
-          "kcal": 160.0
+          "kcal": 160.0,
+          "jednostka": {
+            "typ": "ml",
+            "gestosc": 0.92,
+            "etykieta": "ml"
+          }
         }
       ],
       "bazowe_kcal": 585,
@@ -1006,12 +1273,22 @@
         {
           "nazwa": "Passata pomidorowa (bez cebuli/czosnku)",
           "gramy": 150.0,
-          "kcal": 45.0
+          "kcal": 45.0,
+          "jednostka": {
+            "typ": "ml",
+            "gestosc": 1.0,
+            "etykieta": "ml"
+          }
         },
         {
           "nazwa": "Oliwa",
           "gramy": 10.0,
-          "kcal": 88.0
+          "kcal": 88.0,
+          "jednostka": {
+            "typ": "ml",
+            "gestosc": 0.92,
+            "etykieta": "ml"
+          }
         }
       ],
       "bazowe_kcal": 748,
@@ -1049,12 +1326,24 @@
         {
           "nazwa": "Jajko (1 szt.)",
           "gramy": 55.0,
-          "kcal": 78.0
+          "kcal": 78.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 55,
+            "etykieta": "szt.",
+            "grupa": "jajka",
+            "nazwa_grupy": "Jajka"
+          }
         },
         {
           "nazwa": "Oliwa",
           "gramy": 10.0,
-          "kcal": 88.0
+          "kcal": 88.0,
+          "jednostka": {
+            "typ": "ml",
+            "gestosc": 0.92,
+            "etykieta": "ml"
+          }
         }
       ],
       "bazowe_kcal": 604,
@@ -1094,7 +1383,12 @@
         {
           "nazwa": "Olej",
           "gramy": 10.0,
-          "kcal": 88.0
+          "kcal": 88.0,
+          "jednostka": {
+            "typ": "ml",
+            "gestosc": 0.92,
+            "etykieta": "ml"
+          }
         }
       ],
       "bazowe_kcal": 705,
@@ -1117,12 +1411,22 @@
         {
           "nazwa": "Pomidor",
           "gramy": 120.0,
-          "kcal": 22.0
+          "kcal": 22.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 120,
+            "etykieta": "szt."
+          }
         },
         {
           "nazwa": "Oliwa z oliwek",
           "gramy": 8.0,
-          "kcal": 71.0
+          "kcal": 71.0,
+          "jednostka": {
+            "typ": "ml",
+            "gestosc": 0.92,
+            "etykieta": "ml"
+          }
         },
         {
           "nazwa": "Bazylia",
@@ -1147,12 +1451,22 @@
         {
           "nazwa": "Jogurt grecki bez laktozy",
           "gramy": 150.0,
-          "kcal": 177.0
+          "kcal": 177.0,
+          "jednostka": {
+            "typ": "ml",
+            "gestosc": 1.0,
+            "etykieta": "ml"
+          }
         },
         {
           "nazwa": "Syrop klonowy",
           "gramy": 15.0,
-          "kcal": 39.0
+          "kcal": 39.0,
+          "jednostka": {
+            "typ": "ml",
+            "gestosc": 1.32,
+            "etykieta": "ml"
+          }
         }
       ],
       "bazowe_kcal": 216,
@@ -1170,7 +1484,14 @@
         {
           "nazwa": "Chleb bezglutenowy",
           "gramy": 40.0,
-          "kcal": 100.0
+          "kcal": 100.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 30,
+            "etykieta": "kromka",
+            "grupa": "pieczywo-bg",
+            "nazwa_grupy": "Pieczywo bezglutenowe"
+          }
         },
         {
           "nazwa": "Ser dojrzewający",
@@ -1198,12 +1519,22 @@
         {
           "nazwa": "Jogurt bez laktozy",
           "gramy": 150.0,
-          "kcal": 90.0
+          "kcal": 90.0,
+          "jednostka": {
+            "typ": "ml",
+            "gestosc": 1.0,
+            "etykieta": "ml"
+          }
         },
         {
           "nazwa": "Syrop klonowy",
           "gramy": 10.0,
-          "kcal": 26.0
+          "kcal": 26.0,
+          "jednostka": {
+            "typ": "ml",
+            "gestosc": 1.32,
+            "etykieta": "ml"
+          }
         }
       ],
       "bazowe_kcal": 164,
@@ -1226,7 +1557,12 @@
         {
           "nazwa": "Pomarańcza",
           "gramy": 150.0,
-          "kcal": 71.0
+          "kcal": 71.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 130,
+            "etykieta": "szt."
+          }
         }
       ],
       "bazowe_kcal": 141,
@@ -1274,7 +1610,12 @@
         {
           "nazwa": "Kiwi",
           "gramy": 75.0,
-          "kcal": 46.0
+          "kcal": 46.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 75,
+            "etykieta": "szt."
+          }
         },
         {
           "nazwa": "Winogrona",
@@ -1297,7 +1638,12 @@
         {
           "nazwa": "Wafle ryżowe",
           "gramy": 24.0,
-          "kcal": 91.0
+          "kcal": 91.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 8,
+            "etykieta": "szt."
+          }
         },
         {
           "nazwa": "Masło bez laktozy",
@@ -1325,7 +1671,12 @@
         {
           "nazwa": "Wafle ryżowe",
           "gramy": 20.0,
-          "kcal": 76.0
+          "kcal": 76.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 8,
+            "etykieta": "szt."
+          }
         },
         {
           "nazwa": "Masło orzechowe",
@@ -1335,7 +1686,12 @@
         {
           "nazwa": "Banan (niedojrzały)",
           "gramy": 60.0,
-          "kcal": 53.0
+          "kcal": 53.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 120,
+            "etykieta": "szt."
+          }
         }
       ],
       "bazowe_kcal": 249,
@@ -1353,7 +1709,12 @@
         {
           "nazwa": "Wafle ryżowe",
           "gramy": 20.0,
-          "kcal": 76.0
+          "kcal": 76.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 8,
+            "etykieta": "szt."
+          }
         },
         {
           "nazwa": "Ser dojrzewający",
@@ -1363,7 +1724,12 @@
         {
           "nazwa": "Pomidor",
           "gramy": 50.0,
-          "kcal": 9.0
+          "kcal": 9.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 120,
+            "etykieta": "szt."
+          }
         }
       ],
       "bazowe_kcal": 185,
@@ -1381,7 +1747,14 @@
         {
           "nazwa": "Jajka (3 szt.)",
           "gramy": 165.0,
-          "kcal": 235.0
+          "kcal": 235.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 55,
+            "etykieta": "szt.",
+            "grupa": "jajka",
+            "nazwa_grupy": "Jajka"
+          }
         },
         {
           "nazwa": "Masło",
@@ -1391,12 +1764,24 @@
         {
           "nazwa": "Chleb bezglutenowy",
           "gramy": 60.0,
-          "kcal": 150.0
+          "kcal": 150.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 30,
+            "etykieta": "kromka",
+            "grupa": "pieczywo-bg",
+            "nazwa_grupy": "Pieczywo bezglutenowe"
+          }
         },
         {
           "nazwa": "Pomidor",
           "gramy": 100.0,
-          "kcal": 18.0
+          "kcal": 18.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 120,
+            "etykieta": "szt."
+          }
         }
       ],
       "bazowe_kcal": 475,
@@ -1414,7 +1799,14 @@
         {
           "nazwa": "Jajka (2 szt.)",
           "gramy": 110.0,
-          "kcal": 156.0
+          "kcal": 156.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 55,
+            "etykieta": "szt.",
+            "grupa": "jajka",
+            "nazwa_grupy": "Jajka"
+          }
         },
         {
           "nazwa": "Szynka",
@@ -1424,12 +1816,24 @@
         {
           "nazwa": "Pomidor",
           "gramy": 100.0,
-          "kcal": 18.0
+          "kcal": 18.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 120,
+            "etykieta": "szt."
+          }
         },
         {
           "nazwa": "Chleb bezglutenowy",
           "gramy": 40.0,
-          "kcal": 100.0
+          "kcal": 100.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 30,
+            "etykieta": "kromka",
+            "grupa": "pieczywo-bg",
+            "nazwa_grupy": "Pieczywo bezglutenowe"
+          }
         },
         {
           "nazwa": "Masło",
@@ -1452,17 +1856,36 @@
         {
           "nazwa": "Chleb bezglutenowy",
           "gramy": 60.0,
-          "kcal": 150.0
+          "kcal": 150.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 30,
+            "etykieta": "kromka",
+            "grupa": "pieczywo-bg",
+            "nazwa_grupy": "Pieczywo bezglutenowe"
+          }
         },
         {
           "nazwa": "Jajka (2 szt.)",
           "gramy": 110.0,
-          "kcal": 156.0
+          "kcal": 156.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 55,
+            "etykieta": "szt.",
+            "grupa": "jajka",
+            "nazwa_grupy": "Jajka"
+          }
         },
         {
           "nazwa": "Majonez",
           "gramy": 15.0,
-          "kcal": 102.0
+          "kcal": 102.0,
+          "jednostka": {
+            "typ": "ml",
+            "gestosc": 0.91,
+            "etykieta": "ml"
+          }
         },
         {
           "nazwa": "Ogórek",
@@ -1490,7 +1913,14 @@
         {
           "nazwa": "Chleb bezglutenowy",
           "gramy": 70.0,
-          "kcal": 175.0
+          "kcal": 175.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 30,
+            "etykieta": "kromka",
+            "grupa": "pieczywo-bg",
+            "nazwa_grupy": "Pieczywo bezglutenowe"
+          }
         },
         {
           "nazwa": "Ser dojrzewający",
@@ -1500,7 +1930,12 @@
         {
           "nazwa": "Pomidor",
           "gramy": 80.0,
-          "kcal": 14.0
+          "kcal": 14.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 120,
+            "etykieta": "szt."
+          }
         },
         {
           "nazwa": "Masło",
@@ -1528,7 +1963,12 @@
         {
           "nazwa": "Mleko bez laktozy 2%",
           "gramy": 200.0,
-          "kcal": 100.0
+          "kcal": 100.0,
+          "jednostka": {
+            "typ": "ml",
+            "gestosc": 1.0,
+            "etykieta": "ml"
+          }
         },
         {
           "nazwa": "Borówki",
@@ -1561,12 +2001,24 @@
         {
           "nazwa": "Jajko (1 szt.)",
           "gramy": 55.0,
-          "kcal": 78.0
+          "kcal": 78.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 55,
+            "etykieta": "szt.",
+            "grupa": "jajka",
+            "nazwa_grupy": "Jajka"
+          }
         },
         {
           "nazwa": "Mleko bez laktozy 2%",
           "gramy": 100.0,
-          "kcal": 50.0
+          "kcal": 50.0,
+          "jednostka": {
+            "typ": "ml",
+            "gestosc": 1.0,
+            "etykieta": "ml"
+          }
         },
         {
           "nazwa": "Truskawki",
@@ -1594,7 +2046,14 @@
         {
           "nazwa": "Jajka (3 szt.)",
           "gramy": 165.0,
-          "kcal": 235.0
+          "kcal": 235.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 55,
+            "etykieta": "szt.",
+            "grupa": "jajka",
+            "nazwa_grupy": "Jajka"
+          }
         },
         {
           "nazwa": "Ser dojrzewający",
@@ -1632,12 +2091,22 @@
         {
           "nazwa": "Mleko bez laktozy 2%",
           "gramy": 200.0,
-          "kcal": 100.0
+          "kcal": 100.0,
+          "jednostka": {
+            "typ": "ml",
+            "gestosc": 1.0,
+            "etykieta": "ml"
+          }
         },
         {
           "nazwa": "Banan (niedojrzały)",
           "gramy": 100.0,
-          "kcal": 89.0
+          "kcal": 89.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 120,
+            "etykieta": "szt."
+          }
         },
         {
           "nazwa": "Orzechy włoskie",
@@ -1667,7 +2136,12 @@
         {
           "nazwa": "Mleko bez laktozy 2%",
           "gramy": 200.0,
-          "kcal": 100.0
+          "kcal": 100.0,
+          "jednostka": {
+            "typ": "ml",
+            "gestosc": 1.0,
+            "etykieta": "ml"
+          }
         },
         {
           "nazwa": "Borówki",
@@ -1677,7 +2151,12 @@
         {
           "nazwa": "Syrop klonowy",
           "gramy": 15.0,
-          "kcal": 40.0
+          "kcal": 40.0,
+          "jednostka": {
+            "typ": "ml",
+            "gestosc": 1.32,
+            "etykieta": "ml"
+          }
         }
       ],
       "bazowe_kcal": 420,
@@ -1695,22 +2174,46 @@
         {
           "nazwa": "Pieczywo bezglutenowe",
           "gramy": 80.0,
-          "kcal": 200.0
+          "kcal": 200.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 30,
+            "etykieta": "kromka",
+            "grupa": "pieczywo-bg",
+            "nazwa_grupy": "Pieczywo bezglutenowe"
+          }
         },
         {
           "nazwa": "Jajka",
           "gramy": 100.0,
-          "kcal": 143.0
+          "kcal": 143.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 55,
+            "etykieta": "szt.",
+            "grupa": "jajka",
+            "nazwa_grupy": "Jajka"
+          }
         },
         {
           "nazwa": "Pomidor",
           "gramy": 100.0,
-          "kcal": 18.0
+          "kcal": 18.0,
+          "jednostka": {
+            "typ": "szt",
+            "na_sztuke": 120,
+            "etykieta": "szt."
+          }
         },
         {
           "nazwa": "Oliwa z oliwek",
           "gramy": 5.0,
-          "kcal": 44.0
+          "kcal": 44.0,
+          "jednostka": {
+            "typ": "ml",
+            "gestosc": 0.92,
+            "etykieta": "ml"
+          }
         }
       ],
       "bazowe_kcal": 405,

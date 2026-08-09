@@ -223,6 +223,7 @@
     </div>
 
     <script src="../hearts.js"></script>
+    <script src="units.js"></script>
     <script>
       // ── Bazowy rozkład kalorii między posiłki (wagi; normalizowane po odfiltrowaniu) ──
       const BASE_WEIGHTS = {
@@ -401,6 +402,7 @@
           nazwa: s.nazwa,
           gramy: Math.max(1, Math.round(s.gramy * factor)),
           kcal: Math.round(s.kcal * factor),
+          jednostka: s.jednostka || null,
         }));
         const kcal = ing.reduce((a, s) => a + s.kcal, 0);
         const gramy = ing.reduce((a, s) => a + s.gramy, 0);
@@ -450,7 +452,7 @@
         const rows = scaled.ing.map((s) =>
           `<tr class="${isWarn(s.nazwa) ? "warn" : ""}"><td>${escapeHtml(s.nazwa)}` +
           `${isWarn(s.nazwa) ? '<span class="chip-warn" title="Składnik warunkowy — bezpieczny tylko w limicie porcji">⚠️</span>' : ""}` +
-          `</td><td class="num">${s.gramy} g</td><td class="num">${s.kcal} kcal</td></tr>`
+          `</td><td class="num">${MenuUnits.qtyLabel(s.gramy, s.jednostka)}</td><td class="num">${s.kcal} kcal</td></tr>`
         ).join("");
         const badge = isYellow(dish)
           ? `<span class="badge badge-yellow">🟡 Żółte</span>`
@@ -474,7 +476,7 @@
           <div class="meal-body">
             ${dish.opis ? `<div class="meal-desc">${dish.opis}</div>` : ""}
             <table class="ing">
-              <thead><tr><th>Składnik</th><th class="num">Gramatura</th><th class="num">Kalorie</th></tr></thead>
+              <thead><tr><th>Składnik</th><th class="num">Ilość</th><th class="num">Kalorie</th></tr></thead>
               <tbody>${rows}</tbody>
             </table>
             <div class="meal-actions">
@@ -532,59 +534,15 @@
       const clampKcal = (v) => Math.min(4000, Math.max(1000, v));
 
       // ── Lista zakupów na dzień ──
-      function fmtQty(g) {
-        if (g >= 1000) { const kg = g / 1000; return (Number.isInteger(kg) ? kg : kg.toFixed(2)) + " kg"; }
-        return g + " g";
-      }
-      // Reguły jednostek: składniki liczone na sztuki (per = g/szt.) lub płynne
-      // (kind "ml", density = g/ml). Pokazujemy zawsze jednostkę + gramy.
-      // Opcjonalne mergeKey/name scala różne nazwy tego samego produktu.
-      const UNIT_RULES = [
-        { kind: "piece", unit: "szt.", per: 55, mergeKey: "jajka", name: "Jajka",
-          test: (n) => /jaj(ka|ko|a|ek)/i.test(n) && !/jajeczn/i.test(n) },
-        { kind: "piece", unit: "szt.", per: 120, test: (n) => /^banan/i.test(n) },
-        { kind: "piece", unit: "szt.", per: 75, test: (n) => /^kiwi/i.test(n) },
-        { kind: "piece", unit: "szt.", per: 130, test: (n) => /^pomarańcza/i.test(n) },
-        { kind: "piece", unit: "szt.", per: 120, test: (n) => /^pomidor$/i.test(n) },
-        { kind: "piece", unit: "szt.", per: 30, test: (n) => /^tortilla/i.test(n) },
-        { kind: "piece", unit: "szt.", per: 8, test: (n) => /^wafle/i.test(n) },
-        { kind: "piece", unit: "kromki", per: 30, mergeKey: "pieczywo-bg", name: "Pieczywo bezglutenowe",
-          test: (n) => /^(chleb|pieczywo) bezglutenow/i.test(n) },
-        { kind: "ml", density: 1.0, test: (n) => /^mleko/i.test(n) },
-        { kind: "ml", density: 1.0, test: (n) => /^jogurt/i.test(n) },
-        { kind: "ml", density: 1.0, test: (n) => /^bulion/i.test(n) },
-        { kind: "ml", density: 1.0, test: (n) => /^passata/i.test(n) },
-        { kind: "ml", density: 0.92, test: (n) => /^(oliwa|olej)/i.test(n) },
-        { kind: "ml", density: 1.32, test: (n) => /^syrop/i.test(n) },
-        { kind: "ml", density: 0.91, test: (n) => /^majonez/i.test(n) },
-      ];
-      const unitRule = (nazwa) => UNIT_RULES.find((r) => r.test(nazwa)) || null;
-      // Polska odmiana „kromka/kromki/kromek".
-      function kromkaForm(n) {
-        if (n === 1) return "kromka";
-        const t = n % 10, h = n % 100;
-        return (t >= 2 && t <= 4 && !(h >= 12 && h <= 14)) ? "kromki" : "kromek";
-      }
-      // Etykieta ilości: „N szt. (X g)", „N ml (X g)" albo same gramy/kg.
-      function qtyLabel(it) {
-        const r = it.rule;
-        if (r && r.kind === "piece") {
-          const n = Math.max(1, Math.round(it.gramy / r.per));
-          const unit = r.unit === "kromki" ? kromkaForm(n) : r.unit;
-          return `${n} ${unit} (${fmtQty(it.gramy)})`;
-        }
-        if (r && r.kind === "ml") {
-          return `${Math.round(it.gramy / r.density)} ml (${fmtQty(it.gramy)})`;
-        }
-        return fmtQty(it.gramy);
-      }
-      // Sumuje składniki z pozycji [{nazwa,gramy}]; produkty z mergeKey scala razem.
+      const fmtQty = MenuUnits.fmtQty;
+      const qtyLabel = (it) => MenuUnits.qtyLabel(it.gramy, it.jednostka);
+      // Sumuje składniki (z ich `jednostka` z danych); produkty z grupą scala razem.
       function aggregateIngredients(entries) {
         const map = new Map();
         for (const it of entries) {
-          const r = unitRule(it.nazwa);
-          const key = (r && r.mergeKey) ? r.mergeKey : it.nazwa;
-          const cur = map.get(key) || { nazwa: (r && r.name) ? r.name : it.nazwa, gramy: 0, rule: r };
+          const j = it.jednostka;
+          const key = (j && j.grupa) ? j.grupa : it.nazwa;
+          const cur = map.get(key) || { nazwa: (j && j.nazwa_grupy) ? j.nazwa_grupy : it.nazwa, gramy: 0, jednostka: j };
           cur.gramy += it.gramy;
           map.set(key, cur);
         }
@@ -597,7 +555,7 @@
         const all = [];
         for (const slug in plan) {
           const s = scaleDish(plan[slug].dish, plan[slug].factor);
-          for (const ing of s.ing) all.push({ nazwa: ing.nazwa, gramy: ing.gramy });
+          for (const ing of s.ing) all.push({ nazwa: ing.nazwa, gramy: ing.gramy, jednostka: ing.jednostka });
         }
         return aggregateIngredients(all);
       }

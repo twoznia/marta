@@ -127,6 +127,7 @@
     </div>
 
     <script src="../hearts.js"></script>
+    <script src="units.js"></script>
     <script>
       const EMOJI = { "sniadanie": "🥣", "drugie-sniadanie": "🍎", "obiad": "🍲", "podwieczorek": "🥕", "kolacja": "🥗" };
       const $ = (id) => document.getElementById(id);
@@ -240,7 +241,7 @@
         const rows = d.skladniki.map((s) =>
           `<tr class="${isW(s.nazwa) ? "warn" : ""}"><td>${escapeHtml(s.nazwa)}` +
           `${isW(s.nazwa) ? '<span class="chip-warn" title="Składnik warunkowy — bezpieczny tylko w limicie porcji">⚠️</span>' : ""}` +
-          `</td><td class="num">${Math.round(s.gramy)} g</td><td class="num">${Math.round(s.kcal)} kcal</td></tr>`
+          `</td><td class="num">${MenuUnits.qtyLabel(Math.round(s.gramy), s.jednostka)}</td><td class="num">${Math.round(s.kcal)} kcal</td></tr>`
         ).join("");
         const badge = isYellow(d)
           ? `<span class="badge badge-yellow">🟡 Żółte</span>`
@@ -259,7 +260,7 @@
           <div class="card-body">
             ${d.opis ? `<div class="card-desc">${escapeHtml(d.opis)}</div>` : ""}
             <table class="ing">
-              <thead><tr><th>Składnik</th><th class="num">Gramatura</th><th class="num">Kalorie</th></tr></thead>
+              <thead><tr><th>Składnik</th><th class="num">Ilość</th><th class="num">Kalorie</th></tr></thead>
               <tbody>${rows}</tbody>
             </table>
             <div class="card-actions">

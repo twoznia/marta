@@ -168,6 +168,7 @@
     </div>
 
     <script src="../hearts.js"></script>
+    <script src="units.js"></script>
     <script>
       const BASE_WEIGHTS = { "sniadanie": 25, "drugie-sniadanie": 10, "obiad": 30, "podwieczorek": 10, "kolacja": 25 };
       const EMOJI = { "sniadanie": "🥣", "drugie-sniadanie": "🍎", "obiad": "🍲", "podwieczorek": "🥕", "kolacja": "🥗" };
@@ -249,6 +250,7 @@
           nazwa: s.nazwa,
           gramy: Math.max(1, Math.round(s.gramy * factor)),
           kcal: Math.round(s.kcal * factor),
+          jednostka: s.jednostka || null,
         }));
         return { ing, kcal: ing.reduce((a, s) => a + s.kcal, 0), gramy: ing.reduce((a, s) => a + s.gramy, 0) };
       }
@@ -350,63 +352,22 @@
       }
 
       // ── Zakupy na tydzień ──
-      function fmtQty(g) {
-        if (g >= 1000) { const kg = g / 1000; return (Number.isInteger(kg) ? kg : kg.toFixed(2)) + " kg"; }
-        return g + " g";
-      }
-      // Reguły jednostek: sztuki (per = g/szt.) lub płyny (kind "ml", density g/ml).
-      // Zawsze pokazujemy jednostkę + gramy; mergeKey/name scala nazwy tego produktu.
-      const UNIT_RULES = [
-        { kind: "piece", unit: "szt.", per: 55, mergeKey: "jajka", name: "Jajka",
-          test: (n) => /jaj(ka|ko|a|ek)/i.test(n) && !/jajeczn/i.test(n) },
-        { kind: "piece", unit: "szt.", per: 120, test: (n) => /^banan/i.test(n) },
-        { kind: "piece", unit: "szt.", per: 75, test: (n) => /^kiwi/i.test(n) },
-        { kind: "piece", unit: "szt.", per: 130, test: (n) => /^pomarańcza/i.test(n) },
-        { kind: "piece", unit: "szt.", per: 120, test: (n) => /^pomidor$/i.test(n) },
-        { kind: "piece", unit: "szt.", per: 30, test: (n) => /^tortilla/i.test(n) },
-        { kind: "piece", unit: "szt.", per: 8, test: (n) => /^wafle/i.test(n) },
-        { kind: "piece", unit: "kromki", per: 30, mergeKey: "pieczywo-bg", name: "Pieczywo bezglutenowe",
-          test: (n) => /^(chleb|pieczywo) bezglutenow/i.test(n) },
-        { kind: "ml", density: 1.0, test: (n) => /^mleko/i.test(n) },
-        { kind: "ml", density: 1.0, test: (n) => /^jogurt/i.test(n) },
-        { kind: "ml", density: 1.0, test: (n) => /^bulion/i.test(n) },
-        { kind: "ml", density: 1.0, test: (n) => /^passata/i.test(n) },
-        { kind: "ml", density: 0.92, test: (n) => /^(oliwa|olej)/i.test(n) },
-        { kind: "ml", density: 1.32, test: (n) => /^syrop/i.test(n) },
-        { kind: "ml", density: 0.91, test: (n) => /^majonez/i.test(n) },
-      ];
-      const unitRule = (nazwa) => UNIT_RULES.find((r) => r.test(nazwa)) || null;
-      function kromkaForm(n) {
-        if (n === 1) return "kromka";
-        const t = n % 10, h = n % 100;
-        return (t >= 2 && t <= 4 && !(h >= 12 && h <= 14)) ? "kromki" : "kromek";
-      }
-      function qtyLabel(it) {
-        const r = it.rule;
-        if (r && r.kind === "piece") {
-          const n = Math.max(1, Math.round(it.gramy / r.per));
-          const unit = r.unit === "kromki" ? kromkaForm(n) : r.unit;
-          return `${n} ${unit} (${fmtQty(it.gramy)})`;
-        }
-        if (r && r.kind === "ml") {
-          return `${Math.round(it.gramy / r.density)} ml (${fmtQty(it.gramy)})`;
-        }
-        return fmtQty(it.gramy);
-      }
+      const qtyLabel = (it) => MenuUnits.qtyLabel(it.gramy, it.jednostka);
       function weekIngredients() {
         const all = [];
         for (const plan of week) {
           for (const slug in plan) {
             const dish = dishBySlug(plan[slug].slug);
             if (!dish) continue;
-            for (const ing of scaleDish(dish, plan[slug].factor).ing) all.push({ nazwa: ing.nazwa, gramy: ing.gramy });
+            for (const ing of scaleDish(dish, plan[slug].factor).ing)
+              all.push({ nazwa: ing.nazwa, gramy: ing.gramy, jednostka: ing.jednostka });
           }
         }
         const map = new Map();
         for (const it of all) {
-          const r = unitRule(it.nazwa);
-          const key = (r && r.mergeKey) ? r.mergeKey : it.nazwa;
-          const cur = map.get(key) || { nazwa: (r && r.name) ? r.name : it.nazwa, gramy: 0, rule: r };
+          const j = it.jednostka;
+          const key = (j && j.grupa) ? j.grupa : it.nazwa;
+          const cur = map.get(key) || { nazwa: (j && j.nazwa_grupy) ? j.nazwa_grupy : it.nazwa, gramy: 0, jednostka: j };
           cur.gramy += it.gramy;
           map.set(key, cur);
         }

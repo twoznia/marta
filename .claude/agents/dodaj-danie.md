@@ -42,6 +42,11 @@ canonical one.
   script so it stays in sync with the `.md` sources.
 - Keep slugs ASCII, lowercase, hyphenated, unique within the meal folder.
 - Ingredient kcal is for the stated grams, not per 100 g.
+- **Use canonical ingredient names** so units (szt./ml + grams) and shopping-list
+  merging work — reuse names already present in other dishes (e.g. `Jajka`,
+  `Pieczywo bezglutenowe`, `Mleko bez laktozy 2%`, `Oliwa z oliwek`). For a genuinely
+  new piece/liquid ingredient not yet covered, add a rule to `jednostka_dla` in
+  `tools/build_menu.py` (see the skill's „Jednostki" section) before rebuilding.
 - Prefer whole, realistic Polish home-cooking ingredients and clear recipe steps.
 - Do not commit or push unless the user explicitly asks — leave that to them or the
   main session. When done, state clearly that changes are staged in the working tree.

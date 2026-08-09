@@ -79,6 +79,43 @@ def klasyfikuj(skladniki: list[dict]) -> tuple[str, list[str]]:
     return ("zolty" if warunkowe else "zielony"), warunkowe
 
 
+# ── Jednostki na listach zakupów / w tabelach dań ────────────────────────────
+# Dla każdego składnika wyliczamy, jak pokazywać ilość: na sztuki (typ "szt",
+# `na_sztuke` g/szt.), płynny (typ "ml", `gestosc` g/ml) albo domyślnie w gramach
+# (brak pola `jednostka`). Reguły są TU centralnie — nowe dania z build-u dostają
+# jednostki automatycznie. Dodając nowy składnik na sztuki/płyn, dopisz regułę
+# poniżej (i przegeneruj dania.json).
+#
+# `grupa`/`nazwa_grupy` scala różne nazwy tego samego produktu na liście zakupów
+# (np. wszystkie warianty jajek → „Jajka", pieczywo/chleb → „Pieczywo bezglutenowe").
+def jednostka_dla(nazwa: str) -> dict | None:
+    n = nazwa.lower()
+    if re.search(r"jaj(ka|ko|a|ek)", n) and "jajeczn" not in n:
+        return {"typ": "szt", "na_sztuke": 55, "etykieta": "szt.", "grupa": "jajka", "nazwa_grupy": "Jajka"}
+    if n.startswith("banan"):
+        return {"typ": "szt", "na_sztuke": 120, "etykieta": "szt."}
+    if n.startswith("kiwi"):
+        return {"typ": "szt", "na_sztuke": 75, "etykieta": "szt."}
+    if n.startswith("pomarańcza"):
+        return {"typ": "szt", "na_sztuke": 130, "etykieta": "szt."}
+    if re.fullmatch(r"pomidor", n):
+        return {"typ": "szt", "na_sztuke": 120, "etykieta": "szt."}
+    if n.startswith("tortilla"):
+        return {"typ": "szt", "na_sztuke": 30, "etykieta": "szt."}
+    if n.startswith("wafle"):
+        return {"typ": "szt", "na_sztuke": 8, "etykieta": "szt."}
+    if re.match(r"(chleb|pieczywo) bezglutenow", n):
+        return {"typ": "szt", "na_sztuke": 30, "etykieta": "kromka",
+                "grupa": "pieczywo-bg", "nazwa_grupy": "Pieczywo bezglutenowe"}
+    for pref, dens in (("mleko", 1.0), ("jogurt", 1.0), ("bulion", 1.0),
+                       ("passata", 1.0), ("syrop", 1.32), ("majonez", 0.91)):
+        if n.startswith(pref):
+            return {"typ": "ml", "gestosc": dens, "etykieta": "ml"}
+    if re.match(r"(oliwa|olej)", n):
+        return {"typ": "ml", "gestosc": 0.92, "etykieta": "ml"}
+    return None
+
+
 def parse_dish(path: Path) -> dict:
     text = path.read_text(encoding="utf-8")
     m = _FM_RE.match(text)
@@ -98,11 +135,16 @@ def parse_dish(path: Path) -> dict:
 
     skladniki = []
     for im in _ING_RE.finditer(front):
-        skladniki.append({
-            "nazwa": im.group("nazwa"),
+        nazwa_sk = im.group("nazwa")
+        s = {
+            "nazwa": nazwa_sk,
             "gramy": float(im.group("gramy")),
             "kcal": float(im.group("kcal")),
-        })
+        }
+        jed = jednostka_dla(nazwa_sk)
+        if jed:
+            s["jednostka"] = jed
+        skladniki.append(s)
     if not skladniki:
         raise ValueError(f"{path}: brak składników (pole 'skladniki')")
 
