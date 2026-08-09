@@ -354,6 +354,19 @@
         if (g >= 1000) { const kg = g / 1000; return (Number.isInteger(kg) ? kg : kg.toFixed(2)) + " kg"; }
         return g + " g";
       }
+      // Składniki liczone na sztuki — scalamy różne nazwy i pokazujemy szt. + gramy.
+      const PIECE_RULES = [
+        { key: "jajka", name: "Jajka", perPiece: 55, unit: "szt.",
+          test: (n) => /jaj(ka|ko|a|ek)/i.test(n) && !/jajeczn/i.test(n) },
+      ];
+      const pieceRule = (nazwa) => PIECE_RULES.find((r) => r.test(nazwa)) || null;
+      function qtyLabel(it) {
+        if (it.rule) {
+          const szt = Math.max(1, Math.round(it.gramy / it.rule.perPiece));
+          return `${szt} ${it.rule.unit} (${fmtQty(it.gramy)})`;
+        }
+        return fmtQty(it.gramy);
+      }
       function weekIngredients() {
         const all = [];
         for (const plan of week) {
@@ -364,17 +377,23 @@
           }
         }
         const map = new Map();
-        for (const it of all) map.set(it.nazwa, (map.get(it.nazwa) || 0) + it.gramy);
-        return [...map.entries()].map(([nazwa, gramy]) => ({ nazwa, gramy: Math.round(gramy) }))
+        for (const it of all) {
+          const r = pieceRule(it.nazwa);
+          const key = r ? r.key : it.nazwa;
+          const cur = map.get(key) || { nazwa: r ? r.name : it.nazwa, gramy: 0, rule: r };
+          cur.gramy += it.gramy;
+          map.set(key, cur);
+        }
+        return [...map.values()].map((it) => ({ ...it, gramy: Math.round(it.gramy) }))
           .sort((a, b) => a.nazwa.localeCompare(b.nazwa, "pl"));
       }
       function shoppingText() {
-        return "Lista zakupów na tydzień\n" + weekIngredients().map((it) => `- ${it.nazwa}: ${fmtQty(it.gramy)}`).join("\n");
+        return "Lista zakupów na tydzień\n" + weekIngredients().map((it) => `- ${it.nazwa}: ${qtyLabel(it)}`).join("\n");
       }
       function openShopping() {
         const items = weekIngredients();
         $("shopMeta").textContent = items.length ? `${items.length} pozycji · na 7 dni` : "Najpierw wygeneruj tydzień.";
-        $("shopList").innerHTML = items.map((it) => `<li><span>${escapeHtml(it.nazwa)}</span><span class="q">${fmtQty(it.gramy)}</span></li>`).join("");
+        $("shopList").innerHTML = items.map((it) => `<li><span>${escapeHtml(it.nazwa)}</span><span class="q">${qtyLabel(it)}</span></li>`).join("");
         $("shopCopied").hidden = true;
         $("shopModal").classList.add("show");
       }

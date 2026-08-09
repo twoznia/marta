@@ -536,12 +536,32 @@
         if (g >= 1000) { const kg = g / 1000; return (Number.isInteger(kg) ? kg : kg.toFixed(2)) + " kg"; }
         return g + " g";
       }
-      // Sumuje składniki (po nazwie) z podanych pozycji [{nazwa,gramy}].
+      // Składniki liczone na sztuki — scalamy różne nazwy i pokazujemy szt. + gramy.
+      const PIECE_RULES = [
+        { key: "jajka", name: "Jajka", perPiece: 55, unit: "szt.",
+          test: (n) => /jaj(ka|ko|a|ek)/i.test(n) && !/jajeczn/i.test(n) },
+      ];
+      const pieceRule = (nazwa) => PIECE_RULES.find((r) => r.test(nazwa)) || null;
+      // Etykieta ilości: dla „sztukowych" → „N szt. (X g)", inaczej → gramy/kg.
+      function qtyLabel(it) {
+        if (it.rule) {
+          const szt = Math.max(1, Math.round(it.gramy / it.rule.perPiece));
+          return `${szt} ${it.rule.unit} (${fmtQty(it.gramy)})`;
+        }
+        return fmtQty(it.gramy);
+      }
+      // Sumuje składniki z pozycji [{nazwa,gramy}]; „sztukowe" scala pod wspólną nazwą.
       function aggregateIngredients(entries) {
         const map = new Map();
-        for (const it of entries) map.set(it.nazwa, (map.get(it.nazwa) || 0) + it.gramy);
-        return [...map.entries()]
-          .map(([nazwa, gramy]) => ({ nazwa, gramy: Math.round(gramy) }))
+        for (const it of entries) {
+          const r = pieceRule(it.nazwa);
+          const key = r ? r.key : it.nazwa;
+          const cur = map.get(key) || { nazwa: r ? r.name : it.nazwa, gramy: 0, rule: r };
+          cur.gramy += it.gramy;
+          map.set(key, cur);
+        }
+        return [...map.values()]
+          .map((it) => ({ ...it, gramy: Math.round(it.gramy) }))
           .sort((a, b) => a.nazwa.localeCompare(b.nazwa, "pl"));
       }
       // Składniki z bieżącego planu dnia (po przeskalowaniu porcji).
@@ -555,7 +575,7 @@
       }
       function shoppingText() {
         const items = planIngredients();
-        return "Lista zakupów na dzień\n" + items.map((it) => `- ${it.nazwa}: ${fmtQty(it.gramy)}`).join("\n");
+        return "Lista zakupów na dzień\n" + items.map((it) => `- ${it.nazwa}: ${qtyLabel(it)}`).join("\n");
       }
       function openShopping() {
         const items = planIngredients();
@@ -564,7 +584,7 @@
           ? `${items.length} pozycji · z ${nMeals} posiłków`
           : "Najpierw wygeneruj plan.";
         $("shopList").innerHTML = items
-          .map((it) => `<li><span>${escapeHtml(it.nazwa)}</span><span class="q">${fmtQty(it.gramy)}</span></li>`)
+          .map((it) => `<li><span>${escapeHtml(it.nazwa)}</span><span class="q">${qtyLabel(it)}</span></li>`)
           .join("");
         $("shopCopied").hidden = true;
         $("shopModal").classList.add("show");
