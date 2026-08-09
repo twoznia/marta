@@ -96,6 +96,49 @@
       .shop-list li .q { color: var(--rose); font-weight: 700; white-space: nowrap; }
       .modal-actions { display: flex; gap: 0.5rem; margin-top: 1rem; flex-wrap: wrap; }
       .copied { color: #2e7d32; font-size: 0.85rem; align-self: center; }
+
+      /* Klikalny posiłek + zmiana dania w karcie dnia */
+      .m-name.m-open { flex: 1; text-align: left; background: none; border: none; padding: 0; cursor: pointer;
+                       color: var(--text); font: inherit; }
+      .m-name.m-open:hover { color: var(--rose); text-decoration: underline; }
+      .m-swap { border: none; background: none; cursor: pointer; font-size: 0.95rem; padding: 0 0.2rem;
+                opacity: 0.6; }
+      .m-swap:hover { opacity: 1; }
+
+      /* Popup szczegółów dania */
+      .dish-cat { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--rose); }
+      .dish-name { font-size: 1.3rem; margin: 0.2rem 0 0.5rem; color: var(--text); }
+      .dish-tags { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.6rem; }
+      .badge { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.72rem; font-weight: 700;
+               text-transform: uppercase; letter-spacing: 0.03em; padding: 0.15rem 0.55rem; border-radius: 100px;
+               border: 1px solid transparent; white-space: nowrap; }
+      .badge-green { background: #e7f6e7; color: #2e7d32; border-color: #b6e0b6; }
+      .badge-yellow { background: #fff4dd; color: #8a6100; border-color: #f0d089; }
+      .kcal-tag { font-size: 0.85rem; color: var(--muted); }
+      .kcal-tag b { color: var(--rose); }
+      .warn-ings { font-size: 0.8rem; color: #8a6100; }
+      .dish-desc { color: var(--muted); font-size: 0.95rem; line-height: 1.5; margin: 0 0 0.8rem; }
+      table.ing { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+      table.ing th, table.ing td { padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--rose-lt); text-align: left; }
+      table.ing th { color: var(--rose); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; }
+      table.ing td.num, table.ing th.num { text-align: right; white-space: nowrap; }
+      table.ing tr:last-child td { border-bottom: none; }
+      table.ing tr.warn td { background: #fff8ea; }
+      .chip-warn { color: #8a6100; font-weight: 700; font-size: 0.8rem; }
+      .dish-actions { display: flex; gap: 0.5rem; margin-top: 0.9rem; flex-wrap: wrap; }
+      .recipe { margin-top: 0.8rem; padding-top: 0.8rem; border-top: 1px dashed var(--rose-lt); font-size: 0.92rem;
+                line-height: 1.6; display: none; }
+      .recipe.show { display: block; }
+      .recipe ol { padding-left: 1.2rem; }
+      .recipe li { margin-bottom: 0.3rem; }
+      .recipe a { color: var(--rose); }
+
+      /* Toast (potwierdzenie kopiowania) */
+      .toast { position: fixed; left: 50%; bottom: 1.5rem; transform: translateX(-50%) translateY(1rem);
+               background: #2e7d32; color: #fff; padding: 0.7rem 1.3rem; border-radius: 100px; font-weight: 700;
+               font-size: 0.9rem; box-shadow: 0 8px 24px rgba(0,0,0,0.2); opacity: 0; pointer-events: none;
+               transition: opacity 0.25s, transform 0.25s; z-index: 200; }
+      .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
     </style>
   </head>
   <body>
@@ -137,6 +180,7 @@
           <button class="btn-primary" id="generate">🗓️ Generuj tydzień</button>
           <button class="btn-ok" id="accept" hidden>✅ Akceptuj plan tygodnia</button>
           <button class="btn-ghost" id="shopping" hidden>🛒 Lista zakupów na tydzień</button>
+          <button class="btn-ghost" id="exportWeek" hidden>📋 Eksport tygodnia</button>
         </div>
       </div>
 
@@ -166,6 +210,18 @@
         </div>
       </div>
     </div>
+
+    <div class="modal-bg" id="dishModal">
+      <div class="modal">
+        <div class="modal-head">
+          <h2>🍽️ Szczegóły dania</h2>
+          <button class="close" id="dishClose" aria-label="Zamknij">×</button>
+        </div>
+        <div class="modal-body" id="dishBody"></div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" aria-live="polite"></div>
 
     <script src="../hearts.js"></script>
     <script src="units.js"></script>
@@ -280,6 +336,7 @@
         week.forEach((plan, i) => box.appendChild(dayCard(plan, i)));
         $("accept").hidden = false;
         $("shopping").hidden = false;
+        $("exportWeek").hidden = false;
         renderStatus();
       }
 
@@ -294,16 +351,19 @@
         const el = document.createElement("div");
         el.className = "day";
         let total = 0;
-        const rows = MENU.posilki.filter((p) => plan[p.slug]).map((p) => {
-          const entry = plan[p.slug];
-          const dish = dishBySlug(entry.slug);
-          const s = scaleDish(dish, entry.factor);
+        const posilki = MENU.posilki.filter((p) => plan[p.slug]);
+        const rows = posilki.map((p) => {
+          const dish = dishBySlug(plan[p.slug].slug);
+          const s = scaleDish(dish, plan[p.slug].factor);
           total += s.kcal;
           const dot = isYellow(dish) ? "dot-yellow" : "dot-green";
           return `<div class="m-row">
               <span class="m-emoji">${EMOJI[p.slug] || "🍽️"}</span>
-              <span class="m-name"><span class="cat">${p.etykieta}</span>${escapeHtml(dish.nazwa)}<span class="dot ${dot}"></span></span>
+              <button class="m-name m-open" data-slug="${p.slug}" title="Pokaż szczegóły i przepis">
+                <span class="cat">${p.etykieta}</span>${escapeHtml(dish.nazwa)}<span class="dot ${dot}"></span>
+              </button>
               <span class="m-kcal">${s.kcal} kcal</span>
+              <button class="m-swap" data-swap="${p.slug}" title="Zmień to danie">🔁</button>
             </div>`;
         }).join("");
         el.innerHTML = `
@@ -313,10 +373,36 @@
           </div>
           <div class="day-body">
             ${rows}
-            <div class="day-actions"><button class="mini" data-reroll>🎲 Przelosuj dzień</button></div>
+            <div class="day-actions">
+              <button class="mini" data-reroll>🎲 Przelosuj dzień</button>
+              <button class="mini" data-exportday>📋 Eksport dnia</button>
+            </div>
           </div>`;
         el.querySelector("[data-reroll]").addEventListener("click", () => rerollDay(i));
+        el.querySelector("[data-exportday]").addEventListener("click", () => copyText(exportDayText(i), "Skopiowano plan dnia ✓"));
+        el.querySelectorAll("[data-swap]").forEach((b) =>
+          b.addEventListener("click", () => swapMeal(i, b.dataset.swap)));
+        el.querySelectorAll(".m-open").forEach((b) =>
+          b.addEventListener("click", () => openDishDetail(i, b.dataset.slug)));
         return el;
+      }
+
+      // Zamiana pojedynczego dania w danym dniu (respektuje limit 1 żółtego/dzień).
+      function swapMeal(dayIndex, slug) {
+        const plan = week[dayIndex];
+        const dishes = byMeal[slug] || [];
+        if (dishes.length <= 1) return;
+        const yellowElsewhere = Object.keys(plan).some(
+          (s) => s !== slug && isYellow(dishBySlug(plan[s].slug)));
+        let pool = yellowElsewhere ? dishes.filter((d) => !isYellow(d)) : dishes;
+        if (!pool.length) pool = dishes;
+        let d;
+        do { d = pick(pool); } while (d.slug === plan[slug].slug && pool.length > 1);
+        const target = clampKcal(parseInt($("kcal").value, 10) || 2000);
+        const w = mealTargets(activeSlugs(), target);
+        plan[slug] = { slug: d.slug, factor: w[slug] / d.bazowe_kcal };
+        accepted = false;
+        render();
       }
 
       // ── Akceptacja: zapis do localStorage ──
@@ -351,20 +437,12 @@
         } catch (e) { return false; }
       }
 
-      // ── Zakupy na tydzień ──
+      // ── Zakupy / agregacja składników ──
       const qtyLabel = (it) => MenuUnits.qtyLabel(it.gramy, it.jednostka);
-      function weekIngredients() {
-        const all = [];
-        for (const plan of week) {
-          for (const slug in plan) {
-            const dish = dishBySlug(plan[slug].slug);
-            if (!dish) continue;
-            for (const ing of scaleDish(dish, plan[slug].factor).ing)
-              all.push({ nazwa: ing.nazwa, gramy: ing.gramy, jednostka: ing.jednostka });
-          }
-        }
+      // Sumuje pozycje [{nazwa,gramy,jednostka}] — produkty z grupą scala razem.
+      function aggregate(entries) {
         const map = new Map();
-        for (const it of all) {
+        for (const it of entries) {
           const j = it.jednostka;
           const key = (j && j.grupa) ? j.grupa : it.nazwa;
           const cur = map.get(key) || { nazwa: (j && j.nazwa_grupy) ? j.nazwa_grupy : it.nazwa, gramy: 0, jednostka: j };
@@ -374,8 +452,119 @@
         return [...map.values()].map((it) => ({ ...it, gramy: Math.round(it.gramy) }))
           .sort((a, b) => a.nazwa.localeCompare(b.nazwa, "pl"));
       }
+      function planEntries(plan) {
+        const all = [];
+        for (const slug in plan) {
+          const dish = dishBySlug(plan[slug].slug);
+          if (!dish) continue;
+          for (const ing of scaleDish(dish, plan[slug].factor).ing)
+            all.push({ nazwa: ing.nazwa, gramy: ing.gramy, jednostka: ing.jednostka });
+        }
+        return all;
+      }
+      const dayShopping = (plan) => aggregate(planEntries(plan));
+      function weekIngredients() {
+        const all = [];
+        for (const plan of week) all.push(...planEntries(plan));
+        return aggregate(all);
+      }
       function shoppingText() {
         return "Lista zakupów na tydzień\n" + weekIngredients().map((it) => `- ${it.nazwa}: ${qtyLabel(it)}`).join("\n");
+      }
+
+      // ── Eksport tekstowy ──
+      function dayTotalKcal(plan) {
+        let t = 0;
+        for (const slug in plan) { const d = dishBySlug(plan[slug].slug); if (d) t += scaleDish(d, plan[slug].factor).kcal; }
+        return t;
+      }
+      function exportDayText(i) {
+        const plan = week[i];
+        const lines = [`${DAYS[i]} — ${dayTotalKcal(plan)} kcal`, ""];
+        for (const p of MENU.posilki) {
+          if (!plan[p.slug]) continue;
+          const dish = dishBySlug(plan[p.slug].slug);
+          const s = scaleDish(dish, plan[p.slug].factor);
+          lines.push(`${p.etykieta.toUpperCase()}: ${dish.nazwa} — ${s.kcal} kcal`);
+          for (const ing of s.ing) lines.push(`  - ${ing.nazwa}: ${MenuUnits.qtyLabel(ing.gramy, ing.jednostka)}`);
+          lines.push("");
+        }
+        lines.push("Lista zakupów (dzień):");
+        for (const it of dayShopping(plan)) lines.push(`- ${it.nazwa}: ${qtyLabel(it)}`);
+        return lines.join("\n");
+      }
+      function exportWeekText() {
+        const target = clampKcal(parseInt($("kcal").value, 10) || 2000);
+        const parts = [`PLAN NA TYDZIEŃ — cel ${target} kcal/dzień`, "=".repeat(40), ""];
+        week.forEach((_, i) => { parts.push(exportDayText(i), "", "-".repeat(40), ""); });
+        parts.push("LISTA ZAKUPÓW NA CAŁY TYDZIEŃ:");
+        for (const it of weekIngredients()) parts.push(`- ${it.nazwa}: ${qtyLabel(it)}`);
+        return parts.join("\n");
+      }
+
+      // ── Popup ze szczegółami dania (jak na stronie głównej) ──
+      const recipeHref = (plik) => plik.replace(/^menu\//, "");
+      function extractRecipe(md, path) {
+        const m = md.split(/^##\s+Przepis\s*$/m)[1] || "";
+        const steps = m.split("\n").map((l) => l.trim()).filter((l) => /^\d+\.\s+/.test(l)).map((l) => l.replace(/^\d+\.\s+/, ""));
+        const list = steps.length ? `<ol>${steps.map((s) => `<li>${escapeHtml(s)}</li>`).join("")}</ol>` : "";
+        return `<strong>Przepis</strong>${list}<a href="${path}" target="_blank" rel="noopener">Pełny plik →</a>`;
+      }
+      async function toggleRecipe(btn, dish, box) {
+        if (box.classList.contains("show")) { box.classList.remove("show"); btn.textContent = "📖 Pokaż przepis"; return; }
+        btn.textContent = "📖 Ukryj przepis"; box.classList.add("show");
+        if (box.dataset.loaded) return;
+        box.innerHTML = "Wczytuję przepis…";
+        const href = recipeHref(dish.plik);
+        try {
+          const res = await fetch(href, { cache: "no-store" });
+          if (!res.ok) throw new Error("HTTP " + res.status);
+          box.innerHTML = extractRecipe(await res.text(), href);
+        } catch (e) { box.innerHTML = `<a href="${href}" target="_blank" rel="noopener">Otwórz pełny przepis →</a>`; }
+        box.dataset.loaded = "1";
+      }
+      function openDishDetail(dayIndex, slug) {
+        const entry = week[dayIndex][slug];
+        const dish = dishBySlug(entry.slug);
+        const p = MENU.posilki.find((x) => x.slug === slug);
+        const s = scaleDish(dish, entry.factor);
+        const warunkowe = dish.warunkowe || [];
+        const isW = (n) => warunkowe.includes(n);
+        const badge = isYellow(dish) ? `<span class="badge badge-yellow">🟡 Żółte</span>` : `<span class="badge badge-green">🟢 Zielone</span>`;
+        const warnLine = (isYellow(dish) && warunkowe.length) ? `<span class="warn-ings">⚠️ warunkowo: ${warunkowe.map(escapeHtml).join(", ")}</span>` : "";
+        const rows = s.ing.map((ing) =>
+          `<tr class="${isW(ing.nazwa) ? "warn" : ""}"><td>${escapeHtml(ing.nazwa)}${isW(ing.nazwa) ? ' <span class="chip-warn">⚠️</span>' : ""}</td>` +
+          `<td class="num">${MenuUnits.qtyLabel(ing.gramy, ing.jednostka)}</td><td class="num">${ing.kcal} kcal</td></tr>`).join("");
+        $("dishBody").innerHTML = `
+          <div class="dish-cat">${EMOJI[slug] || "🍽️"} ${p ? p.etykieta : ""} · ${DAYS[dayIndex]}</div>
+          <h2 class="dish-name">${escapeHtml(dish.nazwa)}</h2>
+          <div class="dish-tags">${badge}<span class="kcal-tag"><b>${s.kcal} kcal</b> · ${s.gramy} g</span>${warnLine}</div>
+          ${dish.opis ? `<p class="dish-desc">${escapeHtml(dish.opis)}</p>` : ""}
+          <table class="ing"><thead><tr><th>Składnik</th><th class="num">Ilość</th><th class="num">Kalorie</th></tr></thead><tbody>${rows}</tbody></table>
+          <div class="dish-actions">
+            <button class="mini" id="dishRecipeBtn">📖 Pokaż przepis</button>
+            <button class="mini" id="dishSwapBtn">🔁 Zmień danie</button>
+          </div>
+          <div class="recipe" id="dishRecipe"></div>`;
+        $("dishRecipeBtn").addEventListener("click", (e) => toggleRecipe(e.target, dish, $("dishRecipe")));
+        $("dishSwapBtn").addEventListener("click", () => { swapMeal(dayIndex, slug); openDishDetail(dayIndex, slug); });
+        $("dishModal").classList.add("show");
+      }
+      const closeDish = () => $("dishModal").classList.remove("show");
+
+      // ── Kopiowanie do schowka + toast ──
+      let toastTimer = null;
+      function toast(msg) {
+        const t = $("toast"); t.textContent = msg; t.classList.add("show");
+        clearTimeout(toastTimer); toastTimer = setTimeout(() => t.classList.remove("show"), 2200);
+      }
+      async function copyText(txt, msg) {
+        try { await navigator.clipboard.writeText(txt); toast(msg || "Skopiowano ✓"); }
+        catch (e) {
+          const ta = document.createElement("textarea"); ta.value = txt; document.body.appendChild(ta); ta.select();
+          try { document.execCommand("copy"); toast(msg || "Skopiowano ✓"); } catch (_) {}
+          ta.remove();
+        }
       }
       function openShopping() {
         const items = weekIngredients();
@@ -403,7 +592,10 @@
       $("shopClose").addEventListener("click", closeShopping);
       $("shopCopy").addEventListener("click", copyShopping);
       $("shopModal").addEventListener("click", (e) => { if (e.target.id === "shopModal") closeShopping(); });
-      document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeShopping(); });
+      $("exportWeek").addEventListener("click", () => copyText(exportWeekText(), "Skopiowano plan tygodnia ✓"));
+      $("dishClose").addEventListener("click", closeDish);
+      $("dishModal").addEventListener("click", (e) => { if (e.target.id === "dishModal") closeDish(); });
+      document.addEventListener("keydown", (e) => { if (e.key === "Escape") { closeShopping(); closeDish(); } });
 
       loadData()
         .then(() => { if (!loadSaved()) generateWeek(); })
