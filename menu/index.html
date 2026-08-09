@@ -536,27 +536,55 @@
         if (g >= 1000) { const kg = g / 1000; return (Number.isInteger(kg) ? kg : kg.toFixed(2)) + " kg"; }
         return g + " g";
       }
-      // Składniki liczone na sztuki — scalamy różne nazwy i pokazujemy szt. + gramy.
-      const PIECE_RULES = [
-        { key: "jajka", name: "Jajka", perPiece: 55, unit: "szt.",
+      // Reguły jednostek: składniki liczone na sztuki (per = g/szt.) lub płynne
+      // (kind "ml", density = g/ml). Pokazujemy zawsze jednostkę + gramy.
+      // Opcjonalne mergeKey/name scala różne nazwy tego samego produktu.
+      const UNIT_RULES = [
+        { kind: "piece", unit: "szt.", per: 55, mergeKey: "jajka", name: "Jajka",
           test: (n) => /jaj(ka|ko|a|ek)/i.test(n) && !/jajeczn/i.test(n) },
+        { kind: "piece", unit: "szt.", per: 120, test: (n) => /^banan/i.test(n) },
+        { kind: "piece", unit: "szt.", per: 75, test: (n) => /^kiwi/i.test(n) },
+        { kind: "piece", unit: "szt.", per: 130, test: (n) => /^pomarańcza/i.test(n) },
+        { kind: "piece", unit: "szt.", per: 120, test: (n) => /^pomidor$/i.test(n) },
+        { kind: "piece", unit: "szt.", per: 30, test: (n) => /^tortilla/i.test(n) },
+        { kind: "piece", unit: "szt.", per: 8, test: (n) => /^wafle/i.test(n) },
+        { kind: "piece", unit: "kromki", per: 30, mergeKey: "pieczywo-bg", name: "Pieczywo bezglutenowe",
+          test: (n) => /^(chleb|pieczywo) bezglutenow/i.test(n) },
+        { kind: "ml", density: 1.0, test: (n) => /^mleko/i.test(n) },
+        { kind: "ml", density: 1.0, test: (n) => /^jogurt/i.test(n) },
+        { kind: "ml", density: 1.0, test: (n) => /^bulion/i.test(n) },
+        { kind: "ml", density: 1.0, test: (n) => /^passata/i.test(n) },
+        { kind: "ml", density: 0.92, test: (n) => /^(oliwa|olej)/i.test(n) },
+        { kind: "ml", density: 1.32, test: (n) => /^syrop/i.test(n) },
+        { kind: "ml", density: 0.91, test: (n) => /^majonez/i.test(n) },
       ];
-      const pieceRule = (nazwa) => PIECE_RULES.find((r) => r.test(nazwa)) || null;
-      // Etykieta ilości: dla „sztukowych" → „N szt. (X g)", inaczej → gramy/kg.
+      const unitRule = (nazwa) => UNIT_RULES.find((r) => r.test(nazwa)) || null;
+      // Polska odmiana „kromka/kromki/kromek".
+      function kromkaForm(n) {
+        if (n === 1) return "kromka";
+        const t = n % 10, h = n % 100;
+        return (t >= 2 && t <= 4 && !(h >= 12 && h <= 14)) ? "kromki" : "kromek";
+      }
+      // Etykieta ilości: „N szt. (X g)", „N ml (X g)" albo same gramy/kg.
       function qtyLabel(it) {
-        if (it.rule) {
-          const szt = Math.max(1, Math.round(it.gramy / it.rule.perPiece));
-          return `${szt} ${it.rule.unit} (${fmtQty(it.gramy)})`;
+        const r = it.rule;
+        if (r && r.kind === "piece") {
+          const n = Math.max(1, Math.round(it.gramy / r.per));
+          const unit = r.unit === "kromki" ? kromkaForm(n) : r.unit;
+          return `${n} ${unit} (${fmtQty(it.gramy)})`;
+        }
+        if (r && r.kind === "ml") {
+          return `${Math.round(it.gramy / r.density)} ml (${fmtQty(it.gramy)})`;
         }
         return fmtQty(it.gramy);
       }
-      // Sumuje składniki z pozycji [{nazwa,gramy}]; „sztukowe" scala pod wspólną nazwą.
+      // Sumuje składniki z pozycji [{nazwa,gramy}]; produkty z mergeKey scala razem.
       function aggregateIngredients(entries) {
         const map = new Map();
         for (const it of entries) {
-          const r = pieceRule(it.nazwa);
-          const key = r ? r.key : it.nazwa;
-          const cur = map.get(key) || { nazwa: r ? r.name : it.nazwa, gramy: 0, rule: r };
+          const r = unitRule(it.nazwa);
+          const key = (r && r.mergeKey) ? r.mergeKey : it.nazwa;
+          const cur = map.get(key) || { nazwa: (r && r.name) ? r.name : it.nazwa, gramy: 0, rule: r };
           cur.gramy += it.gramy;
           map.set(key, cur);
         }
