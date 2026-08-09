@@ -66,6 +66,14 @@
       .mini { border: 1px solid var(--rose-lt); background: var(--card); color: var(--muted); border-radius: 100px;
               padding: 0.35rem 0.9rem; font-size: 0.85rem; cursor: pointer; }
       .mini:hover { border-color: var(--rose); color: var(--rose); }
+      .card-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; }
+      .fav-btn { border: 1px solid var(--rose-lt); background: var(--card); color: var(--muted); border-radius: 100px;
+                 padding: 0.35rem 0.9rem; font-size: 0.85rem; cursor: pointer; }
+      .fav-btn:hover { border-color: var(--rose); color: var(--rose); }
+      .fav-btn.on { border-color: var(--rose); color: var(--rose); background: var(--rose-lt); font-weight: 700; }
+      .saved-btn { border: 1px solid var(--rose-lt); background: var(--card); color: var(--muted); border-radius: 100px;
+                   padding: 0.5rem 1.1rem; font-size: 0.9rem; cursor: pointer; font-weight: 700; }
+      .saved-btn.on { border-color: var(--rose); color: #fff; background: var(--rose); }
       .recipe { margin-top: 0.7rem; padding-top: 0.7rem; border-top: 1px dashed var(--rose-lt); font-size: 0.9rem;
                 line-height: 1.6; display: none; }
       .recipe.show { display: block; }
@@ -105,6 +113,7 @@
           <input class="cnt-input" id="cnt" type="number" min="1" max="50" step="1" value="6" />
           <label class="filter-toggle"><input type="checkbox" id="onlyGreen" /> tylko 🟢 zielone</label>
           <button class="btn-primary" id="show">🎲 Pokaż propozycje</button>
+          <button class="saved-btn" id="savedBtn" type="button">⭐ Zapisane (0)</button>
         </div>
         <div class="legend">
           <span><span class="badge badge-green">🟢 Zielone</span> w pełni low FODMAP</span>
@@ -120,7 +129,30 @@
     <script>
       const EMOJI = { "sniadanie": "🥣", "drugie-sniadanie": "🍎", "obiad": "🍲", "podwieczorek": "🥕", "kolacja": "🥗" };
       const $ = (id) => document.getElementById(id);
-      let MENU = null, byMeal = {}, currentMeal = null;
+      let MENU = null, byMeal = {}, currentMeal = null, savedMode = false;
+
+      // ── Ulubione zapisywane lokalnie (localStorage) ──
+      const FAV_KEY = "marta_menu_ulubione";
+      function loadFav() {
+        try { return new Set(JSON.parse(localStorage.getItem(FAV_KEY) || "[]")); }
+        catch (e) { return new Set(); }
+      }
+      let FAV = loadFav();
+      function saveFav() {
+        try { localStorage.setItem(FAV_KEY, JSON.stringify([...FAV])); } catch (e) {}
+        updateSavedBtn();
+      }
+      const isFav = (slug) => FAV.has(slug);
+      function toggleFav(slug) {
+        if (FAV.has(slug)) FAV.delete(slug); else FAV.add(slug);
+        saveFav();
+      }
+      function updateSavedBtn() {
+        const btn = $("savedBtn");
+        btn.textContent = `⭐ Zapisane (${FAV.size})`;
+        btn.classList.toggle("on", savedMode);
+      }
+      const dishBySlug = (slug) => (MENU ? MENU.dania.find((d) => d.slug === slug) : null);
 
       const isYellow = (d) => d && d.fodmap === "zolty";
       const escapeHtml = (s) => s.replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
@@ -158,12 +190,30 @@
 
       function selectMeal(slug) {
         currentMeal = slug;
+        savedMode = false; updateSavedBtn();
         for (const b of $("mealChips").children) b.classList.toggle("on", b.dataset.slug === slug);
         show();
       }
 
       function show() {
         const grid = $("grid");
+        grid.innerHTML = "";
+
+        if (savedMode) {
+          // Tryb „Zapisane" — pokazuje ulubione dania ze WSZYSTKICH posiłków.
+          let saved = MENU.dania.filter((d) => isFav(d.slug));
+          if ($("onlyGreen").checked) saved = saved.filter((d) => !isYellow(d));
+          $("note").textContent = FAV.size
+            ? `Zapisane dania: ${saved.length}${$("onlyGreen").checked ? " (po filtrze zielonych)" : ""}.`
+            : "";
+          if (!saved.length) {
+            grid.innerHTML = '<div class="empty">Brak zapisanych dań. Kliknij „☆ Zapisz" na karcie, żeby dodać.</div>';
+            return;
+          }
+          for (const d of saved) grid.appendChild(card(d));
+          return;
+        }
+
         let dishes = byMeal[currentMeal] || [];
         if ($("onlyGreen").checked) dishes = dishes.filter((d) => !isYellow(d));
         const n = Math.max(1, Math.min(50, parseInt($("cnt").value, 10) || 6));
@@ -174,7 +224,6 @@
           ? `Pokazuję ${chosen.length} z ${dishes.length} dań (${label.toLowerCase()}).`
           : "";
 
-        grid.innerHTML = "";
         if (!chosen.length) {
           grid.innerHTML = '<div class="empty">Brak dań dla tego filtra.</div>';
           return;
@@ -213,12 +262,23 @@
               <tbody>${rows}</tbody>
             </table>
             <div class="card-actions">
+              <button class="fav-btn ${isFav(d.slug) ? "on" : ""}" data-act="fav">
+                ${isFav(d.slug) ? "★ Zapisane" : "☆ Zapisz"}
+              </button>
               <button class="mini" data-act="recipe">📖 Pokaż przepis</button>
-              <div class="recipe" data-recipe></div>
             </div>
+            <div class="recipe" data-recipe></div>
           </div>`;
         el.querySelector('[data-act="recipe"]').addEventListener("click", (e) =>
           toggleRecipe(e.target, d, el.querySelector("[data-recipe]")));
+        el.querySelector('[data-act="fav"]').addEventListener("click", (e) => {
+          toggleFav(d.slug);
+          const on = isFav(d.slug);
+          e.target.classList.toggle("on", on);
+          e.target.textContent = on ? "★ Zapisane" : "☆ Zapisz";
+          // W trybie „Zapisane" odznaczenie usuwa kartę z widoku.
+          if (savedMode && !on) { el.remove(); if (!$("grid").children.length) show(); }
+        });
         return el;
       }
 
@@ -246,10 +306,12 @@
         return `<strong>Przepis</strong>${list}<a href="${path}" target="_blank" rel="noopener">Pełny plik →</a>`;
       }
 
-      $("show").addEventListener("click", show);
+      $("show").addEventListener("click", () => { savedMode = false; updateSavedBtn(); show(); });
       $("cnt").addEventListener("change", show);
       $("onlyGreen").addEventListener("change", show);
+      $("savedBtn").addEventListener("click", () => { savedMode = !savedMode; updateSavedBtn(); show(); });
 
+      updateSavedBtn();
       loadData().catch((err) => { $("grid").innerHTML = `<div class="empty">${err.message}</div>`; });
     </script>
   </body>
