@@ -2,26 +2,28 @@
 nazwa: Koktajl bananowo-truskawkowy
 posilek: drugie-sniadanie
 skladniki:
-  - { nazwa: "Banan", gramy: 100, kcal: 89 }
-  - { nazwa: "Truskawki", gramy: 100, kcal: 33 }
-  - { nazwa: "Mleko 2%", gramy: 150, kcal: 75 }
-  - { nazwa: "Miód", gramy: 10, kcal: 30 }
+  - { nazwa: "Banan (niedojrzały)", gramy: 100, kcal: 89 }
+  - { nazwa: "Truskawki", gramy: 100, kcal: 32 }
+  - { nazwa: "Mleko bez laktozy 2%", gramy: 150, kcal: 75 }
+  - { nazwa: "Syrop klonowy", gramy: 10, kcal: 26 }
 ---
 
 # Koktajl bananowo-truskawkowy
 
-Owocowy koktajl na mleku — orzeźwiający i szybki.
+Koktajl na mleku bez laktozy z niedojrzałym bananem i truskawkami.
 
-**Bazowa porcja:** 360 g · **227 kcal** (wartości bazowe; planer skaluje porcję do Twojego celu kalorycznego).
+**Low FODMAP:** tak — składniki i porcje dobrane pod dietę low FODMAP.
+
+**Bazowa porcja:** 360 g · **222 kcal** (wartości bazowe; planer skaluje porcję do Twojego celu kalorycznego).
 
 ## Składniki (porcja bazowa)
 
-- Banan — 100 g — 89 kcal
-- Truskawki — 100 g — 33 kcal
-- Mleko 2% — 150 g — 75 kcal
-- Miód — 10 g — 30 kcal
+- Banan (niedojrzały) — 100 g — 89 kcal
+- Truskawki — 100 g — 32 kcal
+- Mleko bez laktozy 2% — 150 g — 75 kcal
+- Syrop klonowy — 10 g — 26 kcal
 
 ## Przepis
 
-1. Wszystkie składniki zblenduj na gładko.
-2. Podawaj od razu, schłodzone.
+1. Wszystko zblenduj na gładko.
+2. Podawaj schłodzone.

@@ -4,6 +4,11 @@ Interaktywny planer dnia: ustawiasz **kalorie na dzień**, a strona generuje
 propozycję na **śniadanie, drugie śniadanie, obiad, podwieczorek i kolację**,
 skalując porcje (gramaturę i kalorie) tak, by suma trafiła w cel.
 
+**Wszystkie dania są low FODMAP** — składniki i porcje dobrane zgodnie z
+przewodnikiem [`low-fodmap/`](../low-fodmap/README.md) (bez laktozy, pieczywo i
+makaron bezglutenowy, bez cebuli/czosnku, owoce i warzywa z listy dozwolonej,
+produkty warunkowe ⚠️ w limitach porcji).
+
 Otwórz: [`menu/index.html`](index.html).
 
 ## Architektura
@@ -71,7 +76,15 @@ python3 tools/build_menu.py
 # 3) zacommituj plik .md ORAZ zmieniony menu/dania.json
 ```
 
+## Low FODMAP — zasada dla nowych dań
+
+Każde nowe danie musi być zgodne z dietą low FODMAP: żadnej laktozy (mleko/jogurt
+bez laktozy, sery dojrzewające), pieczywo/makaron **bezglutenowy**, bez cebuli i
+czosnku (dozwolona oliwa czosnkowa), owoce/warzywa z listy ✅, a produkty warunkowe
+⚠️ tylko w bazowych porcjach z limitów. Szczegóły i limity: [`low-fodmap/`](../low-fodmap/README.md).
+
 ## Uwaga
 
-Wartości kaloryczne są orientacyjne (typowe wartości produktów). To narzędzie
-pomocnicze do planowania, nie porada dietetyczna.
+Wartości kaloryczne są orientacyjne (typowe wartości produktów). FODMAP-y się
+kumulują — mocne zwiększenie porcji dań z produktami ⚠️ może przekroczyć próg
+tolerancji. To narzędzie pomocnicze do planowania, nie porada dietetyczna.

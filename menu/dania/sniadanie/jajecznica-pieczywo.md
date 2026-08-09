@@ -1,28 +1,30 @@
 ---
-nazwa: Jajecznica na maśle z pieczywem
+nazwa: Jajecznica z pieczywem bezglutenowym
 posilek: sniadanie
 skladniki:
   - { nazwa: "Jajka (3 szt.)", gramy: 165, kcal: 235 }
-  - { nazwa: "Masło", gramy: 10, kcal: 74 }
-  - { nazwa: "Chleb żytni", gramy: 60, kcal: 150 }
+  - { nazwa: "Masło", gramy: 10, kcal: 72 }
+  - { nazwa: "Chleb bezglutenowy", gramy: 60, kcal: 150 }
   - { nazwa: "Pomidor", gramy: 100, kcal: 18 }
 ---
 
-# Jajecznica na maśle z pieczywem
+# Jajecznica z pieczywem bezglutenowym
 
-Klasyczna jajecznica na maśle podana z chlebem żytnim i pomidorem.
+Jajecznica na maśle z chlebem bezglutenowym i pomidorem — bez cebuli i czosnku.
 
-**Bazowa porcja:** 335 g · **477 kcal** (wartości bazowe; planer skaluje porcję do Twojego celu kalorycznego).
+**Low FODMAP:** tak — składniki i porcje dobrane pod dietę low FODMAP.
+
+**Bazowa porcja:** 335 g · **475 kcal** (wartości bazowe; planer skaluje porcję do Twojego celu kalorycznego).
 
 ## Składniki (porcja bazowa)
 
 - Jajka (3 szt.) — 165 g — 235 kcal
-- Masło — 10 g — 74 kcal
-- Chleb żytni — 60 g — 150 kcal
+- Masło — 10 g — 72 kcal
+- Chleb bezglutenowy — 60 g — 150 kcal
 - Pomidor — 100 g — 18 kcal
 
 ## Przepis
 
-1. Rozgrzej masło na patelni na średnim ogniu.
-2. Wbij jajka, mieszaj do ścięcia (2–3 min). Posól, popieprz.
-3. Podawaj z pieczywem i plasterkami pomidora.
+1. Rozgrzej masło na patelni.
+2. Wbij jajka, mieszaj do ścięcia. Posól, popieprz.
+3. Podawaj z opieczonym chlebem bezglutenowym i pomidorem.

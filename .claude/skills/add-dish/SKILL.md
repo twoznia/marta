@@ -1,6 +1,6 @@
 ---
 name: add-dish
-description: Add a new dish to the "marta" Menu / meal-planner (menu/dania). Use when asked to add, create, or register a new potrawa / danie / posiłek (śniadanie, drugie śniadanie, obiad, podwieczorek, kolacja) with ingredients, gramatura and kalorie, or to regenerate menu/dania.json.
+description: Add a new dish to the "marta" Menu / meal-planner (menu/dania). Every dish must be low FODMAP. Use when asked to add, create, or register a new potrawa / danie / posiłek (śniadanie, drugie śniadanie, obiad, podwieczorek, kolacja) with ingredients, gramatura and kalorie, or to regenerate menu/dania.json.
 ---
 
 # Add a dish to the Menu planner
@@ -12,6 +12,30 @@ generator (`tools/build_menu.py`) reads all those files and writes
 **derived from the ingredient list** — you never hand-maintain a total.
 
 To add a dish you do two things: **write the `.md` file**, then **rebuild the JSON**.
+
+## Hard rule: every dish must be LOW FODMAP
+
+The whole Menu is low FODMAP — do not add a dish that isn't. Follow the repo's own
+guide (`low-fodmap/README.md`). Practical rules:
+
+- **No lactose:** use *mleko/jogurt bez laktozy*, mature cheeses (ser dojrzewający,
+  parmezan, feta w małej porcji). Never plain cow milk, zwykły jogurt, twaróg,
+  serek wiejski, śmietana.
+- **No wheat/rye/barley:** use *chleb/makaron/panierka bezglutenowa*. No pszenny/żytni
+  bread, wheat pasta, kuskus.
+- **No onion/garlic** (fruktany): season without them; *oliwa czosnkowa* is fine
+  (fructans don't dissolve in fat). Watch ready sauces/broths — say "bez cebuli/czosnku".
+- **No honey/agave/HFCS/polioli:** sweeten with cukier (umiar), syrop klonowy, stewia.
+- **No** ciecierzyca/soczewica/fasola/hummus, jabłko/gruszka/mango/arbuz.
+- **Green-light** staples: jajka, mięso, drób, ryby; ryż, quinoa, kasza gryczana,
+  kukurydza; marchew, ogórek, sałata, szpinak, pomidor, ziemniak; banan (niedojrzały),
+  truskawki, borówki, winogrona, kiwi, pomarańcza; orzechy włoskie/makadamia/ziemne.
+- **Conditional (⚠️) only in their per-serve limit** as the BASE portion (the planner
+  may scale up, so keep the base modest): awokado ~30 g, brokuł (różyczki) ~75 g,
+  cukinia ~65 g, papryka czerwona ~75 g, feta/mozzarella mała porcja, migdały ~10 szt,
+  owies ~50 g. Prefer building dishes mostly from green-light items so scaling is safe.
+
+Keep the `**Low FODMAP:** tak …` note line in the body (the seed uses it).
 
 ## 1. Pick the meal (posiłek)
 
@@ -36,7 +60,7 @@ nazwa: Owsianka z bananem i orzechami
 posilek: sniadanie
 skladniki:
   - { nazwa: "Płatki owsiane", gramy: 60, kcal: 228 }
-  - { nazwa: "Mleko 2%", gramy: 200, kcal: 100 }
+  - { nazwa: "Mleko bez laktozy 2%", gramy: 200, kcal: 100 }
   - { nazwa: "Banan", gramy: 100, kcal: 89 }
   - { nazwa: "Orzechy włoskie", gramy: 15, kcal: 98 }
 ---

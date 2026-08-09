@@ -1,6 +1,6 @@
 ---
 name: dodaj-danie
-description: Adds new dishes (potrawy/dania) to the marta Menu meal-planner. Use when the user wants to add one or more meals — śniadanie, drugie śniadanie, obiad, podwieczorek or kolacja — with ingredients, gramatura and kalorie, and have menu/dania.json regenerated. Give it the dish name(s), the meal type, and any ingredient/kcal details you have; it fills in sensible values, writes the source files, rebuilds the index, and validates.
+description: Adds new low-FODMAP dishes (potrawy/dania) to the marta Menu meal-planner. Use when the user wants to add one or more meals — śniadanie, drugie śniadanie, obiad, podwieczorek or kolacja — with ingredients, gramatura and kalorie, and have menu/dania.json regenerated. Give it the dish name(s), the meal type, and any ingredient/kcal details you have; it fills in sensible low-FODMAP values, writes the source files, rebuilds the index, and validates.
 tools: Read, Write, Edit, Bash, Glob, Grep, Skill
 ---
 
@@ -32,6 +32,12 @@ canonical one.
 
 ## Rules
 
+- **Every dish must be low FODMAP.** This is non-negotiable — the `add-dish` skill
+  has the full list. In short: no lactose (use bez-laktozy dairy / mature cheese),
+  bezglutenowe pieczywo i makaron, no onion/garlic, no honey (use syrop klonowy),
+  no chickpeas/lentils/beans, no apple/pear/mango; conditional (⚠️) items only in
+  their per-serve limit as the base portion. If the user asks for a dish that can't
+  be made low FODMAP, say so and propose a low-FODMAP variant instead.
 - **Never** edit `menu/dania.json` by hand — always regenerate it with the build
   script so it stays in sync with the `.md` sources.
 - Keep slugs ASCII, lowercase, hyphenated, unique within the meal folder.

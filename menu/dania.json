@@ -28,18 +28,44 @@
   ],
   "dania": [
     {
-      "slug": "jogurt-granola-owoce",
-      "nazwa": "Jogurt naturalny z granolą i owocami",
+      "slug": "jajka-pomidor-pieczywo",
+      "nazwa": "Jajka na twardo z pomidorem",
       "posilek": "drugie-sniadanie",
-      "opis": "Jogurt z chrupiącą granolą i borówkami — szybka, lekka przekąska.",
+      "opis": "Jajka na twardo z pomidorem i pieczywem bezglutenowym — dużo białka.",
       "skladniki": [
         {
-          "nazwa": "Jogurt naturalny",
+          "nazwa": "Jajka (2 szt.)",
+          "gramy": 110.0,
+          "kcal": 156.0
+        },
+        {
+          "nazwa": "Pomidor",
+          "gramy": 100.0,
+          "kcal": 18.0
+        },
+        {
+          "nazwa": "Chleb bezglutenowy",
+          "gramy": 30.0,
+          "kcal": 75.0
+        }
+      ],
+      "bazowe_kcal": 249,
+      "bazowa_gramatura": 240,
+      "plik": "menu/dania/drugie-sniadanie/jajka-pomidor-pieczywo.md"
+    },
+    {
+      "slug": "jogurt-granola-owoce",
+      "nazwa": "Jogurt bez laktozy z granolą i owocami",
+      "posilek": "drugie-sniadanie",
+      "opis": "Jogurt bez laktozy z granolą bezglutenową (bez miodu/inuliny) i borówkami.",
+      "skladniki": [
+        {
+          "nazwa": "Jogurt bez laktozy",
           "gramy": 150.0,
           "kcal": 90.0
         },
         {
-          "nazwa": "Granola",
+          "nazwa": "Granola bezglutenowa",
           "gramy": 40.0,
           "kcal": 180.0
         },
@@ -57,17 +83,17 @@
       "slug": "kanapka-awokado-jajko",
       "nazwa": "Kanapka z awokado i jajkiem",
       "posilek": "drugie-sniadanie",
-      "opis": "Chleb żytni z rozgniecionym awokado i jajkiem na twardo.",
+      "opis": "Pieczywo bezglutenowe z awokado (porcja low FODMAP) i jajkiem.",
       "skladniki": [
         {
-          "nazwa": "Chleb żytni",
+          "nazwa": "Chleb bezglutenowy",
           "gramy": 50.0,
           "kcal": 125.0
         },
         {
           "nazwa": "Awokado",
-          "gramy": 50.0,
-          "kcal": 80.0
+          "gramy": 30.0,
+          "kcal": 48.0
         },
         {
           "nazwa": "Jajko (1 szt.)",
@@ -75,75 +101,49 @@
           "kcal": 78.0
         }
       ],
-      "bazowe_kcal": 283,
-      "bazowa_gramatura": 155,
+      "bazowe_kcal": 251,
+      "bazowa_gramatura": 135,
       "plik": "menu/dania/drugie-sniadanie/kanapka-awokado-jajko.md"
     },
     {
       "slug": "koktajl-banan-truskawka",
       "nazwa": "Koktajl bananowo-truskawkowy",
       "posilek": "drugie-sniadanie",
-      "opis": "Owocowy koktajl na mleku — orzeźwiający i szybki.",
+      "opis": "Koktajl na mleku bez laktozy z niedojrzałym bananem i truskawkami.",
       "skladniki": [
         {
-          "nazwa": "Banan",
+          "nazwa": "Banan (niedojrzały)",
           "gramy": 100.0,
           "kcal": 89.0
         },
         {
           "nazwa": "Truskawki",
           "gramy": 100.0,
-          "kcal": 33.0
+          "kcal": 32.0
         },
         {
-          "nazwa": "Mleko 2%",
+          "nazwa": "Mleko bez laktozy 2%",
           "gramy": 150.0,
           "kcal": 75.0
         },
         {
-          "nazwa": "Miód",
+          "nazwa": "Syrop klonowy",
           "gramy": 10.0,
-          "kcal": 30.0
+          "kcal": 26.0
         }
       ],
-      "bazowe_kcal": 227,
+      "bazowe_kcal": 222,
       "bazowa_gramatura": 360,
       "plik": "menu/dania/drugie-sniadanie/koktajl-banan-truskawka.md"
     },
     {
-      "slug": "serek-wiejski-pomidor",
-      "nazwa": "Serek wiejski z pomidorem",
-      "posilek": "drugie-sniadanie",
-      "opis": "Serek wiejski z pomidorem i pieczywem chrupkim — dużo białka.",
-      "skladniki": [
-        {
-          "nazwa": "Serek wiejski",
-          "gramy": 150.0,
-          "kcal": 147.0
-        },
-        {
-          "nazwa": "Pomidor",
-          "gramy": 100.0,
-          "kcal": 18.0
-        },
-        {
-          "nazwa": "Pieczywo chrupkie",
-          "gramy": 20.0,
-          "kcal": 70.0
-        }
-      ],
-      "bazowe_kcal": 235,
-      "bazowa_gramatura": 270,
-      "plik": "menu/dania/drugie-sniadanie/serek-wiejski-pomidor.md"
-    },
-    {
-      "slug": "kanapki-wedlina-ser",
-      "nazwa": "Kanapki z wędliną i serem",
+      "slug": "kanapki-szynka-ser",
+      "nazwa": "Kanapki z szynką i serem dojrzewającym",
       "posilek": "kolacja",
-      "opis": "Kanapki z szynką drobiową, serem i papryką.",
+      "opis": "Pieczywo bezglutenowe z szynką drobiową, serem dojrzewającym i papryką.",
       "skladniki": [
         {
-          "nazwa": "Chleb pełnoziarnisty",
+          "nazwa": "Chleb bezglutenowy",
           "gramy": 80.0,
           "kcal": 200.0
         },
@@ -153,25 +153,25 @@
           "kcal": 84.0
         },
         {
-          "nazwa": "Ser żółty",
+          "nazwa": "Ser dojrzewający",
           "gramy": 40.0,
           "kcal": 160.0
         },
         {
-          "nazwa": "Papryka",
-          "gramy": 80.0,
-          "kcal": 26.0
+          "nazwa": "Papryka czerwona",
+          "gramy": 75.0,
+          "kcal": 23.0
         }
       ],
-      "bazowe_kcal": 470,
-      "bazowa_gramatura": 260,
-      "plik": "menu/dania/kolacja/kanapki-wedlina-ser.md"
+      "bazowe_kcal": 467,
+      "bazowa_gramatura": 255,
+      "plik": "menu/dania/kolacja/kanapki-szynka-ser.md"
     },
     {
       "slug": "omlet-warzywny-kolacja",
       "nazwa": "Omlet warzywny na kolację",
       "posilek": "kolacja",
-      "opis": "Lekki omlet z papryką, cukinią i fetą.",
+      "opis": "Lekki omlet z papryką, cukinią i fetą — porcje warzyw ⚠️ w limitach low FODMAP.",
       "skladniki": [
         {
           "nazwa": "Jajka (3 szt.)",
@@ -179,14 +179,14 @@
           "kcal": 235.0
         },
         {
-          "nazwa": "Papryka",
+          "nazwa": "Papryka czerwona",
           "gramy": 60.0,
-          "kcal": 20.0
+          "kcal": 18.0
         },
         {
           "nazwa": "Cukinia",
-          "gramy": 60.0,
-          "kcal": 10.0
+          "gramy": 65.0,
+          "kcal": 11.0
         },
         {
           "nazwa": "Ser feta",
@@ -199,15 +199,56 @@
           "kcal": 70.0
         }
       ],
-      "bazowe_kcal": 441,
-      "bazowa_gramatura": 333,
+      "bazowe_kcal": 440,
+      "bazowa_gramatura": 338,
       "plik": "menu/dania/kolacja/omlet-warzywny-kolacja.md"
+    },
+    {
+      "slug": "salatka-grecka",
+      "nazwa": "Sałatka grecka z pieczywem bezglutenowym",
+      "posilek": "kolacja",
+      "opis": "Feta (mała porcja), pomidor, ogórek i oliwki z pieczywem bezglutenowym.",
+      "skladniki": [
+        {
+          "nazwa": "Ser feta",
+          "gramy": 40.0,
+          "kcal": 106.0
+        },
+        {
+          "nazwa": "Pomidor",
+          "gramy": 100.0,
+          "kcal": 18.0
+        },
+        {
+          "nazwa": "Ogórek",
+          "gramy": 80.0,
+          "kcal": 10.0
+        },
+        {
+          "nazwa": "Oliwki",
+          "gramy": 30.0,
+          "kcal": 35.0
+        },
+        {
+          "nazwa": "Oliwa",
+          "gramy": 8.0,
+          "kcal": 70.0
+        },
+        {
+          "nazwa": "Chleb bezglutenowy",
+          "gramy": 40.0,
+          "kcal": 100.0
+        }
+      ],
+      "bazowe_kcal": 339,
+      "bazowa_gramatura": 298,
+      "plik": "menu/dania/kolacja/salatka-grecka.md"
     },
     {
       "slug": "salatka-tunczyk-jajko",
       "nazwa": "Sałatka z tuńczykiem i jajkiem",
       "posilek": "kolacja",
-      "opis": "Sałatka z tuńczykiem, jajkiem i świeżymi warzywami z pieczywem.",
+      "opis": "Sałatka z tuńczykiem, jajkiem i warzywami, z pieczywem bezglutenowym.",
       "skladniki": [
         {
           "nazwa": "Tuńczyk w sosie własnym",
@@ -222,7 +263,7 @@
         {
           "nazwa": "Sałata i warzywa",
           "gramy": 150.0,
-          "kcal": 40.0
+          "kcal": 38.0
         },
         {
           "nazwa": "Oliwa",
@@ -230,51 +271,20 @@
           "kcal": 88.0
         },
         {
-          "nazwa": "Pieczywo",
+          "nazwa": "Chleb bezglutenowy",
           "gramy": 40.0,
           "kcal": 100.0
         }
       ],
-      "bazowe_kcal": 500,
+      "bazowe_kcal": 498,
       "bazowa_gramatura": 410,
       "plik": "menu/dania/kolacja/salatka-tunczyk-jajko.md"
-    },
-    {
-      "slug": "twarozek-warzywa-pieczywo",
-      "nazwa": "Twarożek z warzywami i pieczywem",
-      "posilek": "kolacja",
-      "opis": "Twarożek ze szczypiorkiem i rzodkiewką, z pieczywem żytnim.",
-      "skladniki": [
-        {
-          "nazwa": "Twaróg półtłusty",
-          "gramy": 120.0,
-          "kcal": 159.0
-        },
-        {
-          "nazwa": "Jogurt naturalny",
-          "gramy": 30.0,
-          "kcal": 18.0
-        },
-        {
-          "nazwa": "Rzodkiewka i szczypiorek",
-          "gramy": 60.0,
-          "kcal": 12.0
-        },
-        {
-          "nazwa": "Chleb żytni",
-          "gramy": 60.0,
-          "kcal": 150.0
-        }
-      ],
-      "bazowe_kcal": 339,
-      "bazowa_gramatura": 270,
-      "plik": "menu/dania/kolacja/twarozek-warzywa-pieczywo.md"
     },
     {
       "slug": "kurczak-ryz-warzywa",
       "nazwa": "Kurczak z ryżem i warzywami",
       "posilek": "obiad",
-      "opis": "Pierś z kurczaka z ryżem i duszonymi warzywami — zbilansowany obiad.",
+      "opis": "Pierś z kurczaka z ryżem, brokułem (porcja low FODMAP) i marchewką.",
       "skladniki": [
         {
           "nazwa": "Pierś z kurczaka",
@@ -287,9 +297,9 @@
           "kcal": 252.0
         },
         {
-          "nazwa": "Brokuł",
-          "gramy": 100.0,
-          "kcal": 34.0
+          "nazwa": "Brokuł (różyczki)",
+          "gramy": 75.0,
+          "kcal": 26.0
         },
         {
           "nazwa": "Marchew",
@@ -302,15 +312,15 @@
           "kcal": 88.0
         }
       ],
-      "bazowe_kcal": 572,
-      "bazowa_gramatura": 410,
+      "bazowe_kcal": 564,
+      "bazowa_gramatura": 385,
       "plik": "menu/dania/obiad/kurczak-ryz-warzywa.md"
     },
     {
       "slug": "losos-ziemniaki",
       "nazwa": "Łosoś pieczony z ziemniakami",
       "posilek": "obiad",
-      "opis": "Pieczony łosoś z ziemniakami i fasolką szparagową.",
+      "opis": "Pieczony łosoś z ziemniakami i fasolką szparagową (porcja low FODMAP).",
       "skladniki": [
         {
           "nazwa": "Łosoś (filet)",
@@ -324,27 +334,27 @@
         },
         {
           "nazwa": "Fasolka szparagowa",
-          "gramy": 100.0,
-          "kcal": 31.0
+          "gramy": 75.0,
+          "kcal": 23.0
         },
         {
           "nazwa": "Masło",
           "gramy": 10.0,
-          "kcal": 74.0
+          "kcal": 72.0
         }
       ],
-      "bazowe_kcal": 571,
-      "bazowa_gramatura": 460,
+      "bazowe_kcal": 561,
+      "bazowa_gramatura": 435,
       "plik": "menu/dania/obiad/losos-ziemniaki.md"
     },
     {
       "slug": "makaron-bolognese",
-      "nazwa": "Makaron z sosem bolognese",
+      "nazwa": "Makaron bezglutenowy z bolognese",
       "posilek": "obiad",
-      "opis": "Makaron z mięsnym sosem pomidorowym — klasyka na sycący obiad.",
+      "opis": "Makaron bezglutenowy z sosem mięsno-pomidorowym bez cebuli i czosnku.",
       "skladniki": [
         {
-          "nazwa": "Makaron (sucha masa)",
+          "nazwa": "Makaron bezglutenowy (sucha masa)",
           "gramy": 90.0,
           "kcal": 315.0
         },
@@ -354,7 +364,7 @@
           "kcal": 300.0
         },
         {
-          "nazwa": "Passata pomidorowa",
+          "nazwa": "Passata pomidorowa (bez cebuli/czosnku)",
           "gramy": 150.0,
           "kcal": 45.0
         },
@@ -370,9 +380,9 @@
     },
     {
       "slug": "schabowy-ziemniaki-surowka",
-      "nazwa": "Kotlet schabowy z ziemniakami i surówką",
+      "nazwa": "Schabowy (panierka bezglutenowa) z ziemniakami",
       "posilek": "obiad",
-      "opis": "Panierowany kotlet schabowy z ziemniakami i surówką z kapusty.",
+      "opis": "Kotlet schabowy w panierce bezglutenowej z ziemniakami i surówką z kapusty.",
       "skladniki": [
         {
           "nazwa": "Schab",
@@ -385,14 +395,14 @@
           "kcal": 154.0
         },
         {
-          "nazwa": "Panierka (bułka+jajko)",
+          "nazwa": "Panierka bezglutenowa",
           "gramy": 30.0,
           "kcal": 110.0
         },
         {
           "nazwa": "Surówka z kapusty",
-          "gramy": 100.0,
-          "kcal": 50.0
+          "gramy": 75.0,
+          "kcal": 38.0
         },
         {
           "nazwa": "Olej",
@@ -400,104 +410,109 @@
           "kcal": 88.0
         }
       ],
-      "bazowe_kcal": 717,
-      "bazowa_gramatura": 470,
+      "bazowe_kcal": 705,
+      "bazowa_gramatura": 445,
       "plik": "menu/dania/obiad/schabowy-ziemniaki-surowka.md"
     },
     {
-      "slug": "jogurt-grecki-miod",
-      "nazwa": "Jogurt grecki z miodem",
+      "slug": "jogurt-grecki-syrop",
+      "nazwa": "Jogurt grecki bez laktozy z syropem klonowym",
       "posilek": "podwieczorek",
-      "opis": "Gęsty jogurt grecki z odrobiną miodu.",
+      "opis": "Gęsty jogurt grecki bez laktozy z odrobiną syropu klonowego.",
       "skladniki": [
         {
-          "nazwa": "Jogurt grecki",
+          "nazwa": "Jogurt grecki bez laktozy",
           "gramy": 150.0,
           "kcal": 177.0
         },
         {
-          "nazwa": "Miód",
+          "nazwa": "Syrop klonowy",
           "gramy": 15.0,
-          "kcal": 46.0
+          "kcal": 39.0
         }
       ],
-      "bazowe_kcal": 223,
+      "bazowe_kcal": 216,
       "bazowa_gramatura": 165,
-      "plik": "menu/dania/podwieczorek/jogurt-grecki-miod.md"
+      "plik": "menu/dania/podwieczorek/jogurt-grecki-syrop.md"
     },
     {
-      "slug": "kanapka-maslo-orzechowe",
-      "nazwa": "Kanapka z masłem orzechowym",
+      "slug": "migdaly-pomarancza",
+      "nazwa": "Migdały i pomarańcza",
       "posilek": "podwieczorek",
-      "opis": "Pieczywo chrupkie z masłem orzechowym i bananem.",
+      "opis": "Garść migdałów (porcja low FODMAP) i pomarańcza.",
       "skladniki": [
         {
-          "nazwa": "Pieczywo chrupkie",
-          "gramy": 20.0,
+          "nazwa": "Migdały",
+          "gramy": 12.0,
           "kcal": 70.0
+        },
+        {
+          "nazwa": "Pomarańcza",
+          "gramy": 150.0,
+          "kcal": 71.0
+        }
+      ],
+      "bazowe_kcal": 141,
+      "bazowa_gramatura": 162,
+      "plik": "menu/dania/podwieczorek/migdaly-pomarancza.md"
+    },
+    {
+      "slug": "salatka-owocowa",
+      "nazwa": "Sałatka owocowa low FODMAP",
+      "posilek": "podwieczorek",
+      "opis": "Truskawki, kiwi i winogrona — owoce z listy dozwolonej.",
+      "skladniki": [
+        {
+          "nazwa": "Truskawki",
+          "gramy": 80.0,
+          "kcal": 26.0
+        },
+        {
+          "nazwa": "Kiwi",
+          "gramy": 75.0,
+          "kcal": 46.0
+        },
+        {
+          "nazwa": "Winogrona",
+          "gramy": 80.0,
+          "kcal": 55.0
+        }
+      ],
+      "bazowe_kcal": 127,
+      "bazowa_gramatura": 235,
+      "plik": "menu/dania/podwieczorek/salatka-owocowa.md"
+    },
+    {
+      "slug": "wafle-maslo-orzechowe",
+      "nazwa": "Wafle ryżowe z masłem orzechowym i bananem",
+      "posilek": "podwieczorek",
+      "opis": "Wafle ryżowe z masłem orzechowym (orzeszki ziemne ✅) i niedojrzałym bananem.",
+      "skladniki": [
+        {
+          "nazwa": "Wafle ryżowe",
+          "gramy": 20.0,
+          "kcal": 76.0
         },
         {
           "nazwa": "Masło orzechowe",
           "gramy": 20.0,
-          "kcal": 118.0
+          "kcal": 120.0
         },
         {
-          "nazwa": "Banan",
+          "nazwa": "Banan (niedojrzały)",
           "gramy": 60.0,
           "kcal": 53.0
         }
       ],
-      "bazowe_kcal": 241,
+      "bazowe_kcal": 249,
       "bazowa_gramatura": 100,
-      "plik": "menu/dania/podwieczorek/kanapka-maslo-orzechowe.md"
-    },
-    {
-      "slug": "marchewki-hummus",
-      "nazwa": "Marchewki z hummusem",
-      "posilek": "podwieczorek",
-      "opis": "Chrupiące słupki marchewki z hummusem.",
-      "skladniki": [
-        {
-          "nazwa": "Marchew",
-          "gramy": 120.0,
-          "kcal": 49.0
-        },
-        {
-          "nazwa": "Hummus",
-          "gramy": 50.0,
-          "kcal": 118.0
-        }
-      ],
-      "bazowe_kcal": 167,
-      "bazowa_gramatura": 170,
-      "plik": "menu/dania/podwieczorek/marchewki-hummus.md"
-    },
-    {
-      "slug": "orzechy-owoc",
-      "nazwa": "Garść orzechów i owoc",
-      "posilek": "podwieczorek",
-      "opis": "Migdały i jabłko — prosta, sycąca przekąska.",
-      "skladniki": [
-        {
-          "nazwa": "Migdały",
-          "gramy": 25.0,
-          "kcal": 145.0
-        },
-        {
-          "nazwa": "Jabłko",
-          "gramy": 150.0,
-          "kcal": 78.0
-        }
-      ],
-      "bazowe_kcal": 223,
-      "bazowa_gramatura": 175,
-      "plik": "menu/dania/podwieczorek/orzechy-owoc.md"
+      "plik": "menu/dania/podwieczorek/wafle-maslo-orzechowe.md"
     },
     {
       "slug": "jajecznica-pieczywo",
-      "nazwa": "Jajecznica na maśle z pieczywem",
+      "nazwa": "Jajecznica z pieczywem bezglutenowym",
       "posilek": "sniadanie",
-      "opis": "Klasyczna jajecznica na maśle podana z chlebem żytnim i pomidorem.",
+      "opis": "Jajecznica na maśle z chlebem bezglutenowym i pomidorem — bez cebuli i czosnku.",
       "skladniki": [
         {
           "nazwa": "Jajka (3 szt.)",
@@ -507,10 +522,10 @@
         {
           "nazwa": "Masło",
           "gramy": 10.0,
-          "kcal": 74.0
+          "kcal": 72.0
         },
         {
-          "nazwa": "Chleb żytni",
+          "nazwa": "Chleb bezglutenowy",
           "gramy": 60.0,
           "kcal": 150.0
         },
@@ -520,51 +535,51 @@
           "kcal": 18.0
         }
       ],
-      "bazowe_kcal": 477,
+      "bazowe_kcal": 475,
       "bazowa_gramatura": 335,
       "plik": "menu/dania/sniadanie/jajecznica-pieczywo.md"
     },
     {
-      "slug": "kanapki-twarozek-warzywa",
-      "nazwa": "Kanapki z twarożkiem i warzywami",
+      "slug": "kanapki-pasta-jajeczna",
+      "nazwa": "Kanapki z pastą jajeczną i warzywami",
       "posilek": "sniadanie",
-      "opis": "Lekkie kanapki z twarożkiem, chrupiącym ogórkiem i rzodkiewką.",
+      "opis": "Pasta jajeczna ze szczypiorkiem na pieczywie bezglutenowym z ogórkiem.",
       "skladniki": [
         {
-          "nazwa": "Chleb pełnoziarnisty",
-          "gramy": 80.0,
-          "kcal": 200.0
+          "nazwa": "Chleb bezglutenowy",
+          "gramy": 60.0,
+          "kcal": 150.0
         },
         {
-          "nazwa": "Twaróg półtłusty",
-          "gramy": 80.0,
-          "kcal": 106.0
+          "nazwa": "Jajka (2 szt.)",
+          "gramy": 110.0,
+          "kcal": 156.0
+        },
+        {
+          "nazwa": "Majonez",
+          "gramy": 15.0,
+          "kcal": 102.0
         },
         {
           "nazwa": "Ogórek",
           "gramy": 50.0,
-          "kcal": 8.0
+          "kcal": 6.0
         },
         {
-          "nazwa": "Rzodkiewka",
-          "gramy": 40.0,
-          "kcal": 7.0
-        },
-        {
-          "nazwa": "Oliwa",
-          "gramy": 5.0,
-          "kcal": 44.0
+          "nazwa": "Szczypiorek (zielona część)",
+          "gramy": 10.0,
+          "kcal": 3.0
         }
       ],
-      "bazowe_kcal": 365,
-      "bazowa_gramatura": 255,
-      "plik": "menu/dania/sniadanie/kanapki-twarozek-warzywa.md"
+      "bazowe_kcal": 417,
+      "bazowa_gramatura": 245,
+      "plik": "menu/dania/sniadanie/kanapki-pasta-jajeczna.md"
     },
     {
       "slug": "omlet-ser-szpinak",
-      "nazwa": "Omlet z serem i szpinakiem",
+      "nazwa": "Omlet z serem dojrzewającym i szpinakiem",
       "posilek": "sniadanie",
-      "opis": "Puszysty omlet z żółtym serem i świeżym szpinakiem.",
+      "opis": "Puszysty omlet z serem dojrzewającym (mało laktozy) i świeżym szpinakiem.",
       "skladniki": [
         {
           "nazwa": "Jajka (3 szt.)",
@@ -572,7 +587,7 @@
           "kcal": 235.0
         },
         {
-          "nazwa": "Ser żółty",
+          "nazwa": "Ser dojrzewający",
           "gramy": 30.0,
           "kcal": 120.0
         },
@@ -584,10 +599,10 @@
         {
           "nazwa": "Masło",
           "gramy": 8.0,
-          "kcal": 59.0
+          "kcal": 57.0
         }
       ],
-      "bazowe_kcal": 426,
+      "bazowe_kcal": 424,
       "bazowa_gramatura": 253,
       "plik": "menu/dania/sniadanie/omlet-ser-szpinak.md"
     },
@@ -595,20 +610,20 @@
       "slug": "owsianka-banan-orzechy",
       "nazwa": "Owsianka z bananem i orzechami",
       "posilek": "sniadanie",
-      "opis": "Ciepła owsianka na mleku z bananem i orzechami — sycące, wolno uwalniające energię śniadanie.",
+      "opis": "Owsianka na mleku bez laktozy z niedojrzałym bananem i orzechami włoskimi — sycące, low FODMAP.",
       "skladniki": [
         {
           "nazwa": "Płatki owsiane",
-          "gramy": 60.0,
-          "kcal": 228.0
+          "gramy": 50.0,
+          "kcal": 190.0
         },
         {
-          "nazwa": "Mleko 2%",
+          "nazwa": "Mleko bez laktozy 2%",
           "gramy": 200.0,
           "kcal": 100.0
         },
         {
-          "nazwa": "Banan",
+          "nazwa": "Banan (niedojrzały)",
           "gramy": 100.0,
           "kcal": 89.0
         },
@@ -618,8 +633,8 @@
           "kcal": 98.0
         }
       ],
-      "bazowe_kcal": 515,
-      "bazowa_gramatura": 375,
+      "bazowe_kcal": 477,
+      "bazowa_gramatura": 365,
       "plik": "menu/dania/sniadanie/owsianka-banan-orzechy.md"
     }
   ]

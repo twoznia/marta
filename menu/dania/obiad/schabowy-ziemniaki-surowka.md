@@ -1,30 +1,31 @@
 ---
-nazwa: Kotlet schabowy z ziemniakami i surówką
+nazwa: Schabowy (panierka bezglutenowa) z ziemniakami
 posilek: obiad
 skladniki:
   - { nazwa: "Schab", gramy: 130, kcal: 315 }
   - { nazwa: "Ziemniaki", gramy: 200, kcal: 154 }
-  - { nazwa: "Panierka (bułka+jajko)", gramy: 30, kcal: 110 }
-  - { nazwa: "Surówka z kapusty", gramy: 100, kcal: 50 }
+  - { nazwa: "Panierka bezglutenowa", gramy: 30, kcal: 110 }
+  - { nazwa: "Surówka z kapusty", gramy: 75, kcal: 38 }
   - { nazwa: "Olej", gramy: 10, kcal: 88 }
 ---
 
-# Kotlet schabowy z ziemniakami i surówką
+# Schabowy (panierka bezglutenowa) z ziemniakami
 
-Panierowany kotlet schabowy z ziemniakami i surówką z kapusty.
+Kotlet schabowy w panierce bezglutenowej z ziemniakami i surówką z kapusty.
 
-**Bazowa porcja:** 470 g · **717 kcal** (wartości bazowe; planer skaluje porcję do Twojego celu kalorycznego).
+**Low FODMAP:** tak — składniki i porcje dobrane pod dietę low FODMAP.
+
+**Bazowa porcja:** 445 g · **705 kcal** (wartości bazowe; planer skaluje porcję do Twojego celu kalorycznego).
 
 ## Składniki (porcja bazowa)
 
 - Schab — 130 g — 315 kcal
 - Ziemniaki — 200 g — 154 kcal
-- Panierka (bułka+jajko) — 30 g — 110 kcal
-- Surówka z kapusty — 100 g — 50 kcal
+- Panierka bezglutenowa — 30 g — 110 kcal
+- Surówka z kapusty — 75 g — 38 kcal
 - Olej — 10 g — 88 kcal
 
 ## Przepis
 
-1. Schab rozbij, panieruj w bułce i jajku.
-2. Smaż na oleju z obu stron do zrumienienia.
-3. Podawaj z ugotowanymi ziemniakami i surówką.
+1. Schab rozbij, panieruj w mące/bułce bezglutenowej i jajku.
+2. Smaż na oleju z obu stron. Podawaj z ziemniakami i surówką (porcja kapusty do ~75 g).
