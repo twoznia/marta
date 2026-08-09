@@ -3,27 +3,27 @@
     {
       "slug": "sniadanie",
       "etykieta": "Śniadanie",
-      "liczba": 8
+      "liczba": 10
     },
     {
       "slug": "drugie-sniadanie",
       "etykieta": "Drugie śniadanie",
-      "liczba": 8
+      "liczba": 10
     },
     {
       "slug": "obiad",
       "etykieta": "Obiad",
-      "liczba": 8
+      "liczba": 10
     },
     {
       "slug": "podwieczorek",
       "etykieta": "Podwieczorek",
-      "liczba": 8
+      "liczba": 10
     },
     {
       "slug": "kolacja",
       "etykieta": "Kolacja",
-      "liczba": 8
+      "liczba": 10
     }
   ],
   "dania": [
@@ -104,6 +104,42 @@
       "bazowe_kcal": 251,
       "bazowa_gramatura": 135,
       "plik": "menu/dania/drugie-sniadanie/kanapka-awokado-jajko.md"
+    },
+    {
+      "slug": "kanapka-indyk-ogorek",
+      "nazwa": "Kanapka z indykiem, ogórkiem i sałatą",
+      "posilek": "drugie-sniadanie",
+      "opis": "Lekka kanapka na pieczywie bezglutenowym z chudą wędliną z indyka, ogórkiem i sałatą.",
+      "skladniki": [
+        {
+          "nazwa": "Pieczywo bezglutenowe",
+          "gramy": 60.0,
+          "kcal": 150.0
+        },
+        {
+          "nazwa": "Wędlina z indyka",
+          "gramy": 40.0,
+          "kcal": 42.0
+        },
+        {
+          "nazwa": "Ogórek",
+          "gramy": 40.0,
+          "kcal": 6.0
+        },
+        {
+          "nazwa": "Sałata",
+          "gramy": 15.0,
+          "kcal": 2.0
+        },
+        {
+          "nazwa": "Masło bez laktozy",
+          "gramy": 5.0,
+          "kcal": 37.0
+        }
+      ],
+      "bazowe_kcal": 237,
+      "bazowa_gramatura": 160,
+      "plik": "menu/dania/drugie-sniadanie/kanapka-indyk-ogorek.md"
     },
     {
       "slug": "kanapka-pasta-tunczyk",
@@ -251,6 +287,73 @@
       "plik": "menu/dania/drugie-sniadanie/owoce-orzechy.md"
     },
     {
+      "slug": "salatka-owocowa-kiwi",
+      "nazwa": "Sałatka owocowa z kiwi, pomarańczą i winogronami",
+      "posilek": "drugie-sniadanie",
+      "opis": "Orzeźwiająca sałatka z owoców low FODMAP, posypana orzechami włoskimi.",
+      "skladniki": [
+        {
+          "nazwa": "Kiwi",
+          "gramy": 80.0,
+          "kcal": 49.0
+        },
+        {
+          "nazwa": "Pomarańcza",
+          "gramy": 120.0,
+          "kcal": 56.0
+        },
+        {
+          "nazwa": "Winogrona",
+          "gramy": 80.0,
+          "kcal": 55.0
+        },
+        {
+          "nazwa": "Orzechy włoskie",
+          "gramy": 15.0,
+          "kcal": 98.0
+        }
+      ],
+      "bazowe_kcal": 258,
+      "bazowa_gramatura": 295,
+      "plik": "menu/dania/drugie-sniadanie/salatka-owocowa-kiwi.md"
+    },
+    {
+      "slug": "jajka-na-twardo-salata",
+      "nazwa": "Jajka na twardo z sałatą i pieczywem bezglutenowym",
+      "posilek": "kolacja",
+      "opis": "Lekka kolacja: jajka na twardo z sałatą, pomidorem i pieczywem bezglutenowym.",
+      "skladniki": [
+        {
+          "nazwa": "Jajka",
+          "gramy": 150.0,
+          "kcal": 215.0
+        },
+        {
+          "nazwa": "Pieczywo bezglutenowe",
+          "gramy": 60.0,
+          "kcal": 150.0
+        },
+        {
+          "nazwa": "Sałata",
+          "gramy": 30.0,
+          "kcal": 5.0
+        },
+        {
+          "nazwa": "Pomidor",
+          "gramy": 80.0,
+          "kcal": 14.0
+        },
+        {
+          "nazwa": "Oliwa z oliwek",
+          "gramy": 8.0,
+          "kcal": 71.0
+        }
+      ],
+      "bazowe_kcal": 455,
+      "bazowa_gramatura": 328,
+      "plik": "menu/dania/kolacja/jajka-na-twardo-salata.md"
+    },
+    {
       "slug": "kanapki-szynka-ser",
       "nazwa": "Kanapki z szynką i serem dojrzewającym",
       "posilek": "kolacja",
@@ -280,6 +383,42 @@
       "bazowe_kcal": 467,
       "bazowa_gramatura": 255,
       "plik": "menu/dania/kolacja/kanapki-szynka-ser.md"
+    },
+    {
+      "slug": "krem-marchewkowy-grzanki",
+      "nazwa": "Krem z marchewki z grzankami",
+      "posilek": "kolacja",
+      "opis": "Aksamitna zupa krem z marchewki i ziemniaka na bulionie bez cebuli i czosnku, z grzankami bezglutenowymi.",
+      "skladniki": [
+        {
+          "nazwa": "Marchew",
+          "gramy": 250.0,
+          "kcal": 100.0
+        },
+        {
+          "nazwa": "Ziemniak",
+          "gramy": 100.0,
+          "kcal": 77.0
+        },
+        {
+          "nazwa": "Bulion warzywny (bez cebuli/czosnku)",
+          "gramy": 200.0,
+          "kcal": 10.0
+        },
+        {
+          "nazwa": "Oliwa z oliwek",
+          "gramy": 10.0,
+          "kcal": 88.0
+        },
+        {
+          "nazwa": "Pieczywo bezglutenowe (grzanki)",
+          "gramy": 40.0,
+          "kcal": 100.0
+        }
+      ],
+      "bazowe_kcal": 375,
+      "bazowa_gramatura": 600,
+      "plik": "menu/dania/kolacja/krem-marchewkowy-grzanki.md"
     },
     {
       "slug": "omlet-warzywny-kolacja",
@@ -637,6 +776,42 @@
       "plik": "menu/dania/obiad/indyk-kasza-gryczana.md"
     },
     {
+      "slug": "klopsiki-indycze-ryz",
+      "nazwa": "Klopsiki indycze w sosie pomidorowym z ryżem",
+      "posilek": "obiad",
+      "opis": "Delikatne klopsiki z indyka duszone w sosie pomidorowym bez cebuli i czosnku, podane z ryżem.",
+      "skladniki": [
+        {
+          "nazwa": "Mięso mielone z indyka",
+          "gramy": 150.0,
+          "kcal": 225.0
+        },
+        {
+          "nazwa": "Passata pomidorowa (bez cebuli/czosnku)",
+          "gramy": 120.0,
+          "kcal": 36.0
+        },
+        {
+          "nazwa": "Ryż (ugotowany)",
+          "gramy": 180.0,
+          "kcal": 234.0
+        },
+        {
+          "nazwa": "Oliwa z oliwek",
+          "gramy": 10.0,
+          "kcal": 88.0
+        },
+        {
+          "nazwa": "Marchew",
+          "gramy": 40.0,
+          "kcal": 16.0
+        }
+      ],
+      "bazowe_kcal": 599,
+      "bazowa_gramatura": 500,
+      "plik": "menu/dania/obiad/klopsiki-indycze-ryz.md"
+    },
+    {
       "slug": "kurczak-ryz-warzywa",
       "nazwa": "Kurczak z ryżem i warzywami",
       "posilek": "obiad",
@@ -671,6 +846,37 @@
       "bazowe_kcal": 564,
       "bazowa_gramatura": 385,
       "plik": "menu/dania/obiad/kurczak-ryz-warzywa.md"
+    },
+    {
+      "slug": "kurczak-ziemniaki-cukinia",
+      "nazwa": "Filet z kurczaka pieczony z ziemniakami i cukinią",
+      "posilek": "obiad",
+      "opis": "Soczysty filet z kurczaka pieczony z ziemniakami i cukinią, skropiony oliwą.",
+      "skladniki": [
+        {
+          "nazwa": "Filet z kurczaka",
+          "gramy": 180.0,
+          "kcal": 198.0
+        },
+        {
+          "nazwa": "Ziemniaki",
+          "gramy": 280.0,
+          "kcal": 216.0
+        },
+        {
+          "nazwa": "Cukinia",
+          "gramy": 65.0,
+          "kcal": 11.0
+        },
+        {
+          "nazwa": "Oliwa z oliwek",
+          "gramy": 18.0,
+          "kcal": 160.0
+        }
+      ],
+      "bazowe_kcal": 585,
+      "bazowa_gramatura": 543,
+      "plik": "menu/dania/obiad/kurczak-ziemniaki-cukinia.md"
     },
     {
       "slug": "losos-ziemniaki",
@@ -812,6 +1018,37 @@
       "plik": "menu/dania/obiad/schabowy-ziemniaki-surowka.md"
     },
     {
+      "slug": "caprese-mozzarella-pomidor",
+      "nazwa": "Sałatka caprese z mozzarellą i pomidorem",
+      "posilek": "podwieczorek",
+      "opis": "Klasyczna caprese: plastry mozzarelli i pomidora z bazylią i oliwą (mała porcja sera).",
+      "skladniki": [
+        {
+          "nazwa": "Mozzarella",
+          "gramy": 60.0,
+          "kcal": 150.0
+        },
+        {
+          "nazwa": "Pomidor",
+          "gramy": 120.0,
+          "kcal": 22.0
+        },
+        {
+          "nazwa": "Oliwa z oliwek",
+          "gramy": 8.0,
+          "kcal": 71.0
+        },
+        {
+          "nazwa": "Bazylia",
+          "gramy": 3.0,
+          "kcal": 1.0
+        }
+      ],
+      "bazowe_kcal": 244,
+      "bazowa_gramatura": 191,
+      "plik": "menu/dania/podwieczorek/caprese-mozzarella-pomidor.md"
+    },
+    {
       "slug": "jogurt-grecki-syrop",
       "nazwa": "Jogurt grecki bez laktozy z syropem klonowym",
       "posilek": "podwieczorek",
@@ -946,6 +1183,32 @@
       "bazowe_kcal": 127,
       "bazowa_gramatura": 235,
       "plik": "menu/dania/podwieczorek/salatka-owocowa.md"
+    },
+    {
+      "slug": "wafle-dzem-truskawkowy",
+      "nazwa": "Wafle ryżowe z dżemem truskawkowym",
+      "posilek": "podwieczorek",
+      "opis": "Chrupiące wafle ryżowe posmarowane masłem bez laktozy i dżemem truskawkowym.",
+      "skladniki": [
+        {
+          "nazwa": "Wafle ryżowe",
+          "gramy": 24.0,
+          "kcal": 91.0
+        },
+        {
+          "nazwa": "Masło bez laktozy",
+          "gramy": 8.0,
+          "kcal": 59.0
+        },
+        {
+          "nazwa": "Dżem truskawkowy",
+          "gramy": 30.0,
+          "kcal": 60.0
+        }
+      ],
+      "bazowe_kcal": 210,
+      "bazowa_gramatura": 62,
+      "plik": "menu/dania/podwieczorek/wafle-dzem-truskawkowy.md"
     },
     {
       "slug": "wafle-maslo-orzechowe",
@@ -1261,6 +1524,68 @@
       "bazowe_kcal": 477,
       "bazowa_gramatura": 365,
       "plik": "menu/dania/sniadanie/owsianka-banan-orzechy.md"
+    },
+    {
+      "slug": "ryz-na-mleku-borowki",
+      "nazwa": "Ryż na mleku bez laktozy z borówkami",
+      "posilek": "sniadanie",
+      "opis": "Ciepły ryż zagotowany na mleku bez laktozy, podany z borówkami i odrobiną syropu klonowego.",
+      "skladniki": [
+        {
+          "nazwa": "Ryż (ugotowany)",
+          "gramy": 180.0,
+          "kcal": 234.0
+        },
+        {
+          "nazwa": "Mleko bez laktozy 2%",
+          "gramy": 200.0,
+          "kcal": 100.0
+        },
+        {
+          "nazwa": "Borówki",
+          "gramy": 80.0,
+          "kcal": 46.0
+        },
+        {
+          "nazwa": "Syrop klonowy",
+          "gramy": 15.0,
+          "kcal": 40.0
+        }
+      ],
+      "bazowe_kcal": 420,
+      "bazowa_gramatura": 475,
+      "plik": "menu/dania/sniadanie/ryz-na-mleku-borowki.md"
+    },
+    {
+      "slug": "tosty-jajko-pomidor",
+      "nazwa": "Tosty bezglutenowe z jajkiem sadzonym i pomidorem",
+      "posilek": "sniadanie",
+      "opis": "Chrupiące tosty bezglutenowe z jajkiem sadzonym i plastrami świeżego pomidora.",
+      "skladniki": [
+        {
+          "nazwa": "Pieczywo bezglutenowe",
+          "gramy": 80.0,
+          "kcal": 200.0
+        },
+        {
+          "nazwa": "Jajka",
+          "gramy": 100.0,
+          "kcal": 143.0
+        },
+        {
+          "nazwa": "Pomidor",
+          "gramy": 100.0,
+          "kcal": 18.0
+        },
+        {
+          "nazwa": "Oliwa z oliwek",
+          "gramy": 5.0,
+          "kcal": 44.0
+        }
+      ],
+      "bazowe_kcal": 405,
+      "bazowa_gramatura": 285,
+      "plik": "menu/dania/sniadanie/tosty-jajko-pomidor.md"
     }
   ]
 }
