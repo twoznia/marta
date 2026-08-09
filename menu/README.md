@@ -2,7 +2,9 @@
 
 Interaktywny planer dnia: ustawiasz **kalorie na dzień**, a strona generuje
 propozycję na **śniadanie, drugie śniadanie, obiad, podwieczorek i kolację**,
-skalując porcje (gramaturę i kalorie) tak, by suma trafiła w cel.
+skalując porcje (gramaturę i kalorie) tak, by suma trafiła w cel. Plan tworzy się
+**automatycznie po wejściu na stronę** — bez klikania; przyciski „Losuj od nowa"
+i „Zamień danie" dają inne propozycje. Biblioteka liczy **40 dań** (po 8 na posiłek).
 
 **Wszystkie dania są low FODMAP** — składniki i porcje dobrane zgodnie z
 przewodnikiem [`low-fodmap/`](../low-fodmap/README.md) (bez laktozy, pieczywo i

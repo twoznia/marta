@@ -108,8 +108,9 @@
         <h1>Planer posiłków 🍱</h1>
         <p>Ustaw docelową liczbę kalorii na dzień, a wygeneruję propozycję na
            <strong>śniadanie, drugie śniadanie, obiad, podwieczorek i kolację</strong>.
-           Wszystkie dania są <strong>🌱 low FODMAP</strong>. Porcje są automatycznie skalowane
-           (gramatura i kalorie), żeby suma dnia trafiła w Twój cel.</p>
+           Wszystkie dania są <strong>🌱 low FODMAP</strong>. Plan tworzy się <strong>automatycznie</strong>
+           po wejściu — zmień kalorie lub kliknij „Losuj od nowa", żeby dostać inną propozycję.
+           Porcje są skalowane (gramatura i kalorie), żeby suma dnia trafiła w Twój cel.</p>
       </div>
 
       <div class="controls">
@@ -140,7 +141,7 @@
       </div>
 
       <div class="meals" id="meals">
-        <div class="empty">Ustaw kalorie i kliknij „Generuj plan na dzień".</div>
+        <div class="empty">Generuję propozycję na dzień…</div>
       </div>
 
       <div class="disclaimer">
@@ -365,9 +366,12 @@
       $("generate").addEventListener("click", () => generate(true));
       $("regen").addEventListener("click", () => generate(true));
 
-      loadData().catch((err) => {
-        $("meals").innerHTML = `<div class="empty">${err.message}</div>`;
-      });
+      // Po wczytaniu danych od razu generujemy propozycję na dzień — bez klikania.
+      loadData()
+        .then(() => generate(true))
+        .catch((err) => {
+          $("meals").innerHTML = `<div class="empty">${err.message}</div>`;
+        });
     </script>
   </body>
 </html>
