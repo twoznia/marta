@@ -101,6 +101,29 @@ Rules that the build/planner rely on — do not deviate:
 - The `## Przepis` section must use a **numbered list** (`1. …`) — the page pulls
   those lines out as steps.
 
+### Jednostki na listach zakupów (sztuki / ml + gramy)
+
+Listy zakupów i tabele składników pokazują ilość w **sztukach lub mililitrach,
+zawsze z gramami** (np. `Jajka: 8 szt. (430 g)`, `Mleko: 200 ml (200 g)`,
+`Pieczywo bezglutenowe: 2 kromki (60 g)`). To wylicza się **automatycznie** w
+`tools/build_menu.py` (funkcja `jednostka_dla`) na podstawie **nazwy składnika**
+i trafia do `dania.json` jako pole `jednostka` — strony nic nie zgadują.
+
+Żeby nowe danie działało poprawnie:
+
+- **Używaj kanonicznych, spójnych nazw składników** — najlepiej takich, jakie już
+  są w innych daniach (patrz istniejące pliki / `menu/dania.json`). Np. jajka
+  zawsze jako `Jajka` (ewentualnie `Jajka (2 szt.)`), pieczywo jako
+  `Pieczywo bezglutenowe`, oleje jako `Oliwa z oliwek` / `Olej`, płyny jako
+  `Mleko bez laktozy 2%`, `Jogurt bez laktozy`, `Bulion…`, `Passata…`,
+  `Syrop klonowy`, `Majonez`. Dzięki temu scalają się na liście zakupów.
+- **Wprowadzasz nowy składnik liczony na sztuki albo płynny, którego nie ma w
+  regułach?** Dopisz regułę w `jednostka_dla` w `tools/build_menu.py`
+  (typ `"szt"` z `na_sztuke` w gramach, albo typ `"ml"` z `gestosc` g/ml;
+  opcjonalnie `grupa`/`nazwa_grupy` do scalania różnych nazw), a potem przegeneruj
+  `dania.json`. Produkty sprzedawane na wagę (mięso, ryby, kasze, sery, orzechy,
+  warzywa) zostaw bez reguły — pokażą się w gramach.
+
 ## 3. Rebuild the index
 
 ```bash
