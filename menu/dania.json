@@ -1,0 +1,1266 @@
+{
+  "posilki": [
+    {
+      "slug": "sniadanie",
+      "etykieta": "Śniadanie",
+      "liczba": 8
+    },
+    {
+      "slug": "drugie-sniadanie",
+      "etykieta": "Drugie śniadanie",
+      "liczba": 8
+    },
+    {
+      "slug": "obiad",
+      "etykieta": "Obiad",
+      "liczba": 8
+    },
+    {
+      "slug": "podwieczorek",
+      "etykieta": "Podwieczorek",
+      "liczba": 8
+    },
+    {
+      "slug": "kolacja",
+      "etykieta": "Kolacja",
+      "liczba": 8
+    }
+  ],
+  "dania": [
+    {
+      "slug": "jajka-pomidor-pieczywo",
+      "nazwa": "Jajka na twardo z pomidorem",
+      "posilek": "drugie-sniadanie",
+      "opis": "Jajka na twardo z pomidorem i pieczywem bezglutenowym — dużo białka.",
+      "skladniki": [
+        {
+          "nazwa": "Jajka (2 szt.)",
+          "gramy": 110.0,
+          "kcal": 156.0
+        },
+        {
+          "nazwa": "Pomidor",
+          "gramy": 100.0,
+          "kcal": 18.0
+        },
+        {
+          "nazwa": "Chleb bezglutenowy",
+          "gramy": 30.0,
+          "kcal": 75.0
+        }
+      ],
+      "bazowe_kcal": 249,
+      "bazowa_gramatura": 240,
+      "plik": "menu/dania/drugie-sniadanie/jajka-pomidor-pieczywo.md"
+    },
+    {
+      "slug": "jogurt-granola-owoce",
+      "nazwa": "Jogurt bez laktozy z granolą i owocami",
+      "posilek": "drugie-sniadanie",
+      "opis": "Jogurt bez laktozy z granolą bezglutenową (bez miodu/inuliny) i borówkami.",
+      "skladniki": [
+        {
+          "nazwa": "Jogurt bez laktozy",
+          "gramy": 150.0,
+          "kcal": 90.0
+        },
+        {
+          "nazwa": "Granola bezglutenowa",
+          "gramy": 40.0,
+          "kcal": 180.0
+        },
+        {
+          "nazwa": "Borówki",
+          "gramy": 50.0,
+          "kcal": 29.0
+        }
+      ],
+      "bazowe_kcal": 299,
+      "bazowa_gramatura": 240,
+      "plik": "menu/dania/drugie-sniadanie/jogurt-granola-owoce.md"
+    },
+    {
+      "slug": "kanapka-awokado-jajko",
+      "nazwa": "Kanapka z awokado i jajkiem",
+      "posilek": "drugie-sniadanie",
+      "opis": "Pieczywo bezglutenowe z awokado (porcja low FODMAP) i jajkiem.",
+      "skladniki": [
+        {
+          "nazwa": "Chleb bezglutenowy",
+          "gramy": 50.0,
+          "kcal": 125.0
+        },
+        {
+          "nazwa": "Awokado",
+          "gramy": 30.0,
+          "kcal": 48.0
+        },
+        {
+          "nazwa": "Jajko (1 szt.)",
+          "gramy": 55.0,
+          "kcal": 78.0
+        }
+      ],
+      "bazowe_kcal": 251,
+      "bazowa_gramatura": 135,
+      "plik": "menu/dania/drugie-sniadanie/kanapka-awokado-jajko.md"
+    },
+    {
+      "slug": "kanapka-pasta-tunczyk",
+      "nazwa": "Kanapka z pastą z tuńczyka",
+      "posilek": "drugie-sniadanie",
+      "opis": "Pieczywo bezglutenowe z pastą z tuńczyka i ogórkiem.",
+      "skladniki": [
+        {
+          "nazwa": "Chleb bezglutenowy",
+          "gramy": 50.0,
+          "kcal": 125.0
+        },
+        {
+          "nazwa": "Tuńczyk w sosie własnym",
+          "gramy": 60.0,
+          "kcal": 70.0
+        },
+        {
+          "nazwa": "Majonez",
+          "gramy": 10.0,
+          "kcal": 68.0
+        },
+        {
+          "nazwa": "Ogórek",
+          "gramy": 40.0,
+          "kcal": 5.0
+        }
+      ],
+      "bazowe_kcal": 268,
+      "bazowa_gramatura": 160,
+      "plik": "menu/dania/drugie-sniadanie/kanapka-pasta-tunczyk.md"
+    },
+    {
+      "slug": "koktajl-banan-truskawka",
+      "nazwa": "Koktajl bananowo-truskawkowy",
+      "posilek": "drugie-sniadanie",
+      "opis": "Koktajl na mleku bez laktozy z niedojrzałym bananem i truskawkami.",
+      "skladniki": [
+        {
+          "nazwa": "Banan (niedojrzały)",
+          "gramy": 100.0,
+          "kcal": 89.0
+        },
+        {
+          "nazwa": "Truskawki",
+          "gramy": 100.0,
+          "kcal": 32.0
+        },
+        {
+          "nazwa": "Mleko bez laktozy 2%",
+          "gramy": 150.0,
+          "kcal": 75.0
+        },
+        {
+          "nazwa": "Syrop klonowy",
+          "gramy": 10.0,
+          "kcal": 26.0
+        }
+      ],
+      "bazowe_kcal": 222,
+      "bazowa_gramatura": 360,
+      "plik": "menu/dania/drugie-sniadanie/koktajl-banan-truskawka.md"
+    },
+    {
+      "slug": "koktajl-zielony",
+      "nazwa": "Koktajl zielony z masłem orzechowym",
+      "posilek": "drugie-sniadanie",
+      "opis": "Koktajl ze szpinakiem, bananem i masłem orzechowym na mleku bez laktozy.",
+      "skladniki": [
+        {
+          "nazwa": "Szpinak",
+          "gramy": 30.0,
+          "kcal": 7.0
+        },
+        {
+          "nazwa": "Banan (niedojrzały)",
+          "gramy": 100.0,
+          "kcal": 89.0
+        },
+        {
+          "nazwa": "Mleko bez laktozy 2%",
+          "gramy": 150.0,
+          "kcal": 75.0
+        },
+        {
+          "nazwa": "Masło orzechowe",
+          "gramy": 15.0,
+          "kcal": 90.0
+        }
+      ],
+      "bazowe_kcal": 261,
+      "bazowa_gramatura": 295,
+      "plik": "menu/dania/drugie-sniadanie/koktajl-zielony.md"
+    },
+    {
+      "slug": "muffiny-jajeczne",
+      "nazwa": "Muffiny jajeczne z warzywami",
+      "posilek": "drugie-sniadanie",
+      "opis": "Pieczone muffiny z jajek z papryką i serem dojrzewającym.",
+      "skladniki": [
+        {
+          "nazwa": "Jajka (2 szt.)",
+          "gramy": 110.0,
+          "kcal": 156.0
+        },
+        {
+          "nazwa": "Papryka czerwona",
+          "gramy": 40.0,
+          "kcal": 12.0
+        },
+        {
+          "nazwa": "Ser dojrzewający",
+          "gramy": 20.0,
+          "kcal": 80.0
+        }
+      ],
+      "bazowe_kcal": 248,
+      "bazowa_gramatura": 170,
+      "plik": "menu/dania/drugie-sniadanie/muffiny-jajeczne.md"
+    },
+    {
+      "slug": "owoce-orzechy",
+      "nazwa": "Owoce z orzechami",
+      "posilek": "drugie-sniadanie",
+      "opis": "Winogrona i pomarańcza z orzechami włoskimi — szybka przekąska.",
+      "skladniki": [
+        {
+          "nazwa": "Winogrona",
+          "gramy": 100.0,
+          "kcal": 69.0
+        },
+        {
+          "nazwa": "Pomarańcza",
+          "gramy": 100.0,
+          "kcal": 47.0
+        },
+        {
+          "nazwa": "Orzechy włoskie",
+          "gramy": 15.0,
+          "kcal": 98.0
+        }
+      ],
+      "bazowe_kcal": 214,
+      "bazowa_gramatura": 215,
+      "plik": "menu/dania/drugie-sniadanie/owoce-orzechy.md"
+    },
+    {
+      "slug": "kanapki-szynka-ser",
+      "nazwa": "Kanapki z szynką i serem dojrzewającym",
+      "posilek": "kolacja",
+      "opis": "Pieczywo bezglutenowe z szynką drobiową, serem dojrzewającym i papryką.",
+      "skladniki": [
+        {
+          "nazwa": "Chleb bezglutenowy",
+          "gramy": 80.0,
+          "kcal": 200.0
+        },
+        {
+          "nazwa": "Szynka drobiowa",
+          "gramy": 60.0,
+          "kcal": 84.0
+        },
+        {
+          "nazwa": "Ser dojrzewający",
+          "gramy": 40.0,
+          "kcal": 160.0
+        },
+        {
+          "nazwa": "Papryka czerwona",
+          "gramy": 75.0,
+          "kcal": 23.0
+        }
+      ],
+      "bazowe_kcal": 467,
+      "bazowa_gramatura": 255,
+      "plik": "menu/dania/kolacja/kanapki-szynka-ser.md"
+    },
+    {
+      "slug": "omlet-warzywny-kolacja",
+      "nazwa": "Omlet warzywny na kolację",
+      "posilek": "kolacja",
+      "opis": "Lekki omlet z papryką, cukinią i fetą — porcje warzyw ⚠️ w limitach low FODMAP.",
+      "skladniki": [
+        {
+          "nazwa": "Jajka (3 szt.)",
+          "gramy": 165.0,
+          "kcal": 235.0
+        },
+        {
+          "nazwa": "Papryka czerwona",
+          "gramy": 60.0,
+          "kcal": 18.0
+        },
+        {
+          "nazwa": "Cukinia",
+          "gramy": 65.0,
+          "kcal": 11.0
+        },
+        {
+          "nazwa": "Ser feta",
+          "gramy": 40.0,
+          "kcal": 106.0
+        },
+        {
+          "nazwa": "Oliwa",
+          "gramy": 8.0,
+          "kcal": 70.0
+        }
+      ],
+      "bazowe_kcal": 440,
+      "bazowa_gramatura": 338,
+      "plik": "menu/dania/kolacja/omlet-warzywny-kolacja.md"
+    },
+    {
+      "slug": "ryba-warzywa-para",
+      "nazwa": "Ryba z warzywami na parze",
+      "posilek": "kolacja",
+      "opis": "Dorsz na parze z marchewką, cukinią i ziemniakami.",
+      "skladniki": [
+        {
+          "nazwa": "Dorsz (filet)",
+          "gramy": 180.0,
+          "kcal": 146.0
+        },
+        {
+          "nazwa": "Marchew",
+          "gramy": 80.0,
+          "kcal": 33.0
+        },
+        {
+          "nazwa": "Cukinia",
+          "gramy": 65.0,
+          "kcal": 11.0
+        },
+        {
+          "nazwa": "Ziemniaki",
+          "gramy": 150.0,
+          "kcal": 116.0
+        },
+        {
+          "nazwa": "Masło",
+          "gramy": 8.0,
+          "kcal": 57.0
+        }
+      ],
+      "bazowe_kcal": 363,
+      "bazowa_gramatura": 483,
+      "plik": "menu/dania/kolacja/ryba-warzywa-para.md"
+    },
+    {
+      "slug": "ryz-warzywa-jajko",
+      "nazwa": "Ryż z warzywami i jajkiem sadzonym",
+      "posilek": "kolacja",
+      "opis": "Ryż z duszoną marchewką i cukinią, z jajkiem sadzonym.",
+      "skladniki": [
+        {
+          "nazwa": "Ryż (sucha masa)",
+          "gramy": 60.0,
+          "kcal": 216.0
+        },
+        {
+          "nazwa": "Jajka (2 szt.)",
+          "gramy": 110.0,
+          "kcal": 156.0
+        },
+        {
+          "nazwa": "Marchew",
+          "gramy": 60.0,
+          "kcal": 25.0
+        },
+        {
+          "nazwa": "Cukinia",
+          "gramy": 65.0,
+          "kcal": 11.0
+        },
+        {
+          "nazwa": "Oliwa",
+          "gramy": 8.0,
+          "kcal": 70.0
+        }
+      ],
+      "bazowe_kcal": 478,
+      "bazowa_gramatura": 303,
+      "plik": "menu/dania/kolacja/ryz-warzywa-jajko.md"
+    },
+    {
+      "slug": "salatka-grecka",
+      "nazwa": "Sałatka grecka z pieczywem bezglutenowym",
+      "posilek": "kolacja",
+      "opis": "Feta (mała porcja), pomidor, ogórek i oliwki z pieczywem bezglutenowym.",
+      "skladniki": [
+        {
+          "nazwa": "Ser feta",
+          "gramy": 40.0,
+          "kcal": 106.0
+        },
+        {
+          "nazwa": "Pomidor",
+          "gramy": 100.0,
+          "kcal": 18.0
+        },
+        {
+          "nazwa": "Ogórek",
+          "gramy": 80.0,
+          "kcal": 10.0
+        },
+        {
+          "nazwa": "Oliwki",
+          "gramy": 30.0,
+          "kcal": 35.0
+        },
+        {
+          "nazwa": "Oliwa",
+          "gramy": 8.0,
+          "kcal": 70.0
+        },
+        {
+          "nazwa": "Chleb bezglutenowy",
+          "gramy": 40.0,
+          "kcal": 100.0
+        }
+      ],
+      "bazowe_kcal": 339,
+      "bazowa_gramatura": 298,
+      "plik": "menu/dania/kolacja/salatka-grecka.md"
+    },
+    {
+      "slug": "salatka-kurczak-grill",
+      "nazwa": "Sałatka z grillowanym kurczakiem",
+      "posilek": "kolacja",
+      "opis": "Sałata z grillowanym kurczakiem, pomidorem i fetą.",
+      "skladniki": [
+        {
+          "nazwa": "Pierś z kurczaka",
+          "gramy": 120.0,
+          "kcal": 132.0
+        },
+        {
+          "nazwa": "Sałata i warzywa",
+          "gramy": 150.0,
+          "kcal": 38.0
+        },
+        {
+          "nazwa": "Pomidor",
+          "gramy": 80.0,
+          "kcal": 14.0
+        },
+        {
+          "nazwa": "Oliwa",
+          "gramy": 10.0,
+          "kcal": 88.0
+        },
+        {
+          "nazwa": "Ser feta",
+          "gramy": 30.0,
+          "kcal": 79.0
+        }
+      ],
+      "bazowe_kcal": 351,
+      "bazowa_gramatura": 390,
+      "plik": "menu/dania/kolacja/salatka-kurczak-grill.md"
+    },
+    {
+      "slug": "salatka-tunczyk-jajko",
+      "nazwa": "Sałatka z tuńczykiem i jajkiem",
+      "posilek": "kolacja",
+      "opis": "Sałatka z tuńczykiem, jajkiem i warzywami, z pieczywem bezglutenowym.",
+      "skladniki": [
+        {
+          "nazwa": "Tuńczyk w sosie własnym",
+          "gramy": 100.0,
+          "kcal": 116.0
+        },
+        {
+          "nazwa": "Jajka (2 szt.)",
+          "gramy": 110.0,
+          "kcal": 156.0
+        },
+        {
+          "nazwa": "Sałata i warzywa",
+          "gramy": 150.0,
+          "kcal": 38.0
+        },
+        {
+          "nazwa": "Oliwa",
+          "gramy": 10.0,
+          "kcal": 88.0
+        },
+        {
+          "nazwa": "Chleb bezglutenowy",
+          "gramy": 40.0,
+          "kcal": 100.0
+        }
+      ],
+      "bazowe_kcal": 498,
+      "bazowa_gramatura": 410,
+      "plik": "menu/dania/kolacja/salatka-tunczyk-jajko.md"
+    },
+    {
+      "slug": "tortilla-kukurydziana-kurczak",
+      "nazwa": "Tortilla kukurydziana z kurczakiem",
+      "posilek": "kolacja",
+      "opis": "Tortilla kukurydziana z kurczakiem, sałatą i serem dojrzewającym.",
+      "skladniki": [
+        {
+          "nazwa": "Tortilla kukurydziana",
+          "gramy": 60.0,
+          "kcal": 130.0
+        },
+        {
+          "nazwa": "Pierś z kurczaka",
+          "gramy": 100.0,
+          "kcal": 110.0
+        },
+        {
+          "nazwa": "Sałata i pomidor",
+          "gramy": 80.0,
+          "kcal": 18.0
+        },
+        {
+          "nazwa": "Ser dojrzewający",
+          "gramy": 20.0,
+          "kcal": 80.0
+        }
+      ],
+      "bazowe_kcal": 338,
+      "bazowa_gramatura": 260,
+      "plik": "menu/dania/kolacja/tortilla-kukurydziana-kurczak.md"
+    },
+    {
+      "slug": "dorsz-ryz-salatka",
+      "nazwa": "Dorsz pieczony z ryżem i sałatką",
+      "posilek": "obiad",
+      "opis": "Pieczony dorsz z ryżem i świeżą sałatką z pomidorem.",
+      "skladniki": [
+        {
+          "nazwa": "Dorsz (filet)",
+          "gramy": 180.0,
+          "kcal": 146.0
+        },
+        {
+          "nazwa": "Ryż (sucha masa)",
+          "gramy": 70.0,
+          "kcal": 252.0
+        },
+        {
+          "nazwa": "Sałata i pomidor",
+          "gramy": 120.0,
+          "kcal": 25.0
+        },
+        {
+          "nazwa": "Oliwa",
+          "gramy": 10.0,
+          "kcal": 88.0
+        }
+      ],
+      "bazowe_kcal": 511,
+      "bazowa_gramatura": 380,
+      "plik": "menu/dania/obiad/dorsz-ryz-salatka.md"
+    },
+    {
+      "slug": "gulasz-wolowy-ziemniaki",
+      "nazwa": "Gulasz wołowy z ziemniakami",
+      "posilek": "obiad",
+      "opis": "Duszona wołowina w sosie pomidorowym (bez cebuli/czosnku) z ziemniakami.",
+      "skladniki": [
+        {
+          "nazwa": "Wołowina",
+          "gramy": 150.0,
+          "kcal": 375.0
+        },
+        {
+          "nazwa": "Ziemniaki",
+          "gramy": 200.0,
+          "kcal": 154.0
+        },
+        {
+          "nazwa": "Marchew",
+          "gramy": 80.0,
+          "kcal": 33.0
+        },
+        {
+          "nazwa": "Passata pomidorowa (bez cebuli/czosnku)",
+          "gramy": 100.0,
+          "kcal": 30.0
+        },
+        {
+          "nazwa": "Oliwa",
+          "gramy": 10.0,
+          "kcal": 88.0
+        }
+      ],
+      "bazowe_kcal": 680,
+      "bazowa_gramatura": 540,
+      "plik": "menu/dania/obiad/gulasz-wolowy-ziemniaki.md"
+    },
+    {
+      "slug": "indyk-kasza-gryczana",
+      "nazwa": "Indyk z kaszą gryczaną i warzywami",
+      "posilek": "obiad",
+      "opis": "Pierś z indyka z kaszą gryczaną, marchewką i cukinią.",
+      "skladniki": [
+        {
+          "nazwa": "Pierś z indyka",
+          "gramy": 150.0,
+          "kcal": 157.0
+        },
+        {
+          "nazwa": "Kasza gryczana (sucha)",
+          "gramy": 70.0,
+          "kcal": 240.0
+        },
+        {
+          "nazwa": "Marchew",
+          "gramy": 80.0,
+          "kcal": 33.0
+        },
+        {
+          "nazwa": "Cukinia",
+          "gramy": 65.0,
+          "kcal": 11.0
+        },
+        {
+          "nazwa": "Oliwa",
+          "gramy": 10.0,
+          "kcal": 88.0
+        }
+      ],
+      "bazowe_kcal": 529,
+      "bazowa_gramatura": 375,
+      "plik": "menu/dania/obiad/indyk-kasza-gryczana.md"
+    },
+    {
+      "slug": "kurczak-ryz-warzywa",
+      "nazwa": "Kurczak z ryżem i warzywami",
+      "posilek": "obiad",
+      "opis": "Pierś z kurczaka z ryżem, brokułem (porcja low FODMAP) i marchewką.",
+      "skladniki": [
+        {
+          "nazwa": "Pierś z kurczaka",
+          "gramy": 150.0,
+          "kcal": 165.0
+        },
+        {
+          "nazwa": "Ryż (sucha masa)",
+          "gramy": 70.0,
+          "kcal": 252.0
+        },
+        {
+          "nazwa": "Brokuł (różyczki)",
+          "gramy": 75.0,
+          "kcal": 26.0
+        },
+        {
+          "nazwa": "Marchew",
+          "gramy": 80.0,
+          "kcal": 33.0
+        },
+        {
+          "nazwa": "Oliwa",
+          "gramy": 10.0,
+          "kcal": 88.0
+        }
+      ],
+      "bazowe_kcal": 564,
+      "bazowa_gramatura": 385,
+      "plik": "menu/dania/obiad/kurczak-ryz-warzywa.md"
+    },
+    {
+      "slug": "losos-ziemniaki",
+      "nazwa": "Łosoś pieczony z ziemniakami",
+      "posilek": "obiad",
+      "opis": "Pieczony łosoś z ziemniakami i fasolką szparagową (porcja low FODMAP).",
+      "skladniki": [
+        {
+          "nazwa": "Łosoś (filet)",
+          "gramy": 150.0,
+          "kcal": 312.0
+        },
+        {
+          "nazwa": "Ziemniaki",
+          "gramy": 200.0,
+          "kcal": 154.0
+        },
+        {
+          "nazwa": "Fasolka szparagowa",
+          "gramy": 75.0,
+          "kcal": 23.0
+        },
+        {
+          "nazwa": "Masło",
+          "gramy": 10.0,
+          "kcal": 72.0
+        }
+      ],
+      "bazowe_kcal": 561,
+      "bazowa_gramatura": 435,
+      "plik": "menu/dania/obiad/losos-ziemniaki.md"
+    },
+    {
+      "slug": "makaron-bolognese",
+      "nazwa": "Makaron bezglutenowy z bolognese",
+      "posilek": "obiad",
+      "opis": "Makaron bezglutenowy z sosem mięsno-pomidorowym bez cebuli i czosnku.",
+      "skladniki": [
+        {
+          "nazwa": "Makaron bezglutenowy (sucha masa)",
+          "gramy": 90.0,
+          "kcal": 315.0
+        },
+        {
+          "nazwa": "Mięso mielone wołowe",
+          "gramy": 120.0,
+          "kcal": 300.0
+        },
+        {
+          "nazwa": "Passata pomidorowa (bez cebuli/czosnku)",
+          "gramy": 150.0,
+          "kcal": 45.0
+        },
+        {
+          "nazwa": "Oliwa",
+          "gramy": 10.0,
+          "kcal": 88.0
+        }
+      ],
+      "bazowe_kcal": 748,
+      "bazowa_gramatura": 370,
+      "plik": "menu/dania/obiad/makaron-bolognese.md"
+    },
+    {
+      "slug": "ryz-smazony-kurczak",
+      "nazwa": "Ryż smażony z kurczakiem i warzywami",
+      "posilek": "obiad",
+      "opis": "Ryż smażony z kurczakiem, warzywami i jajkiem — bez cebuli i czosnku.",
+      "skladniki": [
+        {
+          "nazwa": "Ryż (sucha masa)",
+          "gramy": 70.0,
+          "kcal": 252.0
+        },
+        {
+          "nazwa": "Pierś z kurczaka",
+          "gramy": 130.0,
+          "kcal": 143.0
+        },
+        {
+          "nazwa": "Marchew",
+          "gramy": 60.0,
+          "kcal": 25.0
+        },
+        {
+          "nazwa": "Papryka czerwona",
+          "gramy": 60.0,
+          "kcal": 18.0
+        },
+        {
+          "nazwa": "Jajko (1 szt.)",
+          "gramy": 55.0,
+          "kcal": 78.0
+        },
+        {
+          "nazwa": "Oliwa",
+          "gramy": 10.0,
+          "kcal": 88.0
+        }
+      ],
+      "bazowe_kcal": 604,
+      "bazowa_gramatura": 385,
+      "plik": "menu/dania/obiad/ryz-smazony-kurczak.md"
+    },
+    {
+      "slug": "schabowy-ziemniaki-surowka",
+      "nazwa": "Schabowy (panierka bezglutenowa) z ziemniakami",
+      "posilek": "obiad",
+      "opis": "Kotlet schabowy w panierce bezglutenowej z ziemniakami i surówką z kapusty.",
+      "skladniki": [
+        {
+          "nazwa": "Schab",
+          "gramy": 130.0,
+          "kcal": 315.0
+        },
+        {
+          "nazwa": "Ziemniaki",
+          "gramy": 200.0,
+          "kcal": 154.0
+        },
+        {
+          "nazwa": "Panierka bezglutenowa",
+          "gramy": 30.0,
+          "kcal": 110.0
+        },
+        {
+          "nazwa": "Surówka z kapusty",
+          "gramy": 75.0,
+          "kcal": 38.0
+        },
+        {
+          "nazwa": "Olej",
+          "gramy": 10.0,
+          "kcal": 88.0
+        }
+      ],
+      "bazowe_kcal": 705,
+      "bazowa_gramatura": 445,
+      "plik": "menu/dania/obiad/schabowy-ziemniaki-surowka.md"
+    },
+    {
+      "slug": "jogurt-grecki-syrop",
+      "nazwa": "Jogurt grecki bez laktozy z syropem klonowym",
+      "posilek": "podwieczorek",
+      "opis": "Gęsty jogurt grecki bez laktozy z odrobiną syropu klonowego.",
+      "skladniki": [
+        {
+          "nazwa": "Jogurt grecki bez laktozy",
+          "gramy": 150.0,
+          "kcal": 177.0
+        },
+        {
+          "nazwa": "Syrop klonowy",
+          "gramy": 15.0,
+          "kcal": 39.0
+        }
+      ],
+      "bazowe_kcal": 216,
+      "bazowa_gramatura": 165,
+      "plik": "menu/dania/podwieczorek/jogurt-grecki-syrop.md"
+    },
+    {
+      "slug": "kanapka-ser",
+      "nazwa": "Kanapka z serem dojrzewającym",
+      "posilek": "podwieczorek",
+      "opis": "Pieczywo bezglutenowe z serem dojrzewającym.",
+      "skladniki": [
+        {
+          "nazwa": "Chleb bezglutenowy",
+          "gramy": 40.0,
+          "kcal": 100.0
+        },
+        {
+          "nazwa": "Ser dojrzewający",
+          "gramy": 30.0,
+          "kcal": 120.0
+        }
+      ],
+      "bazowe_kcal": 220,
+      "bazowa_gramatura": 70,
+      "plik": "menu/dania/podwieczorek/kanapka-ser.md"
+    },
+    {
+      "slug": "koktajl-truskawkowy",
+      "nazwa": "Koktajl truskawkowy bez laktozy",
+      "posilek": "podwieczorek",
+      "opis": "Truskawki z jogurtem bez laktozy i syropem klonowym.",
+      "skladniki": [
+        {
+          "nazwa": "Truskawki",
+          "gramy": 150.0,
+          "kcal": 48.0
+        },
+        {
+          "nazwa": "Jogurt bez laktozy",
+          "gramy": 150.0,
+          "kcal": 90.0
+        },
+        {
+          "nazwa": "Syrop klonowy",
+          "gramy": 10.0,
+          "kcal": 26.0
+        }
+      ],
+      "bazowe_kcal": 164,
+      "bazowa_gramatura": 310,
+      "plik": "menu/dania/podwieczorek/koktajl-truskawkowy.md"
+    },
+    {
+      "slug": "migdaly-pomarancza",
+      "nazwa": "Migdały i pomarańcza",
+      "posilek": "podwieczorek",
+      "opis": "Garść migdałów (porcja low FODMAP) i pomarańcza.",
+      "skladniki": [
+        {
+          "nazwa": "Migdały",
+          "gramy": 12.0,
+          "kcal": 70.0
+        },
+        {
+          "nazwa": "Pomarańcza",
+          "gramy": 150.0,
+          "kcal": 71.0
+        }
+      ],
+      "bazowe_kcal": 141,
+      "bazowa_gramatura": 162,
+      "plik": "menu/dania/podwieczorek/migdaly-pomarancza.md"
+    },
+    {
+      "slug": "orzechy-winogrona",
+      "nazwa": "Orzechy i winogrona",
+      "posilek": "podwieczorek",
+      "opis": "Orzechy włoskie z winogronami.",
+      "skladniki": [
+        {
+          "nazwa": "Orzechy włoskie",
+          "gramy": 20.0,
+          "kcal": 131.0
+        },
+        {
+          "nazwa": "Winogrona",
+          "gramy": 100.0,
+          "kcal": 69.0
+        }
+      ],
+      "bazowe_kcal": 200,
+      "bazowa_gramatura": 120,
+      "plik": "menu/dania/podwieczorek/orzechy-winogrona.md"
+    },
+    {
+      "slug": "salatka-owocowa",
+      "nazwa": "Sałatka owocowa low FODMAP",
+      "posilek": "podwieczorek",
+      "opis": "Truskawki, kiwi i winogrona — owoce z listy dozwolonej.",
+      "skladniki": [
+        {
+          "nazwa": "Truskawki",
+          "gramy": 80.0,
+          "kcal": 26.0
+        },
+        {
+          "nazwa": "Kiwi",
+          "gramy": 75.0,
+          "kcal": 46.0
+        },
+        {
+          "nazwa": "Winogrona",
+          "gramy": 80.0,
+          "kcal": 55.0
+        }
+      ],
+      "bazowe_kcal": 127,
+      "bazowa_gramatura": 235,
+      "plik": "menu/dania/podwieczorek/salatka-owocowa.md"
+    },
+    {
+      "slug": "wafle-maslo-orzechowe",
+      "nazwa": "Wafle ryżowe z masłem orzechowym i bananem",
+      "posilek": "podwieczorek",
+      "opis": "Wafle ryżowe z masłem orzechowym (orzeszki ziemne ✅) i niedojrzałym bananem.",
+      "skladniki": [
+        {
+          "nazwa": "Wafle ryżowe",
+          "gramy": 20.0,
+          "kcal": 76.0
+        },
+        {
+          "nazwa": "Masło orzechowe",
+          "gramy": 20.0,
+          "kcal": 120.0
+        },
+        {
+          "nazwa": "Banan (niedojrzały)",
+          "gramy": 60.0,
+          "kcal": 53.0
+        }
+      ],
+      "bazowe_kcal": 249,
+      "bazowa_gramatura": 100,
+      "plik": "menu/dania/podwieczorek/wafle-maslo-orzechowe.md"
+    },
+    {
+      "slug": "wafle-ser-pomidor",
+      "nazwa": "Wafle ryżowe z serem i pomidorem",
+      "posilek": "podwieczorek",
+      "opis": "Wafle ryżowe z serem dojrzewającym i pomidorem.",
+      "skladniki": [
+        {
+          "nazwa": "Wafle ryżowe",
+          "gramy": 20.0,
+          "kcal": 76.0
+        },
+        {
+          "nazwa": "Ser dojrzewający",
+          "gramy": 25.0,
+          "kcal": 100.0
+        },
+        {
+          "nazwa": "Pomidor",
+          "gramy": 50.0,
+          "kcal": 9.0
+        }
+      ],
+      "bazowe_kcal": 185,
+      "bazowa_gramatura": 95,
+      "plik": "menu/dania/podwieczorek/wafle-ser-pomidor.md"
+    },
+    {
+      "slug": "jajecznica-pieczywo",
+      "nazwa": "Jajecznica z pieczywem bezglutenowym",
+      "posilek": "sniadanie",
+      "opis": "Jajecznica na maśle z chlebem bezglutenowym i pomidorem — bez cebuli i czosnku.",
+      "skladniki": [
+        {
+          "nazwa": "Jajka (3 szt.)",
+          "gramy": 165.0,
+          "kcal": 235.0
+        },
+        {
+          "nazwa": "Masło",
+          "gramy": 10.0,
+          "kcal": 72.0
+        },
+        {
+          "nazwa": "Chleb bezglutenowy",
+          "gramy": 60.0,
+          "kcal": 150.0
+        },
+        {
+          "nazwa": "Pomidor",
+          "gramy": 100.0,
+          "kcal": 18.0
+        }
+      ],
+      "bazowe_kcal": 475,
+      "bazowa_gramatura": 335,
+      "plik": "menu/dania/sniadanie/jajecznica-pieczywo.md"
+    },
+    {
+      "slug": "jajka-sadzone-szynka",
+      "nazwa": "Jajka sadzone na szynce z pomidorem",
+      "posilek": "sniadanie",
+      "opis": "Jajka sadzone z szynką i pomidorem, z pieczywem bezglutenowym.",
+      "skladniki": [
+        {
+          "nazwa": "Jajka (2 szt.)",
+          "gramy": 110.0,
+          "kcal": 156.0
+        },
+        {
+          "nazwa": "Szynka",
+          "gramy": 40.0,
+          "kcal": 56.0
+        },
+        {
+          "nazwa": "Pomidor",
+          "gramy": 100.0,
+          "kcal": 18.0
+        },
+        {
+          "nazwa": "Chleb bezglutenowy",
+          "gramy": 40.0,
+          "kcal": 100.0
+        },
+        {
+          "nazwa": "Masło",
+          "gramy": 5.0,
+          "kcal": 36.0
+        }
+      ],
+      "bazowe_kcal": 366,
+      "bazowa_gramatura": 295,
+      "plik": "menu/dania/sniadanie/jajka-sadzone-szynka.md"
+    },
+    {
+      "slug": "kanapki-pasta-jajeczna",
+      "nazwa": "Kanapki z pastą jajeczną i warzywami",
+      "posilek": "sniadanie",
+      "opis": "Pasta jajeczna ze szczypiorkiem na pieczywie bezglutenowym z ogórkiem.",
+      "skladniki": [
+        {
+          "nazwa": "Chleb bezglutenowy",
+          "gramy": 60.0,
+          "kcal": 150.0
+        },
+        {
+          "nazwa": "Jajka (2 szt.)",
+          "gramy": 110.0,
+          "kcal": 156.0
+        },
+        {
+          "nazwa": "Majonez",
+          "gramy": 15.0,
+          "kcal": 102.0
+        },
+        {
+          "nazwa": "Ogórek",
+          "gramy": 50.0,
+          "kcal": 6.0
+        },
+        {
+          "nazwa": "Szczypiorek (zielona część)",
+          "gramy": 10.0,
+          "kcal": 3.0
+        }
+      ],
+      "bazowe_kcal": 417,
+      "bazowa_gramatura": 245,
+      "plik": "menu/dania/sniadanie/kanapki-pasta-jajeczna.md"
+    },
+    {
+      "slug": "kanapki-ser-pomidor",
+      "nazwa": "Kanapki z serem dojrzewającym i pomidorem",
+      "posilek": "sniadanie",
+      "opis": "Pieczywo bezglutenowe z serem dojrzewającym, pomidorem i masłem.",
+      "skladniki": [
+        {
+          "nazwa": "Chleb bezglutenowy",
+          "gramy": 70.0,
+          "kcal": 175.0
+        },
+        {
+          "nazwa": "Ser dojrzewający",
+          "gramy": 40.0,
+          "kcal": 160.0
+        },
+        {
+          "nazwa": "Pomidor",
+          "gramy": 80.0,
+          "kcal": 14.0
+        },
+        {
+          "nazwa": "Masło",
+          "gramy": 8.0,
+          "kcal": 57.0
+        }
+      ],
+      "bazowe_kcal": 406,
+      "bazowa_gramatura": 198,
+      "plik": "menu/dania/sniadanie/kanapki-ser-pomidor.md"
+    },
+    {
+      "slug": "kasza-jaglana-owoce",
+      "nazwa": "Kasza jaglana z owocami i orzechami",
+      "posilek": "sniadanie",
+      "opis": "Kasza jaglana na mleku bez laktozy z borówkami i orzechami makadamia.",
+      "skladniki": [
+        {
+          "nazwa": "Kasza jaglana (sucha)",
+          "gramy": 60.0,
+          "kcal": 213.0
+        },
+        {
+          "nazwa": "Mleko bez laktozy 2%",
+          "gramy": 200.0,
+          "kcal": 100.0
+        },
+        {
+          "nazwa": "Borówki",
+          "gramy": 60.0,
+          "kcal": 34.0
+        },
+        {
+          "nazwa": "Orzechy makadamia",
+          "gramy": 15.0,
+          "kcal": 108.0
+        }
+      ],
+      "bazowe_kcal": 455,
+      "bazowa_gramatura": 335,
+      "plik": "menu/dania/sniadanie/kasza-jaglana-owoce.md"
+    },
+    {
+      "slug": "nalesniki-truskawki",
+      "nazwa": "Naleśniki bezglutenowe z truskawkami",
+      "posilek": "sniadanie",
+      "opis": "Cienkie naleśniki z mąki bezglutenowej z truskawkami.",
+      "skladniki": [
+        {
+          "nazwa": "Mąka bezglutenowa",
+          "gramy": 60.0,
+          "kcal": 210.0
+        },
+        {
+          "nazwa": "Jajko (1 szt.)",
+          "gramy": 55.0,
+          "kcal": 78.0
+        },
+        {
+          "nazwa": "Mleko bez laktozy 2%",
+          "gramy": 100.0,
+          "kcal": 50.0
+        },
+        {
+          "nazwa": "Truskawki",
+          "gramy": 100.0,
+          "kcal": 32.0
+        },
+        {
+          "nazwa": "Masło (do smażenia)",
+          "gramy": 5.0,
+          "kcal": 36.0
+        }
+      ],
+      "bazowe_kcal": 406,
+      "bazowa_gramatura": 320,
+      "plik": "menu/dania/sniadanie/nalesniki-truskawki.md"
+    },
+    {
+      "slug": "omlet-ser-szpinak",
+      "nazwa": "Omlet z serem dojrzewającym i szpinakiem",
+      "posilek": "sniadanie",
+      "opis": "Puszysty omlet z serem dojrzewającym (mało laktozy) i świeżym szpinakiem.",
+      "skladniki": [
+        {
+          "nazwa": "Jajka (3 szt.)",
+          "gramy": 165.0,
+          "kcal": 235.0
+        },
+        {
+          "nazwa": "Ser dojrzewający",
+          "gramy": 30.0,
+          "kcal": 120.0
+        },
+        {
+          "nazwa": "Szpinak",
+          "gramy": 50.0,
+          "kcal": 12.0
+        },
+        {
+          "nazwa": "Masło",
+          "gramy": 8.0,
+          "kcal": 57.0
+        }
+      ],
+      "bazowe_kcal": 424,
+      "bazowa_gramatura": 253,
+      "plik": "menu/dania/sniadanie/omlet-ser-szpinak.md"
+    },
+    {
+      "slug": "owsianka-banan-orzechy",
+      "nazwa": "Owsianka z bananem i orzechami",
+      "posilek": "sniadanie",
+      "opis": "Owsianka na mleku bez laktozy z niedojrzałym bananem i orzechami włoskimi — sycące, low FODMAP.",
+      "skladniki": [
+        {
+          "nazwa": "Płatki owsiane",
+          "gramy": 50.0,
+          "kcal": 190.0
+        },
+        {
+          "nazwa": "Mleko bez laktozy 2%",
+          "gramy": 200.0,
+          "kcal": 100.0
+        },
+        {
+          "nazwa": "Banan (niedojrzały)",
+          "gramy": 100.0,
+          "kcal": 89.0
+        },
+        {
+          "nazwa": "Orzechy włoskie",
+          "gramy": 15.0,
+          "kcal": 98.0
+        }
+      ],
+      "bazowe_kcal": 477,
+      "bazowa_gramatura": 365,
+      "plik": "menu/dania/sniadanie/owsianka-banan-orzechy.md"
+    }
+  ]
+}
