@@ -106,6 +106,25 @@
       .empty { text-align: center; color: var(--muted); padding: 2rem 1rem; }
       .disclaimer { background: #fff4dd; border: 1px solid #f0d089; border-radius: 0.8rem; padding: 1rem 1.2rem;
                     color: #7a5a10; font-size: 0.9rem; line-height: 1.55; max-width: 820px; margin: 2.5rem auto 0; }
+
+      /* Modal listy zakupów */
+      .modal-bg { position: fixed; inset: 0; background: rgba(45,26,32,0.45); z-index: 100; display: none;
+                  align-items: flex-start; justify-content: center; padding: 4vh 1rem; overflow-y: auto; }
+      .modal-bg.show { display: flex; }
+      .modal { background: var(--card); border-radius: 1rem; box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+               max-width: 620px; width: 100%; overflow: hidden; }
+      .modal-head { display: flex; align-items: center; gap: 0.7rem; padding: 1rem 1.3rem; background: var(--rose-lt);
+                    border-bottom: 1px solid var(--rose-lt); }
+      .modal-head h2 { color: var(--rose); font-size: 1.2rem; margin: 0; }
+      .modal-head .close { margin-left: auto; border: none; background: transparent; font-size: 1.5rem; cursor: pointer;
+                           color: var(--muted); line-height: 1; }
+      .modal-body { padding: 1.1rem 1.3rem 1.4rem; }
+      .shop-list { list-style: none; padding: 0; margin: 0.4rem 0 0; column-gap: 2rem; }
+      .shop-list li { display: flex; justify-content: space-between; gap: 1rem; padding: 0.4rem 0;
+                      border-bottom: 1px solid var(--rose-lt); font-size: 0.95rem; }
+      .shop-list li .q { color: var(--rose); font-weight: 700; white-space: nowrap; }
+      .modal-actions { display: flex; gap: 0.5rem; margin-top: 1rem; flex-wrap: wrap; }
+      .copied { color: #2e7d32; font-size: 0.85rem; align-self: center; }
     </style>
   </head>
   <body>
@@ -163,6 +182,7 @@
         <div class="gen-row">
           <button class="btn-primary" id="generate">Generuj plan na dzień</button>
           <button class="btn-ghost" id="regen" hidden>🎲 Losuj od nowa</button>
+          <button class="btn-ghost" id="shopping" hidden>🛒 Lista zakupów</button>
         </div>
       </div>
 
@@ -181,6 +201,23 @@
         się kumulują — przy mocnym <em>zwiększeniu</em> porcji dania z warzywami/owocami warunkowymi (⚠️, np. brokuł,
         awokado, papryka, cukinia, feta) możesz przekroczyć swój próg tolerancji. Wartości kaloryczne są orientacyjne.
         To materiał pomocniczy, nie porada dietetyczna — indywidualne zapotrzebowanie i tolerancję ustal z dietetykiem.
+      </div>
+    </div>
+
+    <div class="modal-bg" id="shopModal">
+      <div class="modal">
+        <div class="modal-head">
+          <h2>🛒 Lista zakupów na dzień</h2>
+          <button class="close" id="shopClose" aria-label="Zamknij">×</button>
+        </div>
+        <div class="modal-body">
+          <div id="shopMeta" style="color:var(--muted);font-size:0.9rem"></div>
+          <ul class="shop-list" id="shopList"></ul>
+          <div class="modal-actions">
+            <button class="btn-primary" id="shopCopy">📋 Kopiuj listę</button>
+            <span class="copied" id="shopCopied" hidden>Skopiowano ✓</span>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -386,6 +423,7 @@
         // Podsumowanie
         $("summary").hidden = false;
         $("regen").hidden = false;
+        $("shopping").hidden = false;
         $("planKcal").textContent = total;
         $("targetKcal").textContent = target;
         if (isDefaultMode()) {
@@ -492,6 +530,58 @@
       const escapeHtml = (s) => s.replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
       const clampKcal = (v) => Math.min(4000, Math.max(1000, v));
 
+      // ── Lista zakupów na dzień ──
+      function fmtQty(g) {
+        if (g >= 1000) { const kg = g / 1000; return (Number.isInteger(kg) ? kg : kg.toFixed(2)) + " kg"; }
+        return g + " g";
+      }
+      // Sumuje składniki (po nazwie) z podanych pozycji [{nazwa,gramy}].
+      function aggregateIngredients(entries) {
+        const map = new Map();
+        for (const it of entries) map.set(it.nazwa, (map.get(it.nazwa) || 0) + it.gramy);
+        return [...map.entries()]
+          .map(([nazwa, gramy]) => ({ nazwa, gramy: Math.round(gramy) }))
+          .sort((a, b) => a.nazwa.localeCompare(b.nazwa, "pl"));
+      }
+      // Składniki z bieżącego planu dnia (po przeskalowaniu porcji).
+      function planIngredients() {
+        const all = [];
+        for (const slug in plan) {
+          const s = scaleDish(plan[slug].dish, plan[slug].factor);
+          for (const ing of s.ing) all.push({ nazwa: ing.nazwa, gramy: ing.gramy });
+        }
+        return aggregateIngredients(all);
+      }
+      function shoppingText() {
+        const items = planIngredients();
+        return "Lista zakupów na dzień\n" + items.map((it) => `- ${it.nazwa}: ${fmtQty(it.gramy)}`).join("\n");
+      }
+      function openShopping() {
+        const items = planIngredients();
+        const nMeals = Object.keys(plan).length;
+        $("shopMeta").textContent = items.length
+          ? `${items.length} pozycji · z ${nMeals} posiłków`
+          : "Najpierw wygeneruj plan.";
+        $("shopList").innerHTML = items
+          .map((it) => `<li><span>${escapeHtml(it.nazwa)}</span><span class="q">${fmtQty(it.gramy)}</span></li>`)
+          .join("");
+        $("shopCopied").hidden = true;
+        $("shopModal").classList.add("show");
+      }
+      async function copyShopping() {
+        const txt = shoppingText();
+        try {
+          await navigator.clipboard.writeText(txt);
+          $("shopCopied").hidden = false;
+        } catch (e) {
+          const ta = document.createElement("textarea");
+          ta.value = txt; document.body.appendChild(ta); ta.select();
+          try { document.execCommand("copy"); $("shopCopied").hidden = false; } catch (_) {}
+          ta.remove();
+        }
+      }
+      const closeShopping = () => $("shopModal").classList.remove("show");
+
       // ── Wiązanie kontrolek ──
       function syncKcal(v) {
         v = clampKcal(v);
@@ -505,6 +595,11 @@
       });
       $("generate").addEventListener("click", () => generate(true));
       $("regen").addEventListener("click", () => generate(true));
+      $("shopping").addEventListener("click", openShopping);
+      $("shopClose").addEventListener("click", closeShopping);
+      $("shopCopy").addEventListener("click", copyShopping);
+      $("shopModal").addEventListener("click", (e) => { if (e.target.id === "shopModal") closeShopping(); });
+      document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeShopping(); });
 
       // Po wczytaniu danych od razu generujemy propozycję na dzień — bez klikania.
       loadData()
