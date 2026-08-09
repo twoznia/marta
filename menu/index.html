@@ -125,6 +125,11 @@
       .shop-list li .q { color: var(--rose); font-weight: 700; white-space: nowrap; }
       .modal-actions { display: flex; gap: 0.5rem; margin-top: 1rem; flex-wrap: wrap; }
       .copied { color: #2e7d32; font-size: 0.85rem; align-self: center; }
+      .toast { position: fixed; left: 50%; bottom: 1.5rem; transform: translateX(-50%) translateY(1rem);
+               background: #2e7d32; color: #fff; padding: 0.7rem 1.3rem; border-radius: 100px; font-weight: 700;
+               font-size: 0.9rem; box-shadow: 0 8px 24px rgba(0,0,0,0.2); opacity: 0; pointer-events: none;
+               transition: opacity 0.25s, transform 0.25s; z-index: 200; }
+      .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
     </style>
   </head>
   <body>
@@ -184,6 +189,8 @@
           <button class="btn-primary" id="generate">Generuj plan na dzień</button>
           <button class="btn-ghost" id="regen" hidden>🎲 Losuj od nowa</button>
           <button class="btn-ghost" id="shopping" hidden>🛒 Lista zakupów</button>
+          <button class="btn-ghost" id="exportDay" hidden>📋 Kopiuj dzień</button>
+          <button class="btn-ghost" id="downloadDay" hidden>⬇️ Pobierz .txt</button>
         </div>
       </div>
 
@@ -216,11 +223,14 @@
           <ul class="shop-list" id="shopList"></ul>
           <div class="modal-actions">
             <button class="btn-primary" id="shopCopy">📋 Kopiuj listę</button>
+            <button class="btn-ghost" id="shopDownload">⬇️ Pobierz .txt</button>
             <span class="copied" id="shopCopied" hidden>Skopiowano ✓</span>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="toast" id="toast" aria-live="polite"></div>
 
     <script src="../hearts.js"></script>
     <script src="units.js"></script>
@@ -427,6 +437,8 @@
         $("summary").hidden = false;
         $("regen").hidden = false;
         $("shopping").hidden = false;
+        $("exportDay").hidden = false;
+        $("downloadDay").hidden = false;
         $("planKcal").textContent = total;
         $("targetKcal").textContent = target;
         if (isDefaultMode()) {
@@ -563,6 +575,39 @@
         const items = planIngredients();
         return "Lista zakupów na dzień\n" + items.map((it) => `- ${it.nazwa}: ${qtyLabel(it)}`).join("\n");
       }
+      // Pełny eksport dnia: posiłki + składniki + lista zakupów (tekst).
+      function exportDayText() {
+        const target = clampKcal(parseInt($("kcal").value, 10) || 2000);
+        let total = 0;
+        const body = [];
+        for (const p of MENU.posilki) {
+          const e = plan[p.slug];
+          if (!e) continue;
+          const s = scaleDish(e.dish, e.factor);
+          total += s.kcal;
+          body.push(`${p.etykieta.toUpperCase()}: ${e.dish.nazwa} — ${s.kcal} kcal`);
+          for (const ing of s.ing) body.push(`  - ${ing.nazwa}: ${MenuUnits.qtyLabel(ing.gramy, ing.jednostka)}`);
+          body.push("");
+        }
+        const lines = [`Plan dnia — ${total} kcal (cel ${target})`, ""].concat(body);
+        lines.push("Lista zakupów (dzień):");
+        for (const it of planIngredients()) lines.push(`- ${it.nazwa}: ${qtyLabel(it)}`);
+        return lines.join("\n");
+      }
+      // Toast (potwierdzenie kopiowania/pobrania).
+      let toastTimer = null;
+      function toast(msg) {
+        const t = $("toast"); t.textContent = msg; t.classList.add("show");
+        clearTimeout(toastTimer); toastTimer = setTimeout(() => t.classList.remove("show"), 2200);
+      }
+      async function copyText(txt, msg) {
+        try { await navigator.clipboard.writeText(txt); toast(msg || "Skopiowano ✓"); }
+        catch (e) {
+          const ta = document.createElement("textarea"); ta.value = txt; document.body.appendChild(ta); ta.select();
+          try { document.execCommand("copy"); toast(msg || "Skopiowano ✓"); } catch (_) {}
+          ta.remove();
+        }
+      }
       function openShopping() {
         const items = planIngredients();
         const nMeals = Object.keys(plan).length;
@@ -605,6 +650,9 @@
       $("shopping").addEventListener("click", openShopping);
       $("shopClose").addEventListener("click", closeShopping);
       $("shopCopy").addEventListener("click", copyShopping);
+      $("shopDownload").addEventListener("click", () => { MenuUnits.download("zakupy-dzien.txt", shoppingText()); toast("Pobrano listę ⬇️"); });
+      $("exportDay").addEventListener("click", () => copyText(exportDayText(), "Skopiowano plan dnia ✓"));
+      $("downloadDay").addEventListener("click", () => { MenuUnits.download("plan-dzien.txt", exportDayText()); toast("Pobrano plan dnia ⬇️"); });
       $("shopModal").addEventListener("click", (e) => { if (e.target.id === "shopModal") closeShopping(); });
       document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeShopping(); });
 

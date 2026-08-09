@@ -180,7 +180,8 @@
           <button class="btn-primary" id="generate">🗓️ Generuj tydzień</button>
           <button class="btn-ok" id="accept" hidden>✅ Akceptuj plan tygodnia</button>
           <button class="btn-ghost" id="shopping" hidden>🛒 Lista zakupów na tydzień</button>
-          <button class="btn-ghost" id="exportWeek" hidden>📋 Eksport tygodnia</button>
+          <button class="btn-ghost" id="exportWeek" hidden>📋 Kopiuj tydzień</button>
+          <button class="btn-ghost" id="downloadWeek" hidden>⬇️ Pobierz .txt</button>
         </div>
       </div>
 
@@ -205,6 +206,7 @@
           <ul class="shop-list" id="shopList"></ul>
           <div class="modal-actions">
             <button class="btn-primary" id="shopCopy">📋 Kopiuj listę</button>
+            <button class="btn-ghost" id="shopDownload">⬇️ Pobierz .txt</button>
             <span class="copied" id="shopCopied" hidden>Skopiowano ✓</span>
           </div>
         </div>
@@ -229,6 +231,8 @@
       const BASE_WEIGHTS = { "sniadanie": 25, "drugie-sniadanie": 10, "obiad": 30, "podwieczorek": 10, "kolacja": 25 };
       const EMOJI = { "sniadanie": "🥣", "drugie-sniadanie": "🍎", "obiad": "🍲", "podwieczorek": "🥕", "kolacja": "🥗" };
       const DAYS = ["Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela"];
+      const DAY_FILES = ["poniedzialek", "wtorek", "sroda", "czwartek", "piatek", "sobota", "niedziela"];
+      const dayFile = (i) => DAY_FILES[i] || ("dzien-" + (i + 1));
       const TOTAL_WEIGHT = 100;
       const SAVE_KEY = "marta_menu_tydzien";
 
@@ -337,6 +341,7 @@
         $("accept").hidden = false;
         $("shopping").hidden = false;
         $("exportWeek").hidden = false;
+        $("downloadWeek").hidden = false;
         renderStatus();
       }
 
@@ -375,11 +380,15 @@
             ${rows}
             <div class="day-actions">
               <button class="mini" data-reroll>🎲 Przelosuj dzień</button>
-              <button class="mini" data-exportday>📋 Eksport dnia</button>
+              <button class="mini" data-exportday>📋 Kopiuj dzień</button>
+              <button class="mini" data-dlday>⬇️ .txt</button>
             </div>
           </div>`;
         el.querySelector("[data-reroll]").addEventListener("click", () => rerollDay(i));
         el.querySelector("[data-exportday]").addEventListener("click", () => copyText(exportDayText(i), "Skopiowano plan dnia ✓"));
+        el.querySelector("[data-dlday]").addEventListener("click", () => {
+          MenuUnits.download(`plan-${dayFile(i)}.txt`, exportDayText(i)); toast("Pobrano plan dnia ⬇️");
+        });
         el.querySelectorAll("[data-swap]").forEach((b) =>
           b.addEventListener("click", () => swapMeal(i, b.dataset.swap)));
         el.querySelectorAll(".m-open").forEach((b) =>
@@ -593,6 +602,8 @@
       $("shopCopy").addEventListener("click", copyShopping);
       $("shopModal").addEventListener("click", (e) => { if (e.target.id === "shopModal") closeShopping(); });
       $("exportWeek").addEventListener("click", () => copyText(exportWeekText(), "Skopiowano plan tygodnia ✓"));
+      $("downloadWeek").addEventListener("click", () => { MenuUnits.download("plan-tydzien.txt", exportWeekText()); toast("Pobrano plan tygodnia ⬇️"); });
+      $("shopDownload").addEventListener("click", () => { MenuUnits.download("zakupy-tydzien.txt", shoppingText()); toast("Pobrano listę ⬇️"); });
       $("dishClose").addEventListener("click", closeDish);
       $("dishModal").addEventListener("click", (e) => { if (e.target.id === "dishModal") closeDish(); });
       document.addEventListener("keydown", (e) => { if (e.key === "Escape") { closeShopping(); closeDish(); } });
