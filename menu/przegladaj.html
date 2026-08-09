@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Propozycje posiłków — low FODMAP</title>
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      .r-nav { position: sticky; top: 0; z-index: 40; background: rgba(255,249,249,0.92);
+               backdrop-filter: blur(8px); border-bottom: 1px solid var(--rose-lt); }
+      .r-nav-inner { max-width: 1000px; margin: 0 auto; padding: 0.7rem 1rem; display: flex; align-items: center;
+                     gap: 1rem; flex-wrap: wrap; }
+      .r-brand { font-weight: 800; color: var(--rose); text-decoration: none; font-size: 1.15rem; }
+      .r-brand span { font-weight: 400; color: var(--muted); font-size: 0.9rem; }
+      .r-navlink { color: var(--text); text-decoration: none; font-weight: 600; font-size: 0.95rem;
+                   padding: 0.35rem 0.7rem; border-radius: 100px; }
+      .r-navlink:hover { background: var(--rose-lt); color: var(--rose); }
+
+      .wrap { max-width: 1000px; margin: 0 auto; padding: 2rem 1rem 4rem; position: relative; z-index: 1; }
+      .lead { text-align: center; margin-bottom: 1.6rem; }
+      .lead h1 { color: var(--rose); font-size: clamp(1.8rem, 5vw, 2.6rem); }
+      .lead p { color: var(--muted); max-width: 640px; margin: 0.7rem auto 0; line-height: 1.6; }
+
+      .controls { background: var(--card); border: 1px solid var(--rose-lt); border-radius: 1rem;
+                  box-shadow: var(--shadow); padding: 1.3rem 1.4rem; max-width: 820px; margin: 0 auto 1.4rem; }
+      .meal-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; justify-content: center; }
+      .chip { border: 1px solid var(--rose-lt); background: var(--card); color: var(--muted); border-radius: 100px;
+              padding: 0.35rem 0.9rem; font-size: 0.9rem; cursor: pointer; font-weight: 600; }
+      .chip.on { border-color: var(--rose); color: var(--rose); background: var(--rose-lt); font-weight: 800; }
+      .row2 { display: flex; flex-wrap: wrap; gap: 0.8rem; align-items: center; justify-content: center; margin-top: 1rem; }
+      .row2 label { font-weight: 700; color: var(--text); font-size: 0.92rem; }
+      .cnt-input { width: 80px; padding: 0.5rem 0.6rem; border: 1px solid var(--rose-lt); border-radius: 0.6rem;
+                   font-size: 1rem; text-align: right; }
+      .filter-toggle { display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.88rem; color: var(--muted); }
+      .btn-primary { background: var(--rose); color: #fff; border: none; font-weight: 700; font-size: 1rem;
+                     padding: 0.6rem 1.4rem; border-radius: 100px; cursor: pointer; }
+      .btn-primary:hover { background: #c0325a; }
+
+      .count-note { text-align: center; color: var(--muted); font-size: 0.9rem; margin: 0 auto 1rem; }
+
+      .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
+              gap: 1rem; max-width: 980px; margin: 0 auto; }
+      .card { background: var(--card); border: 1px solid var(--rose-lt); border-radius: 1rem; box-shadow: var(--shadow);
+              overflow: hidden; display: flex; flex-direction: column; }
+      .card-head { padding: 0.9rem 1.1rem; border-bottom: 1px solid var(--rose-lt); background: var(--rose-lt); }
+      .card-name { font-weight: 800; font-size: 1.05rem; }
+      .card-tags { display: flex; align-items: center; gap: 0.4rem; margin-top: 0.35rem; flex-wrap: wrap; }
+      .badge { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.72rem; font-weight: 700;
+               text-transform: uppercase; letter-spacing: 0.03em; padding: 0.15rem 0.55rem; border-radius: 100px;
+               border: 1px solid transparent; white-space: nowrap; }
+      .badge-green { background: #e7f6e7; color: #2e7d32; border-color: #b6e0b6; }
+      .badge-yellow { background: #fff4dd; color: #8a6100; border-color: #f0d089; }
+      .kcal-tag { font-size: 0.82rem; color: var(--muted); }
+      .kcal-tag b { color: var(--rose); }
+      .card-body { padding: 0.9rem 1.1rem 1.1rem; display: flex; flex-direction: column; flex: 1; }
+      .card-desc { color: var(--muted); font-size: 0.9rem; margin-bottom: 0.7rem; line-height: 1.5; }
+      table.ing { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+      table.ing th, table.ing td { padding: 0.35rem 0.45rem; border-bottom: 1px solid var(--rose-lt); text-align: left; }
+      table.ing th { color: var(--rose); font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.04em; }
+      table.ing td.num, table.ing th.num { text-align: right; white-space: nowrap; }
+      table.ing tr:last-child td { border-bottom: none; }
+      table.ing tr.warn td { background: #fff8ea; }
+      .chip-warn { color: #8a6100; font-weight: 700; margin-left: 0.3rem; font-size: 0.8rem; }
+      .warn-ings { font-size: 0.78rem; color: #8a6100; }
+      .card-actions { margin-top: auto; padding-top: 0.8rem; }
+      .mini { border: 1px solid var(--rose-lt); background: var(--card); color: var(--muted); border-radius: 100px;
+              padding: 0.35rem 0.9rem; font-size: 0.85rem; cursor: pointer; }
+      .mini:hover { border-color: var(--rose); color: var(--rose); }
+      .recipe { margin-top: 0.7rem; padding-top: 0.7rem; border-top: 1px dashed var(--rose-lt); font-size: 0.9rem;
+                line-height: 1.6; display: none; }
+      .recipe.show { display: block; }
+      .recipe ol { padding-left: 1.2rem; }
+      .recipe li { margin-bottom: 0.3rem; }
+      .recipe a { color: var(--rose); }
+      .empty { text-align: center; color: var(--muted); padding: 2rem 1rem; }
+      .legend { display: flex; gap: 0.9rem; justify-content: center; flex-wrap: wrap; margin: 0.4rem auto 0;
+                font-size: 0.82rem; color: var(--muted); }
+    </style>
+  </head>
+  <body>
+    <div class="hearts-bg" aria-hidden="true" id="hearts-bg"></div>
+
+    <nav class="r-nav">
+      <div class="r-nav-inner">
+        <a class="r-brand" href="../index.html">🍱 Menu <span>propozycje · low FODMAP</span></a>
+        <a class="r-navlink" href="index.html">← Planer dnia</a>
+        <a class="r-navlink" href="../index.html">Strona główna</a>
+        <a class="r-navlink" href="../restauracje/index.html">Restauracje</a>
+        <a class="r-navlink" href="../low-fodmap/index.html">Low FODMAP</a>
+      </div>
+    </nav>
+
+    <div class="wrap">
+      <div class="lead">
+        <h1>Propozycje posiłków 📋</h1>
+        <p>Wybierz posiłek i ile propozycji chcesz zobaczyć (np. 5 obiadów, 7 śniadań),
+           a pokażę dania <strong>🌱 low FODMAP</strong> do wyboru — z gramaturą, kaloriami
+           porcji bazowej i przepisem.</p>
+      </div>
+
+      <div class="controls">
+        <div class="meal-chips" id="mealChips"></div>
+        <div class="row2">
+          <label for="cnt">Ile propozycji:</label>
+          <input class="cnt-input" id="cnt" type="number" min="1" max="50" step="1" value="6" />
+          <label class="filter-toggle"><input type="checkbox" id="onlyGreen" /> tylko 🟢 zielone</label>
+          <button class="btn-primary" id="show">🎲 Pokaż propozycje</button>
+        </div>
+        <div class="legend">
+          <span><span class="badge badge-green">🟢 Zielone</span> w pełni low FODMAP</span>
+          <span><span class="badge badge-yellow">🟡 Żółte</span> składnik warunkowy (⚠️)</span>
+        </div>
+      </div>
+
+      <div class="count-note" id="note"></div>
+      <div class="grid" id="grid"><div class="empty">Wczytuję dania…</div></div>
+    </div>
+
+    <script src="../hearts.js"></script>
+    <script>
+      const EMOJI = { "sniadanie": "🥣", "drugie-sniadanie": "🍎", "obiad": "🍲", "podwieczorek": "🥕", "kolacja": "🥗" };
+      const $ = (id) => document.getElementById(id);
+      let MENU = null, byMeal = {}, currentMeal = null;
+
+      const isYellow = (d) => d && d.fodmap === "zolty";
+      const escapeHtml = (s) => s.replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
+      const recipeHref = (plik) => plik.replace(/^menu\//, "");
+      const shuffled = (arr) => {
+        const a = arr.slice();
+        for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
+        return a;
+      };
+
+      async function loadData() {
+        const res = await fetch("dania.json", { cache: "no-store" });
+        if (!res.ok) throw new Error("Nie udało się wczytać dania.json (uruchom przez http://, nie file://).");
+        MENU = await res.json();
+        byMeal = {};
+        for (const p of MENU.posilki) byMeal[p.slug] = [];
+        for (const d of MENU.dania) (byMeal[d.posilek] ||= []).push(d);
+        renderChips();
+        currentMeal = MENU.posilki[2]?.slug || MENU.posilki[0].slug; // domyślnie obiad
+        selectMeal(currentMeal);
+      }
+
+      function renderChips() {
+        const box = $("mealChips");
+        box.innerHTML = "";
+        for (const p of MENU.posilki) {
+          const b = document.createElement("button");
+          b.className = "chip";
+          b.dataset.slug = p.slug;
+          b.textContent = `${EMOJI[p.slug] || ""} ${p.etykieta} (${p.liczba})`;
+          b.addEventListener("click", () => selectMeal(p.slug));
+          box.appendChild(b);
+        }
+      }
+
+      function selectMeal(slug) {
+        currentMeal = slug;
+        for (const b of $("mealChips").children) b.classList.toggle("on", b.dataset.slug === slug);
+        show();
+      }
+
+      function show() {
+        const grid = $("grid");
+        let dishes = byMeal[currentMeal] || [];
+        if ($("onlyGreen").checked) dishes = dishes.filter((d) => !isYellow(d));
+        const n = Math.max(1, Math.min(50, parseInt($("cnt").value, 10) || 6));
+        const chosen = shuffled(dishes).slice(0, n);
+
+        const label = MENU.posilki.find((p) => p.slug === currentMeal)?.etykieta || "";
+        $("note").textContent = dishes.length
+          ? `Pokazuję ${chosen.length} z ${dishes.length} dań (${label.toLowerCase()}).`
+          : "";
+
+        grid.innerHTML = "";
+        if (!chosen.length) {
+          grid.innerHTML = '<div class="empty">Brak dań dla tego filtra.</div>';
+          return;
+        }
+        for (const d of chosen) grid.appendChild(card(d));
+      }
+
+      function card(d) {
+        const el = document.createElement("div");
+        el.className = "card";
+        const warunkowe = d.warunkowe || [];
+        const isW = (nazwa) => warunkowe.includes(nazwa);
+        const rows = d.skladniki.map((s) =>
+          `<tr class="${isW(s.nazwa) ? "warn" : ""}"><td>${escapeHtml(s.nazwa)}` +
+          `${isW(s.nazwa) ? '<span class="chip-warn" title="Składnik warunkowy — bezpieczny tylko w limicie porcji">⚠️</span>' : ""}` +
+          `</td><td class="num">${Math.round(s.gramy)} g</td><td class="num">${Math.round(s.kcal)} kcal</td></tr>`
+        ).join("");
+        const badge = isYellow(d)
+          ? `<span class="badge badge-yellow">🟡 Żółte</span>`
+          : `<span class="badge badge-green">🟢 Zielone</span>`;
+        const warnLine = (isYellow(d) && warunkowe.length)
+          ? `<span class="warn-ings">⚠️ ${warunkowe.map(escapeHtml).join(", ")}</span>` : "";
+        el.innerHTML = `
+          <div class="card-head">
+            <div class="card-name">${escapeHtml(d.nazwa)}</div>
+            <div class="card-tags">
+              ${badge}
+              <span class="kcal-tag"><b>${d.bazowe_kcal} kcal</b> · ${d.bazowa_gramatura} g (porcja bazowa)</span>
+              ${warnLine}
+            </div>
+          </div>
+          <div class="card-body">
+            ${d.opis ? `<div class="card-desc">${escapeHtml(d.opis)}</div>` : ""}
+            <table class="ing">
+              <thead><tr><th>Składnik</th><th class="num">Gramatura</th><th class="num">Kalorie</th></tr></thead>
+              <tbody>${rows}</tbody>
+            </table>
+            <div class="card-actions">
+              <button class="mini" data-act="recipe">📖 Pokaż przepis</button>
+              <div class="recipe" data-recipe></div>
+            </div>
+          </div>`;
+        el.querySelector('[data-act="recipe"]').addEventListener("click", (e) =>
+          toggleRecipe(e.target, d, el.querySelector("[data-recipe]")));
+        return el;
+      }
+
+      async function toggleRecipe(btn, dish, box) {
+        if (box.classList.contains("show")) { box.classList.remove("show"); btn.textContent = "📖 Pokaż przepis"; return; }
+        btn.textContent = "📖 Ukryj przepis";
+        box.classList.add("show");
+        if (box.dataset.loaded) return;
+        box.innerHTML = "Wczytuję przepis…";
+        const href = recipeHref(dish.plik);
+        try {
+          const res = await fetch(href, { cache: "no-store" });
+          if (!res.ok) throw new Error("HTTP " + res.status);
+          box.innerHTML = extractRecipe(await res.text(), href);
+        } catch (e) {
+          box.innerHTML = `<a href="${href}" target="_blank" rel="noopener">Otwórz pełny przepis →</a>`;
+        }
+        box.dataset.loaded = "1";
+      }
+
+      function extractRecipe(md, path) {
+        const m = md.split(/^##\s+Przepis\s*$/m)[1] || "";
+        const steps = m.split("\n").map((l) => l.trim()).filter((l) => /^\d+\.\s+/.test(l)).map((l) => l.replace(/^\d+\.\s+/, ""));
+        const list = steps.length ? `<ol>${steps.map((s) => `<li>${escapeHtml(s)}</li>`).join("")}</ol>` : "";
+        return `<strong>Przepis</strong>${list}<a href="${path}" target="_blank" rel="noopener">Pełny plik →</a>`;
+      }
+
+      $("show").addEventListener("click", show);
+      $("cnt").addEventListener("change", show);
+      $("onlyGreen").addEventListener("change", show);
+
+      loadData().catch((err) => { $("grid").innerHTML = `<div class="empty">${err.message}</div>`; });
+    </script>
+  </body>
+</html>

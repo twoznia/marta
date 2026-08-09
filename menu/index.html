@@ -35,7 +35,12 @@
               padding: 0.28rem 0.8rem; font-size: 0.85rem; cursor: pointer; }
       .kbtn:hover { border-color: var(--rose); color: var(--rose); }
 
-      .meals-toggle { display: flex; flex-wrap: wrap; gap: 0.4rem; justify-content: center; margin-top: 1rem; }
+      .quick-select { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; align-items: center;
+                      margin-top: 1rem; font-size: 0.9rem; color: var(--muted); }
+      .quick-select .qs-label { font-weight: 700; }
+      .qs-only select { border: 1px solid var(--rose-lt); border-radius: 100px; padding: 0.25rem 0.6rem;
+                        color: var(--text); background: var(--card); font-size: 0.85rem; }
+      .meals-toggle { display: flex; flex-wrap: wrap; gap: 0.4rem; justify-content: center; margin-top: 0.7rem; }
       .mtog { display: inline-flex; align-items: center; gap: 0.35rem; border: 1px solid var(--rose-lt);
               background: var(--card); border-radius: 100px; padding: 0.28rem 0.75rem; font-size: 0.85rem;
               cursor: pointer; color: var(--muted); user-select: none; }
@@ -110,6 +115,7 @@
       <div class="r-nav-inner">
         <a class="r-brand" href="../index.html">🍱 Menu <span>planer posiłków · low FODMAP</span></a>
         <a class="r-navlink" href="../index.html">← Strona główna</a>
+        <a class="r-navlink" href="przegladaj.html">📋 Propozycje</a>
         <a class="r-navlink" href="../restauracje/index.html">Restauracje</a>
         <a class="r-navlink" href="../low-fodmap/index.html">Low FODMAP</a>
       </div>
@@ -138,6 +144,15 @@
           <button class="kbtn" data-k="2000">2000</button>
           <button class="kbtn" data-k="2200">2200</button>
           <button class="kbtn" data-k="2500">2500</button>
+        </div>
+        <div class="quick-select">
+          <span class="qs-label">Które posiłki:</span>
+          <button class="kbtn" id="qsAll" type="button">Wszystkie 5</button>
+          <label class="qs-only">tylko jeden:
+            <select id="qsOnly">
+              <option value="">— wybierz —</option>
+            </select>
+          </label>
         </div>
         <div class="meals-toggle" id="mealsToggle"></div>
         <div class="legend">
@@ -200,6 +215,35 @@
         for (const d of MENU.dania) (byMeal[d.posilek] ||= []).push(d);
         for (const p of MENU.posilki) active[p.slug] = true;
         renderToggles();
+        initQuickSelect();
+      }
+
+      // Wypełnia listę „tylko jeden" i podpina szybki wybór.
+      function initQuickSelect() {
+        const sel = $("qsOnly");
+        sel.innerHTML = '<option value="">— wybierz —</option>';
+        for (const p of MENU.posilki) {
+          const o = document.createElement("option");
+          o.value = p.slug;
+          o.textContent = `${EMOJI[p.slug] || ""} ${p.etykieta}`;
+          sel.appendChild(o);
+        }
+        sel.addEventListener("change", (e) => { if (e.target.value) setOnly(e.target.value); });
+        $("qsAll").addEventListener("click", () => setAllMeals(true));
+      }
+
+      function applyActive() {
+        renderToggles();
+        generate(false);   // przelicz porcje, zachowując wybrane dania
+      }
+      function setAllMeals(on) {
+        for (const p of MENU.posilki) active[p.slug] = on;
+        $("qsOnly").value = "";
+        applyActive();
+      }
+      function setOnly(slug) {
+        for (const p of MENU.posilki) active[p.slug] = (p.slug === slug);
+        applyActive();
       }
 
       function renderToggles() {
@@ -213,19 +257,39 @@
           lab.querySelector("input").addEventListener("change", (e) => {
             active[p.slug] = e.target.checked;
             lab.classList.toggle("on", e.target.checked);
+            const sel = $("qsOnly"); if (sel) sel.value = "";  // ręczna zmiana ≠ „tylko jeden"
             if (Object.keys(plan).length) generate(false); // przelicz, zachowując dania
           });
           box.appendChild(lab);
         }
       }
 
-      // Normalizuje wagi tylko dla aktywnych posiłków (suma = 1).
-      function activeWeights() {
-        const w = {};
-        let sum = 0;
-        for (const p of MENU.posilki) if (active[p.slug]) { w[p.slug] = BASE_WEIGHTS[p.slug] || 0; sum += w[p.slug]; }
-        for (const k in w) w[k] = sum ? w[k] / sum : 0;
-        return w;
+      const TOTAL_WEIGHT = Object.values(BASE_WEIGHTS).reduce((a, b) => a + b, 0); // = 100
+
+      function activeSlugs() {
+        return MENU.posilki.filter((p) => active[p.slug]).map((p) => p.slug);
+      }
+
+      // Tryb planu:
+      //  • < 3 posiłków → "domyślne porcje": każdy posiłek dostaje swój domyślny
+      //    udział dnia (waga/100 × cel), NIE sumujemy do celu.
+      //  • ≥ 3 posiłków → "do celu": wagi normalizujemy tak, by suma = cel.
+      function isDefaultMode() {
+        return activeSlugs().length < 3;
+      }
+
+      // Zwraca docelową liczbę kcal dla każdego aktywnego posiłku.
+      function mealTargets(target) {
+        const slugs = activeSlugs();
+        const out = {};
+        if (slugs.length >= 3) {
+          let sum = 0;
+          for (const s of slugs) sum += BASE_WEIGHTS[s] || 0;
+          for (const s of slugs) out[s] = target * ((BASE_WEIGHTS[s] || 0) / (sum || 1));
+        } else {
+          for (const s of slugs) out[s] = target * ((BASE_WEIGHTS[s] || 0) / TOTAL_WEIGHT);
+        }
+        return out;
       }
 
       const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
@@ -248,7 +312,7 @@
       // Blokada kumulacji: w całym planie dnia dopuszczamy najwyżej JEDNO żółte danie.
       function generate(reroll = true) {
         const target = clampKcal(parseInt($("kcal").value, 10) || 2000);
-        const w = activeWeights();
+        const w = mealTargets(target);
         const prev = plan;
         plan = {};
         let yellowUsed = false;
@@ -271,8 +335,7 @@
           }
           if (isYellow(dish)) yellowUsed = true;
 
-          const mealTarget = target * w[p.slug];
-          plan[p.slug] = { dish, factor: mealTarget / dish.bazowe_kcal };
+          plan[p.slug] = { dish, factor: w[p.slug] / dish.bazowe_kcal };
         }
         render(target);
       }
@@ -289,8 +352,8 @@
         let d;
         do { d = pick(dishes); } while (d.slug === plan[slug].dish.slug && dishes.length > 1);
         const target = clampKcal(parseInt($("kcal").value, 10) || 2000);
-        const w = activeWeights();
-        plan[slug] = { dish: d, factor: (target * w[slug]) / d.bazowe_kcal };
+        const w = mealTargets(target);
+        plan[slug] = { dish: d, factor: w[slug] / d.bazowe_kcal };
         render(target);
       }
 
@@ -325,11 +388,18 @@
         $("regen").hidden = false;
         $("planKcal").textContent = total;
         $("targetKcal").textContent = target;
-        const diff = total - target;
-        const sign = diff > 0 ? "+" : "";
-        $("diff").textContent =
-          `Różnica względem celu: ${sign}${diff} kcal` +
-          (Math.abs(diff) <= Math.max(20, target * 0.02) ? " ✓ (w granicach zaokrągleń porcji)" : "");
+        if (isDefaultMode()) {
+          // Mniej niż 3 posiłki — porcje domyślne, nie sumujemy do celu.
+          $("diff").textContent =
+            `Porcje domyślne dla celu ${target} kcal/dzień (przy < 3 posiłkach nie sumuję do celu). ` +
+            `Suma wybranych: ${total} kcal.`;
+        } else {
+          const diff = total - target;
+          const sign = diff > 0 ? "+" : "";
+          $("diff").textContent =
+            `Różnica względem celu: ${sign}${diff} kcal` +
+            (Math.abs(diff) <= Math.max(20, target * 0.02) ? " ✓ (w granicach zaokrągleń porcji)" : "");
+        }
         $("barFill").style.width = Math.min(100, (total / target) * 100) + "%";
       }
 
