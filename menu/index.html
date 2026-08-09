@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu — planer posiłków</title>
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      .r-nav { position: sticky; top: 0; z-index: 40; background: rgba(255,249,249,0.92);
+               backdrop-filter: blur(8px); border-bottom: 1px solid var(--rose-lt); }
+      .r-nav-inner { max-width: 1000px; margin: 0 auto; padding: 0.7rem 1rem; display: flex; align-items: center;
+                     gap: 1rem; flex-wrap: wrap; }
+      .r-brand { font-weight: 800; color: var(--rose); text-decoration: none; font-size: 1.15rem; }
+      .r-brand span { font-weight: 400; color: var(--muted); font-size: 0.9rem; }
+      .r-navlink { color: var(--text); text-decoration: none; font-weight: 600; font-size: 0.95rem;
+                   padding: 0.35rem 0.7rem; border-radius: 100px; }
+      .r-navlink:hover { background: var(--rose-lt); color: var(--rose); }
+
+      .wrap { max-width: 1000px; margin: 0 auto; padding: 2rem 1rem 4rem; position: relative; z-index: 1; }
+      .lead { text-align: center; margin-bottom: 1.6rem; }
+      .lead h1 { color: var(--rose); font-size: clamp(1.8rem, 5vw, 2.6rem); }
+      .lead p { color: var(--muted); max-width: 640px; margin: 0.7rem auto 0; line-height: 1.6; }
+
+      /* Panel sterowania */
+      .controls { background: var(--card); border: 1px solid var(--rose-lt); border-radius: 1rem;
+                  box-shadow: var(--shadow); padding: 1.3rem 1.4rem; max-width: 760px; margin: 0 auto 1.6rem; }
+      .kcal-row { display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap; justify-content: center; }
+      .kcal-row label { font-weight: 700; }
+      .kcal-input { width: 110px; padding: 0.55rem 0.7rem; border: 1px solid var(--rose-lt); border-radius: 0.6rem;
+                    font-size: 1.05rem; text-align: right; outline: none; }
+      .kcal-input:focus { border-color: var(--rose); }
+      .kcal-range { flex: 1 1 240px; max-width: 340px; accent-color: var(--rose); }
+      .kcal-presets { display: flex; gap: 0.4rem; flex-wrap: wrap; justify-content: center; margin-top: 0.8rem; }
+      .kbtn { border: 1px solid var(--rose-lt); background: var(--card); color: var(--muted); border-radius: 100px;
+              padding: 0.28rem 0.8rem; font-size: 0.85rem; cursor: pointer; }
+      .kbtn:hover { border-color: var(--rose); color: var(--rose); }
+
+      .meals-toggle { display: flex; flex-wrap: wrap; gap: 0.4rem; justify-content: center; margin-top: 1rem; }
+      .mtog { display: inline-flex; align-items: center; gap: 0.35rem; border: 1px solid var(--rose-lt);
+              background: var(--card); border-radius: 100px; padding: 0.28rem 0.75rem; font-size: 0.85rem;
+              cursor: pointer; color: var(--muted); user-select: none; }
+      .mtog input { accent-color: var(--rose); }
+      .mtog.on { border-color: var(--rose); color: var(--rose); font-weight: 700; }
+
+      .gen-row { display: flex; gap: 0.6rem; justify-content: center; margin-top: 1.2rem; flex-wrap: wrap; }
+      .btn-primary { background: var(--rose); color: #fff; border: none; font-weight: 700; font-size: 1rem;
+                     padding: 0.7rem 1.6rem; border-radius: 100px; cursor: pointer; }
+      .btn-primary:hover { background: #c0325a; }
+      .btn-ghost { background: var(--card); color: var(--rose); border: 1px solid var(--rose); font-weight: 700;
+                   padding: 0.7rem 1.3rem; border-radius: 100px; cursor: pointer; }
+
+      /* Podsumowanie kalorii */
+      .summary { text-align: center; margin: 0 auto 1.4rem; max-width: 760px; }
+      .summary .big { font-size: 1.6rem; font-weight: 800; color: var(--rose); }
+      .summary .diff { font-size: 0.9rem; color: var(--muted); }
+      .bar { height: 12px; border-radius: 100px; background: var(--rose-lt); overflow: hidden; margin: 0.6rem auto 0; max-width: 520px; }
+      .bar > div { height: 100%; background: linear-gradient(90deg, #ff8fa3, var(--rose)); width: 0; transition: width 0.4s; }
+
+      /* Karty posiłków */
+      .meals { display: grid; gap: 1rem; max-width: 820px; margin: 0 auto; }
+      .meal { background: var(--card); border: 1px solid var(--rose-lt); border-radius: 1rem; box-shadow: var(--shadow);
+              overflow: hidden; }
+      .meal-head { display: flex; align-items: center; gap: 0.7rem; padding: 0.9rem 1.2rem; border-bottom: 1px solid var(--rose-lt);
+                   background: var(--rose-lt); }
+      .meal-emoji { font-size: 1.5rem; }
+      .meal-cat { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--rose); }
+      .meal-name { font-weight: 800; font-size: 1.12rem; }
+      .meal-kcal { margin-left: auto; text-align: right; }
+      .meal-kcal .n { font-weight: 800; color: var(--rose); font-size: 1.15rem; }
+      .meal-kcal .g { font-size: 0.8rem; color: var(--muted); }
+      .meal-body { padding: 0.9rem 1.2rem 1.1rem; }
+      .meal-desc { color: var(--muted); font-size: 0.92rem; margin-bottom: 0.7rem; line-height: 1.5; }
+      table.ing { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+      table.ing th, table.ing td { padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--rose-lt); text-align: left; }
+      table.ing th { color: var(--rose); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; }
+      table.ing td.num, table.ing th.num { text-align: right; white-space: nowrap; }
+      table.ing tr:last-child td { border-bottom: none; }
+      .meal-actions { display: flex; gap: 0.5rem; margin-top: 0.9rem; flex-wrap: wrap; }
+      .mini { border: 1px solid var(--rose-lt); background: var(--card); color: var(--muted); border-radius: 100px;
+              padding: 0.35rem 0.9rem; font-size: 0.85rem; cursor: pointer; }
+      .mini:hover { border-color: var(--rose); color: var(--rose); }
+      .recipe { margin-top: 0.8rem; padding-top: 0.8rem; border-top: 1px dashed var(--rose-lt); font-size: 0.92rem;
+                line-height: 1.6; display: none; }
+      .recipe.show { display: block; }
+      .recipe ol { padding-left: 1.2rem; }
+      .recipe li { margin-bottom: 0.3rem; }
+      .recipe a { color: var(--rose); }
+
+      .empty { text-align: center; color: var(--muted); padding: 2rem 1rem; }
+      .disclaimer { background: #fff4dd; border: 1px solid #f0d089; border-radius: 0.8rem; padding: 1rem 1.2rem;
+                    color: #7a5a10; font-size: 0.9rem; line-height: 1.55; max-width: 820px; margin: 2.5rem auto 0; }
+    </style>
+  </head>
+  <body>
+    <div class="hearts-bg" aria-hidden="true" id="hearts-bg"></div>
+
+    <nav class="r-nav">
+      <div class="r-nav-inner">
+        <a class="r-brand" href="../index.html">🍱 Menu <span>planer posiłków</span></a>
+        <a class="r-navlink" href="../index.html">← Strona główna</a>
+        <a class="r-navlink" href="../restauracje/index.html">Restauracje</a>
+        <a class="r-navlink" href="../low-fodmap/index.html">Low FODMAP</a>
+      </div>
+    </nav>
+
+    <div class="wrap">
+      <div class="lead">
+        <h1>Planer posiłków 🍱</h1>
+        <p>Ustaw docelową liczbę kalorii na dzień, a wygeneruję propozycję na
+           <strong>śniadanie, drugie śniadanie, obiad, podwieczorek i kolację</strong>.
+           Porcje są automatycznie skalowane (gramatura i kalorie), żeby suma dnia trafiła w Twój cel.</p>
+      </div>
+
+      <div class="controls">
+        <div class="kcal-row">
+          <label for="kcal">Kalorie na dzień:</label>
+          <input class="kcal-input" id="kcal" type="number" min="1000" max="4000" step="50" value="2000" />
+          <span style="font-weight:700;color:var(--muted)">kcal</span>
+          <input class="kcal-range" id="kcalRange" type="range" min="1200" max="3500" step="50" value="2000" />
+        </div>
+        <div class="kcal-presets" id="presets">
+          <button class="kbtn" data-k="1500">1500</button>
+          <button class="kbtn" data-k="1800">1800</button>
+          <button class="kbtn" data-k="2000">2000</button>
+          <button class="kbtn" data-k="2200">2200</button>
+          <button class="kbtn" data-k="2500">2500</button>
+        </div>
+        <div class="meals-toggle" id="mealsToggle"></div>
+        <div class="gen-row">
+          <button class="btn-primary" id="generate">Generuj plan na dzień</button>
+          <button class="btn-ghost" id="regen" hidden>🎲 Losuj od nowa</button>
+        </div>
+      </div>
+
+      <div class="summary" id="summary" hidden>
+        <div class="big"><span id="planKcal">0</span> kcal <span style="color:var(--muted);font-weight:600;font-size:1rem">/ cel <span id="targetKcal">0</span></span></div>
+        <div class="diff" id="diff"></div>
+        <div class="bar"><div id="barFill"></div></div>
+      </div>
+
+      <div class="meals" id="meals">
+        <div class="empty">Ustaw kalorie i kliknij „Generuj plan na dzień".</div>
+      </div>
+
+      <div class="disclaimer">
+        <strong>Uwaga:</strong> wartości kaloryczne są orientacyjne (bazują na typowych wartościach produktów).
+        To materiał pomocniczy do planowania, nie porada dietetyczna — indywidualne zapotrzebowanie ustal z dietetykiem.
+      </div>
+    </div>
+
+    <script src="../hearts.js"></script>
+    <script>
+      // ── Bazowy rozkład kalorii między posiłki (wagi; normalizowane po odfiltrowaniu) ──
+      const BASE_WEIGHTS = {
+        "sniadanie": 25,
+        "drugie-sniadanie": 10,
+        "obiad": 30,
+        "podwieczorek": 10,
+        "kolacja": 25,
+      };
+      const EMOJI = {
+        "sniadanie": "🥣", "drugie-sniadanie": "🍎", "obiad": "🍲",
+        "podwieczorek": "🥕", "kolacja": "🥗",
+      };
+
+      let MENU = null;          // dane z dania.json
+      let byMeal = {};          // slug posiłku -> [dania]
+      let active = {};          // slug posiłku -> bool (włączony)
+      let plan = {};            // slug posiłku -> { dish, factor }
+
+      const $ = (id) => document.getElementById(id);
+
+      async function loadData() {
+        const res = await fetch("dania.json", { cache: "no-store" });
+        if (!res.ok) throw new Error("Nie udało się wczytać dania.json (uruchom stronę przez http://, nie file://).");
+        MENU = await res.json();
+        byMeal = {};
+        for (const p of MENU.posilki) byMeal[p.slug] = [];
+        for (const d of MENU.dania) (byMeal[d.posilek] ||= []).push(d);
+        for (const p of MENU.posilki) active[p.slug] = true;
+        renderToggles();
+      }
+
+      function renderToggles() {
+        const box = $("mealsToggle");
+        box.innerHTML = "";
+        for (const p of MENU.posilki) {
+          const lab = document.createElement("label");
+          lab.className = "mtog" + (active[p.slug] ? " on" : "");
+          lab.innerHTML =
+            `<input type="checkbox" ${active[p.slug] ? "checked" : ""}> ${EMOJI[p.slug] || ""} ${p.etykieta}`;
+          lab.querySelector("input").addEventListener("change", (e) => {
+            active[p.slug] = e.target.checked;
+            lab.classList.toggle("on", e.target.checked);
+            if (Object.keys(plan).length) generate(false); // przelicz, zachowując dania
+          });
+          box.appendChild(lab);
+        }
+      }
+
+      // Normalizuje wagi tylko dla aktywnych posiłków (suma = 1).
+      function activeWeights() {
+        const w = {};
+        let sum = 0;
+        for (const p of MENU.posilki) if (active[p.slug]) { w[p.slug] = BASE_WEIGHTS[p.slug] || 0; sum += w[p.slug]; }
+        for (const k in w) w[k] = sum ? w[k] / sum : 0;
+        return w;
+      }
+
+      const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
+
+      // reroll=true losuje nowe dania; reroll=false zachowuje wybrane i tylko przelicza porcje.
+      function generate(reroll = true) {
+        const target = clampKcal(parseInt($("kcal").value, 10) || 2000);
+        const w = activeWeights();
+        const prev = plan;
+        plan = {};
+        for (const p of MENU.posilki) {
+          if (!active[p.slug]) continue;
+          const dishes = byMeal[p.slug] || [];
+          if (!dishes.length) continue;
+          const dish = (!reroll && prev[p.slug]?.dish) ? prev[p.slug].dish : pick(dishes);
+          const mealTarget = target * w[p.slug];
+          plan[p.slug] = { dish, factor: mealTarget / dish.bazowe_kcal };
+        }
+        render(target);
+      }
+
+      function swapMeal(slug) {
+        const dishes = byMeal[slug] || [];
+        if (dishes.length <= 1) return;
+        let d;
+        do { d = pick(dishes); } while (d.slug === plan[slug].dish.slug && dishes.length > 1);
+        const target = clampKcal(parseInt($("kcal").value, 10) || 2000);
+        const w = activeWeights();
+        plan[slug] = { dish: d, factor: (target * w[slug]) / d.bazowe_kcal };
+        render(target);
+      }
+
+      // Skaluje danie: zaokrągla gramaturę i kcal składników; kcal posiłku = suma zaokrąglonych.
+      function scaleDish(dish, factor) {
+        const ing = dish.skladniki.map((s) => ({
+          nazwa: s.nazwa,
+          gramy: Math.max(1, Math.round(s.gramy * factor)),
+          kcal: Math.round(s.kcal * factor),
+        }));
+        const kcal = ing.reduce((a, s) => a + s.kcal, 0);
+        const gramy = ing.reduce((a, s) => a + s.gramy, 0);
+        return { ing, kcal, gramy };
+      }
+
+      function render(target) {
+        const meals = $("meals");
+        meals.innerHTML = "";
+        let total = 0;
+        for (const p of MENU.posilki) {
+          const entry = plan[p.slug];
+          if (!entry) continue;
+          const s = scaleDish(entry.dish, entry.factor);
+          total += s.kcal;
+          meals.appendChild(mealCard(p, entry.dish, s, Math.round(entry.factor * 100)));
+        }
+        if (!meals.children.length) {
+          meals.innerHTML = '<div class="empty">Włącz przynajmniej jeden posiłek.</div>';
+        }
+        // Podsumowanie
+        $("summary").hidden = false;
+        $("regen").hidden = false;
+        $("planKcal").textContent = total;
+        $("targetKcal").textContent = target;
+        const diff = total - target;
+        const sign = diff > 0 ? "+" : "";
+        $("diff").textContent =
+          `Różnica względem celu: ${sign}${diff} kcal` +
+          (Math.abs(diff) <= Math.max(20, target * 0.02) ? " ✓ (w granicach zaokrągleń porcji)" : "");
+        $("barFill").style.width = Math.min(100, (total / target) * 100) + "%";
+      }
+
+      function mealCard(posilek, dish, scaled, pct) {
+        const el = document.createElement("div");
+        el.className = "meal";
+        const rows = scaled.ing.map((s) =>
+          `<tr><td>${s.nazwa}</td><td class="num">${s.gramy} g</td><td class="num">${s.kcal} kcal</td></tr>`
+        ).join("");
+        el.innerHTML = `
+          <div class="meal-head">
+            <span class="meal-emoji">${EMOJI[posilek.slug] || "🍽️"}</span>
+            <div>
+              <div class="meal-cat">${posilek.etykieta}</div>
+              <div class="meal-name">${dish.nazwa}</div>
+            </div>
+            <div class="meal-kcal">
+              <div class="n">${scaled.kcal} kcal</div>
+              <div class="g">${scaled.gramy} g · porcja ${pct}%</div>
+            </div>
+          </div>
+          <div class="meal-body">
+            ${dish.opis ? `<div class="meal-desc">${dish.opis}</div>` : ""}
+            <table class="ing">
+              <thead><tr><th>Składnik</th><th class="num">Gramatura</th><th class="num">Kalorie</th></tr></thead>
+              <tbody>${rows}</tbody>
+            </table>
+            <div class="meal-actions">
+              <button class="mini" data-act="swap">🔁 Zamień danie</button>
+              <button class="mini" data-act="recipe">📖 Pokaż przepis</button>
+            </div>
+            <div class="recipe" data-recipe></div>
+          </div>`;
+        el.querySelector('[data-act="swap"]').addEventListener("click", () => swapMeal(posilek.slug));
+        el.querySelector('[data-act="recipe"]').addEventListener("click", (e) =>
+          toggleRecipe(e.target, dish, el.querySelector("[data-recipe]"))
+        );
+        return el;
+      }
+
+      async function toggleRecipe(btn, dish, box) {
+        if (box.classList.contains("show")) {
+          box.classList.remove("show");
+          btn.textContent = "📖 Pokaż przepis";
+          return;
+        }
+        btn.textContent = "📖 Ukryj przepis";
+        box.classList.add("show");
+        if (box.dataset.loaded) return;
+        box.innerHTML = "Wczytuję przepis…";
+        try {
+          const res = await fetch(dish.plik, { cache: "no-store" });
+          const md = await res.text();
+          box.innerHTML = extractRecipe(md, dish.plik);
+        } catch (e) {
+          box.innerHTML = `<a href="${dish.plik}" target="_blank" rel="noopener">Otwórz pełny przepis →</a>`;
+        }
+        box.dataset.loaded = "1";
+      }
+
+      // Wyciąga sekcję "## Przepis" z Markdown i renderuje jako listę kroków.
+      function extractRecipe(md, path) {
+        const m = md.split(/^##\s+Przepis\s*$/m)[1] || "";
+        const steps = m.split("\n").map((l) => l.trim())
+          .filter((l) => /^\d+\.\s+/.test(l))
+          .map((l) => l.replace(/^\d+\.\s+/, ""));
+        const list = steps.length
+          ? `<ol>${steps.map((s) => `<li>${escapeHtml(s)}</li>`).join("")}</ol>`
+          : "";
+        return `<strong>Przepis</strong>${list}<a href="${path}" target="_blank" rel="noopener">Pełny plik →</a>`;
+      }
+
+      const escapeHtml = (s) => s.replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
+      const clampKcal = (v) => Math.min(4000, Math.max(1000, v));
+
+      // ── Wiązanie kontrolek ──
+      function syncKcal(v) {
+        v = clampKcal(v);
+        $("kcal").value = v;
+        $("kcalRange").value = Math.min(3500, Math.max(1200, v));
+      }
+      $("kcal").addEventListener("input", (e) => $("kcalRange").value = Math.min(3500, Math.max(1200, parseInt(e.target.value, 10) || 2000)));
+      $("kcalRange").addEventListener("input", (e) => { $("kcal").value = e.target.value; if (Object.keys(plan).length) generate(false); });
+      $("presets").addEventListener("click", (e) => {
+        if (e.target.dataset.k) { syncKcal(parseInt(e.target.dataset.k, 10)); if (Object.keys(plan).length) generate(false); }
+      });
+      $("generate").addEventListener("click", () => generate(true));
+      $("regen").addEventListener("click", () => generate(true));
+
+      loadData().catch((err) => {
+        $("meals").innerHTML = `<div class="empty">${err.message}</div>`;
+      });
+    </script>
+  </body>
+</html>

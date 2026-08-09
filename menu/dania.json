@@ -1,0 +1,626 @@
+{
+  "posilki": [
+    {
+      "slug": "sniadanie",
+      "etykieta": "Śniadanie",
+      "liczba": 4
+    },
+    {
+      "slug": "drugie-sniadanie",
+      "etykieta": "Drugie śniadanie",
+      "liczba": 4
+    },
+    {
+      "slug": "obiad",
+      "etykieta": "Obiad",
+      "liczba": 4
+    },
+    {
+      "slug": "podwieczorek",
+      "etykieta": "Podwieczorek",
+      "liczba": 4
+    },
+    {
+      "slug": "kolacja",
+      "etykieta": "Kolacja",
+      "liczba": 4
+    }
+  ],
+  "dania": [
+    {
+      "slug": "jogurt-granola-owoce",
+      "nazwa": "Jogurt naturalny z granolą i owocami",
+      "posilek": "drugie-sniadanie",
+      "opis": "Jogurt z chrupiącą granolą i borówkami — szybka, lekka przekąska.",
+      "skladniki": [
+        {
+          "nazwa": "Jogurt naturalny",
+          "gramy": 150.0,
+          "kcal": 90.0
+        },
+        {
+          "nazwa": "Granola",
+          "gramy": 40.0,
+          "kcal": 180.0
+        },
+        {
+          "nazwa": "Borówki",
+          "gramy": 50.0,
+          "kcal": 29.0
+        }
+      ],
+      "bazowe_kcal": 299,
+      "bazowa_gramatura": 240,
+      "plik": "menu/dania/drugie-sniadanie/jogurt-granola-owoce.md"
+    },
+    {
+      "slug": "kanapka-awokado-jajko",
+      "nazwa": "Kanapka z awokado i jajkiem",
+      "posilek": "drugie-sniadanie",
+      "opis": "Chleb żytni z rozgniecionym awokado i jajkiem na twardo.",
+      "skladniki": [
+        {
+          "nazwa": "Chleb żytni",
+          "gramy": 50.0,
+          "kcal": 125.0
+        },
+        {
+          "nazwa": "Awokado",
+          "gramy": 50.0,
+          "kcal": 80.0
+        },
+        {
+          "nazwa": "Jajko (1 szt.)",
+          "gramy": 55.0,
+          "kcal": 78.0
+        }
+      ],
+      "bazowe_kcal": 283,
+      "bazowa_gramatura": 155,
+      "plik": "menu/dania/drugie-sniadanie/kanapka-awokado-jajko.md"
+    },
+    {
+      "slug": "koktajl-banan-truskawka",
+      "nazwa": "Koktajl bananowo-truskawkowy",
+      "posilek": "drugie-sniadanie",
+      "opis": "Owocowy koktajl na mleku — orzeźwiający i szybki.",
+      "skladniki": [
+        {
+          "nazwa": "Banan",
+          "gramy": 100.0,
+          "kcal": 89.0
+        },
+        {
+          "nazwa": "Truskawki",
+          "gramy": 100.0,
+          "kcal": 33.0
+        },
+        {
+          "nazwa": "Mleko 2%",
+          "gramy": 150.0,
+          "kcal": 75.0
+        },
+        {
+          "nazwa": "Miód",
+          "gramy": 10.0,
+          "kcal": 30.0
+        }
+      ],
+      "bazowe_kcal": 227,
+      "bazowa_gramatura": 360,
+      "plik": "menu/dania/drugie-sniadanie/koktajl-banan-truskawka.md"
+    },
+    {
+      "slug": "serek-wiejski-pomidor",
+      "nazwa": "Serek wiejski z pomidorem",
+      "posilek": "drugie-sniadanie",
+      "opis": "Serek wiejski z pomidorem i pieczywem chrupkim — dużo białka.",
+      "skladniki": [
+        {
+          "nazwa": "Serek wiejski",
+          "gramy": 150.0,
+          "kcal": 147.0
+        },
+        {
+          "nazwa": "Pomidor",
+          "gramy": 100.0,
+          "kcal": 18.0
+        },
+        {
+          "nazwa": "Pieczywo chrupkie",
+          "gramy": 20.0,
+          "kcal": 70.0
+        }
+      ],
+      "bazowe_kcal": 235,
+      "bazowa_gramatura": 270,
+      "plik": "menu/dania/drugie-sniadanie/serek-wiejski-pomidor.md"
+    },
+    {
+      "slug": "kanapki-wedlina-ser",
+      "nazwa": "Kanapki z wędliną i serem",
+      "posilek": "kolacja",
+      "opis": "Kanapki z szynką drobiową, serem i papryką.",
+      "skladniki": [
+        {
+          "nazwa": "Chleb pełnoziarnisty",
+          "gramy": 80.0,
+          "kcal": 200.0
+        },
+        {
+          "nazwa": "Szynka drobiowa",
+          "gramy": 60.0,
+          "kcal": 84.0
+        },
+        {
+          "nazwa": "Ser żółty",
+          "gramy": 40.0,
+          "kcal": 160.0
+        },
+        {
+          "nazwa": "Papryka",
+          "gramy": 80.0,
+          "kcal": 26.0
+        }
+      ],
+      "bazowe_kcal": 470,
+      "bazowa_gramatura": 260,
+      "plik": "menu/dania/kolacja/kanapki-wedlina-ser.md"
+    },
+    {
+      "slug": "omlet-warzywny-kolacja",
+      "nazwa": "Omlet warzywny na kolację",
+      "posilek": "kolacja",
+      "opis": "Lekki omlet z papryką, cukinią i fetą.",
+      "skladniki": [
+        {
+          "nazwa": "Jajka (3 szt.)",
+          "gramy": 165.0,
+          "kcal": 235.0
+        },
+        {
+          "nazwa": "Papryka",
+          "gramy": 60.0,
+          "kcal": 20.0
+        },
+        {
+          "nazwa": "Cukinia",
+          "gramy": 60.0,
+          "kcal": 10.0
+        },
+        {
+          "nazwa": "Ser feta",
+          "gramy": 40.0,
+          "kcal": 106.0
+        },
+        {
+          "nazwa": "Oliwa",
+          "gramy": 8.0,
+          "kcal": 70.0
+        }
+      ],
+      "bazowe_kcal": 441,
+      "bazowa_gramatura": 333,
+      "plik": "menu/dania/kolacja/omlet-warzywny-kolacja.md"
+    },
+    {
+      "slug": "salatka-tunczyk-jajko",
+      "nazwa": "Sałatka z tuńczykiem i jajkiem",
+      "posilek": "kolacja",
+      "opis": "Sałatka z tuńczykiem, jajkiem i świeżymi warzywami z pieczywem.",
+      "skladniki": [
+        {
+          "nazwa": "Tuńczyk w sosie własnym",
+          "gramy": 100.0,
+          "kcal": 116.0
+        },
+        {
+          "nazwa": "Jajka (2 szt.)",
+          "gramy": 110.0,
+          "kcal": 156.0
+        },
+        {
+          "nazwa": "Sałata i warzywa",
+          "gramy": 150.0,
+          "kcal": 40.0
+        },
+        {
+          "nazwa": "Oliwa",
+          "gramy": 10.0,
+          "kcal": 88.0
+        },
+        {
+          "nazwa": "Pieczywo",
+          "gramy": 40.0,
+          "kcal": 100.0
+        }
+      ],
+      "bazowe_kcal": 500,
+      "bazowa_gramatura": 410,
+      "plik": "menu/dania/kolacja/salatka-tunczyk-jajko.md"
+    },
+    {
+      "slug": "twarozek-warzywa-pieczywo",
+      "nazwa": "Twarożek z warzywami i pieczywem",
+      "posilek": "kolacja",
+      "opis": "Twarożek ze szczypiorkiem i rzodkiewką, z pieczywem żytnim.",
+      "skladniki": [
+        {
+          "nazwa": "Twaróg półtłusty",
+          "gramy": 120.0,
+          "kcal": 159.0
+        },
+        {
+          "nazwa": "Jogurt naturalny",
+          "gramy": 30.0,
+          "kcal": 18.0
+        },
+        {
+          "nazwa": "Rzodkiewka i szczypiorek",
+          "gramy": 60.0,
+          "kcal": 12.0
+        },
+        {
+          "nazwa": "Chleb żytni",
+          "gramy": 60.0,
+          "kcal": 150.0
+        }
+      ],
+      "bazowe_kcal": 339,
+      "bazowa_gramatura": 270,
+      "plik": "menu/dania/kolacja/twarozek-warzywa-pieczywo.md"
+    },
+    {
+      "slug": "kurczak-ryz-warzywa",
+      "nazwa": "Kurczak z ryżem i warzywami",
+      "posilek": "obiad",
+      "opis": "Pierś z kurczaka z ryżem i duszonymi warzywami — zbilansowany obiad.",
+      "skladniki": [
+        {
+          "nazwa": "Pierś z kurczaka",
+          "gramy": 150.0,
+          "kcal": 165.0
+        },
+        {
+          "nazwa": "Ryż (sucha masa)",
+          "gramy": 70.0,
+          "kcal": 252.0
+        },
+        {
+          "nazwa": "Brokuł",
+          "gramy": 100.0,
+          "kcal": 34.0
+        },
+        {
+          "nazwa": "Marchew",
+          "gramy": 80.0,
+          "kcal": 33.0
+        },
+        {
+          "nazwa": "Oliwa",
+          "gramy": 10.0,
+          "kcal": 88.0
+        }
+      ],
+      "bazowe_kcal": 572,
+      "bazowa_gramatura": 410,
+      "plik": "menu/dania/obiad/kurczak-ryz-warzywa.md"
+    },
+    {
+      "slug": "losos-ziemniaki",
+      "nazwa": "Łosoś pieczony z ziemniakami",
+      "posilek": "obiad",
+      "opis": "Pieczony łosoś z ziemniakami i fasolką szparagową.",
+      "skladniki": [
+        {
+          "nazwa": "Łosoś (filet)",
+          "gramy": 150.0,
+          "kcal": 312.0
+        },
+        {
+          "nazwa": "Ziemniaki",
+          "gramy": 200.0,
+          "kcal": 154.0
+        },
+        {
+          "nazwa": "Fasolka szparagowa",
+          "gramy": 100.0,
+          "kcal": 31.0
+        },
+        {
+          "nazwa": "Masło",
+          "gramy": 10.0,
+          "kcal": 74.0
+        }
+      ],
+      "bazowe_kcal": 571,
+      "bazowa_gramatura": 460,
+      "plik": "menu/dania/obiad/losos-ziemniaki.md"
+    },
+    {
+      "slug": "makaron-bolognese",
+      "nazwa": "Makaron z sosem bolognese",
+      "posilek": "obiad",
+      "opis": "Makaron z mięsnym sosem pomidorowym — klasyka na sycący obiad.",
+      "skladniki": [
+        {
+          "nazwa": "Makaron (sucha masa)",
+          "gramy": 90.0,
+          "kcal": 315.0
+        },
+        {
+          "nazwa": "Mięso mielone wołowe",
+          "gramy": 120.0,
+          "kcal": 300.0
+        },
+        {
+          "nazwa": "Passata pomidorowa",
+          "gramy": 150.0,
+          "kcal": 45.0
+        },
+        {
+          "nazwa": "Oliwa",
+          "gramy": 10.0,
+          "kcal": 88.0
+        }
+      ],
+      "bazowe_kcal": 748,
+      "bazowa_gramatura": 370,
+      "plik": "menu/dania/obiad/makaron-bolognese.md"
+    },
+    {
+      "slug": "schabowy-ziemniaki-surowka",
+      "nazwa": "Kotlet schabowy z ziemniakami i surówką",
+      "posilek": "obiad",
+      "opis": "Panierowany kotlet schabowy z ziemniakami i surówką z kapusty.",
+      "skladniki": [
+        {
+          "nazwa": "Schab",
+          "gramy": 130.0,
+          "kcal": 315.0
+        },
+        {
+          "nazwa": "Ziemniaki",
+          "gramy": 200.0,
+          "kcal": 154.0
+        },
+        {
+          "nazwa": "Panierka (bułka+jajko)",
+          "gramy": 30.0,
+          "kcal": 110.0
+        },
+        {
+          "nazwa": "Surówka z kapusty",
+          "gramy": 100.0,
+          "kcal": 50.0
+        },
+        {
+          "nazwa": "Olej",
+          "gramy": 10.0,
+          "kcal": 88.0
+        }
+      ],
+      "bazowe_kcal": 717,
+      "bazowa_gramatura": 470,
+      "plik": "menu/dania/obiad/schabowy-ziemniaki-surowka.md"
+    },
+    {
+      "slug": "jogurt-grecki-miod",
+      "nazwa": "Jogurt grecki z miodem",
+      "posilek": "podwieczorek",
+      "opis": "Gęsty jogurt grecki z odrobiną miodu.",
+      "skladniki": [
+        {
+          "nazwa": "Jogurt grecki",
+          "gramy": 150.0,
+          "kcal": 177.0
+        },
+        {
+          "nazwa": "Miód",
+          "gramy": 15.0,
+          "kcal": 46.0
+        }
+      ],
+      "bazowe_kcal": 223,
+      "bazowa_gramatura": 165,
+      "plik": "menu/dania/podwieczorek/jogurt-grecki-miod.md"
+    },
+    {
+      "slug": "kanapka-maslo-orzechowe",
+      "nazwa": "Kanapka z masłem orzechowym",
+      "posilek": "podwieczorek",
+      "opis": "Pieczywo chrupkie z masłem orzechowym i bananem.",
+      "skladniki": [
+        {
+          "nazwa": "Pieczywo chrupkie",
+          "gramy": 20.0,
+          "kcal": 70.0
+        },
+        {
+          "nazwa": "Masło orzechowe",
+          "gramy": 20.0,
+          "kcal": 118.0
+        },
+        {
+          "nazwa": "Banan",
+          "gramy": 60.0,
+          "kcal": 53.0
+        }
+      ],
+      "bazowe_kcal": 241,
+      "bazowa_gramatura": 100,
+      "plik": "menu/dania/podwieczorek/kanapka-maslo-orzechowe.md"
+    },
+    {
+      "slug": "marchewki-hummus",
+      "nazwa": "Marchewki z hummusem",
+      "posilek": "podwieczorek",
+      "opis": "Chrupiące słupki marchewki z hummusem.",
+      "skladniki": [
+        {
+          "nazwa": "Marchew",
+          "gramy": 120.0,
+          "kcal": 49.0
+        },
+        {
+          "nazwa": "Hummus",
+          "gramy": 50.0,
+          "kcal": 118.0
+        }
+      ],
+      "bazowe_kcal": 167,
+      "bazowa_gramatura": 170,
+      "plik": "menu/dania/podwieczorek/marchewki-hummus.md"
+    },
+    {
+      "slug": "orzechy-owoc",
+      "nazwa": "Garść orzechów i owoc",
+      "posilek": "podwieczorek",
+      "opis": "Migdały i jabłko — prosta, sycąca przekąska.",
+      "skladniki": [
+        {
+          "nazwa": "Migdały",
+          "gramy": 25.0,
+          "kcal": 145.0
+        },
+        {
+          "nazwa": "Jabłko",
+          "gramy": 150.0,
+          "kcal": 78.0
+        }
+      ],
+      "bazowe_kcal": 223,
+      "bazowa_gramatura": 175,
+      "plik": "menu/dania/podwieczorek/orzechy-owoc.md"
+    },
+    {
+      "slug": "jajecznica-pieczywo",
+      "nazwa": "Jajecznica na maśle z pieczywem",
+      "posilek": "sniadanie",
+      "opis": "Klasyczna jajecznica na maśle podana z chlebem żytnim i pomidorem.",
+      "skladniki": [
+        {
+          "nazwa": "Jajka (3 szt.)",
+          "gramy": 165.0,
+          "kcal": 235.0
+        },
+        {
+          "nazwa": "Masło",
+          "gramy": 10.0,
+          "kcal": 74.0
+        },
+        {
+          "nazwa": "Chleb żytni",
+          "gramy": 60.0,
+          "kcal": 150.0
+        },
+        {
+          "nazwa": "Pomidor",
+          "gramy": 100.0,
+          "kcal": 18.0
+        }
+      ],
+      "bazowe_kcal": 477,
+      "bazowa_gramatura": 335,
+      "plik": "menu/dania/sniadanie/jajecznica-pieczywo.md"
+    },
+    {
+      "slug": "kanapki-twarozek-warzywa",
+      "nazwa": "Kanapki z twarożkiem i warzywami",
+      "posilek": "sniadanie",
+      "opis": "Lekkie kanapki z twarożkiem, chrupiącym ogórkiem i rzodkiewką.",
+      "skladniki": [
+        {
+          "nazwa": "Chleb pełnoziarnisty",
+          "gramy": 80.0,
+          "kcal": 200.0
+        },
+        {
+          "nazwa": "Twaróg półtłusty",
+          "gramy": 80.0,
+          "kcal": 106.0
+        },
+        {
+          "nazwa": "Ogórek",
+          "gramy": 50.0,
+          "kcal": 8.0
+        },
+        {
+          "nazwa": "Rzodkiewka",
+          "gramy": 40.0,
+          "kcal": 7.0
+        },
+        {
+          "nazwa": "Oliwa",
+          "gramy": 5.0,
+          "kcal": 44.0
+        }
+      ],
+      "bazowe_kcal": 365,
+      "bazowa_gramatura": 255,
+      "plik": "menu/dania/sniadanie/kanapki-twarozek-warzywa.md"
+    },
+    {
+      "slug": "omlet-ser-szpinak",
+      "nazwa": "Omlet z serem i szpinakiem",
+      "posilek": "sniadanie",
+      "opis": "Puszysty omlet z żółtym serem i świeżym szpinakiem.",
+      "skladniki": [
+        {
+          "nazwa": "Jajka (3 szt.)",
+          "gramy": 165.0,
+          "kcal": 235.0
+        },
+        {
+          "nazwa": "Ser żółty",
+          "gramy": 30.0,
+          "kcal": 120.0
+        },
+        {
+          "nazwa": "Szpinak",
+          "gramy": 50.0,
+          "kcal": 12.0
+        },
+        {
+          "nazwa": "Masło",
+          "gramy": 8.0,
+          "kcal": 59.0
+        }
+      ],
+      "bazowe_kcal": 426,
+      "bazowa_gramatura": 253,
+      "plik": "menu/dania/sniadanie/omlet-ser-szpinak.md"
+    },
+    {
+      "slug": "owsianka-banan-orzechy",
+      "nazwa": "Owsianka z bananem i orzechami",
+      "posilek": "sniadanie",
+      "opis": "Ciepła owsianka na mleku z bananem i orzechami — sycące, wolno uwalniające energię śniadanie.",
+      "skladniki": [
+        {
+          "nazwa": "Płatki owsiane",
+          "gramy": 60.0,
+          "kcal": 228.0
+        },
+        {
+          "nazwa": "Mleko 2%",
+          "gramy": 200.0,
+          "kcal": 100.0
+        },
+        {
+          "nazwa": "Banan",
+          "gramy": 100.0,
+          "kcal": 89.0
+        },
+        {
+          "nazwa": "Orzechy włoskie",
+          "gramy": 15.0,
+          "kcal": 98.0
+        }
+      ],
+      "bazowe_kcal": 515,
+      "bazowa_gramatura": 375,
+      "plik": "menu/dania/sniadanie/owsianka-banan-orzechy.md"
+    }
+  ]
+}
