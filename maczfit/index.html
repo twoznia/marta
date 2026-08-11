@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maczfit — wybór posiłków</title>
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      .r-nav { position: sticky; top: 0; z-index: 40; background: rgba(255,249,249,0.92);
+               backdrop-filter: blur(8px); border-bottom: 1px solid var(--rose-lt); }
+      .r-nav-inner { max-width: 1100px; margin: 0 auto; padding: 0.7rem 1rem; display: flex; align-items: center;
+                     gap: 1rem; flex-wrap: wrap; }
+      .r-brand { font-weight: 800; color: var(--rose); text-decoration: none; font-size: 1.15rem; }
+      .r-brand span { font-weight: 400; color: var(--muted); font-size: 0.9rem; }
+      .r-navlink { color: var(--text); text-decoration: none; font-weight: 600; font-size: 0.95rem;
+                   padding: 0.35rem 0.7rem; border-radius: 100px; }
+      .r-navlink:hover { background: var(--rose-lt); color: var(--rose); }
+
+      .wrap { max-width: 1100px; margin: 0 auto; padding: 2rem 1rem 4rem; position: relative; z-index: 1; }
+      .lead { text-align: center; margin-bottom: 1.6rem; }
+      .lead h1 { color: var(--rose); font-size: clamp(1.8rem, 5vw, 2.6rem); }
+      .lead p { color: var(--muted); max-width: 680px; margin: 0.7rem auto 0; line-height: 1.6; }
+
+      /* Panel sterowania */
+      .controls { background: var(--card); border: 1px solid var(--rose-lt); border-radius: 1rem;
+                  box-shadow: var(--shadow); padding: 1rem 1.2rem; max-width: 900px; margin: 0 auto 1.4rem;
+                  display: flex; flex-wrap: wrap; gap: 0.8rem; align-items: center; justify-content: center; }
+      .search { flex: 1 1 260px; max-width: 420px; padding: 0.55rem 0.9rem; border: 1px solid var(--rose-lt);
+                border-radius: 100px; font-size: 0.95rem; outline: none; }
+      .search:focus { border-color: var(--rose); }
+      .cat-filter { display: flex; gap: 0.4rem; flex-wrap: wrap; justify-content: center; }
+      .cbtn { border: 1px solid var(--rose-lt); background: var(--card); color: var(--muted); border-radius: 100px;
+              padding: 0.32rem 0.85rem; font-size: 0.85rem; cursor: pointer; }
+      .cbtn:hover { border-color: var(--rose); color: var(--rose); }
+      .cbtn.on { background: var(--rose); color: #fff; border-color: var(--rose); font-weight: 700; }
+
+      /* Pasek wyboru (sticky) */
+      .picked-bar { position: sticky; top: 56px; z-index: 30; max-width: 900px; margin: 0 auto 1.6rem;
+                    background: var(--card); border: 1px solid var(--rose-lt); border-radius: 1rem;
+                    box-shadow: var(--shadow); padding: 0.9rem 1.2rem; }
+      .picked-top { display: flex; align-items: center; gap: 0.7rem; flex-wrap: wrap; }
+      .picked-count { font-weight: 800; color: var(--rose); font-size: 1.05rem; }
+      .picked-actions { margin-left: auto; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+      .btn-ghost { background: var(--card); color: var(--rose); border: 1px solid var(--rose); font-weight: 700;
+                   padding: 0.5rem 1rem; border-radius: 100px; cursor: pointer; font-size: 0.9rem; }
+      .btn-ghost:disabled { opacity: 0.45; cursor: default; }
+      .picked-chips { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.7rem; }
+      .chip { display: inline-flex; align-items: center; gap: 0.4rem; background: var(--rose-lt); color: var(--rose);
+              border-radius: 100px; padding: 0.28rem 0.7rem; font-size: 0.82rem; font-weight: 600; }
+      .chip b { font-weight: 800; }
+      .chip button { border: none; background: transparent; color: var(--rose); cursor: pointer; font-size: 1rem;
+                     line-height: 1; padding: 0; }
+      .chip-empty { color: var(--muted); font-size: 0.85rem; }
+
+      /* Sekcja kategorii */
+      .cat { margin: 2rem auto 0; max-width: 1040px; }
+      .cat-head { display: flex; align-items: baseline; gap: 0.6rem; margin: 0 0 0.9rem; }
+      .cat-head .emoji { font-size: 1.4rem; }
+      .cat-head h2 { color: var(--rose); font-size: 1.35rem; margin: 0; }
+      .cat-head .n { color: var(--muted); font-size: 0.85rem; }
+
+      .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1rem; }
+      .card { background: var(--card); border: 1px solid var(--rose-lt); border-radius: 1rem; overflow: hidden;
+              box-shadow: var(--shadow); display: flex; flex-direction: column; cursor: pointer; position: relative;
+              transition: border-color 0.15s, transform 0.1s; }
+      .card:hover { border-color: var(--rose); }
+      .card.sel { border-color: var(--rose); box-shadow: 0 0 0 2px var(--rose), var(--shadow); }
+      .card .thumb { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; background: var(--rose-lt); display: block; }
+      .card .body { padding: 0.8rem 0.9rem 0.9rem; display: flex; flex-direction: column; gap: 0.4rem; flex: 1; }
+      .card h3 { font-size: 0.98rem; margin: 0; line-height: 1.3; }
+      .card .ing { font-size: 0.8rem; color: var(--muted); line-height: 1.45; }
+      .card .alg { font-size: 0.74rem; color: #8a6100; margin-top: auto; }
+      .card .pick { display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem;
+                    margin-top: 0.3rem; border: 1px solid var(--rose); background: var(--card); color: var(--rose);
+                    border-radius: 100px; padding: 0.4rem 0.6rem; font-size: 0.85rem; font-weight: 700; }
+      .card.sel .pick { background: var(--rose); color: #fff; }
+      .check { position: absolute; top: 0.6rem; right: 0.6rem; width: 30px; height: 30px; border-radius: 50%;
+               background: var(--rose); color: #fff; display: none; align-items: center; justify-content: center;
+               font-size: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
+      .card.sel .check { display: flex; }
+
+      .empty { text-align: center; color: var(--muted); padding: 1.5rem 1rem; grid-column: 1 / -1; }
+      .disclaimer { background: #fff4dd; border: 1px solid #f0d089; border-radius: 0.8rem; padding: 1rem 1.2rem;
+                    color: #7a5a10; font-size: 0.9rem; line-height: 1.55; max-width: 1040px; margin: 2.5rem auto 0; }
+
+      /* Modal podglądu */
+      .modal-bg { position: fixed; inset: 0; background: rgba(45,26,32,0.45); z-index: 100; display: none;
+                  align-items: flex-start; justify-content: center; padding: 4vh 1rem; overflow-y: auto; }
+      .modal-bg.show { display: flex; }
+      .modal { background: var(--card); border-radius: 1rem; box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+               max-width: 640px; width: 100%; overflow: hidden; }
+      .modal-head { display: flex; align-items: center; gap: 0.7rem; padding: 1rem 1.3rem; background: var(--rose-lt); }
+      .modal-head h2 { color: var(--rose); font-size: 1.2rem; margin: 0; }
+      .modal-head .close { margin-left: auto; border: none; background: transparent; font-size: 1.5rem; cursor: pointer;
+                           color: var(--muted); line-height: 1; }
+      .modal-body { padding: 1.1rem 1.3rem 1.4rem; }
+      .shop-list { list-style: none; padding: 0; margin: 0.4rem 0 0; }
+      .shop-list li { padding: 0.6rem 0; border-bottom: 1px solid var(--rose-lt); font-size: 0.95rem; }
+      .shop-list li:last-child { border-bottom: none; }
+      .shop-list .cat-label { color: var(--rose); font-weight: 800; font-size: 0.78rem; text-transform: uppercase;
+                              letter-spacing: 0.04em; }
+      .shop-list .nm { font-weight: 700; }
+      .shop-list .sk { color: var(--muted); font-size: 0.82rem; }
+      .modal-actions { display: flex; gap: 0.5rem; margin-top: 1rem; flex-wrap: wrap; }
+      .btn-primary { background: var(--rose); color: #fff; border: none; font-weight: 700; font-size: 0.95rem;
+                     padding: 0.6rem 1.3rem; border-radius: 100px; cursor: pointer; }
+      .btn-primary:hover { background: #c0325a; }
+      .toast { position: fixed; left: 50%; bottom: 1.5rem; transform: translateX(-50%) translateY(1rem);
+               background: #2e7d32; color: #fff; padding: 0.7rem 1.3rem; border-radius: 100px; font-weight: 700;
+               font-size: 0.9rem; box-shadow: 0 8px 24px rgba(0,0,0,0.2); opacity: 0; pointer-events: none;
+               transition: opacity 0.25s, transform 0.25s; z-index: 200; }
+      .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+    </style>
+  </head>
+  <body>
+    <div class="hearts-bg" aria-hidden="true" id="hearts-bg"></div>
+
+    <nav class="r-nav">
+      <div class="r-nav-inner">
+        <a class="r-brand" href="../index.html">🍽️ Maczfit <span>wybór posiłków</span></a>
+        <a class="r-navlink" href="../index.html">← Strona główna</a>
+        <a class="r-navlink" href="../menu/index.html">🍱 Menu</a>
+        <a class="r-navlink" href="../restauracje/index.html">Restauracje</a>
+        <a class="r-navlink" href="../low-fodmap/index.html">Low FODMAP</a>
+      </div>
+    </nav>
+
+    <div class="wrap">
+      <div class="lead">
+        <h1>Maczfit 🍽️</h1>
+        <p>Przeglądaj wszystkie dostępne posiłki Maczfit i <strong>wybierz swoje</strong> na
+           śniadanie, drugie śniadanie, obiad, podwieczorek i kolację. Kliknij danie, żeby dodać je
+           do wyboru — potem możesz go skopiować lub pobrać jako listę.</p>
+      </div>
+
+      <div class="controls">
+        <input class="search" id="search" type="search" placeholder="🔍 Szukaj po nazwie lub składniku…" />
+        <div class="cat-filter" id="catFilter"></div>
+      </div>
+
+      <div class="picked-bar">
+        <div class="picked-top">
+          <span class="picked-count"><span id="pickN">0</span> / 5 wybranych</span>
+          <div class="picked-actions">
+            <button class="btn-ghost" id="viewPick" disabled>📋 Podgląd wyboru</button>
+            <button class="btn-ghost" id="copyPick" disabled>📋 Kopiuj</button>
+            <button class="btn-ghost" id="downloadPick" disabled>⬇️ Pobierz .txt</button>
+            <button class="btn-ghost" id="clearPick" disabled>✕ Wyczyść</button>
+          </div>
+        </div>
+        <div class="picked-chips" id="pickedChips">
+          <span class="chip-empty">Nic jeszcze nie wybrano — kliknij danie poniżej.</span>
+        </div>
+      </div>
+
+      <div id="cats"></div>
+
+      <div class="disclaimer">
+        <strong>Uwaga:</strong> to zestawienie posiłków Maczfit (składniki i alergeny wg producenta). Dania
+        <em>nie są</em> filtrowane pod dietę low FODMAP — sprawdzaj składniki samodzielnie. Daty dostaw są
+        pominięte; lista pokazuje wszystkie unikalne dania z menu.
+      </div>
+    </div>
+
+    <div class="modal-bg" id="pickModal">
+      <div class="modal">
+        <div class="modal-head">
+          <h2>📋 Twój wybór</h2>
+          <button class="close" id="pickClose" aria-label="Zamknij">×</button>
+        </div>
+        <div class="modal-body">
+          <ul class="shop-list" id="pickList"></ul>
+          <div class="modal-actions">
+            <button class="btn-primary" id="pickCopy">📋 Kopiuj</button>
+            <button class="btn-ghost" id="pickDownload">⬇️ Pobierz .txt</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" aria-live="polite"></div>
+
+    <script src="../hearts.js"></script>
+    <script>
+      const $ = (id) => document.getElementById(id);
+      let DATA = null;
+      let byCat = {};
+      let picked = {};          // slug posiłku -> danie (sku)
+      let filterCat = "all";
+      let query = "";
+
+      const escapeHtml = (s) => String(s || "").replace(/[&<>"]/g, (c) =>
+        ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+      async function load() {
+        const res = await fetch("dania.json", { cache: "no-store" });
+        if (!res.ok) throw new Error("Nie udało się wczytać dania.json (uruchom przez http://, nie file://).");
+        DATA = await res.json();
+        byCat = {};
+        for (const p of DATA.posilki) byCat[p.slug] = [];
+        for (const d of DATA.dania) (byCat[d.posilek] ||= []).push(d);
+        renderCatFilter();
+        render();
+      }
+
+      function renderCatFilter() {
+        const box = $("catFilter");
+        box.innerHTML = `<button class="cbtn on" data-cat="all">Wszystkie</button>` +
+          DATA.posilki.map((p) =>
+            `<button class="cbtn" data-cat="${p.slug}">${p.emoji} ${escapeHtml(p.etykieta)}</button>`).join("");
+        box.addEventListener("click", (e) => {
+          const b = e.target.closest("[data-cat]");
+          if (!b) return;
+          filterCat = b.dataset.cat;
+          box.querySelectorAll(".cbtn").forEach((x) => x.classList.toggle("on", x === b));
+          render();
+        });
+      }
+
+      function matches(d) {
+        if (!query) return true;
+        const hay = (d.nazwa + " " + d.skladniki).toLowerCase();
+        return hay.includes(query);
+      }
+
+      function render() {
+        const root = $("cats");
+        root.innerHTML = "";
+        const cats = DATA.posilki.filter((p) => filterCat === "all" || p.slug === filterCat);
+        for (const p of cats) {
+          const dishes = (byCat[p.slug] || []).filter(matches);
+          const sec = document.createElement("section");
+          sec.className = "cat";
+          sec.innerHTML =
+            `<div class="cat-head"><span class="emoji">${p.emoji}</span>` +
+            `<h2>${escapeHtml(p.etykieta)}</h2><span class="n">${dishes.length} dań</span></div>` +
+            `<div class="cards"></div>`;
+          const grid = sec.querySelector(".cards");
+          if (!dishes.length) {
+            grid.innerHTML = `<div class="empty">Brak dań pasujących do wyszukiwania.</div>`;
+          } else {
+            for (const d of dishes) grid.appendChild(card(p, d));
+          }
+          root.appendChild(sec);
+        }
+      }
+
+      function card(posilek, d) {
+        const el = document.createElement("div");
+        const isSel = picked[posilek.slug] && picked[posilek.slug].sku === d.sku;
+        el.className = "card" + (isSel ? " sel" : "");
+        el.innerHTML =
+          `<div class="check">✓</div>` +
+          `<img class="thumb" src="${escapeHtml(d.obrazek)}" alt="${escapeHtml(d.nazwa)}" loading="lazy" ` +
+          `onerror="this.style.visibility='hidden'">` +
+          `<div class="body">` +
+          `<h3>${escapeHtml(d.nazwa)}</h3>` +
+          `<div class="ing">${escapeHtml(d.skladniki)}</div>` +
+          (d.alergeny.length ? `<div class="alg">⚠️ Alergeny: ${escapeHtml(d.alergeny.join(", "))}</div>` : "") +
+          `<span class="pick">${isSel ? "✓ Wybrane" : "＋ Wybierz"}</span>` +
+          `</div>`;
+        el.addEventListener("click", () => toggle(posilek.slug, d));
+        return el;
+      }
+
+      function toggle(slug, d) {
+        if (picked[slug] && picked[slug].sku === d.sku) delete picked[slug];
+        else picked[slug] = d;
+        render();
+        renderPicked();
+      }
+
+      function renderPicked() {
+        const n = Object.keys(picked).length;
+        $("pickN").textContent = n;
+        const chips = $("pickedChips");
+        if (!n) {
+          chips.innerHTML = `<span class="chip-empty">Nic jeszcze nie wybrano — kliknij danie poniżej.</span>`;
+        } else {
+          chips.innerHTML = DATA.posilki.filter((p) => picked[p.slug]).map((p) => {
+            const d = picked[p.slug];
+            return `<span class="chip"><b>${p.emoji} ${escapeHtml(p.etykieta)}:</b> ` +
+                   `${escapeHtml(d.nazwa)} <button data-clear="${p.slug}" title="Usuń">×</button></span>`;
+          }).join("");
+          chips.querySelectorAll("[data-clear]").forEach((b) =>
+            b.addEventListener("click", () => { delete picked[b.dataset.clear]; render(); renderPicked(); }));
+        }
+        const has = n > 0;
+        ["viewPick", "copyPick", "downloadPick", "clearPick"].forEach((id) => $(id).disabled = !has);
+      }
+
+      function pickText() {
+        const lines = ["Mój wybór z Maczfit", ""];
+        for (const p of DATA.posilki) {
+          const d = picked[p.slug];
+          if (!d) continue;
+          lines.push(`${p.etykieta.toUpperCase()}: ${d.nazwa}`);
+          if (d.skladniki) lines.push(`  Składniki: ${d.skladniki}`);
+          if (d.alergeny.length) lines.push(`  Alergeny: ${d.alergeny.join(", ")}`);
+          lines.push("");
+        }
+        return lines.join("\n").trim() + "\n";
+      }
+
+      function openModal() {
+        $("pickList").innerHTML = DATA.posilki.filter((p) => picked[p.slug]).map((p) => {
+          const d = picked[p.slug];
+          return `<li><div class="cat-label">${p.emoji} ${escapeHtml(p.etykieta)}</div>` +
+                 `<div class="nm">${escapeHtml(d.nazwa)}</div>` +
+                 (d.skladniki ? `<div class="sk">${escapeHtml(d.skladniki)}</div>` : "") + `</li>`;
+        }).join("");
+        $("pickModal").classList.add("show");
+      }
+      const closeModal = () => $("pickModal").classList.remove("show");
+
+      let toastTimer = null;
+      function toast(msg) {
+        const t = $("toast"); t.textContent = msg; t.classList.add("show");
+        clearTimeout(toastTimer); toastTimer = setTimeout(() => t.classList.remove("show"), 2200);
+      }
+      async function copyText(txt) {
+        try { await navigator.clipboard.writeText(txt); toast("Skopiowano ✓"); }
+        catch (e) {
+          const ta = document.createElement("textarea"); ta.value = txt; document.body.appendChild(ta); ta.select();
+          try { document.execCommand("copy"); toast("Skopiowano ✓"); } catch (_) {}
+          ta.remove();
+        }
+      }
+      function download(name, txt) {
+        const blob = new Blob([txt], { type: "text/plain;charset=utf-8" });
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(blob); a.download = name;
+        document.body.appendChild(a); a.click(); a.remove();
+        setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+      }
+
+      $("search").addEventListener("input", (e) => { query = e.target.value.trim().toLowerCase(); render(); });
+      $("viewPick").addEventListener("click", openModal);
+      $("pickClose").addEventListener("click", closeModal);
+      $("copyPick").addEventListener("click", () => copyText(pickText()));
+      $("pickCopy").addEventListener("click", () => copyText(pickText()));
+      $("downloadPick").addEventListener("click", () => { download("maczfit-wybor.txt", pickText()); toast("Pobrano ⬇️"); });
+      $("pickDownload").addEventListener("click", () => { download("maczfit-wybor.txt", pickText()); toast("Pobrano ⬇️"); });
+      $("clearPick").addEventListener("click", () => { picked = {}; render(); renderPicked(); });
+      $("pickModal").addEventListener("click", (e) => { if (e.target.id === "pickModal") closeModal(); });
+      document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
+
+      load().catch((err) => { $("cats").innerHTML = `<div class="empty">${escapeHtml(err.message)}</div>`; });
+    </script>
+  </body>
+</html>
