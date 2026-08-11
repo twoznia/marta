@@ -1,0 +1,894 @@
+{
+  "zrodlo": "Maczfit",
+  "posilki": [
+    {
+      "slug": "sniadanie",
+      "etykieta": "Śniadanie",
+      "emoji": "🥣"
+    },
+    {
+      "slug": "drugie-sniadanie",
+      "etykieta": "II śniadanie",
+      "emoji": "🍎"
+    },
+    {
+      "slug": "obiad",
+      "etykieta": "Obiad",
+      "emoji": "🍲"
+    },
+    {
+      "slug": "podwieczorek",
+      "etykieta": "Podwieczorek",
+      "emoji": "🥕"
+    },
+    {
+      "slug": "kolacja",
+      "etykieta": "Kolacja",
+      "emoji": "🥗"
+    }
+  ],
+  "dania": [
+    {
+      "sku": "300003006",
+      "posilek": "sniadanie",
+      "nazwa": "Kokosowa kukurydzianka bez laktozy z musem truskawkowym i ananas",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300003006.jpg",
+      "skladniki": "Mleko bez laktozy 1,5% tł. (64%), Ananas (20%), Truskawki (8%), Kasza kukurydziana (5%), Wiórki kokosowe (2%), Cukier",
+      "alergeny": [
+        "Dwutlenek siarki i siarczyny",
+        "Mleko"
+      ]
+    },
+    {
+      "sku": "300003007",
+      "posilek": "drugie-sniadanie",
+      "nazwa": "Sałatka z serem greckim bez laktozy, czarną fasolą, komosą ryżową, cherry i sos musztardowy z syropem klonowym",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300003007.jpg",
+      "skladniki": "Woda (29%), Pomidor daktylowy czerwony (16%), Komosa ryżowa (15%), Fasola czarna (12%), Ser typu greckiego bez laktozy (12%), Mix sałat (9%), Musztarda (2%), Olej rzepakowy (2%), Syrop klonowy (2%), Woda, Sól, Sok z cytryny, Pieprz czarny",
+      "alergeny": [
+        "Gorczyca",
+        "Mleko"
+      ]
+    },
+    {
+      "sku": "300003008",
+      "posilek": "obiad",
+      "nazwa": "Filet z okonia w kremowym sosie serowym, marchewką i cukinią, czerwonym ryżem z natką i marchewka baby",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300003008.jpg",
+      "skladniki": "Okoń nilowy (36%), Woda (20%), Marchew baby (13%), Ryż czerwony (12%), Śmietanka 30% bez laktozy (5%), Cukinia (3%), Marchew (3%), Śmietana bez laktozy 18% (3%), Ser podpuszczkowy dojrzewający (2%), Olej rzepakowy, Natka pietruszki, Sól, Masło bez laktozy, Skrobia ziemniaczana, Natka pietruszki, Pieprz czarny, Gałka muszkatołowa",
+      "alergeny": [
+        "Jaja",
+        "Mleko",
+        "Ryby"
+      ]
+    },
+    {
+      "sku": "300003009",
+      "posilek": "podwieczorek",
+      "nazwa": "Trufla z tahini, orzechami włoskimi, ziemnymi, płatkami owsianymi i melon",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300003009.jpg",
+      "skladniki": "Melon pomarańczowy (60%), Masło orzechowe (10%), Olej kokosowy (8%), Orzeszki arachidowe (8%), Płatki owsiane bezglutenowe (4%), Pasta sezamowa tahini (4%), Syrop klonowy (4%), Orzechy włoskie (2%)",
+      "alergeny": [
+        "Orzechy",
+        "Orzeszki ziemne",
+        "Sezam"
+      ]
+    },
+    {
+      "sku": "300003010",
+      "posilek": "kolacja",
+      "nazwa": "Bezglutenowa zapiekanka z indykiem, ryżem, cukinią, bakłażanem, cherry i sos jogurtowo-ziołowy bez laktozy",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300003010.jpg",
+      "skladniki": "Bakłażan (15%), Cukinia (15%), Woda (14%), Pomidor daktylowy czerwony (11%), Mięso drobne z indyka (10%), Koncentrat pomidorowy (7%), Ryż paraboiled (6%), Jogurt naturalny wysokobiałkowy bez laktozy (6%), Mozzarella bez laktozy (6%), Jogurt naturalny bez laktozy (3%), Jaja (2%), Skrobia ziemniaczana (2%), Olej rzepakowy, Syrop klonowy, Sól, Koperek, Natka pietruszki, Pieprz czarny, Oregano, Cząber, Kardamon, Bazylia",
+      "alergeny": [
+        "Jaja",
+        "Mleko"
+      ]
+    },
+    {
+      "sku": "300003116",
+      "posilek": "sniadanie",
+      "nazwa": "Bezlaktozowy twarożek z rzodkiewką, ogórkiem i koperkiem, chleb bezglutenowy i czerwona papryka",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300003116.jpg",
+      "skladniki": "Chleb bezglutenowy (41%), Papryka czerwona (18%), Ser twarogowy bez laktozy półtłusty (17%), Serek naturalny bez laktozy (16%), Ogórek (4%), Rzodkiewka (4%), Koperek, Sól, Pieprz czarny",
+      "alergeny": [
+        "Mleko"
+      ]
+    },
+    {
+      "sku": "300003117",
+      "posilek": "drugie-sniadanie",
+      "nazwa": "Czekoladowy deser z tapioki na mleku bez laktozy z wiórkami kokosa i pomarańcze",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300003117.jpg",
+      "skladniki": "Mleko bez laktozy 1,5% tł. (52%), Pomarańcza (38%), Tapioka (5%), Czekolada gorzka (3%), Cukier (2%), Wiórki kokosowe",
+      "alergeny": [
+        "Dwutlenek siarki i siarczyny",
+        "Mleko"
+      ]
+    },
+    {
+      "sku": "300003118",
+      "posilek": "obiad",
+      "nazwa": "Kurczak w sosie śmietanowo-cytrynowym, kasza jaglana z natką i duszony szpinak ze śmietanką",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300003118.jpg",
+      "skladniki": "Filet z piersi kurczaka (32%), Woda (28%), Szpinak (15%), Śmietanka 30% bez laktozy (11%), Kasza jaglana (8%), Olej rzepakowy, Masło bez laktozy, Natka pietruszki, Sól, Skrobia ziemniaczana, , Sok z cytryny, Natka pietruszki, Cukier, Mąka kukurydziana, Cytryna, Pieprz czarny, Tymianek suszony",
+      "alergeny": [
+        "Mleko"
+      ]
+    },
+    {
+      "sku": "300003119",
+      "posilek": "podwieczorek",
+      "nazwa": "Sałatka z pieczonym indykiem i marchewką, ogórkiem, cherry i sos musztardowy z syropem klonowym",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300003119.jpg",
+      "skladniki": "Filet z piersi indyka (37%), Ogórek (19%), Pomidor daktylowy czerwony (14%), Marchew (12%), Mix sałat (9%), Olej rzepakowy (3%), Syrop klonowy (2%), Musztarda (2%), Natka pietruszki, Sól, Sok z cytryny, Skrobia ziemniaczana, Papryka słodka mielona , Pieprz czarny, Imbir mielony",
+      "alergeny": [
+        "Gorczyca"
+      ]
+    },
+    {
+      "sku": "300003120",
+      "posilek": "kolacja",
+      "nazwa": "Zupa dyniowo-marchewkowa z pomidorami na mleczku kokosowym z pestkami dyni i wafle z komosy ryżowej",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300003120.jpg",
+      "skladniki": "Pomidory krojone (24%), Dynia (15%), Marchew (15%), Woda (15%), Ziemniaki (15%), Mleko kokosowe (8%), Wafle z komosy ryżowej (7%), Olej rzepakowy, Sól, Pestki dyni, Imbir mielony, Pieprz czarny\nNa terenie zakładu wykorzystywane są różne surowce zawierające alergeny. Możliwe jest zanieczyszczenie krzyżowe alergenami.",
+      "alergeny": []
+    },
+    {
+      "sku": "300003400",
+      "posilek": "sniadanie",
+      "nazwa": "Jaglane ciasto śniadaniowe, bezlaktozowy serek chałwowy z czekoladą i grejpfrut",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300003400.jpg",
+      "skladniki": "Jogurt naturalny wysokobiałkowy bez laktozy (25%), Grejfrut (19%), Mleko bez laktozy 1,5% tł. (13%), Białko jaja (8%), Woda (6%), Mąka bezglutenowa (6%), Śmietana bez laktozy 18% (5%), Żółtko jaja (4%), Kasza jaglana (3%), Chałwa waniliowa (3%), Jogurt naturalny bez laktozy (3%), Cukier (3%), Syrop klonowy, Cukier wanilinowy, Czekolada gorzka",
+      "alergeny": [
+        "Jaja",
+        "Mleko",
+        "Sezam",
+        "Soja"
+      ]
+    },
+    {
+      "sku": "300003401",
+      "posilek": "drugie-sniadanie",
+      "nazwa": "Bezlaktozowa pasta serowa z sezamem, wafelki ryżowe i słupki marchewki",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300003401.jpg",
+      "skladniki": "Marchew (43%), Talarki ryżowe (16%), Ser żółty bez laktozy (15%), Serek naturalny bez laktozy (14%), Majonez light (7%), Ser dojrzewający (3%), Sezam czarny, Natka pietruszki, Pasta Harrisa",
+      "alergeny": [
+        "Gorczyca",
+        "Jaja",
+        "Mleko",
+        "Sezam"
+      ]
+    },
+    {
+      "sku": "300003402",
+      "posilek": "obiad",
+      "nazwa": "Indyk w sosie pomidorowym z natką, kasza gryczana i surówka z ogórka",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300003402.jpg",
+      "skladniki": "Filet z piersi indyka (28%), Pomidory krojone (14%), Sok marchwiowy (14%), Woda (14%), Ogórek (12%), Kasza gryczana prażona (9%), Jogurt naturalny wysokobiałkowy bez laktozy (2%), Majonez wegański (2%), Koncentrat pomidorowy, Olej rzepakowy, Cukier, Sól, Oliwa z oliwek, Koperek, Natka pietruszki, Skrobia ziemniaczana, Natka pietruszki, Pieprz czarny, Oregano, Sok z cytryny, Bazylia",
+      "alergeny": [
+        "Gorczyca",
+        "Mleko"
+      ]
+    },
+    {
+      "sku": "300003403",
+      "posilek": "podwieczorek",
+      "nazwa": "Jogurtowy koktajl z papają, bananem i kurkumą na mleku kokosowym",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300003403.jpg",
+      "skladniki": "Papaja (24%), Banan (18%), Jogurt naturalny wysokobiałkowy bez laktozy (18%), Mleko bez laktozy 1,5% tł. (18%), Mleko kokosowe (17%), Sok z cytryny (4%), Syrop klonowy (2%), Kurkuma",
+      "alergeny": [
+        "Mleko"
+      ]
+    },
+    {
+      "sku": "300003404",
+      "posilek": "kolacja",
+      "nazwa": "Sałatka Cezar z kurczakiem, ogórkiem, cherry, własnej roboty parmezanem ze słonecznika, bezglutenowe paluchy i sos cezar bez laktozy",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300003404.jpg",
+      "skladniki": "Filet z piersi kurczaka (26%), Ogórek (21%), Pomidor daktylowy czerwony (14%), Paluchy bezglutenowe z ziołami (13%), Mix sałat (9%), Olej rzepakowy (4%), Jogurt naturalny wysokobiałkowy bez laktozy (3%), Woda (3%), Słonecznik (2%), Ser dojrzewający (2%), Musztarda, Majonez light, Płatki drożdżowe nieaktywne, Sok z cytryny, Sól, Papryka słodka mielona , Pieprz czarny, Zioła prowansalskie",
+      "alergeny": [
+        "Gorczyca",
+        "Jaja",
+        "Mleko",
+        "Sezam"
+      ]
+    },
+    {
+      "sku": "300004120",
+      "posilek": "sniadanie",
+      "nazwa": "Bezglutenowy bajgiel z makiem, bezlaktozowy twarożek z łososiem i koperkiem, ogórki i rzodkiewki",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300004120.jpg",
+      "skladniki": "Bezglutenowy bajgiel z makiem (32%), Serek naturalny bez laktozy (21%), Filet z łososia (13%), Ogórek (13%), Ser twarogowy bez laktozy półtłusty (10%), Rzodkiewka (10%), Koperek, Sól, Pieprz czarny",
+      "alergeny": [
+        "Jaja",
+        "Mleko",
+        "Ryby"
+      ]
+    },
+    {
+      "sku": "300004121",
+      "posilek": "drugie-sniadanie",
+      "nazwa": "Wegańskie ciasteczko z ciecierzycy i masła orzechowego z czekoladą i ananas",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300004121.jpg",
+      "skladniki": "Ananas (36%), Ciecierzyca (28%), Masło orzechowe (19%), Czekolada gorzka (6%), Cukier (5%), Syrop klonowy (5%), Cukier wanilinowy, Proszek do pieczenia bezglutenowy",
+      "alergeny": [
+        "Mleko",
+        "Orzeszki ziemne",
+        "Soja"
+      ]
+    },
+    {
+      "sku": "300057684",
+      "posilek": "obiad",
+      "nazwa": "Wołowina w sosie musztardowym z koperkiem, ryż basmati i surówka z kalarepy i marchewki",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300057684.jpg",
+      "skladniki": "Wołowina udziec (36%), Woda (24%), Kalarepa (9%), Marchew (9%), Ryż Basmati (8%), Śmietanka 30% bez laktozy (5%), Majonez light (2%), Musztarda, Musztarda francuska, Olej rzepakowy, Sól, Ocet winny biały, Skrobia ziemniaczana, Mieszanka warzyw suszonych, Koperek, Papryka słodka mielona , Pieprz czarny, Sok z cytryny",
+      "alergeny": [
+        "Dwutlenek siarki i siarczyny",
+        "Gorczyca",
+        "Jaja",
+        "Mleko",
+        "Seler"
+      ]
+    },
+    {
+      "sku": "300004123",
+      "posilek": "podwieczorek",
+      "nazwa": "Leczo warzywne z cukinią, bakłażanem, pomidorami, parmezanem i pieczone ziemniaczki",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300004123.jpg",
+      "skladniki": "Ziemniaki (23%), Pomidory krojone (23%), Cukinia (15%), Marchew (13%), Bakłażan (13%), Papryka (10%), Ser parmezan, Olej rzepakowy, Sól, Cukier, Pieprz czarny, Zioła prowansalskie",
+      "alergeny": [
+        "Mleko"
+      ]
+    },
+    {
+      "sku": "300004124",
+      "posilek": "kolacja",
+      "nazwa": "Sałatka z kurczakiem, pieczoną cukinią i papryką, bezglutenowym makaronem i sos pomarańczowo-bazyliowy",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300004124.jpg",
+      "skladniki": "Filet z piersi kurczaka (23%), Cukinia (19%), Woda (14%), Papryka czerwona (12%), Makaron bezglutenowy (12%), Mix sałat (11%), Sok pomarańczowy (3%), Olej rzepakowy (3%), Musztarda, Syrop klonowy, Sól, , Cukier, Natka pietruszki, Pieprz czarny, Oregano, Lubczyk",
+      "alergeny": [
+        "Gorczyca"
+      ]
+    },
+    {
+      "sku": "300004250",
+      "posilek": "sniadanie",
+      "nazwa": "Bezglutenowe tosty francuskie z serkiem naturalnym bez laktozy, musem malinowym, miętą i syrop klonowy",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300004250.jpg",
+      "skladniki": "Chleb rustykalny bezglutenowy (23%), Maliny (17%), Jogurt naturalny wysokobiałkowy bez laktozy (15%), Serek naturalny bez laktozy (15%), Jaja (14%), Syrop klonowy (7%), Cukier (4%), Masło bez laktozy (3%), Mięta, Cukier wanilinowy",
+      "alergeny": [
+        "Jaja",
+        "Mleko",
+        "Soja"
+      ]
+    },
+    {
+      "sku": "300004251",
+      "posilek": "drugie-sniadanie",
+      "nazwa": "Sałatka z bezlaktozowym serem greckim, jajkami, brokułami, suszonymi pomidorami i sos jogurtowo-majonezowy",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300004251.jpg",
+      "skladniki": "Brokuły (32%), Jaja (25%), Ser typu greckiego bez laktozy (17%), Mix sałat (13%), Majonez light (6%), Jogurt naturalny wysokobiałkowy bez laktozy (4%), Pomidory suszone w oleju (3%), Musztarda, Cukier, Sól, Pieprz czarny",
+      "alergeny": [
+        "Gorczyca",
+        "Jaja",
+        "Mleko"
+      ]
+    },
+    {
+      "sku": "300004252",
+      "posilek": "obiad",
+      "nazwa": "Stir fry z krewetkami, fasolką szparagową, marchewką, kapustą, selerem naciowym i ryż basmati",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300004252.jpg",
+      "skladniki": "Woda (30%), Krewetki (26%), Fasolka szparagowa zielona (13%), Ryż Basmati (11%), Marchew (6%), Kapusta biała (5%), Syrop klonowy (2%), Sos sojowy bezglutenowy (2%), Seler naciowy (2%), Olej rzepakowy, Olej sezamowy, Sos rybny, Skrobia ziemniaczana, Sól, Sok z cytryny, Papryka słodka mielona , Kurkuma, Imbir mielony, Pieprz czarny",
+      "alergeny": [
+        "Ryby",
+        "Seler",
+        "Sezam",
+        "Skorupiaki",
+        "Soja"
+      ]
+    },
+    {
+      "sku": "300004253",
+      "posilek": "podwieczorek",
+      "nazwa": "Budyń ryżowy bez laktozy z czekoladą i melon",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300004253.jpg",
+      "skladniki": "Mleko bez laktozy 1,5% tł. (65%), Melon pomarańczowy (23%), Mąka bezglutenowa (5%), Cukier (3%), Masło bez laktozy (2%), Cukier wanilinowy (2%), Czekolada gorzka",
+      "alergeny": [
+        "Mleko",
+        "Soja"
+      ]
+    },
+    {
+      "sku": "300004254",
+      "posilek": "kolacja",
+      "nazwa": "Ramen z mieloną wołowiną, szpinakiem, szczypiorkiem i makaronem bezglutenowym",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300004254.jpg",
+      "skladniki": "Woda (29%), Napój owsiany (27%), Mięso mielone wołowe (21%), Makaron bezglutenowy (9%), Śmietanka 30% bez laktozy (6%), Sos sojowy bezglutenowy (2%), Pasta sezamowa tahini, Pasta miso jasna, Szpinak, Szczypior, Mieszanka warzyw suszonych, Grzyby shitake suszone, Sól, Płatki drożdżowe nieaktywne, Papryka słodka mielona , Olej rzepakowy, Olej sezamowy, Imbir mielony, Pieprz biały, Pieprz czarny",
+      "alergeny": [
+        "Gluten",
+        "Mleko",
+        "Seler",
+        "Sezam",
+        "Soja"
+      ]
+    },
+    {
+      "sku": "300008474",
+      "posilek": "sniadanie",
+      "nazwa": "Czekoladowa granola z orzechami ziemnymi, brazylijskimi, słonecznikiem, kokosem, chia, jogurt naturalny bez laktozy i melon",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300008474.jpg",
+      "skladniki": "Jogurt naturalny bez laktozy (54%), Melon pomarańczowy (26%), Syrop klonowy (3%), Płatki jaglane (3%), Płatki owsiane bezglutenowe (3%), Czekolada gorzka (3%), Woda (2%), Orzeszki arachidowe, Żurawina suszona słodzona, Kakao o obniżonej zawartości tłuszczu, Orzechy brazylijskie, Wiórki kokosowe , Słonecznik, Nasiona chia, Gryka ekspandowana",
+      "alergeny": [
+        "Dwutlenek siarki i siarczyny",
+        "Mleko",
+        "Orzechy",
+        "Orzeszki ziemne",
+        "Soja"
+      ]
+    },
+    {
+      "sku": "300008475",
+      "posilek": "drugie-sniadanie",
+      "nazwa": "Sałatka z bezlaktozowym serem greckim, pomarańczą, pieczoną cukinią, płatkami migdałów i sos musztardowy z syropem klonowym",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300008475.jpg",
+      "skladniki": "Pomarańcza (28%), Cukinia (27%), Ser typu greckiego bez laktozy (19%), Mix sałat (14%), Musztarda (3%), Olej rzepakowy (2%), Syrop klonowy (2%), Woda (2%), Migdał płatki, Cukier, Sok z cytryny, Sól, Pieprz czarny",
+      "alergeny": [
+        "Gorczyca",
+        "Mleko",
+        "Orzechy"
+      ]
+    },
+    {
+      "sku": "300008476",
+      "posilek": "obiad",
+      "nazwa": "Pieczony filet z łososia z kremowym sosem cytrynowym i natką pietruszki, kasza gryczana, surówka z marchewki i selera",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300008476.jpg",
+      "skladniki": "Filet z łososia (33%), Mleko bez laktozy 1,5% tł. (16%), Woda (15%), Marchew (12%), Kasza gryczana prażona (8%), Seler korzeń (7%), Śmietanka 30% bez laktozy (6%), Cytryna (2%), Mąka bezglutenowa , Sól, Olej rzepakowy, Natka pietruszki, Pieprz czarny, Sok z cytryny, Tymianek suszony",
+      "alergeny": [
+        "Mleko",
+        "Ryby",
+        "Seler"
+      ]
+    },
+    {
+      "sku": "300008477",
+      "posilek": "podwieczorek",
+      "nazwa": "Ciasto leśny mech z granatem i ananas",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300008477.jpg",
+      "skladniki": "Ananas (29%), Jogurt naturalny bez laktozy (20%), Woda (16%), Białko jaja (8%), Cukier (6%), Granat (5%), Żółtko jaja (5%), Szpinak (3%), Galaretka agrestowa (3%), Mąka ryżowa (3%), Mąka bezglutenowa MIX (2%), Skrobia ziemniaczana, Żelatyna, Proszek do pieczenia bezglutenowy",
+      "alergeny": [
+        "Jaja",
+        "Mleko"
+      ]
+    },
+    {
+      "sku": "300008478",
+      "posilek": "kolacja",
+      "nazwa": "Bezglutenowa włoska zapiekanka z indykiem, ryżem, serem, cukinią i suszonymi pomidorami, sos pomidorowy i sałata z oliwkami",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300008478.jpg",
+      "skladniki": "Sos pomidorowy (25%), Woda (19%), Mięso drobne z indyka (14%), Ryż paraboiled (11%), Cukinia (6%), Jaja (6%), Szpinak (5%), Pomidory suszone w oleju (4%), Mix sałat (4%), Śmietana bez laktozy 18% (2%), Ser podpuszczkowy dojrzewający (2%), Oliwki zielone (2%), Olej rzepakowy, Sól, Pieprz czarny, Bazylia",
+      "alergeny": [
+        "Jaja",
+        "Mleko"
+      ]
+    },
+    {
+      "sku": "300059814",
+      "posilek": "sniadanie",
+      "nazwa": "Bezlaktozowa pasta twarogowa z serem greckim, rzodkiewką i ziołami, bułka bezglutenowa, cherry",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300059814.jpg",
+      "skladniki": "Bułka bezglutenowa z ziarnami (36%), Ser twarogowy bez laktozy półtłusty (20%), Pomidor daktylowy czerwony (16%), Ser feta bez laktozy (16%), Rzodkiewka (7%), Jogurt naturalny bez laktozy (4%), Posypka pomidory suszone, Zioła prowansalskie, Pieprz czarny",
+      "alergeny": [
+        "Mleko",
+        "Sezam",
+        "Soja"
+      ]
+    },
+    {
+      "sku": "300009265",
+      "posilek": "drugie-sniadanie",
+      "nazwa": "Sałatka owocowa, serek waniliowy z ricottą i czekoladą",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300009265.jpg",
+      "skladniki": "Serek homogenizowany waniliowy bez laktozy (38%), Kiwi (17%), Ananas (17%), Ricotta (16%), Melon pomarańczowy (12%), Czekolada gorzka",
+      "alergeny": [
+        "Mleko",
+        "Soja"
+      ]
+    },
+    {
+      "sku": "300009266",
+      "posilek": "obiad",
+      "nazwa": "Kurczak w sosie z cukinią, marchewką i chlorellą na mleczku kokosowym, ryż basmati z kolendrą i limonką",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300009266.jpg",
+      "skladniki": "Filet z piersi kurczaka (26%), Woda (25%), Ryż Basmati (13%), Mleko kokosowe (12%), Cukinia (7%), Marchew (7%), Olej rzepakowy (2%), Limonka (2%), Seler naciowy, Mąka kukurydziana, Sos rybny, Sól, Skrobia ziemniaczana, Kolendra, Kolendra, Chlorella, Kurkuma, Papryka słodka mielona , Imbir mielony, Kmin rzymski, Kardamon",
+      "alergeny": [
+        "Ryby",
+        "Seler"
+      ]
+    },
+    {
+      "sku": "300009267",
+      "posilek": "podwieczorek",
+      "nazwa": "Sałatka z indykiem, cykorią, marchewką, ogórkiem, orzechami ziemnymi, nachosy i sos majonezowo-jogurtowy",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300009267.jpg",
+      "skladniki": "Filet z piersi indyka (37%), Marchew (11%), Ogórek (11%), Nachosy kukurydziane (10%), Mix sałat (8%), Majonez light (6%), Jogurt naturalny wysokobiałkowy bez laktozy (5%), Jogurt naturalny bez laktozy (5%), Cykoria czerwona (4%), Orzeszki arachidowe (3%), Musztarda, Olej rzepakowy, Sól, Cukier, Skrobia ziemniaczana, Papryka słodka mielona , Pieprz czarny, Bazylia, Oregano",
+      "alergeny": [
+        "Gorczyca",
+        "Jaja",
+        "Mleko",
+        "Orzeszki ziemne"
+      ]
+    },
+    {
+      "sku": "300009268",
+      "posilek": "kolacja",
+      "nazwa": "Bezglutenowy makaron w sosie pomidorowym z marchewką, bakłażanem, cukinią, serem długodojrzewającym i bazylią",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300009268.jpg",
+      "skladniki": "Woda (33%), Makaron bezglutenowy (16%), Bakłażan (12%), Cukinia (12%), Marchew (12%), Pomidory krojone (12%), Ser dojrzewający (2%), Sól, Olej rzepakowy, Koncentrat pomidorowy, Papryka słodka mielona , , Ziele angielskie, Liść laurowy",
+      "alergeny": [
+        "Mleko"
+      ]
+    },
+    {
+      "sku": "300009709",
+      "posilek": "sniadanie",
+      "nazwa": "Bezglutenowe śniadaniowe ciasto marchewkowe, serek chałwowy bez laktozy i pomarańcze",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300009709.jpg",
+      "skladniki": "Pomarańcza (31%), Jogurt naturalny wysokobiałkowy bez laktozy (26%), Marchew (13%), Mąka bezglutenowa (9%), Olej rzepakowy (5%), Jaja (4%), Cukier (4%), Chałwa waniliowa (4%), Jogurt naturalny bez laktozy (3%), Syrop klonowy, Sól, Proszek do pieczenia bezglutenowy , Soda oczyszczona, Cynamon",
+      "alergeny": [
+        "Jaja",
+        "Mleko",
+        "Sezam"
+      ]
+    },
+    {
+      "sku": "300009710",
+      "posilek": "drugie-sniadanie",
+      "nazwa": "Pasta z tuńczyka z serem bez laktozy, słupki kalarepy i mini wafle gryczane",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300009710.jpg",
+      "skladniki": "Kalarepa (29%), Serek naturalny bez laktozy (19%), Talarki gryczane (18%), Tuńczyk w kawałkach w wodzie (16%), Majonez light (8%), Ser twarogowy bez laktozy półtłusty (5%), Ser żółty bez laktozy (4%), Posypka pomidory suszone, Kurkuma, Gałka muszkatołowa, Kolendra, Sok z cytryny, Pieprz czarny",
+      "alergeny": [
+        "Gorczyca",
+        "Jaja",
+        "Mleko",
+        "Ryby"
+      ]
+    },
+    {
+      "sku": "300009711",
+      "posilek": "obiad",
+      "nazwa": "Pulpeciki z brązowego ryżu z ricottą, miso i sezamem w sosie orzechowym, makaron ryżowy, surówka z marchewki, ananasa i pędów bambusa z orzeszkami arachidowymi",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300009711.jpg",
+      "skladniki": "Woda (31%), Makaron ryżowy (10%), Brokuły (9%), Ryż brązowy (7%), Ananas w syropie (6%), Pędy bambusa (6%), Marchew (6%), Ricotta (4%), Olej rzepakowy (3%), Masło orzechowe (3%), Jaja (2%), Ser wegański (2%), Woda (2%), Sezam biały, Orzechy arachidowe prażone w karmelu, Sos sojowy bezglutenowy, Syrop klonowy, Płatki jaglane, Natka pietruszki, Szczypior, Sól, Ocet winny biały, Pasta miso jasna, Ocet ryżowy, Cukier, Sok z cytryny, Imbir mielony, Pieprz czarny, Papryka słodka mielona",
+      "alergeny": [
+        "Dwutlenek siarki i siarczyny",
+        "Jaja",
+        "Mleko",
+        "Orzeszki ziemne",
+        "Sezam",
+        "Soja"
+      ]
+    },
+    {
+      "sku": "300009712",
+      "posilek": "podwieczorek",
+      "nazwa": "Smoothie z kiwi, bananem i awokado na soku pomarańczowym",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300009712.jpg",
+      "skladniki": "Sok pomarańczowy (49%), Kiwi (19%), Banan (16%), Awokado (13%), Sok z limonki (3%)\nNa terenie zakładu wykorzystywane są różne surowce zawierające alergeny. Możliwe jest zanieczyszczenie krzyżowe alergenami.",
+      "alergeny": []
+    },
+    {
+      "sku": "300059675",
+      "posilek": "kolacja",
+      "nazwa": "Sałatka z serem greckim bez laktozy, komosą ryżową, suszonymi pomidorami, marchewką, tortilla kukurydziana i sos jogurtowo-koperkowy bez laktozy",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300059675.jpg",
+      "skladniki": "Woda (21%), Ser feta bez laktozy (17%), Jogurt naturalny bez laktozy (13%), Tortilla kukurydziana (10%), Marchew (10%), Komosa ryżowa czarna (10%), Mix sałat (9%), Pomidory suszone w oleju (5%), Majonez wegański (3%), Koperek, Sok z cytryny, Sól, Pieprz czarny",
+      "alergeny": [
+        "Gorczyca",
+        "Mleko"
+      ]
+    },
+    {
+      "sku": "300012166",
+      "posilek": "sniadanie",
+      "nazwa": "Bezlaktozowy twarożek z kaparami i koperkiem, bezglutenowa bułka, ogórki i rukola",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300012166.jpg",
+      "skladniki": "Bułka bezglutenowa z ziarnami (32%), Serek naturalny bez laktozy (24%), Ogórek (23%), Ser twarogowy bez laktozy półtłusty (13%), Musztarda (4%), Rukola (2%), Syrop klonowy, Kapary w zalewie, Koperek, Posypka pomidory suszone, Pieprz czarny",
+      "alergeny": [
+        "Gorczyca",
+        "Mleko",
+        "Sezam",
+        "Soja"
+      ]
+    },
+    {
+      "sku": "300012167",
+      "posilek": "drugie-sniadanie",
+      "nazwa": "Bezglutenowe ciasto pomarańczowo-czekoladowe à la delicja i ananas",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300012167.jpg",
+      "skladniki": "Sok pomarańczowy (40%), Ananas (27%), Białko jaja (8%), Czekolada gorzka (6%), Żółtko jaja (4%), Woda (3%), Mleko bez laktozy 1,5% tł. (3%), Mąka bezglutenowa (3%), Syrop klonowy (2%), Cukier (2%), Żelatyna, Skrobia ziemniaczana, Proszek do pieczenia bezglutenowy",
+      "alergeny": [
+        "Jaja",
+        "Mleko"
+      ]
+    },
+    {
+      "sku": "300012168",
+      "posilek": "obiad",
+      "nazwa": "Indyk w słodkim sosie musztardowym z natką pietruszki, kasza gryczana i kolorowa fasolka szparagowa",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300012168.jpg",
+      "skladniki": "Filet z piersi indyka (31%), Woda (31%), Kasza gryczana prażona (10%), Fasolka szparagowa zielona (7%), Fasolka szparagowa żółta (7%), Syrop klonowy (5%), Musztarda (4%), Musztarda sarepska (2%), Oliwa z oliwek, Olej rzepakowy, Sól, Skrobia ziemniaczana, Mieszanka warzyw suszonych, Natka pietruszki, Papryka słodka mielona , Sok z cytryny, Przyprawa curry, Pieprz czarny",
+      "alergeny": [
+        "Gorczyca",
+        "Seler"
+      ]
+    },
+    {
+      "sku": "300012169",
+      "posilek": "podwieczorek",
+      "nazwa": "Sałatka z pieczonymi ziemniaczkami, serem wegańskim, cherry, oliwkami i oliwa bazyliowo-cytrynowa",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300012169.jpg",
+      "skladniki": "Ziemniaki (34%), Pomidor daktylowy czerwony (21%), Mix sałat (14%), Ser wegański (14%), Oliwki zielone (7%), Oliwa z oliwek (4%), Olej rzepakowy (3%), (3%), Sól, Sok z cytryny, Pieprz czarny\nNa terenie zakładu wykorzystywane są różne surowce zawierające alergeny. Możliwe jest zanieczyszczenie krzyżowe alergenami.",
+      "alergeny": []
+    },
+    {
+      "sku": "300059988",
+      "posilek": "kolacja",
+      "nazwa": "Makaron ryżowy z orientalnym kurczakiem, cukinią, marchewką i sosem orzechowym",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300059988.jpg",
+      "skladniki": "Filet z piersi kurczaka (24%), Woda (21%), Marchew (18%), Cukinia (17%), Makaron ryżowy (9%), Masło orzechowe (3%), Olej rzepakowy (2%), Woda (2%), Koncentrat pomidorowy, Sos sojowy bezglutenowy, Syrop klonowy, Sezam biały, Sezam czarny, Ocet ryżowy, Sól, Skrobia ziemniaczana, Przyprawa chińska 5 smaków, Sok z cytryny, Papryka słodka mielona , Pieprz czarny",
+      "alergeny": [
+        "Orzeszki ziemne",
+        "Sezam",
+        "Soja"
+      ]
+    },
+    {
+      "sku": "300012417",
+      "posilek": "sniadanie",
+      "nazwa": "Czekoladowa kukurydzianka na mleku bez laktozy z serkiem orzechowym i mus malinowy",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300012417.jpg",
+      "skladniki": "Mleko bez laktozy 1,5% tł. (66%), Maliny (13%), Kasza kukurydziana (7%), Serek naturalny bez laktozy (5%), Masło orzechowe (3%), Ser twarogowy bez laktozy półtłusty (2%), Cukier (2%), Czekolada gorzka, Cukier puder, Kakao o obniżonej zawartości tłuszczu, Orzeszki ziemne prażone",
+      "alergeny": [
+        "Mleko",
+        "Orzeszki ziemne"
+      ]
+    },
+    {
+      "sku": "300012418",
+      "posilek": "drugie-sniadanie",
+      "nazwa": "Sałatka z jajkiem, marchewką, mini kukurydzą i sos musztardowo-klonowy",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300012418.jpg",
+      "skladniki": "Jaja (33%), Mini kolby kukurydzy konserwowe (28%), Marchew (18%), Mix sałat (10%), Musztarda (4%), Olej rzepakowy (4%), Syrop klonowy (2%), Sok z cytryny, Pieprz czarny",
+      "alergeny": [
+        "Gorczyca",
+        "Jaja"
+      ]
+    },
+    {
+      "sku": "300012419",
+      "posilek": "obiad",
+      "nazwa": "Pieczony pstrąg łososiowy w sosie szpinakowo-śmietanowym, ryż w kurkumie z natką, surówka z ogórka i rzodkiewki",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300012419.jpg",
+      "skladniki": "Pstrąg łososiowy (37%), Woda (23%), Ryż Basmati (9%), Szpinak (6%), Ogórek (6%), Rzodkiewka (6%), Mleko bez laktozy 1,5% tł. (4%), Śmietanka 30% bez laktozy (3%), Sok z cytryny, Śmietana bez laktozy 18%, Olej rzepakowy, Koperek, Sól, Skrobia ziemniaczana, Kurkuma, Natka pietruszki, Pieprz cytrynowy, Pieprz kolorowy, Gałka muszkatołowa, Pieprz czarny, Estragon",
+      "alergeny": [
+        "Mleko",
+        "Ryby"
+      ]
+    },
+    {
+      "sku": "300012420",
+      "posilek": "podwieczorek",
+      "nazwa": "Sernik waniliowy bez glutenu i laktozy z kokosem i ananas",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300012420.jpg",
+      "skladniki": "Ananas (46%), Ser twarogowy bez laktozy półtłusty (13%), Serek naturalny bez laktozy (13%), Mleko bez laktozy 1,5% tł. (7%), Masło bez laktozy (5%), Wegańskie ciasteczka czekoladowe z chia (4%), Płatki kukurydziane (4%), Cukier (3%), Woda (2%), Żelatyna, Cukier wanilinowy, Wiórki kokosowe",
+      "alergeny": [
+        "Dwutlenek siarki i siarczyny",
+        "Mleko"
+      ]
+    },
+    {
+      "sku": "300057861",
+      "posilek": "kolacja",
+      "nazwa": "Zupa jarzynowa z koperkiem i chleb bezglutenowy",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300057861.jpg",
+      "skladniki": "Woda (53%), Chleb bezglutenowy (13%), Marchew (8%), Ziemniaki (7%), Brokuły (5%), Korzeń pietruszki (4%), Seler korzeń (4%), Śmietanka 30% bez laktozy (3%), Mieszanka warzyw suszonych, Masło bez laktozy, Sól, Koperek, Lubczyk, Pieprz czarny, Ziele angielskie",
+      "alergeny": [
+        "Mleko",
+        "Seler"
+      ]
+    },
+    {
+      "sku": "300019864",
+      "posilek": "sniadanie",
+      "nazwa": "Pudding ryżowy na mleku bez laktozy z czekoladą i mus papaja-kiwi",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300019864.jpg",
+      "skladniki": "Mleko bez laktozy 1,5% tł. (55%), Kiwi (15%), Papaja (15%), Ryż jaśminowy (7%), Mleko kokosowe (5%), Cukier (2%), Cukier wanilinowy, Czekolada gorzka",
+      "alergeny": [
+        "Mleko",
+        "Soja"
+      ]
+    },
+    {
+      "sku": "300019865",
+      "posilek": "drugie-sniadanie",
+      "nazwa": "Sałatka z bezlaktozowym serem greckim, papryką, ogórkiem, pomidorem, oliwkami, bezglutenowe paluchy i ziołowy winegret",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300019865.jpg",
+      "skladniki": "Pomidor czerwony (26%), Ogórek (16%), Papryka czerwona (15%), Ser typu greckiego bez laktozy (13%), Paluchy bezglutenowe z ziołami (11%), Mix sałat (9%), Oliwki czarne (4%), Olej rzepakowy (2%), Woda (2%), Musztarda, , Natka pietruszki, Syrop klonowy, Sok z cytryny, Witamina C, Pieprz czarny",
+      "alergeny": [
+        "Gorczyca",
+        "Mleko",
+        "Sezam"
+      ]
+    },
+    {
+      "sku": "300061478",
+      "posilek": "obiad",
+      "nazwa": "Pieczony filet z miruny w sosie warzywnym, komosa ryżowa i surówka z kalarepy i marchewki z natką",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300061478.jpg",
+      "skladniki": "Filet z miruny (26%), Woda (22%), Marchew (13%), Pomidory krojone (11%), Komosa ryżowa (8%), Kalarepa (7%), Pietruszka korzeń (5%), Koncentrat pomidorowy (3%), Seler korzeń (2%), Majonez light, Olej rzepakowy, Sól, Płatki suszonej papryki, Cukier, Musztarda, Natka pietruszki, Papryka słodka mielona , Pieprz czarny, Sok z cytryny, Oregano, Ziele angielskie, Liść laurowy",
+      "alergeny": [
+        "Gorczyca",
+        "Jaja",
+        "Ryby",
+        "Seler"
+      ]
+    },
+    {
+      "sku": "300019867",
+      "posilek": "podwieczorek",
+      "nazwa": "Sernik na zimno z galaretką i truskawkami na spodzie z ekspandowaną kaszą jaglaną i melon",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300019867.jpg",
+      "skladniki": "Melon pomarańczowy (22%), Serek naturalny bez laktozy (19%), Woda (15%), Truskawki (12%), Ser twarogowy bez laktozy półtłusty (8%), Czekolada gorzka (6%), Masło bez laktozy (4%), Płatki owsiane bezglutenowe (4%), Cukier (3%), Śmietanka 30% bez laktozy (3%), Kasza jaglana ekspandowana (2%), Galaretka truskawkowa (2%), Żelatyna, Cukier wanilinowy",
+      "alergeny": [
+        "Mleko",
+        "Soja"
+      ]
+    },
+    {
+      "sku": "300019868",
+      "posilek": "kolacja",
+      "nazwa": "Szarpany kurczak w pomidorach z kolendrą, salsa z ogórka i pomidora, sos majonezowo-jogurtowy i tortilla bezglutenowa",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300019868.jpg",
+      "skladniki": "Filet z piersi kurczaka (34%), Pomidor czerwony (18%), Tortilla kukurydziana (14%), Ogórek (9%), Majonez light (6%), Koncentrat pomidorowy (6%), Jogurt naturalny wysokobiałkowy bez laktozy (5%), Woda (3%), Olej rzepakowy, Cukier, Musztarda, Sos Worcester, Sól, Oliwa z oliwek, Kolendra, Sok z cytryny, Pieprz ziołowy, Pieprz czarny, Oregano, Kmin rzymski",
+      "alergeny": [
+        "Gorczyca",
+        "Jaja",
+        "Mleko"
+      ]
+    },
+    {
+      "sku": "300020894",
+      "posilek": "sniadanie",
+      "nazwa": "Bezglutenowy bajgiel z makiem, bezlaktozowy twarożek à la tzatziki i pomidory z rukolą",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300020894.jpg",
+      "skladniki": "Bezglutenowy bajgiel z makiem (30%), Serek naturalny bez laktozy (24%), Pomidor czerwony (20%), Ogórek (10%), Ser twarogowy bez laktozy półtłusty (9%), Ser feta bez laktozy (5%), Szczypior, Rukola, Pieprz czarny",
+      "alergeny": [
+        "Jaja",
+        "Mleko"
+      ]
+    },
+    {
+      "sku": "300020895",
+      "posilek": "drugie-sniadanie",
+      "nazwa": "Bezlaktozowy deser twarogowy z musem truskawka-marakuja i bezglutenowa ciasteczkowa kruszonka",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300020895.jpg",
+      "skladniki": "Ser twarogowy bez laktozy półtłusty (25%), Jogurt naturalny wysokobiałkowy bez laktozy (17%), Serek homogenizowany waniliowy bez laktozy (17%), Pulpa z marakui (15%), Truskawki (15%), Wegańskie ciasteczka czekoladowe z chia (8%), Masło bez laktozy (3%), Cukier",
+      "alergeny": [
+        "Mleko"
+      ]
+    },
+    {
+      "sku": "300020896",
+      "posilek": "obiad",
+      "nazwa": "Pieczony kurczak w sosie słodko-kwaśnym z cukinią, papryką, ananasem, kukurydzą, natką i makaron ryżowy z sezamem",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300020896.jpg",
+      "skladniki": "Filet z piersi kurczaka (26%), Woda (22%), Makaron ryżowy (11%), Papryka czerwona (8%), Ananas w syropie (7%), Cukinia (5%), Kukurydza (3%), Syrop klonowy (3%), Nektar ananasowy (2%), Pomidory krojone (2%), Sos sojowy bezglutenowy (2%), Olej sezamowy, Ocet ryżowy, Sezam biały, Sos rybny, Olej rzepakowy, Sezam czarny, Skrobia kukurydziana, Sól, Natka pietruszki, Papryka słodka mielona , Imbir mielony",
+      "alergeny": [
+        "Ryby",
+        "Sezam",
+        "Soja"
+      ]
+    },
+    {
+      "sku": "300020897",
+      "posilek": "podwieczorek",
+      "nazwa": "Sałatka z jajkiem, awokado, cherry, granatem i sos pomarańczowo-bazyliowy",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300020897.jpg",
+      "skladniki": "Pomidor daktylowy czerwony (24%), Mix sałat (20%), Jaja (20%), Awokado (14%), Sok pomarańczowy (8%), Granat (7%), Musztarda (3%), Olej rzepakowy (2%), Syrop klonowy, , Pieprz czarny, Sól",
+      "alergeny": [
+        "Gorczyca",
+        "Jaja"
+      ]
+    },
+    {
+      "sku": "300020898",
+      "posilek": "kolacja",
+      "nazwa": "Orientalna zupa na mleczku kokosowym z indykiem, cukinią, marchewką, ryżem basmati i kolendrą",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300020898.jpg",
+      "skladniki": "Woda (48%), Filet z piersi indyka (16%), Cukinia (6%), Marchew (6%), Mleko kokosowe (6%), Ryż Basmati (6%), Pietruszka korzeń (4%), Mleko bez laktozy 1,5% tł. (2%), Sos sojowy bezglutenowy, Olej rzepakowy, Sos rybny, Trawa cytrynowa puree, Sól, Kolendra, Anyż , Gałka muszkatołowa, Imbir mielony, Kolendra, Kmin rzymski, Kurkuma, Pieprz czarny, Lubczyk",
+      "alergeny": [
+        "Mleko",
+        "Ryby",
+        "Soja"
+      ]
+    },
+    {
+      "sku": "300021720",
+      "posilek": "sniadanie",
+      "nazwa": "Placuszki jogurtowe z maliną i chia, serek orzechowy i ananas",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300021720.jpg",
+      "skladniki": "Jogurt naturalny bez laktozy (27%), Ananas (26%), Maliny (12%), Ser twarogowy bez laktozy półtłusty (12%), Mąka gryczana (8%), Cukier (4%), Masło orzechowe (3%), Mąka bezglutenowa MIX (3%), Olej rzepakowy (3%), Nasiona chia, Orzeszki ziemne prażone , Soda oczyszczona, Sól, Cynamon",
+      "alergeny": [
+        "Mleko",
+        "Orzeszki ziemne"
+      ]
+    },
+    {
+      "sku": "300021721",
+      "posilek": "drugie-sniadanie",
+      "nazwa": "Bezlaktozowa pasta serowa z sezamem, chrupkie pieczywo bezglutenowe i czerwona papryka",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300021721.jpg",
+      "skladniki": "Papryka czerwona (27%), Ser żółty bez laktozy (20%), Serek naturalny bez laktozy (19%), Pieczywo chrupkie bezglutenowe (18%), Majonez light (9%), Ser dojrzewający (5%), Natka pietruszki, Pasta Harrisa, Sezam czarny",
+      "alergeny": [
+        "Gorczyca",
+        "Jaja",
+        "Mleko",
+        "Sezam"
+      ]
+    },
+    {
+      "sku": "300021722",
+      "posilek": "obiad",
+      "nazwa": "Kotleciki twarogowe z kremowym sosem serowym, pieczone ziemniaki z natką i fasolka szparagowa",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300021722.jpg",
+      "skladniki": "Ser twarogowy bez laktozy półtłusty (31%), Fasolka szparagowa zielona (20%), Ziemniaki (18%), Woda (7%), Jaja (6%), Śmietanka 30% bez laktozy (6%), Mąka bezglutenowa MIX (5%), Ser pleśniowy typu blue (3%), Olej rzepakowy (3%), Sól, Natka pietruszki, Skrobia ziemniaczana, Pieprz czarny, Czosnek niedźwiedzi, Majeranek",
+      "alergeny": [
+        "Jaja",
+        "Mleko"
+      ]
+    },
+    {
+      "sku": "300021723",
+      "posilek": "podwieczorek",
+      "nazwa": "Shake jogurtowo-mleczny z bananem i masłem orzechowym",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300021723.jpg",
+      "skladniki": "Mleko bez laktozy 1,5% tł. (46%), Jogurt naturalny wysokobiałkowy bez laktozy (28%), Banan (17%), Masło orzechowe (6%), Cukier (3%)",
+      "alergeny": [
+        "Mleko",
+        "Orzeszki ziemne"
+      ]
+    },
+    {
+      "sku": "300021724",
+      "posilek": "kolacja",
+      "nazwa": "Sałatka z komosą ryżową, indykiem, pomidorami i ogórkami, nachosy i dip jogurtowy z suszonymi pomidorami",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300021724.jpg",
+      "skladniki": "Filet z piersi indyka (25%), Pomidor czerwony (22%), Woda (14%), Ogórek (12%), Jogurt naturalny bez laktozy (8%), Nachosy kukurydziane (8%), Komosa ryżowa (7%), Olej rzepakowy, Pestki dyni, Pomidory suszone w oleju, Sól, Ser dojrzewający, Sok z cytryny, Kurkuma, Pieprz czarny",
+      "alergeny": [
+        "Mleko"
+      ]
+    },
+    {
+      "sku": "300021740",
+      "posilek": "sniadanie",
+      "nazwa": "Bezlaktozowy twarożek z serem greckim i słonecznikiem, chleb bezglutenowy, rzodkiewka",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300021740.jpg",
+      "skladniki": "Ser twarogowy bez laktozy półtłusty (32%), Chleb bezglutenowy (27%), Rzodkiewka (25%), Ser feta bez laktozy (10%), Jogurt naturalny wysokobiałkowy bez laktozy (5%), Słonecznik (2%), Pieprz czarny",
+      "alergeny": [
+        "Mleko"
+      ]
+    },
+    {
+      "sku": "300021741",
+      "posilek": "drugie-sniadanie",
+      "nazwa": "Bezglutenowy biszkopt z truskawkami i serek waniliowy bez laktozy",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300021741.jpg",
+      "skladniki": "Serek homogenizowany waniliowy bez laktozy (27%), Białko jaja (21%), Truskawki (16%), Mąka bezglutenowa (11%), Żółtko jaja (10%), Cukier (8%), Skrobia ziemniaczana (5%), Mąka bezglutenowa MIX (2%), Proszek do pieczenia bezglutenowy",
+      "alergeny": [
+        "Jaja",
+        "Mleko"
+      ]
+    },
+    {
+      "sku": "300021742",
+      "posilek": "obiad",
+      "nazwa": "Pulpeciki z indyka w sosie szpinakowym bez laktozy, kasza gryczana z natką i surówka z kalarepy, ogórka i marchewki",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300021742.jpg",
+      "skladniki": "Mięso drobne z indyka (28%), Woda (20%), Marchew (10%), Kasza gryczana prażona (8%), Kalarepa (8%), Ogórek (6%), Szpinak (6%), Mleko bez laktozy 1,5% tł. (4%), Jaja (3%), Śmietanka 30% bez laktozy (2%), Olej rzepakowy, Płatki jaglane, Sól, Natka pietruszki, Cukier, Ocet winny biały, Szczypior, Natka pietruszki, Skrobia ziemniaczana, Sok z cytryny, Pieprz czarny, Gałka muszkatołowa",
+      "alergeny": [
+        "Dwutlenek siarki i siarczyny",
+        "Jaja",
+        "Mleko"
+      ]
+    },
+    {
+      "sku": "300021743",
+      "posilek": "podwieczorek",
+      "nazwa": "Sałatka z mozzarellą bez laktozy, melonem, oliwkami, ogórkiem, orzechami laskowymi i sos balsamiczny",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300021743.jpg",
+      "skladniki": "Melon pomarańczowy (32%), Ogórek (23%), Mozzarella bez laktozy (16%), Mix sałat (14%), Orzechy laskowe (2%), Oliwki czarne (2%), Syrop klonowy (2%), Musztarda (2%), Ocet balsamiczny (2%), Olej rzepakowy (2%), Woda (2%), Posypka pomidory suszone, Sól, Pieprz czarny",
+      "alergeny": [
+        "Dwutlenek siarki i siarczyny",
+        "Gorczyca",
+        "Mleko",
+        "Orzechy"
+      ]
+    },
+    {
+      "sku": "300021744",
+      "posilek": "kolacja",
+      "nazwa": "Zupa pomidorowa z bezglutenowym makaronem, soczewicą, bezlaktozowym serem i natką pietruszki",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300021744.jpg",
+      "skladniki": "Woda (31%), Pomidory krojone (29%), Makaron bezglutenowy (10%), Sok marchwiowy (7%), Marchew (5%), Korzeń pietruszki (4%), Soczewica zielona (4%), Śmietanka 30% bez laktozy (4%), Seler korzeń (3%), Sól, Mieszanka warzyw suszonych, Bazylia, Olej rzepakowy, Natka pietruszki, Ser dojrzewający, Pieprz czarny, Liść laurowy",
+      "alergeny": [
+        "Mleko",
+        "Seler"
+      ]
+    },
+    {
+      "sku": "300022216",
+      "posilek": "sniadanie",
+      "nazwa": "Pomarańczowa jaglanka na mleku bez laktozy z orzeszkami, kiwi i ananas",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300022216.jpg",
+      "skladniki": "Mleko bez laktozy 1,5% tł. (48%), Sok pomarańczowy (14%), Ananas (13%), Kiwi (13%), Płatki jaglane (7%), Syrop klonowy (3%), Orzeszki ziemne prażone , Cynamon",
+      "alergeny": [
+        "Mleko",
+        "Orzeszki ziemne"
+      ]
+    },
+    {
+      "sku": "300022217",
+      "posilek": "drugie-sniadanie",
+      "nazwa": "Sałatka z serem typu cypryjskiego, ogórkiem, rzodkiewką, bezglutenowe paluchy i biały sos balsamiczny",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300022217.jpg",
+      "skladniki": "Ogórek (24%), Rzodkiewka (19%), Ser typu halloumi (18%), Mix sałat (14%), Paluchy bezglutenowe z czarnuszką (14%), Syrop klonowy (4%), Majonez light (2%), Jogurt naturalny wysokobiałkowy bez laktozy (2%), Ocet winny biały, Olej rzepakowy, Sól, Oregano, Pieprz czarny",
+      "alergeny": [
+        "Dwutlenek siarki i siarczyny",
+        "Gorczyca",
+        "Jaja",
+        "Mleko",
+        "Sezam"
+      ]
+    },
+    {
+      "sku": "300022218",
+      "posilek": "obiad",
+      "nazwa": "Filet z miruny w kremowym sosie cytrynowo-koperkowym, ryż basmati z buraczanym pudrem i surówka z kapusty pekińskiej, czerwonej papryki i koperku",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300022218.jpg",
+      "skladniki": "Woda (37%), Filet z miruny (31%), Kapusta pekińska (9%), Ryż Basmati (8%), Papryka czerwona (6%), Śmietanka 30% bez laktozy (3%), Koperek (2%), Mąka bezglutenowa do chleba, Olej rzepakowy, Jogurt naturalny bez laktozy , Sól, Cukier, Majonez light, Puder buraczany, Mieszanka warzyw suszonych, Sok z cytryny, Pieprz ziołowy, Imbir mielony, Pieprz czarny, Kurkuma, Gałka muszkatołowa",
+      "alergeny": [
+        "Gorczyca",
+        "Jaja",
+        "Mleko",
+        "Ryby",
+        "Seler"
+      ]
+    },
+    {
+      "sku": "300022219",
+      "posilek": "podwieczorek",
+      "nazwa": "Serek kokosowy bez laktozy z płatkami migdałów i mus malinowy",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300022219.jpg",
+      "skladniki": "Ser twarogowy bez laktozy półtłusty (50%), Maliny (24%), Jogurt naturalny wysokobiałkowy bez laktozy (14%), Cukier (7%), Wiórki kokosowe (3%), Migdał płatki",
+      "alergeny": [
+        "Dwutlenek siarki i siarczyny",
+        "Mleko",
+        "Orzechy"
+      ]
+    },
+    {
+      "sku": "300022220",
+      "posilek": "kolacja",
+      "nazwa": "Zupa szpinakowo-serowa z makaronem ryżowym",
+      "obrazek": "https://maczhubzabprd.blob.core.windows.net/maczhub/menuitempictures/SKU/300022220.jpg",
+      "skladniki": "Woda (34%), Mleko bez laktozy 1,5% tł. (19%), Szpinak (19%), Śmietanka 30% bez laktozy (9%), Makaron ryżowy (9%), Ser żółty bez laktozy (6%), Masło bez laktozy, Sok z cytryny, Sól, Szczypior, Olej rzepakowy, Pieprz czarny",
+      "alergeny": [
+        "Mleko"
+      ]
+    }
+  ]
+}
