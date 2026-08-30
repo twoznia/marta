@@ -251,6 +251,8 @@
         el.className = "card" + (isSel ? " sel" : "");
         el.innerHTML =
           `<div class="check">✓</div>` +
+          // Obrazek lokalny (img/<SKU>.jpg) gdy pobrany; oryginalny link Maczfit zachowany w komentarzu.
+          `<!-- ${escapeHtml(d.obrazekUrl || d.obrazek)} -->` +
           `<img class="thumb" src="${escapeHtml(d.obrazek)}" alt="${escapeHtml(d.nazwa)}" loading="lazy" ` +
           `onerror="this.style.visibility='hidden'">` +
           `<div class="body">` +
