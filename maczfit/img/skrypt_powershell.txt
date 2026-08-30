@@ -1,0 +1,10 @@
+New-Item -ItemType Directory -Force -Path img | Out-Null
+$ok=0; $fail=0
+Get-Content URLS.txt | ForEach-Object {
+  $sku,$url = $_ -split "`t",2
+  $out = "img\$sku.jpg"
+  if (Test-Path $out) { return }
+  try   { Invoke-WebRequest -Uri $url -OutFile $out -UseBasicParsing; $script:ok++ }
+  catch { Write-Host "FAIL $sku  $url" -ForegroundColor Red; $script:fail++ }
+}
+Write-Host "Pobrano $ok, bledow $fail"
